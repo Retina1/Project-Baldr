@@ -7,6 +7,12 @@ Quan[X]
 # 0x0214
 Arden[X]
 
+# 0x021A
+Jamke[X]
+
+# 0x0249
+Dimaggio[.][X]
+
 # 0x0002 textWeaponRankIncreasedTo
  Weapon rank increased to [X]
 

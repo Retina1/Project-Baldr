@@ -1,0 +1,2 @@
+#include "EnemyDefs.event"
+#define IsPointer 0x8000000

@@ -15,3 +15,20 @@ ArdenPortrait:
 #incbin "Arden_palette.dmp"
 #incbin "Arden_minimug.dmp"
 setMugEntry(0x5,ArdenPortrait,2,5,2,3)
+
+ALIGN 4
+JamkePortrait:
+#incbin "Jamke_mug.dmp"
+#incbin "Jamke_frames.dmp"
+#incbin "Jamke_palette.dmp"
+#incbin "Jamke_minimug.dmp"
+setMugEntry(0xC,JamkePortrait,3,5,3,3)
+
+ALIGN 4
+DimaggioPortrait:
+#incbin "Dimaggio_mug.dmp"
+#incbin "Dimaggio_frames.dmp"
+#incbin "Dimaggio_palette.dmp"
+#incbin "Dimaggio_minimug.dmp"
+setMugEntry(0x30,DimaggioPortrait,3,5,3,3)
+

@@ -1,0 +1,9 @@
+PUSH
+
+//Allow each animation table entry to have its own palette
+ORG 0x59A34
+SHORT 0x46C0 0x46C0
+ORG 0x59B16
+SHORT 0x46C0 0x46C0
+
+POP

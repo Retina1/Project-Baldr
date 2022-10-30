@@ -37,6 +37,10 @@ ORG FreeSpaceBLRange //defined in custom definitions
   //Hold L to toggle Anims
   #include "QualityOfLife/LToggle/LToggle.event"
 
+
+  //Inline hacks
+  #include "_InlineHacks.event"
+
   //negative wt/crit
   #include "QualityOfLife/NegativeWStatDisplay/NegativeDisplay.event"
 
@@ -133,6 +137,8 @@ POP
 
   //Menu Semitransparency
   #include "QualityOfLife/SemitransparencyChanges.event"
+  
+  #include "PRFAnims/Installer.event"
 
   //Supply available in prologue
   #include "QualityOfLife/PrologueSupply.event"

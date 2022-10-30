@@ -5,3 +5,5 @@
 #include AnimationTable.event
 
 #include "Animation/Master Animation Installer.event"
+
+#include "Palettes/_Battle Palette Installer.event"

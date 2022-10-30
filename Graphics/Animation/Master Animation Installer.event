@@ -25,7 +25,7 @@
 #define SwordAnim(Animation) "BYTE 0x00 0x01 ; SHORT Animation"
 #define LanceAnim(Animation) "BYTE 0x01 0x01 ; SHORT Animation"
 #define AxeAnim(Animation) "BYTE 0x02 0x01 ; SHORT Animation"
-#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation; BYTE MasterAxe 0x00 ; SHORT Animation; BYTE VoidCleaver 0x00 ; SHORT Animation"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation; BYTE Hatchet 0x00 ; SHORT Animation"
 #define BowAnim(Animation) "BYTE 0x03 0x01 ; SHORT Animation"
 #define StaffAnim(Animation) "BYTE 0x04 0x01 ; SHORT Animation"
 #define AnimaAnim(Animation) "BYTE 0x05 0x01 ; SHORT Animation"
@@ -39,13 +39,36 @@
 
 //////////////Installed animations go here:
 
+{
 #include "Sigurd\Sword Installer.event"
 #include "Sigurd\Unarmed Installer.event"
+}
+{
+#include "JamkePro\Bow Installer.event"
+}
+{
+#include "Brigand\Axe Installer.event"
+#include "Brigand\Handaxe Installer.event"
+#include "Brigand\Unarmed Installer.event"
+}
+
 
   //#include "my animation Installer.event"
+  
+ALIGN 4
+BrigandAnims:
+AxeAnim(0x20)
+HandAxeAnim(0x21)
+UnarmedAnim(0x22)
+EndAnim  
   
 ALIGN 4
 SigurdAnims:
 SwordAnim(0x3)
 UnarmedAnim(0x4)
+EndAnim  
+
+ALIGN 4
+JamkeProAnims:
+BowAnim(0xF5)
 EndAnim  
