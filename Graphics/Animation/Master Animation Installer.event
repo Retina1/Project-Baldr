@@ -1,0 +1,51 @@
+/*#ifndef ClassAnimTable
+  #ifdef _FE8_
+    #define ClassAnimTable (0xc00008-0x20)
+  #endif
+  #ifdef _FE7_
+    #define ClassAnimTable (0xe00008-0x20)
+  #endif
+#endif*/
+
+#define AnimTableEntry(index) "ORG ClassAnimTable - 0x20 + (index * 0x20)"
+#define animSword 0
+#define animLance 1
+#define animAxe 2
+#define animBow 3
+#define animStaff 4
+#define animAnima 5
+#define animLight 6
+#define animDark 7
+#define animNone 9
+#define weaponTypeAnim(weaponType, ID) "BYTE weaponType 1 ID 0;"
+#define weaponAnim(weaponID, ID) "BYTE weaponID 0 ID 0;"
+#define weaponAnimEnd "WORD 0"
+#define SetAnimationPointers(class, pointer) "PUSH; ORG 0x807110 + (class*84) + 52; POIN pointer; POP"
+
+#define SwordAnim(Animation) "BYTE 0x00 0x01 ; SHORT Animation"
+#define LanceAnim(Animation) "BYTE 0x01 0x01 ; SHORT Animation"
+#define AxeAnim(Animation) "BYTE 0x02 0x01 ; SHORT Animation"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation; BYTE MasterAxe 0x00 ; SHORT Animation; BYTE VoidCleaver 0x00 ; SHORT Animation"
+#define BowAnim(Animation) "BYTE 0x03 0x01 ; SHORT Animation"
+#define StaffAnim(Animation) "BYTE 0x04 0x01 ; SHORT Animation"
+#define AnimaAnim(Animation) "BYTE 0x05 0x01 ; SHORT Animation"
+#define LightAnim(Animation) "BYTE 0x06 0x01 ; SHORT Animation"
+#define DarkAnim(Animation) "BYTE 0x07 0x01 ; SHORT Animation"
+#define MagicAnim(Animation) "BYTE 0x05 0x01 ; SHORT Animation ; BYTE 0x06 0x01 ; SHORT Animation ; BYTE 0x07 0x01 ; SHORT Animation ; BYTE 0x09 0x01 ; SHORT Animation"
+#define UnarmedAnim(Animation) "BYTE 0x09 0x01 ; SHORT Animation"
+#define MonsterAnim(Animation) "BYTE 0x0B 0x01 ; SHORT Animation"
+#define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
+#define EndAnim "WORD 0x0 0x0"
+
+//////////////Installed animations go here:
+
+#include "Sigurd\Sword Installer.event"
+#include "Sigurd\Unarmed Installer.event"
+
+  //#include "my animation Installer.event"
+  
+ALIGN 4
+SigurdAnims:
+SwordAnim(0x3)
+UnarmedAnim(0x4)
+EndAnim  

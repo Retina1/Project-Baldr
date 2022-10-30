@@ -1,0 +1,7 @@
+#include "Mugs/Mugs Installer.event"
+
+#include "MapSprites/MapSpriteInstaller.event"
+
+#include AnimationTable.event
+
+#include "Animation/Master Animation Installer.event"

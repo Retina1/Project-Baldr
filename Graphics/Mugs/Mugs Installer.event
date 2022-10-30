@@ -1,0 +1,17 @@
+#include "Tools/Tool Helpers.txt"
+//(mouthx,mouthy,eyesx,eyesy)
+ALIGN 4
+SigurdPortrait:
+#incbin "Sigurd_mug.dmp"
+#incbin "Sigurd_frames.dmp"
+#incbin "Sigurd_palette.dmp"
+#incbin "Sigurd_minimug.dmp"
+setMugEntry(0x2,SigurdPortrait,3,5,3,3)
+
+ALIGN 4
+ArdenPortrait:
+#incbin "Arden_mug.dmp"
+#incbin "Arden_frames.dmp"
+#incbin "Arden_palette.dmp"
+#incbin "Arden_minimug.dmp"
+setMugEntry(0x5,ArdenPortrait,2,5,2,3)
