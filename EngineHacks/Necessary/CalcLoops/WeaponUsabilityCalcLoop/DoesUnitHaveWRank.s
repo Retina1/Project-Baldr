@@ -16,6 +16,32 @@ mov r4,r0 @character pointer
 mov r5,r1 @item halfword
 mov r6,r2 @rank
 
+mov r1,#0xFF
+and r1,r5
+mov r0,#0x24
+mul r1,r0
+ldr r0,ItemTable
+add r0,r1
+ldrb r1,[r0,#7] @weapon type
+cmp r1,#0x15
+beq wind
+cmp r1,#0x25
+beq thunder
+b normal
+
+wind:
+mov r0,r4
+add r0,#0x3B @start of wranks
+ldrb r6,[r0] @r6 = rank
+b normal
+
+thunder:
+mov r0,r4
+add r0,#0x47 @start of wranks
+ldrb r6,[r0] @r6 = rank
+b normal
+
+normal:
 @get item's wrank requirement
 mov r0,r5
 mov r1,#0xFF

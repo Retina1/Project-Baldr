@@ -26,15 +26,36 @@ Loop:
   L1:
   add   r2, #0x1
   cmp   r2, #0x8
+  beq   wind
+  cmp   r2, #0x12
+  beq   thunder
+  cmp   r2, #0x8
   blt   Loop
+  b Break
+  wind:
+  add   r2, #0x9
+  b Loop
+  thunder:
+  add   r2,#0xA
+  b Loop
+  
   
 Break:
+cmp   r2,#0x11
+beq   L2W   
+cmp   r2,#0x1c
+beq   L2T
 cmp   r2, #0x8
-blt   L2
+blt   L2                        @ Weapon rank exists, display RText
+
 
   @ Couldn't find weapon. Display WeaponHelpText 0. We shouldn't be able to reach this.
   mov   r2, #0x0
-  
+L2W:
+mov   r2,#0x08
+b L2
+L2T:
+mov   r2,#0x09
 L2:
 ldr   r1, =WeaponHelpTextIDs
 lsl   r2, #0x1

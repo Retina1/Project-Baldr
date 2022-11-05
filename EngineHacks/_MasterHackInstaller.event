@@ -100,8 +100,8 @@ POP
   #include "ExternalHacks/Biorhythm/Biorhythm.event"
 
   //Modular Stat Screen
-  #undef MODULAR_STAT_SCREEN 
-  WARNING AAAAAAA
+  //#undef MODULAR_STAT_SCREEN 
+  //WARNING AAAAAAA
   #include "Necessary/ModularStatScreen/ModularStatScreen.event"
   
   // Strength/Magic Split
@@ -121,7 +121,7 @@ POP
   #include "ExternalHacks/PortraitSelectASM/PortraitSelectionASM.event"
 	
   //Stairs
-  #include "ExternalHacks/Stairs/Stairs.event"
+  //#include "ExternalHacks/Stairs/Stairs.event"
 
   //Raid
   #include "ExternalHacks/Raid/Raid.event"

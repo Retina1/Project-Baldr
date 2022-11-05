@@ -1,0 +1,41 @@
+#0x505 ^
+Sword[X]
+
+#0x506 ^
+Lance[X]
+
+#0x507 ^
+Axe[X]
+
+#0x508 ^
+Bow[X]
+
+#0x509 ^
+Staff[X]
+
+#0x50B ^
+Light[X]
+
+#0x50C ^
+Dark[X]
+
+#0x50D ^
+Item[X]
+
+#0x510 ^
+Fire[X]
+
+#0x511 ^
+Thunder[X]
+
+#0x512 ^
+Wind[X]
+
+#0x565
+Fire magic master level[X]
+
+#0x8f8
+Wind magic master level[X]
+
+#0x8f9
+Thunder magic master level[X]

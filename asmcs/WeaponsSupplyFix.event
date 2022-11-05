@@ -1,0 +1,72 @@
+PUSH
+
+//Chop off the first digit when viewing items in supply 
+//Eg. 0x21 becomes 0x01 and will show up with lances. 
+//AUTHOR=Vesly
+
+ORG 0x98086
+BYTE 0x00 0x07 0x00 0x0F
+
+ORG 0x980D0
+BYTE 0x00 0x07 0x00 0x0F
+
+POP 
+
+// Examine items past 0x0D fix 
+// Author = Sme
+PUSH
+ORG $16E28
+SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0
+SHORT 0x0080
+SHORT 0x1840
+ORG $16E4C
+POIN WeaponTypeTextIDArray
+POP
+
+ALIGN 4
+WeaponTypeTextIDArray:
+WORD 0x505   //yes 
+WORD 0x506    //yes
+WORD 0x507    //yes
+WORD 0x508    //yes
+WORD 0x509
+WORD 0x510 //yes
+WORD 0x50B //yes
+WORD 0x50C //yes
+WORD 0x505 // nothing should use this 0x08 
+WORD 0x50D
+WORD 0x505 // nothing should use this 0x0A
+WORD 0x505 // nothing should use this 0x0B
+WORD 0x505 // nothing should use this 0x0C
+WORD 0x505 // nothing should use this 0x0D
+WORD 0x505 // nothing should use this 0x0E
+WORD 0x505 // nothing should use this 0x0F
+
+WORD 0x505 //yes
+WORD 0x505
+WORD 0x505 //yes
+WORD 0x505 //yes
+WORD 0x505
+WORD 0x512 //Wind
+WORD 0x505 //yes
+WORD 0x505 //yes
+WORD 0x505 // nothing should use this 0x18 
+WORD 0x505 // nothing should use this 0x19
+WORD 0x505 // nothing should use this 0x1A 
+WORD 0x505 // nothing should use this 0x1B
+WORD 0x505 // nothing should use this 0x1C 
+WORD 0x505 // nothing should use this 0x1D 
+WORD 0x505 // nothing should use this 0x1E 
+WORD 0x505 // nothing should use this 0x1F
+
+WORD 0x505 // nothing should use this 0x20
+WORD 0x505 // nothing should use this 0x21
+WORD 0x505 // nothing should use this 0x22
+WORD 0x505//yes
+WORD 0x505 // nothing should use this 0x24
+WORD 0x511 //Thunder
+WORD 0x505 // nothing should use this 0x26
+WORD 0x505 //0x27 
+WORD 0x505 // nothing should use this 0x28
+WORD 0x505 // nothing should use this 0x29
+WORD 0x0    //Terminator just in case ?
