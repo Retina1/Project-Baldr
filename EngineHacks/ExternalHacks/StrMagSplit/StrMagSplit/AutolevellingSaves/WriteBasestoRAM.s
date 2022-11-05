@@ -25,6 +25,47 @@ ldrb	r0,	[r2, #0xF]
 ldrb	r5,	[r1, #0x10]
 add		r0,r0,r5
 strb	r0, [r4, #0x17]
+
+@Load Wind and Thunder magic. Only use r0,r5, and r3, but r3 must be 0 at the end
+
+@Wind
+mov    r0,#0x24      @Location of weapon level for class
+add    r0,r2,r0    
+ldrb    r0,[r0]     
+mov 	r5,#0x3B
+add 	r5,r4,r5
+strb    r0,[r5]     
+
+mov     r5,#0x31     
+add     r5,r1,r5      @location of weapon level for character
+ldrb    r5,[r5]     
+cmp     r0,r5       
+bge     charIsGreaterOne @If greater, set
+mov 	r0,#0x3B
+add 	r0,r4,r0
+strb    r5,[r0]     
+charIsGreaterOne:
+
+@Thunder
+mov    r0,#0x25      @Location of weapon level for class
+add    r0,r2,r0    
+ldrb    r0,[r0]     
+mov 	r5,#0x47
+add 	r5,r4,r5
+strb    r0,[r5]     
+
+mov     r5,#0x32     
+add     r5,r1,r5      @location of weapon level for character
+ldrb    r5,[r5]     
+cmp     r0,r5       
+bge     charIsGreaterTwo @If greater, set
+mov 	r0,#0x47
+add 	r0,r4,r0
+strb    r5,[r0]     
+charIsGreaterTwo:
+
+
+
 ldrb 	r0, [r2, #0x10]
 ldrb 	r2, [r1, #0x11]
 bx		r14

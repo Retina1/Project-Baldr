@@ -88,7 +88,8 @@ gSaveBlockTypeSizeLookup:
 		MESSAGE EMS with strmag and Stair
 		#include "SrcModules/SaveUnitExpandedStrmagStairs.lyn.event" // Str/Mag and Stairs both require saving shenanigans.
 	#else
-		#include "SrcModules/SaveUnitExpandedStrmag.lyn.event" // Only Str/Mag split.
+		MESSAGE EMS with strmag and Stair at currentOffset
+		#include "SrcModules/SaveUnitExpandedStrmagStairsFatigue.lyn.event" // Only Str/Mag split.
 	#endif // STAIRS_ASM
 #else
 	#ifdef STAIRS_ASM
@@ -185,14 +186,14 @@ gSuspendSaveChunks:
 	// Save 62 blue units (62 * 0x34 = $0C98)
 	DeclSaveChunk($08C0, $0C98, ESU_SavePlayerSuspendUnits, ESU_LoadPlayerSuspendUnits)
 
-	// Save 50 red units (50 * 0x38 = $0AF0)
-	DeclSaveChunk($1558, $0AF0, ESU_SaveRedSuspendUnits,    ESU_LoadRedSuspendUnits)
+	// Save 50 red units (50 * 0x3C = $0BB8)
+	DeclSaveChunk($1558, $0BB8, ESU_SaveRedSuspendUnits,    ESU_LoadRedSuspendUnits)
 
-	// Save 20 green units (20 * 0x38 = $0460)
-	DeclSaveChunk($2048, $0460, ESU_SaveGreenSuspendUnits,  ESU_LoadGreenSuspendUnits)
+	// Save 20 green units (15 * 0x3C = $0384)
+	DeclSaveChunk($2110, $0384, ESU_SaveGreenSuspendUnits,  ESU_LoadGreenSuspendUnits)
 
 	// Save Debuffs (TODO: maybe reduce size)
-	DeclSaveChunk($24A8, DebuffTableSize, SUD_SaveDebuffs,  SUD_LoadDebuffs)
+	DeclSaveChunk($2494, DebuffTableSize, SUD_SaveDebuffs,  SUD_LoadDebuffs)
 
 	// Permanent eids (moved here because of a mistake in the previous allocation)
 	DeclSaveChunk($2DA8, $0019, $0A3150+1, $0A3198+1)

@@ -33,6 +33,8 @@ Learned  [X]
 
 #include "unitmenu_text.txt"
 
+#include "ItemNames.txt"
+
 #0xd4c LikesText
 //first text ID in the free block
 Likes:[X]

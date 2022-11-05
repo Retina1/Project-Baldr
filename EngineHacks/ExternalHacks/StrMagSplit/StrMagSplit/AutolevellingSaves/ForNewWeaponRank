@@ -1,0 +1,19 @@
+@r4 - Unit
+@r2 - Storage location in RAM
+
+    08017E78 (T)  adds    r2,r3,r1                                ;2  99
+    08017E7A (T)  ldr     r0,[r4,4h]                              ;9  108
+    08017E7C (T)  adds    r0,2Ch                                  ;2  110 @Location of weapon level for class
+    08017E7E (T)  adds    r0,r0,r1                                ;2  112
+    08017E80 (T)  ldrb    r0,[r0]                                 ;4  116
+    08017E82 (T)  strb    r0,[r2]                                 ;7  123
+    08017E84 (T)  ldr     r0,[r4]                                 ;9  132
+    08017E86 (T)  adds    r0,14h                                  ;2  134 @location of weapon level for character
+    08017E88 (T)  adds    r0,r0,r1                                ;2  136
+    08017E8A (T)  ldrb    r0,[r0]                                 ;4  140
+    08017E8C (T)  cmp     r0,0h                                   ;2  142
+    08017E8E (T)  beq     Lxx_8017E92h                            ;8  150 @If greater, set
+    08017E90 (T)  strb    r0,[r2]                                 ;7  157
+    08017E92 (T)  adds    r1,1h                                   ;2  159
+    08017E94 (T)  cmp     r1,7h                                   ;2  161
+    08017E96 (T)  ble     Lxx_8017E78h                            ;8  169

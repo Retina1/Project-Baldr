@@ -47,7 +47,15 @@ NoRank:
 add r7, #0x1
 cmp r7, #0x2F
 ble LoopWeapons
-b EndRanks
+cmp r7,#0x48
+beq EndRanks
+cmp r7,#0x3C
+beq ThunderRank
+mov r7,#0x3B
+b LoopWeapons
+ThunderRank:
+mov r7,#0x47
+b LoopWeapons
 
 .ltorg
 

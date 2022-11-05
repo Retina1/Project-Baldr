@@ -10,11 +10,16 @@ ALIGN 4
 FixWpnRnkHook:
 	#incbin "NewFixWpnRank.dmp" 
 	// - Edited slightly by Vesly to account for weapon types past 0x7 
+WeaponFixWindThunder:
+	#incbin "saveWpnRnkUp.dmp"
 
 PUSH
 
 	ORG $02C0F0
 		jumpToHack(FixWpnRnkHook)
+
+	ORG $02c280
+		jumpToHack(WeaponFixWindThunder)
 
 POP
 

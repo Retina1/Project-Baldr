@@ -1,0 +1,25 @@
+.thumb    
+cmp    r0,#0x15
+beq    Wind
+cmp    r0,#0x25
+beq    Thunder
+add    r1,r1,#0x28
+add    r5,r1,r0        
+b FoundType
+Wind:
+add r1,r1,#0x3B
+mov r5,r1
+b   FoundType
+Thunder:
+add r1,r1,#0x47
+mov r5,r1
+b   FoundType
+FoundType:
+ldrb    r0,[r5]         
+cmp     r0,#0x0          
+bne     Ender
+mov    r4,#0x0
+Ender:           
+add    r0,r4,#0x0         
+ldr r1,=#0x08017FA5
+bx r1

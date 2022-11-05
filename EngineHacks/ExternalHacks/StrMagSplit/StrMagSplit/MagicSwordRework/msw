@@ -1,0 +1,33 @@
+.thumb
+mov    r5,#0x50         
+add    r5,r5,r7       
+ldrb    r0,[r5]
+cmp     r0,#0x15
+beq     Wind
+cmp     r0,#0x25
+beq     Thunder
+mov    r4,#0x28
+add    r4,r4,r7
+b GetWpnAmount
+
+Wind:
+mov     r0,#0x0
+mov     r4,#0x3B
+add    r4,r4,r7
+b GetWpnAmount
+
+Thunder:
+mov     r0,#0x0
+mov     r4,#0x47
+add    r4,r4,r7
+b GetWpnAmount
+
+GetWpnAmount:
+ldrb    r6,[r4,r0]     
+cmp     r6,#0x0          
+beq     End
+ldr     r3,=0x802C133
+bx      r3             
+End:
+ldr     r3,=0x802C113
+bx      r3             

@@ -27,7 +27,7 @@ prGetMountTypeIconGfx:
 	POIN MountTypeIcons
 
 prGetWRankIconGfx:
-	#incbin "asm/GetSheetIconGfx.bin"
+	#incbin "asm/GetWeaponSheetIconGfx.dmp"
 	POIN WRankIcons
 
 prGetSkillBookIconGfx:
