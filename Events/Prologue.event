@@ -35,6 +35,7 @@ ENDTRAP
 ALIGN 4
 TurnBasedEvents:
 TurnEventEnemy(0x0,MidirDieth,1)
+TurnEventPlayer(0x0,AzelCometh,2)
 
 END_MAIN
 
@@ -86,18 +87,27 @@ Text(0x0C41) //midir fucking dies
 SFXKillUnit(Midir)
 ENDA
 
+AzelCometh:
+LOAD1 0x1 LexCometh
+ENDA
+
 ALIGN 4
 
 PlayerUnits:
 UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [56,5] 0x0 0x0 0x0 0x1 [SilverSword] NoAI
-UNIT Alec Cavalier 0x0 Level(1,Ally,0) [55,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Alec Cavalier 0x0 Level(10,Ally,0) [55,6] 0x0 0x0 0x0 0x1 [IronSword, MasterSeal] NoAI
 UNIT Noish Cavalier 0x0 Level(1,Ally,0) [57,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Arden Knight 0x0 Level(1,Ally,0) [56,7] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT //Tells the game that the unit list has ended
 
 UselessBoi:
 UNIT Midir Archer Sigurd Level(1,NPC,0) [29,18] 0x0 0x0 0x0 0x1 [IronBow] NoAI
+UNIT
 
+LexCometh:
+UNIT Azel Mage 0x0 Level(10,Ally,0) [40,4] 0x0 0x0 0x0 0x1 [Fire, MasterSeal] NoAI
+UNIT Lex Fighter 0x0 Level(10,Ally,0) [42,4] 0x0 0x0 0x0 0x1 [IronAxe, MasterSeal] NoAI
+UNIT
 
 EnemyUnits:
 UNIT DiMaggio Brigand DiMaggio Level(3,Enemy,0) [52,6] 0x0 0x0 0x0 0x1 [SteelAxe, HandAxe] AttackInRangeAI

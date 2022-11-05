@@ -1,4 +1,4 @@
-#include "include\gbafe.h"
+#include "gbafe.h"
 
 // Leadership Stars FE8. Hack by Zeta/Gilgamesh
 // Requires FE-CLIB
@@ -30,41 +30,27 @@ extern u8 NPCStarAvoidBonus;
 
 extern u8 CancelOutOpposingLeadership;
 
-signed char GetFactionLeadershipCount(u8 faction)
+extern u8* GetUnitsInRange(Unit* unit, int allyOption, int range);
+u8 GetLeadershipStarCount(Unit *unit);
+
+signed char GetFactionLeadershipCount(Unit* unit)
 {
 	signed char total = 0;
-	Unit *unitArray = gUnitArrayBlue;
-	int maxUnits = MAX_BLUE_UNITS;
-	
-	if (faction == FACTION_RED)
+	Unit* otherUnit = 0;
+	u8* unitBuffer = GetUnitsInRange(unit, 0, 3);
+
+	if (unitBuffer)
 	{
-		unitArray = gUnitArrayRed;
-		maxUnits = MAX_RED_UNITS;
-	}
-	if (faction == FACTION_GREEN)
-	{
-		unitArray = gUnitArrayGreen;
-		maxUnits = MAX_GREEN_UNITS;		
-	}
-	
-	// go through the unit array for the appropriate faction
-	for (int x = 0; x < maxUnits; x++)
-	{
-		// make sure the unit is alive
-		if (unitArray[x].pCharacterData != NULL && !(unitArray[x].state & US_UNAVAILABLE))
+		//Loop through unitBuffer and check leadership stars
+		for (int x = 0; unitBuffer[x]; x++)
 		{
-			// now check through the leadership table to see if they're on it
-			for (int y = 0; LeadershipTable[y].UnitID != 0; y++)
-			{
-				if (LeadershipTable[y].UnitID == unitArray[x].pCharacterData->number)
-				{
-					total += LeadershipTable[y].LeadershipStars;
-					break; // no need to go through the rest of the leadership table
-				}
-			}
+			otherUnit = GetUnit(unitBuffer[x]);
+			total += GetLeadershipStarCount(otherUnit);
 		}
 	}
-	
+
+	total += GetLeadershipStarCount(unit);
+
 	return total;
 }
 
@@ -106,8 +92,8 @@ void CalculateHitAvoidBonus(BattleUnit* bunit, signed char leadership)
 
 void ApplyLeadershipBonus(BattleUnit *bunitOne, BattleUnit *bunitTwo)
 {
-	signed char unitOneLeadership = GetFactionLeadershipCount(UNIT_FACTION(&bunitOne->unit));
-	signed char unitTwoLeadership = GetFactionLeadershipCount(UNIT_FACTION(&bunitTwo->unit));
+	signed char unitOneLeadership = GetFactionLeadershipCount(&bunitOne->unit);
+	signed char unitTwoLeadership = GetFactionLeadershipCount(&bunitTwo->unit);
 	
 	if (CancelOutOpposingLeadership)
 		unitOneLeadership -= unitTwoLeadership;
@@ -125,5 +111,5 @@ u8 GetLeadershipStarCount(Unit *unit)
 			return LeadershipTable[x].LeadershipStars;
 	}
 	
-	return 0xFF;
+	return 0x0;
 }
