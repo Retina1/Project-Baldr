@@ -3,5 +3,5 @@
 #include "ClassDefs.event"
 #include "FactionDefs.event"
 #include "NPCDefs.event"
-#include "REDAs.event"
+#include "EventDefs.event"
 #define IsPointer 0x8000000
