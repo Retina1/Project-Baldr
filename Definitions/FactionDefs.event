@@ -1,0 +1,49 @@
+//generics
+#define Verdane1 0xB1
+#define Verdane2 0xB2 //for chapter 1
+#define Heirhein 0xB3
+#define Anphony 0xB4
+#define Mackily 0xB5
+#define ErinysSquad 0xB6
+#define Agusty 0xB7
+#define Madino 0xB8
+#define Silvail 0xB9
+#define Orgahil 0xBA
+#define CrossKnight 0xBB
+#define Thove 0xBC
+#define DithorbaSquad 0xBD
+#define PamelaSquad 0xBE
+#define Zaxon 0xBF
+#define BeigenRitter 0xC0
+#define AssassinLamia 0xC1
+#define Lubeck 0xC2
+#define Bandit 0xC3
+#define Pirate 0xC4 
+#define Ruffian 0xC5
+#define Priest 0xC6
+#define Thracia 0xC7
+#define Velthomer 0xC8
+#define Friege 0xC9
+#define Ganeishire 0xCA
+#define Sophara 0xCB
+#define Isaach 0xCC
+#define Rivough 0xCD
+#define Yied 0xCE
+#define Darna 0xCF
+#define Loptrian 0xD0
+#define Alster 0xD1
+#define MercJavarro0xD2
+#define Melgen 0xD3
+#define HighMage 0xD4
+#define Connaught 0xD5
+#define Kapathogia 0xD6
+#define Grutia 0xD7
+#define Grannvale 0xD8
+#define RiddellSquad 0xD9 // he is so epic
+#define MercMiletos 0xDA
+#define RotenRitter 0xDB
+#define Edda 0xDC
+#define MercEdda 0xDE
+#define GrauenRitter 0xDF
+#define GelbenRitter 0xE0
+#define Belhalla 0xE1

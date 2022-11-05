@@ -37,7 +37,6 @@ ORG FreeSpaceBLRange //defined in custom definitions
   //Hold L to toggle Anims
   #include "QualityOfLife/LToggle/LToggle.event"
 
-
   //Inline hacks
   #include "_InlineHacks.event"
 

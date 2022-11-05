@@ -1,0 +1,86 @@
+
+EventPointerTable(0x07,ThisChapter)
+
+ThisChapter:
+
+POIN TurnBasedEvents
+
+POIN CharacterBasedEvents
+
+POIN LocationBasedEvents
+
+POIN MiscBasedEvents
+
+POIN Dunno Dunno Dunno
+
+POIN Tutorial
+
+POIN TrapData TrapData
+
+POIN PlayerUnits PlayerUnits
+
+POIN $0 $0 $0 $0 $0 $0
+
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+Seize(1,8)
+Seize(0x3,EvansAttack,29,18)
+Seize(0x3,DebugMap,56,5)
+END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+CharacterEventBothWays(0xA,SigurdArvisTalkConvo,Sigurd,ArvisGen1)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+LOAD1 0x1 PlayerUnits
+ENUN
+LOAD1 0x1 EnemyUnits
+ENDA
+
+EndingScene:
+ENDA
+
+DebugMap:
+MoveToChapter(Debugmap)
+ENDA
+
+EvansAttack:
+ENDA
+
+SigurdArvisTalkConvo:
+ConvoEvent(SigurdArvisTalk)
+ENDA
+
+ALIGN 4
+
+PlayerUnits:
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [56,5] 0x0 0x0 0x0 0x1 [SilverSword] NoAI
+UNIT Alec Cavalier 0x0 Level(1,Ally,0) [55,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Noish Cavalier 0x0 Level(1,Ally,0) [57,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden Knight 0x0 Level(1,Ally,0) [56,7] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT //Tells the game that the unit list has ended
+
+EnemyUnits:
+UNIT DiMaggio Brigand DiMaggio Level(3,Enemy,0) [52,6] 0x0 0x0 0x0 0x1 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT

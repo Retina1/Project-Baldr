@@ -1,0 +1,75 @@
+//playable defs
+#define Sigurd 0x01                    //Gen 1 Lord
+#define Seliph 0x02                    //Gen 2 Lord
+#define Alec 0x03                      //Prologue
+#define Noish 0x04
+#define Arden 0x05
+#define Azel 0x06
+#define Lex 0x07
+#define Quan 0x08
+#define Ethlyn 0x09
+#define Finn 0x0A
+#define Midir 0x0B
+#define Edain 0x0C                      //Chapter 1
+#define Dew 0x0D
+#define Ayra 0x0E
+#define Jamke 0x0F
+#define Deirdre 0x10
+#define Lachesis 0x11                    //Chapter 2
+#define Holyn 0x12
+#define Beowolf 0x13
+#define Lewyn 0x14
+#define Sylvia 0x15
+#define Erinys 0x16
+#define Hopper 0x17
+#define Indech 0x18                       //Chapter 3
+#define Claud 0x19
+#define Tailtiu 0x1A
+#define Callista 0x1B
+#define Brigid 0x1C
+#define Larcei 0x1D                      //Chapter 6
+#define Creidne 0x1E
+#define Scathach 0x1F
+#define Dalvin 0x20
+#define Lana 0x21
+#define Muirne 0x22
+#define Diarmuid 0x23
+#define Tristan 0x24
+#define Lester 0x25
+#define Deimne 0x26
+#define Fee 0x27
+#define Hermina 0x28
+#define Arthur 0x29
+#define Amid 0x2A
+#define Patty 0x2B                       //Chapter 7
+#define Daisy 0x2C
+#define Nanna 0x2D
+#define Jeanne 0x2E
+#define Lene 0x2F
+#define Laylea 0x30
+#define CallistaSon 0x31
+#define CalliSonSub 0x32
+#define Tine 0x33
+#define Linda 0x34
+#define Faval 0x35                      //Chapter 8
+#define Asaello 0x36
+#define CallistaDaughter 0x37
+#define CalliGirlSub 0x38
+#define Ced 0x39
+#define Hawk 0x3A
+#define Coirpre 0x3B                     //Chapter 9
+#define Charlot 0x3C
+#define OifeyAdult 0x3D                 //Gen 2 Non-Inheritance
+#define Julia 0x3E
+#define Iuchar 0x3F
+#define Iucharba 0x40
+#define ShannanAdult 0x41
+#define Ares 0x42
+#define IndechChild 0x43
+#define Leif 0x44
+#define Eyvel 0x45                    //oh no
+#define Hannibal 0x46
+#define Shannam 0x47
+#define Altena 0x48
+#define Saias 0x49
+#define Arion 0x4A

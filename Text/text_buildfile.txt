@@ -11,7 +11,10 @@ Arden[X]
 Jamke[X]
 
 # 0x0249
-Dimaggio[.][X]
+DiMaggio[.][X]
+
+## SigurdArvisTalk
+[OpenMidLeft][LoadFace][0x02][0x01][OpenMidRight][LoadFace][0x47][0x01][OpenMidRight]hi[.][A][ToggleSmile][X]
 
 # 0x0002 textWeaponRankIncreasedTo
  Weapon rank increased to [X]

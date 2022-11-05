@@ -30,15 +30,15 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define SetPaletteFull(Character,UnpromotedPalette,UnpromotedClass,FirstPromotionPalette,FirstPromotionClass,SecondPromotionPalette,SecondPromotionClass) "setCharPalette(Character,0x00,UnpromotedPalette,0x00,FirstPromotionPalette,SecondPromotionPalette,0x00,0x00) ; setCharClass(Character,0x00,UnpromotedClass,0x00,FirstPromotionClass,SecondPromotionClass,0x00,0x00)"
 #define SetPaletteFuller(Character,UnpromotedPalette,UnpromotedClass,UnpromotedPalette2,UnpromotedClass2,FirstPromotionPalette,FirstPromotionClass,SecondPromotionPalette,SecondPromotionClass,ThirdPromotionPalette,ThirdPromotionClass,FourthPromotionPalette,FourthPromotionClass) "setCharPalette(Character,0x00,UnpromotedPalette,UnpromotedPalette2,FirstPromotionPalette,SecondPromotionPalette,ThirdPromotionPalette,FourthPromotionPalette) ; setCharClass(Character,0x00,UnpromotedClass,UnpromotedClass2,FirstPromotionClass,SecondPromotionClass,ThirdPromotionClass,FourthPromotionClass)"
 
-#define DimaggioPaletteID 0x20
+#define DiMaggioPaletteID 0x20
 
-setPalette(DimaggioPaletteID,DimaggioPalette)
+setPalette(DiMaggioPaletteID,DiMaggioPalette)
 
-SetPaletteFull(Dimaggio,DimaggioPaletteID,Brigand,0x0,0x0,0x0,0x0)
+SetPaletteFull(DiMaggio,DiMaggioPaletteID,Brigand,0x0,0x0,0x0,0x0)
 
 ALIGN 4
-DimaggioPalette:
-#incbin "Dimaggio.dmp"
+DiMaggioPalette:
+#incbin "DiMaggio.dmp"
 
 PUSH
 ORG $59BFC

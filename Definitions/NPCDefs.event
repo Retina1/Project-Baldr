@@ -1,0 +1,27 @@
+//good guys
+#define Leonster 0xE2
+#define AnnandSquad 0xE3
+#define Eldigan 0xE4
+#define Annand 0xE5
+#define ArvisGen1 0xE6
+#define Eve 0xE7
+#define Eva 0xE8
+#define Alva 0xE9
+#define OifeyKid 0xEA
+#define ShannanKid 0xEB
+#define Aida 0xEC
+#define Palmarch 0xED
+#define Augury 0xEE
+#define ArenaGuy 0xEF
+#define BlacksmithGuy 0xF0 
+#define VendorDude 0xF1
+#define Anna 0xF2
+#define PawnshopGuy 0xF3
+#define Jake 0xF4
+#define Arena1 0xF5
+#define Arena2 0xF6
+#define Arena3 0xF7
+#define Arena4 0xF8
+#define Arena5 0xF9
+#define Arena6 0xFA
+#define Arena7 0xFB
