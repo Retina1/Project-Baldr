@@ -24,7 +24,7 @@
 
 	#ifdef USE_TEST_MAP
     //Events
-    #include "Events/EventTemplate.event"
+    #include "Events/_ChapterEventsInstaller.event"
     #include "Events/WorldMapEvents.event"
 
     //Maps

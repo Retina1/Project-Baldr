@@ -1,0 +1,106 @@
+
+EventPointerTable(0x07,ThisChapter)
+
+ThisChapter:
+
+POIN TurnBasedEvents
+
+POIN CharacterBasedEvents
+
+POIN LocationBasedEvents
+
+POIN MiscBasedEvents
+
+POIN Dunno Dunno Dunno
+
+POIN Tutorial
+
+POIN TrapData TrapData
+
+POIN PlayerUnits PlayerUnits
+
+POIN $0 $0 $0 $0 $0 $0
+
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+TurnEventEnemy(0x0,MidirDieth,1)
+
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+Seize(1,8)
+Seize(0x3,EvansAttack,29,18)
+Seize(0x3,DebugMap,56,5)
+END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+CharacterEventBothWays(0xA,SigurdArvisTalkConvo,Sigurd,ArvisGen1)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+LOAD1 0x1 PlayerUnits
+LOAD1 0x1 UselessBoi
+ENUN
+LOAD1 0x1 EnemyUnits
+ENDA
+
+EndingScene:
+ENDA
+
+DebugMap:
+MoveToChapter(Debugmap)
+ENDA
+
+EvansAttack:
+ENDA
+
+SigurdArvisTalkConvo:
+ConvoEvent(SigurdArvisTalk)
+ENDA
+
+MidirDieth:
+CAM1 [29,19]
+StartBattle 
+NormalDamage(1,22)
+CriticalHit(0,99)
+EndAttack
+FIG1 Munnir Midir HandAxe
+Text(0x0C41) //midir fucking dies
+SFXKillUnit(Midir)
+ENDA
+
+ALIGN 4
+
+PlayerUnits:
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [56,5] 0x0 0x0 0x0 0x1 [SilverSword] NoAI
+UNIT Alec Cavalier 0x0 Level(1,Ally,0) [55,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Noish Cavalier 0x0 Level(1,Ally,0) [57,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden Knight 0x0 Level(1,Ally,0) [56,7] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT //Tells the game that the unit list has ended
+
+UselessBoi:
+UNIT Midir Archer Sigurd Level(1,NPC,0) [29,18] 0x0 0x0 0x0 0x1 [IronBow] NoAI
+
+
+EnemyUnits:
+UNIT DiMaggio Brigand DiMaggio Level(3,Enemy,0) [52,6] 0x0 0x0 0x0 0x1 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT Gerrard Fighter Gerrard Level(3,Enemy,0) [1,8] 0x0 0x0 0x0 0x1 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT Munnir Warrior Munnir Level(3,Enemy,0) [28,19] 0x0 0x0 0x0 0x1 [SteelAxe, HandAxe] AttackInRangeAI
+UNIT

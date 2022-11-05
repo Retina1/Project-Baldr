@@ -24,7 +24,7 @@ POIN CustomAnimeTable
 
 #define CustomAnimationSet(unit,class,pointer) "BYTE unit; BYTE class; BYTE 0x00; BYTE 0x00; WORD pointer"
 CustomAnimeTable:
-CustomAnimationSet(Colm,Sniper,JamkeProAnims|IsPointer)
+CustomAnimationSet(Jamke,Sniper,JamkeProAnims|IsPointer)
 BYTE 0x00  //Unit: term data
 BYTE 0x00  //dummy
 BYTE 0x00  //dummy

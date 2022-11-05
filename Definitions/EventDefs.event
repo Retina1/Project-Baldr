@@ -1,0 +1,53 @@
+#define LoadUnitsByDifficulty(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN;"
+#define SystemText(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; REMA"
+#define SystemText(bgid,textid) "CenterTutorialTextBox; SetBackground(bgid); TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND"
+#define NarrationText(textid) "SVAL 0xB 0x00B4FFFF; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
+#define EndEvent "EVBIT_T 0x7; ENDA"
+#define CleanTextNoMap(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define CleanText(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; ClearBackgroundSmooth"
+#define GiveItem(item) "SMOV 0x3 item; GIVEITEMTO 0xFFFF;"
+#define GiveItem(item,character) "SMOV 0x3 item; GIVEITEMTO character;"
+#define Narration(bgid,textid) "SetBackground(bgid); STAL 120; NarrationText(textid); MUSC 0x0; FADI 0x3c"
+#define CamOn "EVBIT_T 9"
+#define CamOff "EVBIT_F 9"
+#define RefreshSMS "ASMC 0x8026689" //see how this looks when loading stuff
+#define Reinforcements(pointer) "CamOn ; LOAD1 0x0 pointer; ENUN; RefreshSMS; CamOff"
+#define HardReinforcements(pointer) "CHECK_HARD ; BNE 6789 rC r0 ; Reinforcements(pointer); LABEL 6789"
+#define DifficultyReinforcements(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; Reinforcements(normal) ; GOTO 4036 ; LABEL 4034 ; Reinforcements(easy) ; GOTO 4036 ; LABEL 4035 ; Reinforcements(hard) ; LABEL 4036 ; ENUN;"
+#define DifficultyReinforcements2(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4064 rC r0 ; CHECK_HARD ; BNE 4065 rC r0 ; Reinforcements(normal) ; GOTO 4066 ; LABEL 4064 ; Reinforcements(easy) ; GOTO 4066 ; LABEL 4065 ; Reinforcements(hard) ; LABEL 4066 ; ENUN;"
+#define RemoveUnit(unit,labelid) "CHECK_ALIVE unit; BEQ labelid 0xc 0x0; REMU unit; LABEL labelid"
+#define UnremoveUnit(unit,labelid) "CHECK_ALIVE unit; BEQ labelid 0xc 0x0; REVEAL unit; LABEL labelid"
+#define RemoveUnit(unit) "CHECK_EXISTS unit; BEQ unit 0xc 0x0; REMU unit; LABEL unit"
+#define UnremoveUnit(unit) "CHECK_EXISTS unit; BEQ unit 0xc 0x0; REVEAL unit; LABEL unit"
+#define KillUnitIfPlayerAlive(player,unit) "CHECK_ALIVE player; BEQ unit 0xc 0x0; CHECK_ALIVE unit; BEQ unit 0xc 0x0; DISA_IF unit; DISA unit; LABEL unit"
+#define TurnAllyIfAlive(unit) "CHECK_ALIVE unit; BEQ unit 0xc 0x0; TurnAlly(unit); LABEL unit"
+#define SilentKillUnit(unit) "DISA_IF unit; DISA unit"
+#define SFXKillUnit(unit) "SET_SOMETHING unit; DISA unit"
+#define DisaIfDead(unit) "CHECK_ALIVE unit; BNE unit 0xc 0x0; DISA unit; LABEL unit"
+
+#define Location(textid) "BROWNBOXTEXT textid [8,8]"
+#define LocationText(bgid,textid,labelid) "SetBackground(bgid); Location(labelid) ; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define LocationText(bgid,textid,labelid,musicid) "MUSC 0x0; SetBackground(bgid); Location(labelid) ; MUSC musicid; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+
+#define AreaEvent(eventID,EventPointer,corner1x,corner1y,corner2x,corner2y)   "AREA eventID EventPointer [corner1x,corner1y] [corner2x,corner2y]" 
+
+#define ResetBaseFlags "ENUT 0x3; ENUF BaseFlag1;ENUF BaseFlag2;ENUF BaseFlag3;ENUF BaseFlag4;ENUF BaseFlag5;ENUF BaseFlag6;ENUF BaseFlag7;ENUF BaseFlag8;"
+
+#define DesertItem(itemid,flag) "CHECK_ALLEGIANCE 0xFFFF; BNE 0x1 0xC 0x0; GiveItem(itemid); GOTO 0x2; LABEL 0x1; ENUF flag; LABEL 0x2; EndEvent"
+#define DesertScroll(skillid,flag) "CHECK_ALLEGIANCE 0xFFFF; BNE 0x1 0xC 0x0; GiveItemWithDurability(SkillScroll,skillid,0xFFFF); GOTO 0x2; LABEL 0x1; ENUF flag; LABEL 0x2; EndEvent"
+
+#define DeathBranchText(char1,char2,deadmus,alivemus,background,bothalive,char1dead,char2dead,bothdead) "CHECK_ALIVE char1; BNE 0x2 0xC 0x0; CHECK_ALIVE char2; BNE 0x3 0xC 0x0; MUSC deadmus; CleanTextNoMap(background,bothdead); GOTO 0x5; LABEL 0x3; MUSC deadmus; CleanTextNoMap(background,char1dead); GOTO 0x5; LABEL 0x2; CHECK_ALIVE char2; BNE 0x4 0xC 0x0; MUSC deadmus; CleanTextNoMap(background,char2dead); GOTO 0x5; LABEL 0x4; MUSC alivemus; CleanTextNoMap(background,bothalive); LABEL 0x5"
+#define PreChoiceToggle "EVBIT_MODIFY 4"
+#define PostChoiceToggle "EVBIT_F 5; EVBIT_F 4; EVBIT_F 3; EVBIT_F 2; EVBIT_F 1; EVBIT_F 0"
+
+#define LearnSkill(charID,skillID) "SVAL 1 skillID; SVAL 2 charID; ASMC ASMC_LearnNewSkill|1"
+#define CurrentUnitLearnSkill(skillID) "SVAL 1 skillID; SVAL 2 (-1); ASMC ASMC_LearnNewSkill|1"
+#define CurrentUnitForgetSkill(skillID) "SVAL 1 skillID; SVAL 2 (-1); ASMC ASMC_ForgetSkill|1"
+
+#define RemoveItem(unit,item) "SVAL 1 unit; BYTE 0x40 0x0D ; SHORT item ; POIN TakeUnitOneItem|1"
+#define TakeItemAll(ITEM) "BYTE 0x40 0x0D ; SHORT ITEM ; POIN TakeItemAll|1"
+
+//DeathBranchText(char1,char2,deadmus,alivemus,background,bothalive,char1dead,char2dead,bothdead) i'm sorry
+//SupportFlagOn(unit1,unit2,flag,supportrank)
+//SupportBranch(unit1,unit2,supportrank,condid)
