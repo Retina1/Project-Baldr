@@ -1,5 +1,3 @@
-//boss defs
-#define Dimaggio 0x68
 //Characters
 #define Eirika 0x01
 #define Seth 0x02
@@ -561,3 +559,111 @@
 #define Anotherpath 0x4C
 #define Gradoshrine_Present 0x4D
 #define Ch5town_Past 0x4E
+//gen 1
+#define DiMaggio 0x4B               //Prologue
+#define Gerrard 0x4C
+#define Kinbois 0x4D             //chapter 1
+#define Munnir 0x4E
+#define Burkaul 0x4F  // the zaneing comences
+#define Sandima 0x50
+#define Elliot 0x51       // chapter 1 or 2?
+#define Graham 0x52
+#define Phillip 0x53
+#define Bordeaux 0x54 //chad
+#define Banquo 0x55
+#define Ross 0x56 //hehe
+#define Macbeth 0x57
+#define Voltz 0x58 //or was it waltz
+#define Elling 0x59  //who
+#define Clement 0x5A //hi bobby
+#define Zane 0x5B //ZANE
+#define Chagall 0x5C //discuss if he should have a second id for baron form or not
+#define Lino 0x5D  // chapter 3
+#define Jacobin 0x5E
+#define Estrella 0x5F
+#define Othello 0x60
+#define Papillon 0x61 //zaneing
+#define Pizare 0x62
+#define Duvall 0x63
+#define Cuvuli 0x64 //chapter 4
+#define Marlon 0x65
+#define Snevejr 0x66 //i'll have to macro his name, zane
+#define Dithorba 0x67
+#define Myos 0x68
+#define Ivan 0x69 //get it because he has 3 kids 
+#define Pamela 0x6A
+#define Donovan 0x6B
+#define Lamia 0x6C
+#define Daccar 0x6D
+#define Slayder 0x6E  //chapter 5
+#define Andrey 0x6F
+#define Langbalt 0x70
+#define Magorn 0x71 //zaneeeeeeeeee
+#define Vaja 0x72
+#define Reptor 0x73
+//gen 2
+#define Harold 0x74 //the fat zane, chapter 6
+#define Schmidt 0x75 
+#define Dannan 0x76
+#define Kutozov 0x77 //chapter 7
+#define Liza 0x78
+#define Ishtore 0x79
+#define Javarro 0x7A
+#define Bramsel 0x7B
+#define Banba 0x7C
+#define Eriu 0x7D
+#define Fotla 0x7E
+#define Tonnamin 0x7F //ITS HIM
+#define Blume 0x80
+#define Muhammed 0x81 //chapter 8
+#define Ovo 0x82
+#define Reinhardt 0x83 //sorry
+#define Ishtar 0x84
+#define Coulter 0x85 //zane but with face disease
+#define Maykov 0x86 
+#define Kanatz 0x87 //chapter 9
+#define Distler 0x88 
+#define Travant 0x89
+#define Musar 0x8A //zane but magic
+#define Judah 0x8B
+#define Leidan 0x8C //chapter 10 gaiden
+#define Lance 0x8D
+#define Lancelot 0x8E
+#define Ridell 0x8F //THE LAST OF ZANE, chapter 10
+#define Hilda 0x90
+#define Morrigan 0x91
+#define Zagam 0x92
+#define ArvisGen2 0x93
+#define Roberto 0x94 //endgame
+#define Boyce 0x95 
+#define Rodan 0x96
+#define Juphiel 0x97
+#define Fisher 0x98
+#define Brian 0x99 //griffin
+#define BrianWife 0x9A //hey serif she should be named like quagmire's dad
+#define Dagon 0x9B
+#define Scorpio 0x9C 
+#define Baran 0x9D
+#define Meng 0x9E
+#define Bleg 0x9F
+#define Mabel 0xA0
+#define Veld 0xA1
+#define Manfroy 0xA2
+#define Julius 0xA3
+#define JuliusLopt 0xA4
+//crusaders
+#define Heim 0xA5
+#define Baldr 0xA6 //WHAT'S BALDRIN CRUSADERS
+#define Hoor 0xA7
+#define Od 0xA8
+#define Njorun 0xA9
+#define Dainn 0xAA
+#define Nal 0xAB
+#define Ullr 0xAC
+#define Bragi 0xAD
+#define Fjalar 0xAE
+#define Thrud 0xAF
+#define Seti 0xB0
+
+
+
