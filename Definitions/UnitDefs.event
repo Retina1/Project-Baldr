@@ -1,3 +1,5 @@
+#undef Ross
+#undef Bandit
 //playable defs
 #define Sigurd 0x01                    //Gen 1 Lord
 #define Seliph 0x02                    //Gen 2 Lord

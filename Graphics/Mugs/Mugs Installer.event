@@ -1,5 +1,9 @@
 #include "Tools/Tool Helpers.txt"
 //(mouthx,mouthy,eyesx,eyesy)
+
+#define setMugEntryExtend(mugEntry, portraitData, minimugData, paletteData, mouthData, mouthX, mouthY, eyeX, eyeY, extend1X, extend1Y, extend2X, extend2Y) "PUSH; ORG PortraitTable+mugEntry*0x1C; POIN portraitData; POIN minimugData; POIN paletteData; POIN mouthData; BYTE extend1X extend1Y extend2X extend2Y; BYTE mouthX mouthY eyeX eyeY; BYTE 1 0 1 0; POP"
+#define setMugEntryExtend(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY, extend1X, extend1Y, extend2X, extend2Y)"PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x1624; POIN mugLocation+0x1604; POIN mugLocation+0x1004; BYTE extend1X extend1Y extend2X extend2Y; BYTE mouthX mouthY eyeX eyeY; BYTE 1 0 1 0; POP"
+
 ALIGN 4
 SigurdPortrait:
 #incbin "Sigurd_mug.dmp"
@@ -9,12 +13,134 @@ SigurdPortrait:
 setMugEntry(0x2,SigurdPortrait,3,5,3,3)
 
 ALIGN 4
+SeliphPortrait:
+#incbin "Seliph_mug.dmp"
+#incbin "Seliph_frames.dmp"
+#incbin "Seliph_palette.dmp"
+#incbin "Seliph_minimug.dmp"
+setMugEntry(0x4,SeliphPortrait,2,5,2,3)
+
+ALIGN 4
+AlecPortrait:
+#incbin "Alec_mug.dmp"
+#incbin "Alec_frames.dmp"
+#incbin "Alec_palette.dmp"
+#incbin "Alec_minimug.dmp"
+setMugEntry(0x5,AlecPortrait,2,5,2,3)
+
+ALIGN 4
+NoishPortrait:
+#incbin "Noish_mug.dmp"
+#incbin "Noish_frames.dmp"
+#incbin "Noish_palette.dmp"
+#incbin "Noish_minimug.dmp"
+setMugEntry(0x6,NoishPortrait,3,5,3,3)
+
+ALIGN 4
 ArdenPortrait:
 #incbin "Arden_mug.dmp"
 #incbin "Arden_frames.dmp"
 #incbin "Arden_palette.dmp"
 #incbin "Arden_minimug.dmp"
-setMugEntry(0x5,ArdenPortrait,2,5,2,3)
+setMugEntry(0x7,ArdenPortrait,2,5,2,3)
+
+ALIGN 4
+ArdenPromotedPortrait:
+#incbin "ArdenPromoted_mug.dmp"
+#incbin "ArdenPromoted_frames.dmp"
+#incbin "ArdenPromoted_palette.dmp"
+#incbin "ArdenPromoted_minimug.dmp"
+setMugEntry(0xF5,ArdenPromotedPortrait,2,5,2,3)
+
+ALIGN 4
+AzelPortrait:
+#incbin "Azel_mug.dmp"
+#incbin "Azel_frames.dmp"
+#incbin "Azel_palette.dmp"
+#incbin "Azel_minimug.dmp"
+setMugEntry(0x8,AzelPortrait,2,6,3,4)
+
+ALIGN 4
+LexPortrait:
+#incbin "Lex_mug.dmp"
+#incbin "Lex_frames.dmp"
+#incbin "Lex_palette.dmp"
+#incbin "Lex_minimug.dmp"
+setMugEntry(0x9,LexPortrait,2,4,2,2)
+
+ALIGN 4
+Quan_Mug:
+#incbin "Quan_mug.dmp"
+
+ALIGN 4
+Quan_Mini:
+#incbin "Quan_minimug.dmp"
+
+ALIGN 4
+Quan_Frames:
+#incbin "Quan_frames.dmp"
+
+ALIGN 4
+Quan_Palette:
+#incbin "Quan_palette.dmp"
+
+setMugEntryExtend(0xA, Quan_Mug, Quan_Mini, Quan_Palette, Quan_Frames, 3, 5, 3, 3, 0, 2, 0, 0)
+
+ALIGN 4
+EthlynPortrait:
+#incbin "Ethlyn_mug.dmp"
+#incbin "Ethlyn_frames.dmp"
+#incbin "Ethlyn_palette.dmp"
+#incbin "Ethlyn_minimug.dmp"
+setMugEntry(0xC,EthlynPortrait,2,6,3,4)
+
+ALIGN 4
+FinnYoungPortrait:
+#incbin "FinnYoung_mug.dmp"
+#incbin "FinnYoung_frames.dmp"
+#incbin "FinnYoung_palette.dmp"
+#incbin "FinnYoung_minimug.dmp"
+setMugEntry(0xE,FinnYoungPortrait,2,5,3,3)
+
+ALIGN 4
+FinnPortrait:
+#incbin "Finn_mug.dmp"
+#incbin "Finn_frames.dmp"
+#incbin "Finn_palette.dmp"
+#incbin "Finn_minimug.dmp"
+setMugEntry(0xC2,FinnPortrait,2,5,2,3)
+
+ALIGN 4
+MidirPortrait:
+#incbin "Midir_mug.dmp"
+#incbin "Midir_frames.dmp"
+#incbin "Midir_palette.dmp"
+#incbin "Midir_minimug.dmp"
+setMugEntry(0xF,MidirPortrait,3,5,3,3)
+
+ALIGN 4
+AideenPortrait:
+#incbin "Aideen_mug.dmp"
+#incbin "Aideen_frames.dmp"
+#incbin "Aideen_palette.dmp"
+#incbin "Aideen_minimug.dmp"
+setMugEntry(0x10,AideenPortrait,3,5,3,3)
+
+ALIGN 4
+DewPortrait:
+#incbin "Dew_mug.dmp"
+#incbin "Dew_frames.dmp"
+#incbin "Dew_palette.dmp"
+#incbin "Dew_minimug.dmp"
+setMugEntry(0x11,DewPortrait,3,6,3,4)
+
+ALIGN 4
+AyraPortrait:
+#incbin "Ayra_mug.dmp"
+#incbin "Ayra_frames.dmp"
+#incbin "Ayra_palette.dmp"
+#incbin "Ayra_minimug.dmp"
+setMugEntry(0x13,AyraPortrait,3,5,3,3)
 
 ALIGN 4
 JamkePortrait:
@@ -22,7 +148,449 @@ JamkePortrait:
 #incbin "Jamke_frames.dmp"
 #incbin "Jamke_palette.dmp"
 #incbin "Jamke_minimug.dmp"
-setMugEntry(0xC,JamkePortrait,3,5,3,3)
+setMugEntry(0x14,JamkePortrait,3,5,3,3)
+
+ALIGN 4
+DeirdrePortrait:
+#incbin "Deirdre_mug.dmp"
+#incbin "Deirdre_frames.dmp"
+#incbin "Deirdre_palette.dmp"
+#incbin "Deirdre_minimug.dmp"
+setMugEntry(0x16,DeirdrePortrait,3,5,3,3)
+
+ALIGN 4
+LachesisPortrait:
+#incbin "Lachesis_mug.dmp"
+#incbin "Lachesis_frames.dmp"
+#incbin "Lachesis_palette.dmp"
+#incbin "Lachesis_minimug.dmp"
+setMugEntry(0x18,LachesisPortrait,4,5,3,3)
+
+ALIGN 4
+HolynPortrait:
+#incbin "Holyn_mug.dmp"
+#incbin "Holyn_frames.dmp"
+#incbin "Holyn_palette.dmp"
+#incbin "Holyn_minimug.dmp"
+setMugEntry(0x19,HolynPortrait,3,5,3,3)
+
+ALIGN 4
+HolynPromotedPortrait:
+#incbin "HolynPromoted_mug.dmp"
+#incbin "HolynPromoted_frames.dmp"
+#incbin "HolynPromoted_palette.dmp"
+#incbin "HolynPromoted_minimug.dmp"
+setMugEntry(0xF7,HolynPromotedPortrait,3,5,3,3)
+
+ALIGN 4
+BeowolfPortrait:
+#incbin "Beowolf_mug.dmp"
+#incbin "Beowolf_frames.dmp"
+#incbin "Beowolf_palette.dmp"
+#incbin "Beowolf_minimug.dmp"
+setMugEntry(0x1A,BeowolfPortrait,2,5,2,3)
+
+ALIGN 4
+BeowolfPromotedPortrait:
+#incbin "BeowolfPromoted_mug.dmp"
+#incbin "BeowolfPromoted_frames.dmp"
+#incbin "BeowolfPromoted_palette.dmp"
+#incbin "BeowolfPromoted_minimug.dmp"
+setMugEntry(0xF6,BeowolfPromotedPortrait,2,5,2,3)
+
+ALIGN 4
+Lewyn_Mug:
+#incbin "Lewyn_mug.dmp"
+
+ALIGN 4
+Lewyn_Mini:
+#incbin "Lewyn_minimug.dmp"
+
+ALIGN 4
+Lewyn_Frames:
+#incbin "Lewyn_frames.dmp"
+
+ALIGN 4
+Lewyn_Palette:
+#incbin "Lewyn_palette.dmp"
+
+setMugEntryExtend(0x1B, Lewyn_Mug, Lewyn_Mini, Lewyn_Palette, Lewyn_Frames, 3, 5, 3, 3, 10, 3, 10, 1)
+
+ALIGN 4
+LewynOldPortrait:
+#incbin "LewynOld_mug.dmp"
+#incbin "LewynOld_frames.dmp"
+#incbin "LewynOld_palette.dmp"
+#incbin "LewynOld_minimug.dmp"
+setMugEntry(0x54,LewynOldPortrait,3,5,3,3)
+
+ALIGN 4
+SylviaPortrait:
+#incbin "Sylvia_mug.dmp"
+#incbin "Sylvia_frames.dmp"
+#incbin "Sylvia_palette.dmp"
+#incbin "Sylvia_minimug.dmp"
+setMugEntry(0x1C,SylviaPortrait,4,5,4,3)
+
+ALIGN 4
+ErinysPortrait:
+#incbin "Erinys_mug.dmp"
+#incbin "Erinys_frames.dmp"
+#incbin "Erinys_palette.dmp"
+#incbin "Erinys_minimug.dmp"
+setMugEntry(0x1E,ErinysPortrait,3,5,3,3)
+
+ALIGN 4
+HopperPortrait:
+#incbin "Hopper_mug.dmp"
+#incbin "Hopper_frames.dmp"
+#incbin "Hopper_palette.dmp"
+#incbin "Hopper_minimug.dmp"
+setMugEntry(0x20,HopperPortrait,3,5,3,3)
+
+ALIGN 4
+IndechPortrait:
+#incbin "Indech_mug.dmp"
+#incbin "Indech_frames.dmp"
+#incbin "Indech_palette.dmp"
+#incbin "Indech_minimug.dmp"
+setMugEntry(0x21,IndechPortrait,3,6,3,4)
+
+ALIGN 4
+TailtiuPortrait:
+#incbin "Tailtiu_mug.dmp"
+#incbin "Tailtiu_frames.dmp"
+#incbin "Tailtiu_palette.dmp"
+#incbin "Tailtiu_minimug.dmp"
+setMugEntry(0x23,TailtiuPortrait,3,6,3,4)
+
+ALIGN 4
+BrigidPortrait:
+#incbin "Brigid_mug.dmp"
+#incbin "Brigid_frames.dmp"
+#incbin "Brigid_palette.dmp"
+#incbin "Brigid_minimug.dmp"
+setMugEntry(0x24,BrigidPortrait,2,5,2,3)
+
+ALIGN 4
+LarceiPortrait:
+#incbin "Larcei_mug.dmp"
+#incbin "Larcei_frames.dmp"
+#incbin "Larcei_palette.dmp"
+#incbin "Larcei_minimug.dmp"
+setMugEntry(0x25,LarceiPortrait,3,6,3,4)
+
+ALIGN 4
+CreidnePortrait:
+#incbin "Creidne_mug.dmp"
+#incbin "Creidne_frames.dmp"
+#incbin "Creidne_palette.dmp"
+#incbin "Creidne_minimug.dmp"
+setMugEntry(0x26,CreidnePortrait,3,6,3,4)
+
+ALIGN 4
+ScathachPortrait:
+#incbin "Scathach_mug.dmp"
+#incbin "Scathach_frames.dmp"
+#incbin "Scathach_palette.dmp"
+#incbin "Scathach_minimug.dmp"
+setMugEntry(0x29,ScathachPortrait,2,6,3,4)
+
+ALIGN 4
+DalvinPortrait:
+#incbin "Dalvin_mug.dmp"
+#incbin "Dalvin_frames.dmp"
+#incbin "Dalvin_palette.dmp"
+#incbin "Dalvin_minimug.dmp"
+setMugEntry(0x2A,DalvinPortrait,3,5,3,3)
+
+ALIGN 4
+LanaPortrait:
+#incbin "Lana_mug.dmp"
+#incbin "Lana_frames.dmp"
+#incbin "Lana_palette.dmp"
+#incbin "Lana_minimug.dmp"
+setMugEntry(0x2B,LanaPortrait,4,6,4,4)
+
+ALIGN 4
+MuirnePortrait:
+#incbin "Muirne_mug.dmp"
+#incbin "Muirne_frames.dmp"
+#incbin "Muirne_palette.dmp"
+#incbin "Muirne_minimug.dmp"
+setMugEntry(0x2C,MuirnePortrait,4,6,4,4)
+
+ALIGN 4
+DelmudPortrait:
+#incbin "Delmud_mug.dmp"
+#incbin "Delmud_frames.dmp"
+#incbin "Delmud_palette.dmp"
+#incbin "Delmud_minimug.dmp"
+setMugEntry(0x46,DelmudPortrait,2,5,2,3)
+
+ALIGN 4
+TristanPortrait:
+#incbin "Tristan_mug.dmp"
+#incbin "Tristan_frames.dmp"
+#incbin "Tristan_palette.dmp"
+#incbin "Tristan_minimug.dmp"
+setMugEntry(0x45,TristanPortrait,2,5,2,3)
+
+ALIGN 4
+LesterPortrait:
+#incbin "Lester_mug.dmp"
+#incbin "Lester_frames.dmp"
+#incbin "Lester_palette.dmp"
+#incbin "Lester_minimug.dmp"
+setMugEntry(0x4B,LesterPortrait,2,5,2,3)
+
+ALIGN 4
+DimnaPortrait:
+#incbin "Dimna_mug.dmp"
+#incbin "Dimna_frames.dmp"
+#incbin "Dimna_palette.dmp"
+#incbin "Dimna_minimug.dmp"
+setMugEntry(0x3F,DimnaPortrait,3,6,3,4)
+
+ALIGN 4
+FeePortrait:
+#incbin "Fee_mug.dmp"
+#incbin "Fee_frames.dmp"
+#incbin "Fee_palette.dmp"
+#incbin "Fee_minimug.dmp"
+setMugEntry(0x42,FeePortrait,2,6,3,4)
+
+ALIGN 4
+FeminaPortrait:
+#incbin "Femina_mug.dmp"
+#incbin "Femina_frames.dmp"
+#incbin "Femina_palette.dmp"
+#incbin "Femina_minimug.dmp"
+setMugEntry(0x48,FeminaPortrait,3,6,3,4)
+
+ALIGN 4
+ArthurPortrait:
+#incbin "Arthur_mug.dmp"
+#incbin "Arthur_frames.dmp"
+#incbin "Arthur_palette.dmp"
+#incbin "Arthur_minimug.dmp"
+setMugEntry(0x43,ArthurPortrait,3,5,3,3)
+
+ALIGN 4
+AmidPortrait:
+#incbin "Amid_mug.dmp"
+#incbin "Amid_frames.dmp"
+#incbin "Amid_palette.dmp"
+#incbin "Amid_minimug.dmp"
+setMugEntry(0x51,AmidPortrait,4,5,4,3)
+
+ALIGN 4
+PattyPortrait:
+#incbin "Patty_mug.dmp"
+#incbin "Patty_frames.dmp"
+#incbin "Patty_palette.dmp"
+#incbin "Patty_minimug.dmp"
+setMugEntry(0x56,PattyPortrait,3,6,3,4)
+
+ALIGN 4
+DaisyPortrait:
+#incbin "Daisy_mug.dmp"
+#incbin "Daisy_frames.dmp"
+#incbin "Daisy_palette.dmp"
+#incbin "Daisy_minimug.dmp"
+setMugEntry(0x52,DaisyPortrait,3,6,3,4)
+
+ALIGN 4
+NannaPortrait:
+#incbin "Nanna_mug.dmp"
+#incbin "Nanna_frames.dmp"
+#incbin "Nanna_palette.dmp"
+#incbin "Nanna_minimug.dmp"
+setMugEntry(0xB8,NannaPortrait,2,6,2,4)
+
+ALIGN 4
+JeannePortrait:
+#incbin "Jeanne_mug.dmp"
+#incbin "Jeanne_frames.dmp"
+#incbin "Jeanne_palette.dmp"
+#incbin "Jeanne_minimug.dmp"
+setMugEntry(0xBA,JeannePortrait,2,6,3,4)
+
+ALIGN 4
+LenePortrait:
+#incbin "Lene_mug.dmp"
+#incbin "Lene_frames.dmp"
+#incbin "Lene_palette.dmp"
+#incbin "Lene_minimug.dmp"
+setMugEntry(0xC0,LenePortrait,3,6,3,4)
+
+ALIGN 4
+LayleaPortrait:
+#incbin "Laylea_mug.dmp"
+#incbin "Laylea_frames.dmp"
+#incbin "Laylea_palette.dmp"
+#incbin "Laylea_minimug.dmp"
+setMugEntry(0x1D,LayleaPortrait,3,6,3,4)
+
+ALIGN 4
+TinnyPortrait:
+#incbin "Tinny_mug.dmp"
+#incbin "Tinny_frames.dmp"
+#incbin "Tinny_palette.dmp"
+#incbin "Tinny_minimug.dmp"
+setMugEntry(0x0B,TinnyPortrait,3,6,3,4)
+
+ALIGN 4
+LindaPortrait:
+#incbin "Linda_mug.dmp"
+#incbin "Linda_frames.dmp"
+#incbin "Linda_palette.dmp"
+#incbin "Linda_minimug.dmp"
+setMugEntry(0x12,LindaPortrait,3,6,3,4)
+
+ALIGN 4
+FavalPortrait:
+#incbin "Faval_mug.dmp"
+#incbin "Faval_frames.dmp"
+#incbin "Faval_palette.dmp"
+#incbin "Faval_minimug.dmp"
+setMugEntry(0x0D,FavalPortrait,3,5,3,3)
+
+ALIGN 4
+CedPortrait:
+#incbin "Ced_mug.dmp"
+#incbin "Ced_frames.dmp"
+#incbin "Ced_palette.dmp"
+#incbin "Ced_minimug.dmp"
+setMugEntry(0x17,CedPortrait,3,5,3,3)
+
+ALIGN 4
+HawkPortrait:
+#incbin "Hawk_mug.dmp"
+#incbin "Hawk_frames.dmp"
+#incbin "Hawk_palette.dmp"
+#incbin "Hawk_minimug.dmp"
+setMugEntry(0x27,HawkPortrait,2,5,3,3)
+
+ALIGN 4
+CoirprePortrait:
+#incbin "Coirpre_mug.dmp"
+#incbin "Coirpre_frames.dmp"
+#incbin "Coirpre_palette.dmp"
+#incbin "Coirpre_minimug.dmp"
+setMugEntry(0x28,CoirprePortrait,3,6,3,4)
+
+ALIGN 4
+OifeyPortrait:
+#incbin "Oifey_mug.dmp"
+#incbin "Oifey_frames.dmp"
+#incbin "Oifey_palette.dmp"
+#incbin "Oifey_minimug.dmp"
+setMugEntry(0x3,OifeyPortrait,3,6,3,4)
+
+ALIGN 4
+OifeyOldPortrait:
+#incbin "OifeyOld_mug.dmp"
+#incbin "OifeyOld_frames.dmp"
+#incbin "OifeyOld_palette.dmp"
+#incbin "OifeyOld_minimug.dmp"
+setMugEntry(0x1F,OifeyOldPortrait,3,5,3,3)
+
+ALIGN 4
+JuliaPortrait:
+#incbin "Julia_mug.dmp"
+#incbin "Julia_frames.dmp"
+#incbin "Julia_palette.dmp"
+#incbin "Julia_minimug.dmp"
+setMugEntry(0x2D,JuliaPortrait,3,6,3,4)
+
+ALIGN 4
+JohanPortrait:
+#incbin "Johan_mug.dmp"
+#incbin "Johan_frames.dmp"
+#incbin "Johan_palette.dmp"
+#incbin "Johan_minimug.dmp"
+setMugEntry(0x2E,JohanPortrait,3,5,3,3)
+
+ALIGN 4
+JohalvierPortrait:
+#incbin "Johalvier_mug.dmp"
+#incbin "Johalvier_frames.dmp"
+#incbin "Johalvier_palette.dmp"
+#incbin "Johalvier_minimug.dmp"
+setMugEntry(0x2F,JohalvierPortrait,2,5,3,3)
+
+ALIGN 4
+ShannanPortrait:
+#incbin "Shannan_mug.dmp"
+#incbin "Shannan_frames.dmp"
+#incbin "Shannan_palette.dmp"
+#incbin "Shannan_minimug.dmp"
+setMugEntry(0xB9,ShannanPortrait,2,5,2,3)
+
+ALIGN 4
+AresPortrait:
+#incbin "Ares_mug.dmp"
+#incbin "Ares_frames.dmp"
+#incbin "Ares_palette.dmp"
+#incbin "Ares_minimug.dmp"
+setMugEntry(0x44,AresPortrait,3,5,3,3)
+
+ALIGN 4
+LeifPortrait:
+#incbin "Leif_mug.dmp"
+#incbin "Leif_frames.dmp"
+#incbin "Leif_palette.dmp"
+#incbin "Leif_minimug.dmp"
+setMugEntry(0xB2,LeifPortrait,3,6,3,4)
+
+ALIGN 4
+EyvelPortrait:
+#incbin "Eyvel_mug.dmp"
+#incbin "Eyvel_frames.dmp"
+#incbin "Eyvel_palette.dmp"
+#incbin "Eyvel_minimug.dmp"
+setMugEntry(0xB7,EyvelPortrait,2,5,3,3)
+
+ALIGN 4
+HannibalPortrait:
+#incbin "Hannibal_mug.dmp"
+#incbin "Hannibal_frames.dmp"
+#incbin "Hannibal_palette.dmp"
+#incbin "Hannibal_minimug.dmp"
+setMugEntry(0x31,HannibalPortrait,2,5,2,3)
+
+ALIGN 4
+AltenaPortrait:
+#incbin "Altena_mug.dmp"
+#incbin "Altena_frames.dmp"
+#incbin "Altena_palette.dmp"
+#incbin "Altena_minimug.dmp"
+setMugEntry(0x33,AltenaPortrait,2,5,2,3)
+
+ALIGN 4
+SaiasPortrait:
+#incbin "Saias_mug.dmp"
+#incbin "Saias_frames.dmp"
+#incbin "Saias_palette.dmp"
+#incbin "Saias_minimug.dmp"
+setMugEntry(0xEE,SaiasPortrait,3,5,3,3)
+
+ALIGN 4
+ArionPortrait:
+#incbin "Arion_mug.dmp"
+#incbin "Arion_frames.dmp"
+#incbin "Arion_palette.dmp"
+#incbin "Arion_minimug.dmp"
+setMugEntry(0x34,ArionPortrait,2,5,2,3)
+
+ALIGN 4
+EdenPromotedPortrait:
+#incbin "EdenPromoted_mug.dmp"
+#incbin "EdenPromoted_frames.dmp"
+#incbin "EdenPromoted_palette.dmp"
+#incbin "EdenPromoted_minimug.dmp"
+setMugEntry(0xF8,EdenPromotedPortrait,3,5,3,3)
 
 ALIGN 4
 DimaggioPortrait:
@@ -30,5 +598,712 @@ DimaggioPortrait:
 #incbin "Dimaggio_frames.dmp"
 #incbin "Dimaggio_palette.dmp"
 #incbin "Dimaggio_minimug.dmp"
-setMugEntry(0x30,DimaggioPortrait,3,5,3,3)
+setMugEntry(0x36,DimaggioPortrait,3,5,3,3)
+
+ALIGN 4
+GerrardPortrait:
+#incbin "Gerrard_mug.dmp"
+#incbin "Gerrard_frames.dmp"
+#incbin "Gerrard_palette.dmp"
+#incbin "Gerrard_minimug.dmp"
+setMugEntry(0x37,GerrardPortrait,3,5,3,3)
+
+ALIGN 4
+KinboisPortrait:
+#incbin "Kinbois_mug.dmp"
+#incbin "Kinbois_frames.dmp"
+#incbin "Kinbois_palette.dmp"
+#incbin "Kinbois_minimug.dmp"
+setMugEntry(0x38,KinboisPortrait,2,5,2,3)
+
+ALIGN 4
+MunnirPortrait:
+#incbin "Munnir_mug.dmp"
+#incbin "Munnir_frames.dmp"
+#incbin "Munnir_palette.dmp"
+#incbin "Munnir_minimug.dmp"
+setMugEntry(0x39,MunnirPortrait,3,4,3,2)
+
+ALIGN 4
+BurkaulPortrait:
+#incbin "Burkaul_mug.dmp"
+#incbin "Burkaul_frames.dmp"
+#incbin "Burkaul_palette.dmp"
+#incbin "Burkaul_minimug.dmp"
+setMugEntry(0x3A,BurkaulPortrait,3,5,3,3)
+
+ALIGN 4
+SandimaPortrait:
+#incbin "Sandima_mug.dmp"
+#incbin "Sandima_frames.dmp"
+#incbin "Sandima_palette.dmp"
+#incbin "Sandima_minimug.dmp"
+setMugEntry(0xE0,SandimaPortrait,3,6,3,4)
+
+ALIGN 4
+ElliotPortrait:
+#incbin "Elliot_mug.dmp"
+#incbin "Elliot_frames.dmp"
+#incbin "Elliot_palette.dmp"
+#incbin "Elliot_minimug.dmp"
+setMugEntry(0x3B,ElliotPortrait,3,5,3,3)
+
+ALIGN 4
+GrahamPortrait:
+#incbin "Graham_mug.dmp"
+#incbin "Graham_frames.dmp"
+#incbin "Graham_palette.dmp"
+#incbin "Graham_minimug.dmp"
+setMugEntry(0x3C,GrahamPortrait,2,5,2,3)
+
+ALIGN 4
+PhilipPortrait:
+#incbin "Philip_mug.dmp"
+#incbin "Philip_frames.dmp"
+#incbin "Philip_palette.dmp"
+#incbin "Philip_minimug.dmp"
+setMugEntry(0xD1,PhilipPortrait,3,5,3,3)
+
+ALIGN 4
+ChadeauxPortrait:
+#incbin "Chadeaux_mug.dmp"
+#incbin "Chadeaux_frames.dmp"
+#incbin "Chadeaux_palette.dmp"
+#incbin "Chadeaux_minimug.dmp"
+setMugEntry(0xC3,ChadeauxPortrait,2,4,2,2)
+
+ALIGN 4
+BanquoPortrait:
+#incbin "Banquo_mug.dmp"
+#incbin "Banquo_frames.dmp"
+#incbin "Banquo_palette.dmp"
+#incbin "Banquo_minimug.dmp"
+setMugEntry(0xBB,BanquoPortrait,3,4,3,2)
+
+ALIGN 4
+RossPortrait:
+#incbin "Ross_mug.dmp"
+#incbin "Ross_frames.dmp"
+#incbin "Ross_palette.dmp"
+#incbin "Ross_minimug.dmp"
+setMugEntry(0xCD,RossPortrait,3,5,3,3)
+
+ALIGN 4
+MacbethPortrait:
+#incbin "Macbeth_mug.dmp"
+#incbin "Macbeth_frames.dmp"
+#incbin "Macbeth_palette.dmp"
+#incbin "Macbeth_minimug.dmp"
+setMugEntry(0x4F,MacbethPortrait,2,5,2,3)
+
+ALIGN 4
+WaltzPortrait:
+#incbin "Waltz_mug.dmp"
+#incbin "Waltz_frames.dmp"
+#incbin "Waltz_palette.dmp"
+#incbin "Waltz_minimug.dmp"
+setMugEntry(0xC5,WaltzPortrait,3,5,3,3)
+
+ALIGN 4
+EllingPortrait:
+#incbin "Elling_mug.dmp"
+#incbin "Elling_frames.dmp"
+#incbin "Elling_palette.dmp"
+#incbin "Elling_minimug.dmp"
+setMugEntry(0xC4,EllingPortrait,2,4,2,2)
+
+ALIGN 4
+ClementPortrait:
+#incbin "Clement_mug.dmp"
+#incbin "Clement_frames.dmp"
+#incbin "Clement_palette.dmp"
+#incbin "Clement_minimug.dmp"
+setMugEntry(0x3D,ClementPortrait,3,5,3,3)
+
+ALIGN 4
+ZanePortrait:
+#incbin "Zane_mug.dmp"
+#incbin "Zane_frames.dmp"
+#incbin "Zane_palette.dmp"
+#incbin "Zane_minimug.dmp"
+setMugEntry(0x3E,ZanePortrait,2,5,2,3)
+
+ALIGN 4
+ChagallPortrait:
+#incbin "Chagall_mug.dmp"
+#incbin "Chagall_frames.dmp"
+#incbin "Chagall_palette.dmp"
+#incbin "Chagall_minimug.dmp"
+setMugEntry(0xD4,ChagallPortrait,2,5,2,3)
+
+ALIGN 4
+LinoPortrait:
+#incbin "Lino_mug.dmp"
+#incbin "Lino_frames.dmp"
+#incbin "Lino_palette.dmp"
+#incbin "Lino_minimug.dmp"
+setMugEntry(0xEC,LinoPortrait,4,5,4,3)
+
+ALIGN 4
+EstrellaPortrait:
+#incbin "Estrella_mug.dmp"
+#incbin "Estrella_frames.dmp"
+#incbin "Estrella_palette.dmp"
+#incbin "Estrella_minimug.dmp"
+setMugEntry(0xCC,EstrellaPortrait,3,5,3,3)
+
+ALIGN 4
+OthelloPortrait:
+#incbin "Othello_mug.dmp"
+#incbin "Othello_frames.dmp"
+#incbin "Othello_palette.dmp"
+#incbin "Othello_minimug.dmp"
+setMugEntry(0xD0,OthelloPortrait,3,5,3,3)
+
+ALIGN 4
+JacobinPortrait:
+#incbin "Jacobin_mug.dmp"
+#incbin "Jacobin_frames.dmp"
+#incbin "Jacobin_palette.dmp"
+#incbin "Jacobin_minimug.dmp"
+setMugEntry(0xD8,JacobinPortrait,2,5,2,3)
+
+ALIGN 4
+PapillonPortrait:
+#incbin "Papillon_mug.dmp"
+#incbin "Papillon_frames.dmp"
+#incbin "Papillon_palette.dmp"
+#incbin "Papillon_minimug.dmp"
+setMugEntry(0xDC,PapillonPortrait,3,4,3,2)
+
+ALIGN 4
+PizarePortrait:
+#incbin "Pizare_mug.dmp"
+#incbin "Pizare_frames.dmp"
+#incbin "Pizare_palette.dmp"
+#incbin "Pizare_minimug.dmp"
+setMugEntry(0xED,PizarePortrait,3,5,3,3)
+
+ALIGN 4
+DuvallPortrait:
+#incbin "Duvall_mug.dmp"
+#incbin "Duvall_frames.dmp"
+#incbin "Duvall_palette.dmp"
+#incbin "Duvall_minimug.dmp"
+setMugEntry(0xCA,DuvallPortrait,2,6,2,4)
+
+ALIGN 4
+CuvuliPortrait:
+#incbin "Cuvuli_mug.dmp"
+#incbin "Cuvuli_frames.dmp"
+#incbin "Cuvuli_palette.dmp"
+#incbin "Cuvuli_minimug.dmp"
+setMugEntry(0xC6,CuvuliPortrait,3,5,3,3)
+
+ALIGN 4
+MarlonPortrait:
+#incbin "Marlon_mug.dmp"
+#incbin "Marlon_frames.dmp"
+#incbin "Marlon_palette.dmp"
+#incbin "Marlon_minimug.dmp"
+setMugEntry(0xCE,MarlonPortrait,3,5,3,3)
+
+ALIGN 4
+MyosPortrait:
+#incbin "Myos_mug.dmp"
+#incbin "Myos_frames.dmp"
+#incbin "Myos_palette.dmp"
+#incbin "Myos_minimug.dmp"
+setMugEntry(0x30,MyosPortrait,2,5,2,3)
+
+ALIGN 4
+IrisPortrait:
+#incbin "Iris_mug.dmp"
+#incbin "Iris_frames.dmp"
+#incbin "Iris_palette.dmp"
+#incbin "Iris_minimug.dmp"
+setMugEntry(0xD7,IrisPortrait,3,5,3,3)
+
+ALIGN 4
+DonovanPortrait:
+#incbin "Donovan_mug.dmp"
+#incbin "Donovan_frames.dmp"
+#incbin "Donovan_palette.dmp"
+#incbin "Donovan_minimug.dmp"
+setMugEntry(0x40,DonovanPortrait,3,5,3,3)
+
+ALIGN 4
+DaccarPortrait:
+#incbin "Daccar_mug.dmp"
+#incbin "Daccar_frames.dmp"
+#incbin "Daccar_palette.dmp"
+#incbin "Daccar_minimug.dmp"
+setMugEntry(0x41,DaccarPortrait,2,4,2,2)
+
+ALIGN 4
+AndreyPortrait:
+#incbin "Andrey_mug.dmp"
+#incbin "Andrey_frames.dmp"
+#incbin "Andrey_palette.dmp"
+#incbin "Andrey_minimug.dmp"
+setMugEntry(0xD3,AndreyPortrait,3,5,3,3)
+
+ALIGN 4
+MagornPortrait:
+#incbin "Magorn_mug.dmp"
+#incbin "Magorn_frames.dmp"
+#incbin "Magorn_palette.dmp"
+#incbin "Magorn_minimug.dmp"
+setMugEntry(0xC1,MagornPortrait,3,5,3,3)
+
+ALIGN 4
+VajaPortrait:
+#incbin "Vaja_mug.dmp"
+#incbin "Vaja_frames.dmp"
+#incbin "Vaja_palette.dmp"
+#incbin "Vaja_minimug.dmp"
+setMugEntry(0xD2,VajaPortrait,3,5,3,3)
+
+ALIGN 4
+ReptorPortrait:
+#incbin "Reptor_mug.dmp"
+#incbin "Reptor_frames.dmp"
+#incbin "Reptor_palette.dmp"
+#incbin "Reptor_minimug.dmp"
+setMugEntry(0xB5,ReptorPortrait,4,5,4,3)
+
+ALIGN 4
+HaroldPortrait:
+#incbin "Harold_mug.dmp"
+#incbin "Harold_frames.dmp"
+#incbin "Harold_palette.dmp"
+#incbin "Harold_minimug.dmp"
+setMugEntry(0xEB,HaroldPortrait,3,5,3,3)
+
+ALIGN 4
+DannanPortrait:
+#incbin "Dannan_mug.dmp"
+#incbin "Dannan_frames.dmp"
+#incbin "Dannan_palette.dmp"
+#incbin "Dannan_minimug.dmp"
+setMugEntry(0x50,DannanPortrait,2,4,3,2)
+
+ALIGN 4
+KutuzovPortrait:
+#incbin "Kutuzov_mug.dmp"
+#incbin "Kutuzov_frames.dmp"
+#incbin "Kutuzov_palette.dmp"
+#incbin "Kutuzov_minimug.dmp"
+setMugEntry(0xB6,KutuzovPortrait,3,5,3,3)
+
+ALIGN 4
+LizaPortrait:
+#incbin "Liza_mug.dmp"
+#incbin "Liza_frames.dmp"
+#incbin "Liza_palette.dmp"
+#incbin "Liza_minimug.dmp"
+setMugEntry(0xDB,LizaPortrait,3,5,3,3)
+
+ALIGN 4
+IshtorePortrait:
+#incbin "Ishtore_mug.dmp"
+#incbin "Ishtore_frames.dmp"
+#incbin "Ishtore_palette.dmp"
+#incbin "Ishtore_minimug.dmp"
+setMugEntry(0xEA,IshtorePortrait,3,5,3,3)
+
+ALIGN 4
+TonnaminPortrait:
+#incbin "Tonnamin_mug.dmp"
+#incbin "Tonnamin_frames.dmp"
+#incbin "Tonnamin_palette.dmp"
+#incbin "Tonnamin_minimug.dmp"
+setMugEntry(0xE9,TonnaminPortrait,3,5,3,3)
+
+ALIGN 4
+BlumePortrait:
+#incbin "Blume_mug.dmp"
+#incbin "Blume_frames.dmp"
+#incbin "Blume_palette.dmp"
+#incbin "Blume_minimug.dmp"
+setMugEntry(0xAD,BlumePortrait,3,5,3,3)
+
+ALIGN 4
+MuhammedPortrait:
+#incbin "Muhammed_mug.dmp"
+#incbin "Muhammed_frames.dmp"
+#incbin "Muhammed_palette.dmp"
+#incbin "Muhammed_minimug.dmp"
+setMugEntry(0xB1,MuhammedPortrait,3,5,3,3)
+
+ALIGN 4
+OvoPortrait:
+#incbin "Ovo_mug.dmp"
+#incbin "Ovo_frames.dmp"
+#incbin "Ovo_palette.dmp"
+#incbin "Ovo_minimug.dmp"
+setMugEntry(0xC8,OvoPortrait,3,5,3,3)
+
+ALIGN 4
+ReinhardtPortrait:
+#incbin "Reinhardt_mug.dmp"
+#incbin "Reinhardt_frames.dmp"
+#incbin "Reinhardt_palette.dmp"
+#incbin "Reinhardt_minimug.dmp"
+setMugEntry(0xB3,ReinhardtPortrait,3,5,3,3)
+
+ALIGN 4
+IshtarPortrait:
+#incbin "Ishtar_mug.dmp"
+#incbin "Ishtar_frames.dmp"
+#incbin "Ishtar_palette.dmp"
+#incbin "Ishtar_minimug.dmp"
+setMugEntry(0xC7,IshtarPortrait,3,6,3,4)
+
+ALIGN 4
+CorutaPortrait:
+#incbin "Coruta_mug.dmp"
+#incbin "Coruta_frames.dmp"
+#incbin "Coruta_palette.dmp"
+#incbin "Coruta_minimug.dmp"
+setMugEntry(0xB4,CorutaPortrait,3,5,3,3)
+
+ALIGN 4
+MaykovPortrait:
+#incbin "Maykov_mug.dmp"
+#incbin "Maykov_frames.dmp"
+#incbin "Maykov_palette.dmp"
+#incbin "Maykov_minimug.dmp"
+setMugEntry(0xE6,MaykovPortrait,3,5,3,3)
+
+ALIGN 4
+KanatzPortrait:
+#incbin "Kanatz_mug.dmp"
+#incbin "Kanatz_frames.dmp"
+#incbin "Kanatz_palette.dmp"
+#incbin "Kanatz_minimug.dmp"
+setMugEntry(0xE5,KanatzPortrait,3,5,3,3)
+
+ALIGN 4
+TravantPortrait:
+#incbin "Travant_mug.dmp"
+#incbin "Travant_frames.dmp"
+#incbin "Travant_palette.dmp"
+#incbin "Travant_minimug.dmp"
+setMugEntry(0x49,TravantPortrait,2,4,2,2)
+
+ALIGN 4
+MusarPortrait:
+#incbin "Musar_mug.dmp"
+#incbin "Musar_frames.dmp"
+#incbin "Musar_palette.dmp"
+#incbin "Musar_minimug.dmp"
+setMugEntry(0xD9,MusarPortrait,3,5,3,3)
+
+ALIGN 4
+LeidanPortrait:
+#incbin "Leidan_mug.dmp"
+#incbin "Leidan_frames.dmp"
+#incbin "Leidan_palette.dmp"
+#incbin "Leidan_minimug.dmp"
+setMugEntry(0xCF,LeidanPortrait,3,5,3,3)
+
+ALIGN 4
+LancePortrait:
+#incbin "Lance_mug.dmp"
+#incbin "Lance_frames.dmp"
+#incbin "Lance_palette.dmp"
+#incbin "Lance_minimug.dmp"
+setMugEntry(0xFC,LancePortrait,3,5,3,3)
+
+ALIGN 4
+LancelotPortrait:
+#incbin "Lancelot_mug.dmp"
+#incbin "Lancelot_frames.dmp"
+#incbin "Lancelot_palette.dmp"
+#incbin "Lancelot_minimug.dmp"
+setMugEntry(0xFD,LancelotPortrait,3,4,3,2)
+
+ALIGN 4
+RidellPortrait:
+#incbin "Ridell_mug.dmp"
+#incbin "Ridell_frames.dmp"
+#incbin "Ridell_palette.dmp"
+#incbin "Ridell_minimug.dmp"
+setMugEntry(0xE8,RidellPortrait,3,5,3,3)
+
+ALIGN 4
+HildaPortrait:
+#incbin "Hilda_mug.dmp"
+#incbin "Hilda_frames.dmp"
+#incbin "Hilda_palette.dmp"
+#incbin "Hilda_minimug.dmp"
+setMugEntry(0xAE,HildaPortrait,3,5,3,3)
+
+ALIGN 4
+HildaYoungPortrait:
+#incbin "HildaYoung_mug.dmp"
+#incbin "HildaYoung_frames.dmp"
+#incbin "HildaYoung_palette.dmp"
+#incbin "HildaYoung_minimug.dmp"
+setMugEntry(0xAF,HildaYoungPortrait,3,5,3,3)
+
+ALIGN 4
+BoycePortrait:
+#incbin "Boyce_mug.dmp"
+#incbin "Boyce_frames.dmp"
+#incbin "Boyce_palette.dmp"
+#incbin "Boyce_minimug.dmp"
+setMugEntry(0x57,BoycePortrait,2,4,2,2)
+
+ALIGN 4
+RodanPortrait:
+#incbin "Rodan_mug.dmp"
+#incbin "Rodan_frames.dmp"
+#incbin "Rodan_palette.dmp"
+#incbin "Rodan_minimug.dmp"
+setMugEntry(0xDA,RodanPortrait,3,6,3,4)
+
+ALIGN 4
+RodanYoungPortrait:
+#incbin "RodanYoung_mug.dmp"
+#incbin "RodanYoung_frames.dmp"
+#incbin "RodanYoung_palette.dmp"
+#incbin "RodanYoung_minimug.dmp"
+setMugEntry(0xC9,RodanYoungPortrait,2,6,2,4)
+
+ALIGN 4
+JuphielPortrait:
+#incbin "Juphiel_mug.dmp"
+#incbin "Juphiel_frames.dmp"
+#incbin "Juphiel_palette.dmp"
+#incbin "Juphiel_minimug.dmp"
+setMugEntry(0xB0,JuphielPortrait,3,6,3,2)
+
+ALIGN 4
+FisherPortrait:
+#incbin "Fisher_mug.dmp"
+#incbin "Fisher_frames.dmp"
+#incbin "Fisher_palette.dmp"
+#incbin "Fisher_minimug.dmp"
+setMugEntry(0xD6,FisherPortrait,2,5,2,3)
+
+ALIGN 4
+BrianPortrait:
+#incbin "Brian_mug.dmp"
+#incbin "Brian_frames.dmp"
+#incbin "Brian_palette.dmp"
+#incbin "Brian_minimug.dmp"
+setMugEntry(0xD5,BrianPortrait,3,5,3,3)
+
+ALIGN 4
+ManfroyPortrait:
+#incbin "Manfroy_mug.dmp"
+#incbin "Manfroy_frames.dmp"
+#incbin "Manfroy_palette.dmp"
+#incbin "Manfroy_minimug.dmp"
+setMugEntry(0xBC,ManfroyPortrait,3,5,3,3)
+
+ALIGN 4
+JuliusPortrait:
+#incbin "Julius_mug.dmp"
+#incbin "Julius_frames.dmp"
+#incbin "Julius_palette.dmp"
+#incbin "Julius_minimug.dmp"
+setMugEntry(0xBD,JuliusPortrait,3,5,3,3)
+
+ALIGN 4
+JuliusEvilPortrait:
+#incbin "JuliusEvil_mug.dmp"
+#incbin "JuliusEvil_frames.dmp"
+#incbin "JuliusEvil_palette.dmp"
+#incbin "JuliusEvil_minimug.dmp"
+setMugEntry(0xBE,JuliusEvilPortrait,3,5,3,3)
+
+ALIGN 4
+ThrudPortrait:
+#incbin "Thrud_mug.dmp"
+#incbin "Thrud_frames.dmp"
+#incbin "Thrud_palette.dmp"
+#incbin "Thrud_minimug.dmp"
+setMugEntry(0xF9,ThrudPortrait,3,5,3,3)
+
+ALIGN 4
+FjalarPortrait:
+#incbin "Fjalar_mug.dmp"
+#incbin "Fjalar_frames.dmp"
+#incbin "Fjalar_palette.dmp"
+#incbin "Fjalar_minimug.dmp"
+setMugEntry(0xFA,FjalarPortrait,3,5,3,3)
+
+ALIGN 4
+EldiganPortrait:
+#incbin "Eldigan_mug.dmp"
+#incbin "Eldigan_frames.dmp"
+#incbin "Eldigan_palette.dmp"
+#incbin "Eldigan_minimug.dmp"
+setMugEntry(0xFE,EldiganPortrait,3,5,3,3)
+
+ALIGN 4
+AnnandPortrait:
+#incbin "Annand_mug.dmp"
+#incbin "Annand_frames.dmp"
+#incbin "Annand_palette.dmp"
+#incbin "Annand_minimug.dmp"
+setMugEntry(0x69,AnnandPortrait,3,5,3,3)
+
+ALIGN 4
+ArvisPortrait:
+#incbin "Arvis_mug.dmp"
+#incbin "Arvis_frames.dmp"
+#incbin "Arvis_palette.dmp"
+#incbin "Arvis_minimug.dmp"
+setMugEntry(0x47,ArvisPortrait,2,4,2,2)
+
+ALIGN 4
+EvePortrait:
+#incbin "Eve_mug.dmp"
+#incbin "Eve_frames.dmp"
+#incbin "Eve_palette.dmp"
+#incbin "Eve_minimug.dmp"
+setMugEntry(0x53,EvePortrait,3,6,3,4)
+
+ALIGN 4
+EvaPortrait:
+#incbin "Eva_mug.dmp"
+#incbin "Eva_frames.dmp"
+#incbin "Eva_palette.dmp"
+#incbin "Eva_minimug.dmp"
+setMugEntry(0x55,EvaPortrait,3,6,3,4)
+
+ALIGN 4
+AlvaPortrait:
+#incbin "Alva_mug.dmp"
+#incbin "Alva_frames.dmp"
+#incbin "Alva_palette.dmp"
+#incbin "Alva_minimug.dmp"
+setMugEntry(0xBF,AlvaPortrait,3,6,3,4)
+
+ALIGN 4
+DagonPortrait:
+#incbin "Dagon_mug.dmp"
+#incbin "Dagon_frames.dmp"
+#incbin "Dagon_palette.dmp"
+#incbin "Dagon_minimug.dmp"
+setMugEntry(0xCB,DagonPortrait,3,5,3,3)
+
+ALIGN 4
+AidaPortrait:
+#incbin "Aida_mug.dmp"
+#incbin "Aida_frames.dmp"
+#incbin "Aida_palette.dmp"
+#incbin "Aida_minimug.dmp"
+setMugEntry(0x15,AidaPortrait,3,5,3,3)
+
+ALIGN 4
+PalmarchOldPortrait:
+#incbin "PalmarchOld_mug.dmp"
+#incbin "PalmarchOld_frames.dmp"
+#incbin "PalmarchOld_palette.dmp"
+#incbin "PalmarchOld_minimug.dmp"
+setMugEntry(0xF3,PalmarchOldPortrait,3,5,3,3)
+
+ALIGN 4
+PalmarchYoungPortrait:
+#incbin "PalmarchYoung_mug.dmp"
+#incbin "PalmarchYoung_frames.dmp"
+#incbin "PalmarchYoung_palette.dmp"
+#incbin "PalmarchYoung_minimug.dmp"
+setMugEntry(0xF4,PalmarchYoungPortrait,3,5,3,3)
+
+ALIGN 4
+FelipePortrait:
+#incbin "Felipe_mug.dmp"
+#incbin "Felipe_frames.dmp"
+#incbin "Felipe_palette.dmp"
+#incbin "Felipe_minimug.dmp"
+setMugEntry(0xF2,FelipePortrait,2,5,2,3)
+
+ALIGN 4
+AuguryPortrait:
+#incbin "Augury_mug.dmp"
+#incbin "Augury_frames.dmp"
+#incbin "Augury_palette.dmp"
+#incbin "Augury_minimug.dmp"
+setMugEntry(0xDE,AuguryPortrait,2,6,2,4)
+
+ALIGN 4
+ArenaPortrait:
+#incbin "Arena_mug.dmp"
+#incbin "Arena_frames.dmp"
+#incbin "Arena_palette.dmp"
+#incbin "Arena_minimug.dmp"
+setMugEntry(0xDD,ArenaPortrait,3,5,3,3)
+
+ALIGN 4
+BlacksmithPortrait:
+#incbin "Blacksmith_mug.dmp"
+#incbin "Blacksmith_frames.dmp"
+#incbin "Blacksmith_palette.dmp"
+#incbin "Blacksmith_minimug.dmp"
+setMugEntry(0xDF,BlacksmithPortrait,2,5,2,3)
+
+ALIGN 4
+VendorPortrait:
+#incbin "Vendor_mug.dmp"
+#incbin "Vendor_frames.dmp"
+#incbin "Vendor_palette.dmp"
+#incbin "Vendor_minimug.dmp"
+setMugEntry(0xE2,VendorPortrait,3,5,3,3)
+
+ALIGN 4
+AnnaPortrait:
+#incbin "Anna_mug.dmp"
+#incbin "Anna_frames.dmp"
+#incbin "Anna_palette.dmp"
+#incbin "Anna_minimug.dmp"
+setMugEntry(0xE3,AnnaPortrait,3,6,3,4)
+
+ALIGN 4
+PawnPortrait:
+#incbin "Pawn_mug.dmp"
+#incbin "Pawn_frames.dmp"
+#incbin "Pawn_palette.dmp"
+#incbin "Pawn_minimug.dmp"
+setMugEntry(0xE1,PawnPortrait,3,6,3,4)
+
+ALIGN 4
+EdenPortrait:
+#incbin "Eden_mug.dmp"
+#incbin "Eden_frames.dmp"
+#incbin "Eden_palette.dmp"
+#incbin "Eden_minimug.dmp"
+setMugEntry(0x64,EdenPortrait,3,5,3,3)
+
+ALIGN 4
+ShopkeeperToaPortrait:
+#incbin "ShopkeeperToa_mug.dmp"
+#incbin "ShopkeeperToa_frames.dmp"
+#incbin "ShopkeeperToa_palette.dmp"
+#incbin "ShopkeeperToa_minimug.dmp"
+setMugEntry(0x68,ShopkeeperToaPortrait,4,3,2,0)
+
+
+ALIGN 4
+Snevejr_Mug:
+#incbin "Snevejr_mug.dmp"
+
+ALIGN 4
+Snevejr_Mini:
+#incbin "Snevejr_minimug.dmp"
+
+ALIGN 4
+Snevejr_Frames:
+#incbin "Snevejr_frames.dmp"
+
+ALIGN 4
+Snevejr_Palette:
+#incbin "Snevejr_palette.dmp"
+
+setMugEntryExtend(0x4C, Snevejr_Mug, Snevejr_Mini, Snevejr_Palette, Snevejr_Frames, 2, 5, 2, 3, 10, 3, 0, 0)
 

@@ -1,0 +1,25 @@
+#define ItemIconEntry(ItemIconID) "ORG NewItemIcons + (ItemIconID*128)"
+
+ALIGN 4
+NewItemIcons:
+// Sheet with all icons goes here 
+#incbin "Icon Sheet.dmp"
+
+
+PUSH 
+// Individual Icons go here
+ALIGN 4
+ItemIconEntry(TyrfingIcon)
+#incbin "Regalia/Tyrfing.dmp"
+ALIGN 4
+ItemIconEntry(StarIcon)
+#incbin "Misc/Star.dmp"
+POP
+
+
+PUSH
+ORG $36B4
+POIN NewItemIcons
+ORG $3788
+POIN NewItemIcons
+POP

@@ -1,0 +1,15 @@
+	#include EAstdlib.event
+	#include "Tools/Tool Helpers.txt"
+	#include "Extensions/Hack Installation.txt"
+	
+	PUSH
+		ORG $30E04
+		jumpToHack(ResetBytes)
+	POP
+	
+	ALIGN 4
+	ResetBytes:
+	BYTE Anticheesebyte $21 $00 $00
+	ALIGN 4
+	#incbin "ResetBytes.dmp"
+	

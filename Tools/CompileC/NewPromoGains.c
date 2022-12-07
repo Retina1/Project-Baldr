@@ -4,18 +4,18 @@ void ApplyUnitPromotion(Unit* unit, const ClassData* newClass){
 
 	const ClassData* oldClass = unit->pClassData;
 
-	int hpDiff = newClass->maxHP - newClass->maxHP;
+	int hpDiff = newClass->maxHP - oldClass->maxHP;
 
-	//(unit->maxHP += hpDiff > newClass->maxHP){
-	//	hpDiff = newClass->maxHP - unit->maxHP; // enough to cap
-	// }
+	if (unit->maxHP + hpDiff > newClass->maxHP){
+		hpDiff = newClass->maxHP - unit->maxHP; // enough to cap
+	}
 
-	 unit->maxHP += hpDiff;
-	 unit->curHP += hpDiff;
+	unit->maxHP += hpDiff;
+	unit->curHP += hpDiff;
 
-	// if (unit->curHP > 1){
-	//	unit->curHP = 1;
-	//}
+	if (unit->curHP > 1){
+		unit->curHP = 1;
+	}
 
 	unit->pow += newClass->basePow - oldClass->basePow;
 
@@ -66,7 +66,7 @@ void ApplyUnitPromotion(Unit* unit, const ClassData* newClass){
 		}
 	}
 
-	unit->level = 0;
+	unit->level = 1;
 	unit->exp = 0;
 	unit->pClassData = newClass;
 

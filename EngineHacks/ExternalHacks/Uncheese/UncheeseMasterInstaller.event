@@ -1,0 +1,32 @@
+	#include EAstdlib.event
+	#include "Tools/Tool Helpers.txt"
+	#include "Extensions/Hack Installation.txt"
+	
+#ifdef _FE8_
+
+	#ifndef Free_Space
+		#define Free_Space 0xB42EF0 //Change to your freespace
+		ORG Free_Space
+	#endif
+	 
+	 
+	#define UnbreakabilityType $0  //0 is all enemy item types are unbreakable
+								   //1 is only enemy weapons are
+								   //unbreakable (staves and items break)
+								   
+	#define Anticheesebyte $3A //Unused character struct byte, editing this
+	                           //will edit the byte used by all the xp codes.
+	
+	//Just comment out whatever you don't want
+
+	#include "Unbreakable-Enemies-and-NPC-Weapons/Only-Player-Weapons-Break.txt"
+	#include "Uncheese-Wexp/Wexp-Uncheese.txt"
+	#include "Uncheese-Staff-Exp/Uncheese-Staff-Exp.txt"
+	#include "Uncheese-Combat-Exp/Uncheese-Combat-Exp.txt"	
+	
+	//Note: If you included an exp modifier, DON'T COMMENT THE RESETTER OUT
+	#include "Uncheese-Character-Struct-Byte-Resetters/Uncheese-Charstruct-Resetter.txt"
+	
+#else
+	ERROR "You're not assembling FE8 events!"
+#endif

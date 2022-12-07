@@ -137,7 +137,17 @@ POP
   //Menu Semitransparency
   #include "QualityOfLife/SemitransparencyChanges.event"
   
+  //Custom animations by Character
   #include "PRFAnims/Installer.event"
+  
+  //Battle Palette Rework
+  //#include "ExternalHacks/BattlePaletteRework/BattlePaletteReworkFE8.event"
+  
+  //Mug Exceed
+  #include "ExternalHacks/MugExceed/EA.txt"
+  
+  //Uncheese
+  #include "ExternalHacks/Uncheese/UncheeseMasterInstaller.event"
 
   //Supply available in prologue
   #include "QualityOfLife/PrologueSupply.event"

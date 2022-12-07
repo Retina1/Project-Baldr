@@ -1,0 +1,21 @@
+	#include EAstdlib.event
+	#include "Tools/Tool Helpers.txt"
+	#include "Extensions/Hack Installation.txt"
+	
+	PUSH
+		ORG $16AEC
+		jumpToHack(Unbreakable)
+		ORG $874C4
+		jumpToHack(UnbreakableDisplay)
+	POP
+
+	ALIGN 4
+	Unbreakable:
+	BYTE UnbreakabilityType $21 $00 $00
+	ALIGN 4
+	#incbin "Unbreakable.dmp"
+	ALIGN 4
+	UnbreakableDisplay:
+	BYTE UnbreakabilityType $21 $00 $00
+	ALIGN 4
+	#incbin "UnbreakableDisplay.dmp"

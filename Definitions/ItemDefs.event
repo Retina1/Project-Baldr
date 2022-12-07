@@ -1,0 +1,92 @@
+#define EarthSwd 0x11
+#define BragiBlade 0x81
+#define MasterSword 0xBC
+#define BeoSword 0xDD
+#define ArdenSword 0xDE
+#define SleepSwd 0xEF
+#define SilenceSwd 0xF0
+#define BerserkSwd 0xF1
+#define MiracleSwd 0xF2
+#define ThiefSwd 0xF3
+#define DefenseSwd 0xF4
+#define BarrierSwd 0xF5
+#define FlameSwd 0xF6
+#define ThunderSwd 0xF7
+
+#define HeroicLance 0x82
+#define MasterLance 0xBD
+
+#define MasterAxe 0xBE
+
+#define GreatArch 0xAC
+#define MasterBow 0xBF
+
+#define Bolganone 0xE2
+#define Meteor 0xE4
+
+#define Elthunder 0xE6
+#define Thoron 0xE7
+#define ArcThunder 0xE8 
+
+#define Wind 0xEA
+#define Elwind 0x3E
+#define Tornado 0xEC
+#define Blizzard 0x3C
+
+#define Jormugandr 0x45
+#define Hel 0xE0
+#define PoisonTome 0xE1
+#define Petrify 0x4A
+
+
+#define CharmStaff 0xC7 //"geez biraku we don't even know what it does" shut up
+#define ThiefStaff 0xC8
+
+#define LifeRing 0x5B
+#define StrRing 0x5C
+#define SklRing 0x5D
+#define SpdRing 0x5E
+#define Circlet 0x5F
+#define DefRing 0x60
+#define ResRing 0x61
+#define LegRing 0x62
+#define RescueRing 0x63
+#define KnightRing 0x64
+#define MiracleRing 0x65
+#define ParagonRing 0x66
+#define RecoverRing 0x67 //the fuck you travant and arvis ring
+#define ThiefRing 0x79
+
+#define Balmung 0x0A
+#define Valflame 0x3D
+#define Mjolnir 0x44
+#define Tyrfing 0x85
+#define Naga 0x87
+#define Forseti 0x8B
+#define ValkyrieStaff 0x8C //not too sure about this one, also this and ross are probably dangerous definitions lol
+#define Gungnir 0x8E
+#define Loptome 0x8F
+#define Mystletainn 0x91
+#define Gaebolg 0x92
+#define Helswath 0x93
+#define Yewfelle 0x94
+
+//Things I want to add but haven't found an appropiate slot yet
+//#define BiracleSword
+//#define Gradivus
+//#define Falchion
+//#define Starlight
+//#define Imhullu
+//#define Grafcalibur
+//#define ThorHammer
+//#define KingSword
+//#define LoptSword
+//#define DarknessLance
+//#define Salamander
+//#define Maera
+//#define AndorAxe
+//#define ToaBlade
+//#define FleursDuMal
+//#define Awaken
+//#define Galerider
+//#define Durandal

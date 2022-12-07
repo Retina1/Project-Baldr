@@ -1,0 +1,14 @@
+	#include EAstdlib.event
+	#include "Tools/Tool Helpers.txt"
+	#include "Extensions/Hack Installation.txt"
+	
+	PUSH
+		ORG $2C13C
+		jumpToHack(UncheeseWexp)
+	POP
+	
+	ALIGN 2
+	UncheeseWexp:
+	BYTE Anticheesebyte $22 $00 $00
+	ALIGN 4
+	#incbin "Wexp-Uncheese.dmp"
