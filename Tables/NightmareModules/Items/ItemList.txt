@@ -89,14 +89,14 @@ Hammerne
 Unlock
 Barrier
 Dragon Axe
-Angelic Robe
-Energy Ring
-Secret Book
-Speedwings
-Goddess Icon
-Dragonshield
-Talisman
-Swiftsoles
+Strength Ring
+Magic Ring
+Skill Ring
+Speed Ring
+Luck Ring
+Defense Ring
+Resistance Ring
+Leg Ring
 Body Ring
 Hero Crest
 Knight Crest
