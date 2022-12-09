@@ -5,40 +5,36 @@
 
 
 ALIGN 4
-SeraphRobeBoost:
-StatBonus(5,0,0,0,0,0,0,0,0,0)
+Strength RingBoost:
+StatBonus(0,5,0,0,0,0,0,0,0,0)
 
 ALIGN 4
-EnergyRingBoost:
-StatBonus(0,2,0,0,0,0,0,0,0,0)
+MagicRingBoost:
+StatBonus(0,0,5,0,0,0,0,0,0,0)
 
 ALIGN 4
-SpiritDustBoost:
-StatBonus(0,0,2,0,0,0,0,0,0,0)
+SkillRingBoost:
+StatBonus(0,0,0,5,0,0,0,0,0,0)
 
 ALIGN 4
-SecretBookBoost:
-StatBonus(0,0,0,3,0,0,0,0,0,0)
+SpeedRingBoost:
+StatBonus(0,0,0,0,5,0,0,0,0,0)
 
 ALIGN 4
-SpeedwingsBoost:
-StatBonus(0,0,0,0,2,0,0,0,0,0)
+LuckRingBoost:
+StatBonus(0,0,0,0,0,0,0,5,0,0)
 
 ALIGN 4
-DracoshieldBoost:
-StatBonus(0,0,0,0,0,2,0,0,0,0)
+DefenseRingBoost:
+StatBonus(0,0,0,0,0,5,0,0,0,0)
 
 ALIGN 4
-TalismanBoost:
-StatBonus(0,0,0,0,0,0,3,0,0,0)
+ResistanceRingBoost:
+StatBonus(0,0,0,0,0,0,5,0,0,0)
 
 ALIGN 4
-OpistusIconBoost:
-StatBonus(0,0,0,0,0,0,0,4,0,0)
-
-ALIGN 4
-BootsBoost:
-StatBonus(0,0,0,0,0,0,0,0,2,0)
+LegRingBoost:
+StatBonus(0,0,0,0,0,0,0,0,1,0)
 
 ALIGN 4
 BodyRingBoost:
