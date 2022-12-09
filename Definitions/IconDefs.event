@@ -1,2 +1,10 @@
+#define StrengthRingIcon 0x59
+#define MagicRingIcon 0x5A
+#define SkillRingIcon 0x5B
+#define SpeedRingIcon 0x5C
+#define LuckRingIcon 0x5D
+#define DefenseRingIcon 0x5E
+#define ResistanceRingIcon 0x5F
+#define LegRingIcon 0x60
 #define TyrfingIcon 0xB0
 #define StarIcon 0xCA
