@@ -2,10 +2,8 @@
 //GrowthBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB)
 //(-1), not -1
 
-
-
 ALIGN 4
-Strength RingBoost:
+StrengthRingBoost:
 StatBonus(0,5,0,0,0,0,0,0,0,0)
 
 ALIGN 4
@@ -87,8 +85,4 @@ StatBonus(0,0,0,0,0,20,10,0,0,0)
 ALIGN 4
 YewfelleBoost:
 StatBonus(0,10,0,0,10,0,0,0,0,0)
-
-ALIGN 4
-LegRingBoost:
-StatBonus(0,0,0,0,0,0,0,0,1,0)
 
