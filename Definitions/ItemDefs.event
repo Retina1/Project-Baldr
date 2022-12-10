@@ -1,6 +1,8 @@
 #define EarthSwd 0x11
 #define BragiBlade 0x81
 #define MasterSword 0xBC
+#define KingSword 0xDB
+#define LoptSword 0xDC
 #define BeoSword 0xDD
 #define ArdenSword 0xDE
 #define SleepSwd 0xEF
@@ -12,6 +14,7 @@
 #define BarrierSwd 0xF5
 #define FlameSwd 0xF6
 #define ThunderSwd 0xF7
+#define WindSwd 0xF8
 
 #define HeroicLance 0x82
 #define MasterLance 0xBD
@@ -21,17 +24,20 @@
 #define GreatArch 0xAC
 #define MasterBow 0xBF
 
-#define Bolganone 0xE2
-#define Meteor 0xE4
+#define Fire 0xE2
+#define Elfire 0xE3
+#define Bolganone 0xE4
+#define Meteor 0xE5
 
-#define Elthunder 0xE6
-#define Thoron 0xE7
-#define ArcThunder 0xE8 
+#define Thunder 0xE6
+#define Elthunder 0xE7
+#define Thoron 0xE8
+#define Bolting 0xE9 
 
 #define Wind 0xEA
-#define Elwind 0x3E
+#define Elwind 0xEB
 #define Tornado 0xEC
-#define Blizzard 0x3C
+#define Blizzard 0xED
 
 #define Jormugandr 0x45
 #define Hel 0xE0
@@ -42,20 +48,26 @@
 #define CharmStaff 0xC7 //"geez biraku we don't even know what it does" shut up
 #define ThiefStaff 0xC8
 
-#define LifeRing 0x5B
-#define StrRing 0x5C
+#define LifeRing 0xD0
+#define ParagonRing 0xD1
+#define ThiefRing 0xD2
+#define MiracleRing 0xD3
+#define BraveRing 0xD4
+#define BargainRing 0xD5
+#define KnightRing 0xD6
+#define RescueRing 0xD7
+#define RecoverRing 0xD8 //the fuck you travant and arvis ring
+#define Circlet 0xD9
+
+#define StrRing 0x5B
+#define MgcRing 0x5B
 #define SklRing 0x5D
 #define SpdRing 0x5E
-#define Circlet 0x5F
+#define LckRing 0x5F
 #define DefRing 0x60
 #define ResRing 0x61
 #define LegRing 0x62
-#define RescueRing 0x63
-#define KnightRing 0x64
-#define MiracleRing 0x65
-#define ParagonRing 0x66
-#define RecoverRing 0x67 //the fuck you travant and arvis ring
-#define ThiefRing 0x79
+
 
 #define Balmung 0x0A
 #define Valflame 0x3D
@@ -79,8 +91,6 @@
 //#define Imhullu
 //#define Grafcalibur
 //#define ThorHammer
-//#define KingSword
-//#define LoptSword
 //#define DarknessLance
 //#define Salamander
 //#define Maera
