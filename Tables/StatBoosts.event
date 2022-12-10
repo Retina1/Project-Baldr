@@ -86,3 +86,10 @@ ALIGN 4
 YewfelleBoost:
 StatBonus(0,10,0,0,10,0,0,0,0,0)
 
+ALIGN 4
+SafeguardBoost:
+StatBonus(0,0,0,0,0,0,7,0,0,0)
+
+ALIGN 4
+BarrierBladeBoost:
+StatBonus(0,0,0,0,0,0,7,0,0,0)
