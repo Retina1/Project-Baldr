@@ -37,7 +37,7 @@
 #define Wind 0xEA
 #define Elwind 0xEB
 #define Tornado 0xEC
-#define Blizzard 0x3D
+#define Blizzard 0xED
 
 #define Jormugandr 0x45
 #define Hel 0xE0
