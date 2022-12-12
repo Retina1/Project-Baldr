@@ -20,8 +20,10 @@
 #define MasterLance 0xBD
 
 #define MasterAxe 0xBE
+#define SeaAxe 0x83
 
-#define GreatArch 0xAC
+#define GreatArch 0x38
+#define MagicBow 0x84
 #define MasterBow 0xBF
 
 #define Fire 0xE2
@@ -40,7 +42,7 @@
 #define Blizzard 0xED
 
 #define Jormugandr 0x45
-#define Hel 0xE0
+#define Hel 0x48
 #define PoisonTome 0xE1
 #define Petrify 0x4A
 
@@ -68,6 +70,11 @@
 #define ResRing 0x61
 #define LegRing 0x62
 
+#define Mercurius 0x39
+#define Gradivus 0x3A
+#define Hauteclere 0x3B
+#define Parthia 0x3C
+#define Falchion 0x3E
 
 #define Balmung 0x0A
 #define Valflame 0x3D
@@ -85,8 +92,6 @@
 
 //Things I want to add but haven't found an appropiate slot yet
 //#define BiracleSword
-//#define Gradivus
-//#define Falchion
 //#define Starlight
 //#define Imhullu
 //#define Grafcalibur
