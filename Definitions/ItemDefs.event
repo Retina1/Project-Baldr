@@ -40,7 +40,7 @@
 #define Blizzard 0xED
 
 #define Jormugandr 0x45
-#define Hel 0xE0
+#define Hel 0x48
 #define PoisonTome 0xE1
 #define Petrify 0x4A
 
