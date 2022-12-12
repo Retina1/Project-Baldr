@@ -21,7 +21,7 @@
 
 #define MasterAxe 0xBE
 
-#define GreatArch 0xAC
+#define GreatArch 0x38
 #define MasterBow 0xBF
 
 #define Fire 0xE2
