@@ -814,12 +814,10 @@ BYTE 00 00
 ALIGN 4
 
 SwordmasterMSkillList:
-BYTE 1 DartingStanceID
 BYTE 00 00
 ALIGN 4
 
 SwordmasterFSkillList:
-BYTE 1 DartingStanceID
 BYTE 00 00
 ALIGN 4
 
@@ -898,12 +896,10 @@ BYTE 00 00
 ALIGN 4
 
 BerserkerMSkillList:
-BYTE 1 FierceStanceID
 BYTE 00 00
 ALIGN 4
 
 BerserkerFSkillList:
-BYTE 1 FierceStanceID
 BYTE 00 00
 ALIGN 4
 
@@ -916,12 +912,10 @@ BYTE 00 00
 ALIGN 4
 
 SniperMSkillList:
-BYTE 1 AlertStanceID
 BYTE 00 00
 ALIGN 4
 
 SniperFSkillList:
-BYTE 1 AlertStanceID
 BYTE 00 00
 ALIGN 4
 
@@ -942,7 +936,6 @@ BYTE 00 00
 ALIGN 4
 
 HalberdierSkillList:
-BYTE 1 SteadyStanceID
 BYTE 00 00
 ALIGN 4
 
@@ -963,7 +956,6 @@ BYTE 00 00
 ALIGN 4
 
 ValkyrieSkillList:
-BYTE 1 SwiftStanceID
 BYTE 00 00
 ALIGN 4
 
@@ -976,7 +968,6 @@ BYTE 00 00
 ALIGN 4
 
 RangerSkillList:
-BYTE 1 KestrelStanceID
 BYTE 00 00
 ALIGN 4
 
@@ -989,7 +980,6 @@ BYTE 00 00
 ALIGN 4
 
 DukeKnightSkillList:
-BYTE 1 ReadyStanceID
 BYTE 00 00
 ALIGN 4
 
@@ -998,7 +988,6 @@ BYTE 00 00
 ALIGN 4
 
 GreatKnightSkillList:
-BYTE 1 SturdyStanceID
 BYTE 00 00
 ALIGN 4
 
@@ -1037,12 +1026,10 @@ BYTE 00 00
 ALIGN 4
 
 ProtectorSkillList:
-BYTE 1 BracingStanceID
 BYTE 00 00
 ALIGN 4
 
 SentrySkillList:
-BYTE 1 BracingStanceID
 BYTE 00 00
 ALIGN 4
 
@@ -1139,13 +1126,11 @@ BYTE 00 00
 ALIGN 4
 
 MageFighterMSkillList:
-BYTE 1 MirrorStanceID
 BYTE 1 AdeptID
 BYTE 00 00
 ALIGN 4
 
 MageFighterFSkillList:
-BYTE 1 MirrorStanceID
 BYTE 1 AdeptID
 BYTE 00 00
 ALIGN 4
@@ -1210,12 +1195,10 @@ BYTE 00 00
 ALIGN 4
 
 BishopMSkillList:
-BYTE 1 WardingStanceID
 BYTE 00 00
 ALIGN 4
 
 BishopFSkillList:
-BYTE 1 WardingStanceID
 BYTE 00 00
 ALIGN 4
 
