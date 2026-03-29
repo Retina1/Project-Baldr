@@ -59,7 +59,7 @@ ClearArenaProgress:
 push        {r4,r5,r14}
 ldr         r4,=#0x02028250
 ldr         r5,=#0x02028250
-mov         r2,#0x60
+mov         r2,#0x4A
 mov         r1,#0x0
 mov 		r3,#0x0
 LOOP:

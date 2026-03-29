@@ -684,7 +684,7 @@ A bag full of money.[X]
 A bag full of money.[X]
 
 ##DGildedBow ^
-Verdane's regalia.[N]
+Verdane's regalia. Grants pursuit.[N]
 High critical hit rate.[X]
 
 

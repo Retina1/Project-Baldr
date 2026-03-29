@@ -50,11 +50,11 @@ CannotDieList:
 //BYTE 0x68 0; SHORT 0xA 0 0 // O'Neill immune until flag A is turned on. 
 //BYTE 0x68 0; SHORT 9 0x936 9// O'Neill immune until flag 9 is turned on. Display text 0x936 and turn on flag 9 when near death. 
 // POIN EventToRun 
-BYTE Elliot 0; SHORT 9 ElliotRetreats 9
+BYTE Elliot 0; SHORT 0x12 ElliotRetreats 0x12
 BYTE Ross 0; SHORT 0x14 RossRetreats 0x14
 /*
 //BYTE Eirika 0; SHORT 0 0 0 // Eirika cannot die through combat 
-BYTE Elliot 0; SHORT 9 ElliotRetreats 9
+//BYTE Elliot 0; SHORT 9 ElliotRetreats 9
 //BYTE 0xFD 0; SHORT 0 0 0  // Arena unit cannot die through combat 
 */
 WORD 0xFFFFFFFF 0xFFFFFFFF  // Terminator 

@@ -61,7 +61,7 @@
 #define SniperF 0x25
 #define Advent 0x26
 #define AdventF 0x27
-#define Freeblade 0x28
+#define Militia 0x28
 #define Soldier 0x29
 #define Halberdier 0x2A
 #define UniCav 0x2B
@@ -141,3 +141,17 @@
 #define DBishopF 0x7D
 #define Archbishop 0x7E
 #define DarkPrince 0x7F
+#define Arena_Master 0x80
+#define Augury 0x81
+#define Blacksmith 0x82
+#define Pawnkeeper 0x83
+#define Vendor 0x84
+#define Supplier_M 0x85
+#define Supplier_F 0x86
+#define Queen_Silesse 0x87
+#define Trueblade 0x88
+#define Freeblade 0x89
+#define Manakete 0x8a
+#define Dragon_Monarch 0x8b
+#define Bowfighter 0x8c
+#define Lionheart 0x8d

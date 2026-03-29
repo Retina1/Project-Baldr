@@ -37,7 +37,7 @@ Sniper (M)
 Sniper (F)
 Adventurer (M)
 Adventurer (F)
-Freeblade
+Militia
 Soldier
 Halberdier
 Cavalier

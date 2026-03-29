@@ -140,3 +140,12 @@ a skill when used.[X]
 
 ## ClassDisplayNameText
  Display[X]
+
+//Arena Stuff
+#0x8D2
+Would you like to test[N]
+your skill in the arena?[Yes][X]
+
+#0x8D6
+So you won, eh? Here's[N]
+your prize. Some gold.[A][X]

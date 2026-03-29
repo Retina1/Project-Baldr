@@ -91,8 +91,8 @@
 #define Julius 0xA3
 #define JuliusLopt 0xA4
 //crusaders
-#define Heim 0xA5
-#define Baldr 0xA6 //WHAT'S BALDRIN CRUSADERS
+#define Heim 0xE0  
+#define Baldr 0xE1 //WHAT'S BALDRIN CRUSADERS
 #define Hoor 0xA7
 #define Od 0xA8
 #define Njorun 0xA9

@@ -24,10 +24,22 @@
 #define FlameSwd 0xF6
 #define ThunderSwd 0xF7
 #define WindSwd 0xF8
+#define IronSwordEth 0x79
+#define IronSwordAr 0x7A
+#define IronSwordAl 0x7B
+#define SteelSwordNoi 0x7D
+#define SlimSwordChpOne 0x7E
+#define IronSwordDew 0xC9
+#define IronBladeHolyn 0xCA
+#define SteelSwordBeowolf 0xCB
 
 #define HeroicLance 0x82
 #define MasterLance 0xBD
 #define Flycatcher 0x8D
+#define IronLanceChpOne 0x7F
+#define JavelinChpOne 0x80
+#define SlimSwordSylvia 0x88
+#define IronLanceFin 0x8A
 
 #define VolantAxe 0x5A
 #define SeaAxe 0x83

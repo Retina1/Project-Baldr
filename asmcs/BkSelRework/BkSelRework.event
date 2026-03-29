@@ -1,0 +1,44 @@
+#ifndef FreeSpace
+	#define FreeSpace $B2A610
+	ORG FreeSpace
+#endif // FreeSpace
+
+#ifndef _FE8_
+	ERROR BkSel-Expansion hack is for FE8
+#endif // _FE8_
+
+
+/*
+ *
+ * BkSel Expansion:
+ * Enable show more than x2 or x4 hits
+ *
+ * by Mokha@FEU (MokhaLeee@GitHub, 悠木晓缺@BiliBili)
+ */
+
+ALIGN 4
+#include "Src/BkSelHack.lyn.event"
+PROTECT $3666C $366A0		// AddWeaponStatsAfterRound
+PROTECT $366A0 $36818		// BKSEL_SetupHitAndSuchStats
+
+
+ALIGN 4
+Gfx_BkSel:
+	#incbin "Data/Gfx_BkSel.4bpp"
+
+Pal_BkSel:
+	#incbin "Data/Gfx_BkSel.gbapal"
+
+PUSH
+	// Make sure BkSel always deiplay x2 or x4 obj
+	ORG $36F94
+	SHORT $2002	// MOV R0, #2
+	SHORT 0 0 0
+	ORG $36FB6
+	SHORT $2004	// MOV R0, #4
+	SHORT 0 0 0
+	
+	// Repoint Palette
+	ORG $36E14
+	POIN Pal_BkSel
+POP

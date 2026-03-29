@@ -710,19 +710,19 @@ Aida[X]
 Palmarch[X]
 
 ##Name_Augury
-Augury[X]
+Fintan[X]
 
 ##Name_Arena
-Arena[X]
+Cumhal[X]
 
 ##Name_Blacksmith
-Blacksmith[X]
+Angus[X]
 
 ##Name_Vendor
-Vendor[X]
+Pierre[X]
 
 ##Name_Pawnshop
-Pawnshop[X]
+Leslie[X]
 
 ##Name_Anna
 Anna[X]
