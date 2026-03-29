@@ -17,6 +17,7 @@
   
   #include "DisplayGrowthsOptions/DisplayGrowthsOptions.event"
   #include "WeaponRankStatScreen/WeaponRankStatScreen.event"
+  #include "Background/Background.event"
   
   PUSH
   ORG $88620

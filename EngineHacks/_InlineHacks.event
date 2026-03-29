@@ -91,9 +91,9 @@ POP
 // by Serif 
 PUSH
 ORG 0x2C1A2
-BYTE 255
+BYTE 0xFB
 ORG 0x2C1A6
-BYTE 255
+BYTE 0xFB
 POP
 
 //Female Aid Fix

@@ -56,8 +56,9 @@ CustomAnimationSet(Jacobin,Hero,JacobanAnims|IsPointer)
 CustomAnimationSet(Boyce,SwMast,BoyceAnims|IsPointer)
 CustomAnimationSet(Shamash,Guardian,ShamashAnims|IsPointer)
 CustomAnimationSet(ArvisGen2,Emperor,ArvisProAnims|IsPointer)
-CustomAnimationSet(Baldr,Berserker,LegionAnims|IsPointer)
+CustomAnimationSet(Legion,Berserker,LegionAnims|IsPointer)
 CustomAnimationSet(Loptrian,Warrior,LoptWarriorAnims|IsPointer)
+CustomAnimationSet(Voltz,Ranger,VoltzAnims|IsPointer)
 BYTE 0x00  //Unit: term data
 BYTE 0x00  //dummy
 BYTE 0x00  //dummy

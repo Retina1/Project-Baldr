@@ -47,6 +47,11 @@ PaletteAssociationEntry(Hopper, $EE)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
+AxeArmorPaletteList:
+PaletteAssociationEntry(Arena5, $106)
+BYTE $00 $00 $00 $00 $00 $00 $00 $00
+ALIGN 4
+
 GeneralPaletteList:
 PaletteAssociationEntry(Madino, $2D)
 PaletteAssociationEntry(Zaxon, $3A)
@@ -94,6 +99,7 @@ ALIGN 4
 MyrmMPaletteList:
 PaletteAssociationEntry(Verdane1, $AD)
 PaletteAssociationEntry(Verdane2, $AD)
+PaletteAssociationEntry(Arena4, $105)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -128,6 +134,7 @@ PaletteAssociationEntry(Thracia, $7B)
 PaletteAssociationEntry(Grutia, $7B)
 PaletteAssociationEntry(Verdane1, $AB)
 PaletteAssociationEntry(Verdane2, $AB)
+PaletteAssociationEntry(Loptrian, $B2)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -182,6 +189,7 @@ PaletteAssociationEntry(Azel, $0C)
 PaletteAssociationEntry(Heirhein, $16)
 PaletteAssociationEntry(Madino, $2E)
 PaletteAssociationEntry(Loptrian, $96)
+PaletteAssociationEntry(Arena2, $103)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -239,6 +247,7 @@ BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
 GKPaletteList:
+PaletteAssociationEntry(Heirhein, $B1)
 PaletteAssociationEntry(GrauenRitter, $57)
 PaletteAssociationEntry(RotenRitter, $73)
 PaletteAssociationEntry(Grannvale, $78)
@@ -262,6 +271,15 @@ PaletteAssociationEntry(Silesse, $39)
 PaletteAssociationEntry(Ganeishire, $4E)
 PaletteAssociationEntry(Sophara, $55)
 PaletteAssociationEntry(Henson, $FD)
+PaletteAssociationEntry(Arena1, $102)
+BYTE $00 $00 $00 $00 $00 $00 $00 $00
+ALIGN 4
+
+MESSAGE milpal here currentOffset
+
+MilitiaPaletteList:
+PaletteAssociationEntry(Verdane1, $B0)
+PaletteAssociationEntry(Verdane2, $B0)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -330,6 +348,7 @@ WindMagePaletteList:
 PaletteAssociationEntry(Tofa, $37)
 PaletteAssociationEntry(Silesse, $3E)
 PaletteAssociationEntry(Ivan, $DB)
+PaletteAssociationEntry(Arena6, $101)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -389,6 +408,8 @@ BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
 SoldierPaletteList:
+PaletteAssociationEntry(Verdane1, $B0)
+PaletteAssociationEntry(Verdane2, $B0)
 PaletteAssociationEntry(Miletos, $8D)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
@@ -505,6 +526,7 @@ PaletteAssociationEntry(Agusti, $26)
 PaletteAssociationEntry(Connacht, $63)
 PaletteAssociationEntry(Miletos, $8B)
 PaletteAssociationEntry(Leonster, $AA)
+PaletteAssociationEntry(Arena3, $104)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -540,6 +562,7 @@ HunterPaletteList:
 PaletteAssociationEntry(Verdane1, $07)
 PaletteAssociationEntry(Verdane2, $07)
 PaletteAssociationEntry(Orgahil, $31)
+PaletteAssociationEntry(Arena4, $107)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -563,6 +586,11 @@ ALIGN 4
 
 MasterKntPaletteList:
 PaletteAssociationEntry(Byron, $E7)
+BYTE $00 $00 $00 $00 $00 $00 $00 $00
+ALIGN 4
+
+LionheartPaletteList:
+PaletteAssociationEntry(Eldigan, $0D)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -619,8 +647,8 @@ MapClassIdToPalettes:
 	SetClassPaletteTable(SniperF,SniperPaletteList)
 	SetClassPaletteTable(Advent,AdventurerPaletteList)
 	SetClassPaletteTable(AdventF,AdventurerPaletteList)
-	SetClassPaletteTable(Freeblade,NO_PALETTE)
-	SetClassPaletteTable(Soldier,SoldierPaletteList)
+	SetClassPaletteTable(Militia,MilitiaPaletteList)
+	SetClassPaletteTable(Soldier,MyrmMPaletteList)
 	SetClassPaletteTable(Halberdier,HalberdierPaletteList)
     SetClassPaletteTable(UniCav,CavalierPaletteList)
 	SetClassPaletteTable(PalM,PaladinPaletteList)
@@ -707,4 +735,19 @@ MapClassIdToPalettes:
 	SetClassPaletteTable(DBishopF,DruidPaletteList)
     SetClassPaletteTable(Archbishop,NO_PALETTE)
     SetClassPaletteTable(DarkPrince,NO_PALETTE)
+    //80
+    SetClassPaletteTable(0x80,NO_PALETTE)
+    SetClassPaletteTable(0x81,NO_PALETTE)
+    SetClassPaletteTable(0x82,NO_PALETTE)
+    SetClassPaletteTable(0x83,NO_PALETTE)
+    SetClassPaletteTable(0x84,NO_PALETTE)
+    SetClassPaletteTable(0x85,NO_PALETTE)
+    SetClassPaletteTable(0x86,NO_PALETTE)
+    SetClassPaletteTable(0x87,NO_PALETTE)
+    SetClassPaletteTable(0x88,NO_PALETTE)
+    SetClassPaletteTable(0x89,NO_PALETTE)
+    SetClassPaletteTable(0x8A,NO_PALETTE)
+    SetClassPaletteTable(0x8B,NO_PALETTE)
+	SetClassPaletteTable(Bowfighter,NO_PALETTE)
+	SetClassPaletteTable(Lionheart,LionheartPaletteList)
 WORD 0 //term

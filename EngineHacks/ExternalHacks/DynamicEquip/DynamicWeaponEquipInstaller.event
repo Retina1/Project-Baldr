@@ -8,5 +8,6 @@
         PROTECT $2A8BC currentOffset
 	POP
 	Dynamic_Weapon_Equip_RangeFix:
-	#incbin "DynamicWeaponEquip_RangeFix.dmp"
+	//#incbin "DynamicWeaponEquip_RangeFix.dmp"
+	#include "DynamicWeaponEquip_RangeFix.lyn.event"
 	POIN Can_Attack_Target

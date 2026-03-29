@@ -116,7 +116,13 @@ UnitMenuTable:
 
 
 
-  UM_Steal
+  //UM_Steal
+
+  MenuCommand(0x67F, UM_RallyDesc, NormalText, Can_Unit_Steal_Two, GoldStealCommandEffect)
+
+  //Give gold
+  MenuCommand(0x68C, UM_RallyDesc, NormalText, GoldGiveCommandUsability, GoldGiveCommandEffect)
+
   
   //UM_Summon
   MenuCommand(0x693,0x6DD,NormalText,NewSummonUsability,0x244B8)

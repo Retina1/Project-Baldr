@@ -1449,3 +1449,26 @@
     mov    r0, r7 @ Next "blank" TextHandle.
   SkipGaidenDraw:
 .endm
+
+
+.equ walletTableRam, 0x0203F540
+
+.macro draw_gold_at, tile_x, tile_y
+  mov     r1, r8
+  mov   r0, #0xB
+  ldrb    r1, [r1, r0]  @deploy byte
+  cmp   r1, #0x54
+  blt   Mult
+  sub   r1, #0x26
+  Mult:
+  lsl   r1, #1
+  ldr     r0, =walletTableRam
+  ldrh    r0, [r0, r1]
+  mov   r1, #Blue
+  draw_number_at \tile_x, \tile_y
+  
+  ldr     r0, =(tile_origin+(0x20*2*\tile_y)+(2*(\tile_x+1)))
+  mov     r1, #Yellow
+  mov     r2, #30 @Big G
+  blh     DrawSpecialUiChar
+.endm

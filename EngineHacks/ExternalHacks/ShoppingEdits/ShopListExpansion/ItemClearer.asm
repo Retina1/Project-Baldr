@@ -10,8 +10,6 @@
  .short 0xf800
 .endm
 
-.equ ItemTablePointer, 0x080177C0
-
 pop    {r3}
 push   {r4-r7,r14}
 mov    r4,r1//item to load halfword 
@@ -282,3 +280,5 @@ mov    r4,r2
 mov    r6,r3
 ldr    r0,=#0x080B5173
 bx     r0
+
+ItemTablePointer:

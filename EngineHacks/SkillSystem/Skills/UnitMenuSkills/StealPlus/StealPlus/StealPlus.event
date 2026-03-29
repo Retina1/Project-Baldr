@@ -92,6 +92,14 @@ WORD WatchfulID
 	WORD StealID
 	WORD StealPlusID
 	WORD ALSO_USE_VANILLA_STEAL_CHECK
+
+	ALIGN 4
+	Can_Unit_Steal_Two:
+	#incbin "Can_Unit_Steal_Two.dmp"
+	POIN SkillTester
+	WORD StealID
+	WORD StealPlusID
+	POIN GoldStealCommandUsability
 	
 #endif
 	
