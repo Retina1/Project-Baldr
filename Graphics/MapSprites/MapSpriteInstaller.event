@@ -1,3 +1,81 @@
+//Standing map sprite fix (FEBuilder version doesn't work?)
+
+PUSH
+ORG 0x26706
+BYTE 0xFF
+
+ORG 0x2678A
+BYTE 0xFF
+
+ORG 0x2680C
+BYTE 0xFF
+
+ORG 0x26C68
+BYTE 0xFF
+
+ORG 0x27250
+BYTE 0xFF
+
+ORG 0x27B96
+BYTE 0xFF
+
+ORG 0x27C82
+BYTE 0xFF
+
+ORG 0x27D30
+BYTE 0xFF
+
+ORG 0x27DF0
+BYTE 0xFF
+
+ORG 0x27E84
+BYTE 0xFF
+
+ORG 0x27F5A
+BYTE 0xFF
+
+ORG 0x2804C
+BYTE 0xFF
+
+ORG 0x26A52
+BYTE 0x00 0x20
+
+ORG 0x268E4
+BYTE 0x00 0x20	//
+
+ORG 0x26B42
+BYTE 0x00 0x20	//
+
+//Below is unique to FEBuilder version. Doesn't work? May cause problems if map sprite index above 0xC0
+
+/*ORG 0x2668A
+BYTE 0xFF
+
+ORG 0x266B8
+BYTE 0x48 0xF1 0x01 0x02
+
+ORG 0x266BE
+BYTE 0xFF
+
+ORG 0x266EC
+BYTE 0x48 0xF1 0x01 0x02
+
+ORG 0x26778
+BYTE 0x48 0xF1 0x01 0x02
+
+ORG 0x267F8
+BYTE 0x48 0xF1 0x01 0x02
+
+ORG 0x26834
+BYTE 0x48 0xF1 0x01 0x02
+
+ORG 0x268C4
+BYTE 0x48 0xF1 0x01 0x02
+
+ORG 0x26F28
+BYTE 0x48 0xF1 0x01 0x02 */
+POP
+
 ALIGN 4
 AP1:
 #incbin "AP1.bin"
@@ -283,12 +361,12 @@ AdventFMv:
 #incbin "AdventFMv.dmp"
 
 ALIGN 4
-FreebldST:
-#incbin "FreebldST.dmp"
+MilitiaST:
+#incbin "MilitiaST.dmp"
 
 ALIGN 4
-FreebldMv:
-#incbin "FreebldMv.dmp"
+MilitiaMv:
+#incbin "MilitiaMv.dmp"
 
 ALIGN 4
 SoldierST:
@@ -609,3 +687,115 @@ DarkPrinceST:
 ALIGN 4
 DarkPrinceMv:
 #incbin "DarkPrinceMv.dmp"
+
+ALIGN 4
+ArenaST:
+#incbin "ArenaST.dmp"
+
+ALIGN 4
+ArenaMv:
+#incbin "ArenaMv.dmp"
+
+ALIGN 4
+AuguryST:
+#incbin "AuguryST.dmp"
+
+ALIGN 4
+AuguryMv:
+#incbin "AuguryMv.dmp"
+
+ALIGN 4
+BlacksmithST:
+#incbin "BlacksmithST.dmp"
+
+ALIGN 4
+BlacksmithMv:
+#incbin "BlacksmithMv.dmp"
+
+ALIGN 4
+PawnkeeperST:
+#incbin "PawnkeeperST.dmp"
+
+ALIGN 4
+PawnkeeperMv:
+#incbin "PawnkeeperMv.dmp"
+
+ALIGN 4
+VendorST:
+#incbin "VendorST.dmp"
+
+ALIGN 4
+VendorMv:
+#incbin "VendorMv.dmp"
+
+ALIGN 4
+SupplierMST:
+#incbin "SupplierMST.dmp"
+
+ALIGN 4
+SupplierMMv:
+#incbin "SupplierMMv.dmp"
+
+ALIGN 4
+SupplierFST:
+#incbin "SupplierFST.dmp"
+
+ALIGN 4
+SupplierFMv:
+#incbin "SupplierFMv.dmp"
+
+ALIGN 4
+EmpressST:
+#incbin "EmpressST.dmp"
+
+ALIGN 4
+EmpressMv:
+#incbin "EmpressMv.dmp"
+
+ALIGN 4
+TruebladeST:
+#incbin "TruebladeST.dmp"
+
+ALIGN 4
+TruebladeMv:
+#incbin "TruebladeMv.dmp"
+
+ALIGN 4
+FreebldST:
+#incbin "FreebldST.dmp"
+
+ALIGN 4
+FreebldMv:
+#incbin "FreebldMv.dmp"
+
+ALIGN 4
+ManaketeST:
+#incbin "ManaketeST.dmp"
+
+ALIGN 4
+ManaketeMv:
+#incbin "ManaketeMv.dmp"
+
+ALIGN 4
+DragonST:
+#incbin "DragonST.dmp"
+
+ALIGN 4
+DragonMv:
+#incbin "DragonMv.dmp"
+
+ALIGN 4
+BowfighterST:
+#incbin "BowfighterST.dmp"
+
+ALIGN 4
+BowfighterMv:
+#incbin "BowfighterMv.dmp"
+
+ALIGN 4
+LionheartST:
+#incbin "LionheartST.dmp"
+
+ALIGN 4
+LionheartMv:
+#incbin "LionheartMv.dmp"

@@ -36,6 +36,9 @@ ALIGN 4
 ItemIconEntry(RecoverRingIcon)
 #incbin "Misc/Recover Ring.dmp"
 ALIGN 4
+ItemIconEntry(ArdenBladeIcon)
+#incbin "Swords/Arden's Blade.dmp"
+ALIGN 4
 ItemIconEntry(SwordOfLegendIcon)
 #incbin "Swords/Sword of Legend.dmp"
 ALIGN 4
@@ -131,6 +134,9 @@ ItemIconEntry(TornadoIcon)
 ALIGN 4
 ItemIconEntry(BlizzardIcon)
 #incbin "Wind/Blizzard.dmp"
+ALIGN 4
+ItemIconEntry(SalamanderIcon)
+#incbin "Fire/Salamander.dmp"
 ALIGN 4
 ItemIconEntry(TyrfingIcon)
 #incbin "Regalia/Tyrfing.dmp"

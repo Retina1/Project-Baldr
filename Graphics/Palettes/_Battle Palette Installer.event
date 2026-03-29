@@ -271,6 +271,10 @@ VerdaneMyrmPalette:
 #incbin "VerdaneMyrm.dmp"
 
 ALIGN 4
+VerdaneMilitiaPalette:
+#incbin "VerdaneMilitia.dmp"
+
+ALIGN 4
 HeirheinArcherPalette:
 #incbin "HeirheinArcher.dmp"
 
@@ -293,6 +297,10 @@ HeirheinLncCavPalette:
 ALIGN 4
 HeirheinPriestPalette:
 #incbin "HeirheinPriest.dmp"
+
+ALIGN 4
+HeirheinGreatKntPalette:
+#incbin "HeirheinGreatKnt.dmp"
 
 ALIGN 4
 HeirheinMagePalette:
@@ -807,6 +815,10 @@ GrauenRitterValkyriePalette:
 #incbin "GrauenRitterValk.dmp"
 
 ALIGN 4
+LoptousArcherPalette:
+#incbin "LoptousArcher.dmp"
+
+ALIGN 4
 LoptousBerserkerPalette:
 #incbin "LoptousBerserker.dmp"
 
@@ -985,6 +997,35 @@ HensonOrangePalette:
 ALIGN 4
 PlaceholderPalette:
 #incbin "Eden.dmp"
+
+ALIGN 4
+EmilPalette:
+#incbin "Emir.dmp"
+
+ALIGN 4
+GazzackPalette:
+#incbin "Gazzak.dmp"
+
+ALIGN 4
+CrotorPalette:
+#incbin "Crotor.dmp"
+
+ALIGN 4
+WisemanPalette:
+#incbin "Wiseman.dmp"
+
+ALIGN 4
+SharkPalette:
+#incbin "Shark.dmp"
+
+ALIGN 4
+HoodPalette:
+#incbin "Hood.dmp"
+
+ALIGN 4
+BacchusPalette:
+#incbin "Bacchus.dmp"
+
 
 PUSH
 ORG $59BFC
