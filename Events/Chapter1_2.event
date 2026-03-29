@@ -45,7 +45,7 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x7,DewFoundIt,Edain,Dew)
+CharacterEventBothWays(0x7,DewFoundIt,Edain,Dew,0x16)
 CharacterEvent(0xA,WaitJomk,Edain,Jamke)
 END_MAIN
 
@@ -65,6 +65,10 @@ LOAD1 0x1 FirstVerdaners
 ENUN
 LOAD1 0x1 Jomk
 ENUN
+SVAL 1 Jamke
+ASMC GoldSetter|1
+SVAL 2 5000
+ASMC SetGoldEvent|1
 CleanText(0x17,VerdaneShenanigans)
 LOAD1 0x1 EnemyUnits
 ENUN
@@ -146,7 +150,11 @@ CHECK_ACTIVE
 SVAL s1 Sigurd
 BNE 0x9000 s1 sC
     LOAD1 0x1 TheMaiden
-	ENUN
+    ENUN
+    SVAL 1 Deirdre
+    ASMC GoldSetter|1
+    SVAL 2 1000
+    ASMC SetGoldEvent|1
     MUSS 0x2B
 	CHECK_ALIVE Sandima
 	BEQ 0x2 0xc 0x0
@@ -222,37 +230,37 @@ UNIT
 
 EnemyUnits:
 UNIT Sandima DMage Manfroy Level(10,Enemy,0) [5,23] DropItem 0x0 0x0 0x1 [Fenrir, Jormugandr, MgcRing] NeverMoveAI
-UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA4R24 [IronBow] AttackInRangeAI
-UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA3R24 [IronBow] AttackInRangeAI
-UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA6R24 [IronBow] AttackInRangeAI
-UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA7R24 [IronBow] AttackInRangeAI
-UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA4R25 [IronBow] AttackInRangeAI
-UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA5R25 [IronBow] AttackInRangeAI
-UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA6R25 [IronBow] AttackInRangeAI
-UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA5R26 [IronBow] AttackInRangeAI
-UNIT Loptrian Warrior Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA3R25 [SteelAxe] AttackInRangeAI
-UNIT Loptrian Warrior Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA7R25 [SteelAxe] AttackInRangeAI
+UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA4R24 [IronBow] [0x0,0x3,0x0,0x1]
+UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA3R24 [IronBow] [0x0,0x3,0x0,0x1]
+UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA6R24 [IronBow] [0x0,0x3,0x0,0x1]
+UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA7R24 [IronBow] [0x0,0x3,0x0,0x1]
+UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA4R25 [IronBow] [0x0,0x3,0x0,0x1]
+UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA5R25 [IronBow] [0x0,0x3,0x0,0x1]
+UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA6R25 [IronBow] [0x0,0x3,0x0,0x1]
+UNIT Loptrian Archer Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA5R26 [IronBow] [0x0,0x3,0x0,0x1]
+UNIT Loptrian Warrior Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA3R25 [SteelAxe] [0x0,0x3,0x0,0x1]
+UNIT Loptrian Warrior Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA7R25 [SteelAxe] [0x0,0x3,0x0,0x1]
 UNIT
 
 FirstVerdaners:
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [8,35] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [4,33] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [6,33] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [6,35] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [7,34] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [9,34] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [10,33] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [11,32] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [10,31] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [10,35] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [12,33] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [9,32] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [7,32] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
-UNIT Verdane2 Hunter Sandima Level(10,Enemy,1) [6,29] 0x0 0x0 0x0 0x1 [IronBow] NoAI
-UNIT Verdane2 Hunter Sandima Level(10,Enemy,1) [7,30] 0x0 0x0 0x0 0x1 [IronBow] NoAI
-UNIT Verdane2 Hunter Sandima Level(10,Enemy,1) [8,29] 0x0 0x0 0x0 0x1 [IronBow] NoAI
-UNIT Verdane2 Hunter Sandima Level(10,Enemy,1) [9,30] 0x0 0x0 0x0 0x1 [IronBow] NoAI
-UNIT Commander Myrm Sandima Level(6,Enemy,1) [8,37] DropItem 0x0 0x0 0x1 [CursedBlade] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [8,35] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [4,33] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [6,33] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [6,35] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [7,34] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [9,34] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [10,33] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [11,32] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [10,31] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [10,35] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [12,33] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [9,32] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Barbarian Sandima Level(10,Enemy,1) [7,32] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Verdane2 Hunter Sandima Level(10,Enemy,1) [6,29] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Verdane2 Hunter Sandima Level(10,Enemy,1) [7,30] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Verdane2 Hunter Sandima Level(10,Enemy,1) [8,29] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Verdane2 Hunter Sandima Level(10,Enemy,1) [9,30] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Commander Myrm Sandima Level(6,Enemy,1) [8,37] DropItem 0x0 0x0 0x0 [CursedBlade] NoAI
 UNIT
 
 TheMaiden:

@@ -35,7 +35,7 @@ ENDTRAP
 ALIGN 4
 TurnBasedEvents:
 TurnEventPlayer(0x0,ComethHeirhein,5)
-TurnEventPlayer(0x0,LachyCheck,1)
+//TurnEventPlayer(0x0,LachyCheck,1)
 END_MAIN
 
 ALIGN 4
@@ -44,8 +44,8 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x8,StealSword,Dew,Lachesis,0x9)
 CharacterEvent(0x9,LachesisJoineth,Sigurd,Lachesis)
+CharacterEventBothWays(0x8,StealSword,Dew,Lachesis,0x9)
 END_MAIN
 
 MiscBasedEvents:
@@ -57,7 +57,7 @@ BeginningScene:
 MUSC 0x4
 Narration(0x8,Ch2_Narration)
 CLEAN
-CAM1 [10,9]
+CAM1 [13,14]
 FADU 16
 MUSC 0x24
 Location(Name_Nordion)
@@ -104,13 +104,13 @@ BEQ 0x37 0xc 0x0
 //elliot dead
 LOAD1 0x1 GrahamUnits
 ENUN
-MoveByCoords(60, 13, 4, 4, 5)
-MoveByCoords(60, 14, 4, 5, 6)
-MoveByCoords(60, 15, 4, 4, 7)
-MoveByCoords(60, 13, 5, 5, 8)
+MoveByCoords(60, 13, 4, 8, 1)
+MoveByCoords(60, 14, 4, 10, 1)
+MoveByCoords(60, 15, 4, 9, 2)
+MoveByCoords(60, 13, 5, 7, 1)
 ENUN
-MoveByCoords(60, 14, 5, 4, 9)
-MoveByCoords(60, 15, 5, 5, 10)
+MoveByCoords(60, 14, 5, 11, 1)
+MoveByCoords(60, 15, 5, 9, 1)
 MoveByCoords(60, 13, 6, 19, 11)
 MoveByCoords(60, 14, 6, 21, 10)
 ENUN
@@ -120,8 +120,8 @@ MoveByCoords(60, 14, 7, 21, 13)
 MoveByCoords(60, 15, 7, 23, 12)
 ENUN
 MoveByCoords(60, 13, 8, 22, 14)
-MoveByCoords(60, 14, 8, 24, 14)
-MoveByCoords(60, 15, 8, 26, 15)
+MoveByCoords(60, 14, 8, 23, 15)
+MoveByCoords(60, 15, 8, 20, 9)
 ENUN
 LOAD1 0x1 AngryUncle
 ENUN
@@ -131,13 +131,13 @@ LABEL 0x37
 //elliot alive
 LOAD1 0x1 EnemyUnits
 ENUN
-MoveByCoords(60, 13, 4, 4, 5)
-MoveByCoords(60, 14, 4, 5, 6)
-MoveByCoords(60, 15, 4, 4, 7)
-MoveByCoords(60, 13, 5, 5, 8)
+MoveByCoords(60, 13, 4, 8, 1)
+MoveByCoords(60, 14, 4, 10, 1)
+MoveByCoords(60, 15, 4, 9, 2)
+MoveByCoords(60, 13, 5, 7, 1)
 ENUN
-MoveByCoords(60, 14, 5, 4, 9)
-MoveByCoords(60, 15, 5, 5, 10)
+MoveByCoords(60, 14, 5, 11, 1)
+MoveByCoords(60, 15, 5, 9, 1)
 MoveByCoords(60, 13, 6, 19, 11)
 MoveByCoords(60, 14, 6, 21, 10)
 ENUN
@@ -147,24 +147,25 @@ MoveByCoords(60, 14, 7, 21, 13)
 MoveByCoords(60, 15, 7, 23, 12)
 ENUN
 MoveByCoords(60, 13, 8, 22, 14)
-MoveByCoords(60, 14, 8, 24, 14)
-MoveByCoords(60, 15, 8, 26, 15)
+MoveByCoords(60, 14, 8, 23, 15)
+MoveByCoords(60, 15, 8, 20, 9)
 ENUN
 LOAD1 0x1 StronkElliot
 ENUN
+ENUT 0x12
 Text(ElliotMad)
 GOTO 0x35
 LABEL 0x36
 //normal elliot
 LOAD1 0x1 EnemyUnits
 ENUN
-MoveByCoords(60, 13, 4, 4, 5)
-MoveByCoords(60, 14, 4, 5, 6)
-MoveByCoords(60, 15, 4, 4, 7)
-MoveByCoords(60, 13, 5, 5, 8)
+MoveByCoords(60, 13, 4, 8, 1)
+MoveByCoords(60, 14, 4, 10, 1)
+MoveByCoords(60, 15, 4, 9, 2)
+MoveByCoords(60, 13, 5, 7, 1)
 ENUN
-MoveByCoords(60, 14, 5, 4, 9)
-MoveByCoords(60, 15, 5, 5, 10)
+MoveByCoords(60, 14, 5, 11, 1)
+MoveByCoords(60, 15, 5, 9, 1)
 MoveByCoords(60, 13, 6, 19, 11)
 MoveByCoords(60, 14, 6, 21, 10)
 ENUN
@@ -174,26 +175,31 @@ MoveByCoords(60, 14, 7, 21, 13)
 MoveByCoords(60, 15, 7, 23, 12)
 ENUN
 MoveByCoords(60, 13, 8, 22, 14)
-MoveByCoords(60, 14, 8, 24, 14)
-MoveByCoords(60, 15, 8, 26, 15)
+MoveByCoords(60, 14, 8, 23, 15)
+MoveByCoords(60, 15, 8, 20, 9)
 ENUN
 LOAD1 0x1 Elliotatitagain
 ENUN
+ENUT 0x12
 Text(ElliotMonologue)
 LABEL 0x35
+LOAD1 0x0 AloneLachesus
+ENUN
+SVAL 0x1 0x20000303
+CHAI Lachesis
 CHECK_EVENTID 0x79
 BEQ 0x30 0xc 0x0
-UnremoveUnit(Lachesis)
+//UnremoveUnit(Lachesis)
 CHECK_EVENTID 0x7A
 BEQ 0x29 0xc 0x0
 //eve dead but brothers ok
-CleanText(0x10,EldiganMissingEva)
+CleanText(0x10,EldiganMissingElliotDead)
 LOAD1 0x1 TheTwoStooges
 ENUN
 GOTO 0x28
 //eve dead and brothers angry
 LABEL 0x29
-CleanText(0x10,EldiganMissingSoldier)
+CleanText(0x10,EldiganMissingElliotAlive)
 LOAD1 0x1 SuckyKnights 
 ENUN
 GOTO 0x28
@@ -204,8 +210,6 @@ LOAD1 0x1 TheThreeStooges
 ENUN
 LABEL 0x28
 CAM1 [42,17]
-MUSC 0x26
-Location(Name_Nordion)
 CleanText(0x10,NordionUnderAttack)
 GotoPrepScreen
 EndEvent
@@ -215,41 +219,22 @@ FADI 16
 CLEN 0x0
 CLEA 0x0
 CLEE 0
-CAM1 [10,9]
 FADU 16
-MUSC 0x31
-CleanText(0xA,SubduedHeirhein)
-CHECK_ALIVE Quan
-BEQ 0x50 0xC 0x0
 LOAD1 0x0 PisuergaReports
 ENUN
-CleanText(0xA,PisuergaBringsNews)
-MOVE 7 Leonster [10,9]
-CleanText(0xA,SubduedHeirhein2)
-LABEL 0x50
 LOAD1 0x0 IndechBadNews
 ENUN
-FADU 16
-CLEN 0x0
-CLEA 0x0
-CLEE 0
+FADI 16
 LOMA 0x8
 CAM1 [18,30]
 MUSC 0x18
 FADU 16
 STAL 60
 LOAD1 0x0 EltoCameo
+ENUN
 Location(Name_Mackily)
 CleanText(0x10,ClementReflexion)
-CHECK_ALIVE Quan
-BEQ 0x30 0xC 0x0
-CHECK_EVENTID 0xC
-BEQ 0x30 0xc 0x0
-MNC2 0x1D
-GOTO 0x31
-LABEL 0x30
 MNC2 0x7
-LABEL 0x31
 EndEvent
 
 LachyCheck:
@@ -264,13 +249,13 @@ EndEvent
 
 ComethHeirhein:
 LOAD1 0x1 HeirheinFodder
-ENUN
 EndEvent
 
 LachesisJoineth:
 MUSS 0x30
 Text(RecruitingLachesis)
 TurnAlly(Lachesis)
+REVEAL Lachesis
 MURE 60
 EndEvent
 
@@ -282,23 +267,23 @@ MURE 60
 EndEvent
 
 PlayerUnits:
-UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [42,17] 0x0 0x0 0x0 0x1 [SteelSword, IronLance] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [41,18] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(3,Ally,0) [43,18] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [42,19] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [40,19] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [44,19] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [43,20] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [41,20] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [40,17] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [44,17] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [37,20] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [38,20] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [34,18] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [33,17] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [33,19] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [35,19] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [35,18] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [28,20] 0x0 0x0 0x0 0x1 [SteelSword, IronLance] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [29,20] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(3,Ally,0) [28,21] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [30,20] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [30,21] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [31,20] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [31,21] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [32,20] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [32,21] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [28,22] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [29,22] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [30,22] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [31,22] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [32,22] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [33,20] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [33,21] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [33,22] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT //Tells the game that the unit list has ended
 
 EnemyUnits:
@@ -338,40 +323,40 @@ UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [14,0] 0x0 0x0 0x1 REDA15R8 [SteelL
 UNIT
 
 Elliotatitagain:
-UNIT Elliot DukeKnt Bordeaux Level(15,Enemy,0) [9,0] DropItem 0x0 0x0 0x1 [SilverLance, Horseslayer] ChaseOnceApproachedAI
+UNIT Elliot DukeKnt Bordeaux Level(15,Enemy,0) [9,0] DropItem 0x0 0x0 0x1 [SilverLance] [0x0,0x12,0x0,0x0]
 UNIT
 
 StronkElliot:
-UNIT Elliot DukeKnt Bordeaux Level(20,Enemy,1) [9,0] DropItem 0x0 0x0 0x1[ShortSpear, Flycatcher, BodyRing] ChaseOnceApproachedAI
+UNIT Elliot DukeKnt Bordeaux Level(15,Enemy,0) [9,0] DropItem 0x0 0x0 0x1 [SilverLance] [0x0,0x12,0x0,0x0]
 UNIT
 
 TheTwoStooges:
-UNIT Eva PalF Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA12R11 [Javelin, SteelSword] GreenStationaryAI
-UNIT Alva PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA10R10 [Javelin, SteelSword] GreenStationaryAI
+UNIT Eva PalF Eldigan Level(18,NPC,0) [13,14] 0x0 0x0 0x1 REDA10R12 [Javelin, SteelSword] [0x3,0x3,0x0,0x20]
+UNIT Alva PalM Eldigan Level(18,NPC,0) [13,14] 0x0 0x0 0x1 REDA14R15 [Javelin, SteelSword] [0x3,0x3,0x0,0x20]
 UNIT
 
 AngryUncle:
-UNIT Graham DukeKnt Bordeaux Level(15,Enemy,0) [9,0] DropItem 0x0 0x0 0x1 [SilverLance, Spear] ChaseOnceApproachedAI
+UNIT Graham DukeKnt Bordeaux Level(15,Enemy,0) [9,0] DropItem 0x0 0x0 0x1 [SilverLance] [0x0,0x12,0x0,0x0]
 UNIT
 
 AloneLachesus:
-UNIT Lachesis Princess Sigurd Level(2,NPC,0) [10,9] 0x0 0x0 0x0 0x1 [MiracleSwd, Heal] GuardTileAI
+UNIT Lachesis Princess Sigurd Level(2,NPC,0) [13,14] 0x0 0x0 0x0 0x1 [MiracleSwd, Heal] [0x3,0x3,0x0,0x20]
 UNIT
 
 TheThreeStooges:
-UNIT Eve PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA11R10 [Javelin, SteelSword] GreenStationaryAI
-UNIT Eva PalF Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA9R10 [Javelin, SteelSword] GreenStationaryAI
-UNIT Alva PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA10R11 [Javelin, SteelSword] GreenStationaryAI
+UNIT Eve PalM Eldigan Level(18,NPC,0) [13,14] 0x0 0x0 0x1 REDA12R15 [Javelin, SteelSword] [0x3,0x3,0x0,0x20]
+UNIT Eva PalM Eldigan Level(18,NPC,0) [13,14] 0x0 0x0 0x1 REDA13R16 [Javelin, SteelSword] [0x3,0x3,0x0,0x20]
+UNIT Alva PalM Eldigan Level(18,NPC,0) [13,14] 0x0 0x0 0x1 REDA14R15 [Javelin, SteelSword] [0x3,0x3,0x0,0x20]
 UNIT
 
 SuckyKnights:
-UNIT CrossKnight PalM Eldigan Level(18,NPC,1) [10,9] 0x0 0x0 0x1 REDA11R10 [Javelin, SteelSword] GreenRangeAI
-UNIT CrossKnight PalM Eldigan Level(18,NPC,1) [10,9] 0x0 0x0 0x1 REDA9R10 [Javelin, SteelSword] GreenRangeAI
-UNIT CrossKnight PalM Eldigan Level(18,NPC,1) [10,9] 0x0 0x0 0x1 REDA10R11 [Javelin, SteelSword] GreenRangeAI
+UNIT CrossKnight PalM Eldigan Level(18,NPC,1) [13,14] 0x0 0x0 0x1 REDA12R15 [Javelin, SteelSword] [0x3,0x3,0x0,0x20]
+UNIT CrossKnight PalM Eldigan Level(18,NPC,1) [13,14] 0x0 0x0 0x1 REDA13R16 [Javelin, SteelSword] [0x3,0x3,0x0,0x20]
+UNIT CrossKnight PalM Eldigan Level(18,NPC,1) [13,14] 0x0 0x0 0x1 REDA14R15 [Javelin, SteelSword] [0x3,0x3,0x0,0x20]
 UNIT
 
 EldieLeaves:
-UNIT Eldigan PalM Chagall Level(20,NPC,0) [10,9] 0x0 0x0 0x1 REDA13R0 [Mystletainn, SteelLance] NoAI
+UNIT Eldigan PalM Chagall Level(20,NPC,0) [13,14] 0x0 0x0 0x1 REDA13R0 [Mystletainn, SteelLance] NoAI
 UNIT
 
 ItsPisuerga:
@@ -379,15 +364,15 @@ UNIT Leonster UniCav Quan Level(20,NPC,0) [22,23] 0x0 0x0 0x1 REDA9R2 [SteelLanc
 UNIT
 
 EltoCameo:
-UNIT Eldigan PalM Chagall Level(20,NPC,0) [10,37] 0x0 0x0 0x1 REDA23R19 [Mystletainn, SteelLance] NoAI
+UNIT Eldigan PalM Chagall Level(20,NPC,0) [10,37] 0x0 0x0 0x1 REDA22R22 [Mystletainn, SteelLance] NoAI
 UNIT
 
 PisuergaReports:
-UNIT Leonster UniCav Quan Level(20,NPC,0) [1,0] 0x0 0x0 0x1 REDA9R10 [SteelLance] NoAI
+UNIT Leonster UniCav Quan Level(20,NPC,0) [1,0] 0x0 0x0 0x1 REDA10R9 [SteelLance] NoAI
 UNIT
 
 IndechBadNews:
-UNIT Indech HolyKnt Eldigan Level(14,NPC,0) [17,0] 0x0 0x0 0x1 REDA10R9 [SteelLance, Lightning] NoAI
+UNIT Indech HolyKnt Eldigan Level(14,Enemy,0) [17,0] 0x0 0x0 0x1 REDA10R9 [SteelLance, Lightning] NoAI
 UNIT
 
 HeirheinFodder:

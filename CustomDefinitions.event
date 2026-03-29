@@ -34,6 +34,9 @@
 //item ID for skill scroll
 #define SkillScroll 0xFE
 
+//For fourth allegiance
+#define NeutralForce 3
+
 #include "EngineHacks/SkillSystem/skill_definitions.event"
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p

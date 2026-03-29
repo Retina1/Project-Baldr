@@ -7,11 +7,17 @@
 
     #include "repointedTextTable.event"
 
+    ALIGN 4
+    //Teq ASM
+    #include "EngineHacks/Baldr/FE8-Text_Engine_Rework/_FE8-Text_Engine_Rework_EA.event"
+    ALIGN 4
+
     //Text first for Text ID definitions
     #include "Text/InstallTextData.event"
     MESSAGE Used text space ends at currentOffset
 	
-	//Graphics
+	//Graphics - Start here because we otherwise go past free space?
+    ORG 0x1000000
 	#include "Graphics/Graphics Installer.event"
 
     //CSV tables
@@ -20,6 +26,19 @@
 	#include "Tables/PromoUsability.event"
 	#include "Tables/EATables.event"
     MESSAGE Used table space ends at currentOffset
+
+    ALIGN 4
+
+    //Personal wallets
+    #include "EngineHacks/PersonalWallets/Installer.event"
+
+    ALIGN 4
+
+    //Prep shop disable
+
+    #include "ban_prep_shop/Installer.event"
+
+    ALIGN 4
 
     //Engine Hacks
     #include "EngineHacks/_MasterHackInstaller.event"
@@ -128,7 +147,241 @@
     ORG 0x2c7cc
     POIN newWeaponTriangleTable
 
+    //Jamke won't attack Aideen doesn't work
+    ORG 0x5A8A00
+    BYTE Edain
+
     POP
+
+    ALIGN 4
+    #include "EngineHacks/PersonalWallets/C_Code.lyn.event"
+    ALIGN 4
+
+
+
+    //Updated draw for fourth allegiance
+    #include "EngineHacks/Baldr/Draw/Installer.event"
+    ALIGN 4
+
+    PUSH
+
+    // Don't clear potential wind magic slot
+    ORG 0x312d8
+    BYTE 0x1B
+
+    //Miss EXP
+    ORG 0x2c574
+    BYTE 0x0
+
+    //Fix promoted enemy auto level bonus
+    //Normal
+    //ORG 0x37B52
+    //BYTE 0x03
+
+    //Hard
+    //ORG 0x37b5c
+    //BYTE 0xA
+
+    POP
+
+     #define Time_Between_Stats 10 //default is 20
+    PUSH
+    ORG $7F464
+    BYTE Time_Between_Stats
+    ORG $741E0
+    BYTE Time_Between_Stats+1
+
+    //Poison
+    ORG $9A50AE // from this proc 9A508C 
+    BYTE 30 // default 50 Frames to wait during poison anim before hp drains 
+    ORG $9A50BE 
+    BYTE 15 // default 30 frames before hp bar disappears 
+    ORG $9A50CE 
+    BYTE 5 // default 44 frames to wait before going to the next unit 
+
+    //Target frames
+    ORG $39EAE 
+    BYTE 20 // Vanilla default 
+
+    ORG $114FA // frames to show "got item" popup 
+    BYTE 45 //96 is vanilla 
+    ORG $1166C // frames to show "got gold" popup 
+    BYTE 45 //96 is vanilla
+
+    // speed for battle map anim rounds 
+    // just from the proc MapAnimBattle 9A49FC
+    // vanilla is 30 30 30 10 30 
+    ORG $9A4A06 
+    BYTE 10 
+    ORG $9A4A16 
+    BYTE 15 
+    ORG $9A4A26 
+    BYTE 10 
+    ORG $9A4A36
+    BYTE 5 
+    ORG $9A4A46
+    BYTE 15  
+    //ORG $7BCE2 // double speed of vuln animation by 7743 
+    //BYTE 0x08 0x34 0x24 0x04 0x24 0x0c 0x00 0x00 0x00 0x00 0x8c 0x42 0x09 0xda
+
+    // make goal window text slightly longer 
+    ORG $8D2A6 
+    BYTE 10 // Width of line 1 (Vanilla is 8)
+    ORG $8D2B2 
+    BYTE 10 // Width of line 2 (Vanilla is 8)
+    ORG $8D2F6 
+    BYTE $48 // length in pixels for centering? (Vanilla is 0x40)
+    ORG $8D3E8 
+    BYTE $48 // length in pixels for "Last turn" (Vanilla is 0x40)
+
+    // speed for battle map anim rounds 
+    // just from the proc MapAnimBattle 9A49FC
+    // vanilla is 30 30 30 10 30 
+    ORG $9A4A06 
+    BYTE 10 
+    ORG $9A4A16 
+    BYTE 15 
+    ORG $9A4A26 
+    BYTE 10 
+    ORG $9A4A36
+    BYTE 5 
+    ORG $9A4A46
+    BYTE 15  
+    //ORG $7BCE2 // double speed of vuln animation by 7743 
+    //BYTE 0x08 0x34 0x24 0x04 0x24 0x0c 0x00 0x00 0x00 0x00 0x8c 0x42 0x09 0xda
+
+    ORG $39EAE 
+    BYTE 16 // Vanilla default is 45
+
+    ORG $9A50AE // from this proc 9A508C 
+    BYTE 30 // default 50 Frames to wait during poison anim before hp drains 
+    ORG $9A50BE 
+    BYTE 15 // default 30 frames before hp bar disappears 
+    ORG $9A50CE 
+    BYTE 5 // default 44 frames to wait before going to the next unit 
+
+
+    POP
+
+    //Contro ASM
+    ALIGN 4
+    #include "EngineHacks/Baldr/BattleForecastFix/Installer.event"
+    ALIGN 4
+    #include "EngineHacks/Baldr/CantoBugFix/Installer.event"
+
+    ALIGN 4
+    #include "asmcs/UpdatedLButtonCycling/UpdatedLButtonCycling.event"
+    ALIGN 4
+    ALIGN 4
+    MESSAGE bk at currentOffset
+    #include "asmcs/BkSelRework/BkSelRework.event"
+    ALIGN 4
+
+    #include "EngineHacks/Baldr/ResTerrainWindow/Installer.event"
+
+    ALIGN 4
+    
+    GoldSetter:
+    #incbin "asmcs/GoldSetter.dmp"
+
+    ALIGN 4
+
+    ALIGN 4
+    
+    #include "asmcs/Weaponkills.lyn.event"
+
+    ALIGN 4
+
+    ALIGN 4
+    
+    #include "asmcs/Parents.lyn.event"
+
+    ALIGN 4
+
+    ALIGN 4
+    
+    #include "asmcs/Store.lyn.event"
+
+    ALIGN 4
+
+    ALIGN 4
+    
+    #include "asmcs/ChapterCounter.lyn.event"
+
+    ALIGN 4
+
+    ALIGN 4
+    #include "ConvoyStuff.lyn.event"
+    ALIGN 4
+
+    ALIGN 4
+    #include "convoy/FE8-Convoy_Stuff_EA.event"
+    ALIGN 4
+
+    ALIGN 4
+
+    callSupplyCommand:
+    #incbin "convoy/ASMC_azukarizyo.dmp"
+
+    ALIGN 4
+
+    SupplyHouse:
+
+    ENUT 0x9D
+
+    ASMC callSupplyCommand|1
+
+    ENUF 0x9D
+
+    NoFade
+    ENDA
+
+
+    //New AI hacks
+
+    enemyAIChange:
+    #incbin "EngineHacks/Baldr/enemyCharacterAIChanger.dmp"
+    ALIGN 4
+
+    npcAIChange:
+    #incbin "EngineHacks/Baldr/npcCharacterAIChanger.dmp"
+    ALIGN 4
+
+    PUSH
+    // AI to account for doubling 
+    ORG $3DF4A
+    BYTE $72 $22 $D2 $18 $12 $78 $D8 $7C $12 $1A $C0 $46 $C0 $46 $C0 $46 $C0 $46
+    /*
+    mov r2, #0x72; add r2, r3 @ dfdr + 0x72 (initial hp) 
+    ldrb r2, [r2]; ldrb r0, [r3, #0x13] @ curr hp after battle 
+    sub r2, r0 @ dmg dealt; nop; nop; nop; nop 
+    */
+
+    //ORG $5A83A1
+    //BYTE 99 // Percentage of health to accept staff healing at when not in recovery mode, I guess
+
+    POP
+
+    ALIGN 4
+    #include "EngineHacks/Baldr/DecideOnDangerMap/DecideOnDangerMap.event"
+
+    ALIGN 4
+    #include "EngineHacks/Baldr/GroupAI/Installer.event"
+    ALIGN 4
+    
+    //Fix for weapon ranks
+    PUSH
+    ORG $2c164
+    BYTE 0xFB
+
+    ORG $2c168
+    BYTE 0xFB
+
+    ORG $2c16C
+    BYTE 0xFB
+
+    POP
+
 	
     MESSAGE Used free space ends at currentOffset
 #else

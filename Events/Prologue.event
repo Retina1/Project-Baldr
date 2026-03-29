@@ -47,7 +47,7 @@ ALIGN 4
 LocationBasedEvents:
 Seize(1,8)
 Seize(0x13,EvansAttack,29,18)
-Seize(0x3,DebugMap,56,5)
+//Seize(0x3,DebugMap,56,5)
 Village(0xC,VillageOne,18,8)
 Village(0xD,VillageTwo,24,2)
 Village(0xE,VillageThree,24,22)
@@ -58,12 +58,13 @@ END_MAIN
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x0,SigurdArvisTalkConvo,Sigurd,ArvisGen1)
-CharacterEventBothWays(0x0,AzelArvisTalkConvo,Azel,ArvisGen1)
+CharacterEventBothWays(0x1F,AzelArvisTalkConvo,Azel,ArvisGen1)
 CharacterEventBothWays(0x8,PrettyFace,Alec,Ethlyn)
 CharacterEventBothWays(0x12,BrothersTalketh,Sigurd,Ethlyn)
 CharacterEventBothWays(0x7,LexTalketh,Sigurd,Lex)
 CharacterEventBothWays(0x1D,AzelTalketh,Sigurd,Azel)
 CharacterEventBothWays(0x1E,QuanTalketh,Sigurd,Quan)
+CharacterEventBothWays(0x20,LegionJoins,Legion,Arden)
 END_MAIN
 
 MiscBasedEvents:
@@ -96,6 +97,7 @@ LOAD1 0x1 GailCrew
 LOAD1 0x2 CrusaderCrew
 ENUN
 FADU 16
+STAL 0x15
 Text(MiracleOfDahna)
 STAL 60
 LOAD1 0x2 FleeingBaldr
@@ -167,6 +169,20 @@ Location(Name_Chalphy)
 CleanText(0x10,ChalphyDudes)
 LOAD1 0x1 PlayerUnits
 ENUN
+SVAL 1 Sigurd
+ASMC GoldSetter|1
+SVAL 2 5000
+ASMC SetGoldEvent|1
+STAL 0x15
+SVAL 1 Alec
+ASMC GoldSetter|1
+SVAL 2 2000
+ASMC SetGoldEvent|1
+STAL 0x15
+SVAL 1 Noish
+ASMC GoldSetter|1
+SVAL 2 2000
+ASMC SetGoldEvent|1
 EndEvent
 
 EndingScene:
@@ -183,20 +199,6 @@ CHECK_EVENTID 0x1B
 BEQ 0x30 0xc 0x0
 CHECK_EVENTID 0x1C
 BEQ 0x30 0xc 0x0
-FADI 0x3C
-CLEA 0
-CLEN 0x0
-MUSC 0x0
-LOAD1 0x1 SwordDiscussion
-SetBackground(0x20)
-Text(OifeyPunishment)
-FADI 0x3c
-MOVE 120 Arden [1,10]
-FADU 16
-Text(SigurdProudofHard)
-FADI 0x3c
-CLEAN
-FADU 16
 GiveItem(ArdenSword,Arden)
 LABEL 0x30
 MNC2 0x1
@@ -220,6 +222,10 @@ CleanText(0x10,MidirRescueth)
 LABEL 0x31
 LOAD1 0x1 UsefulBoi
 ENUN
+SVAL 1 Midir
+ASMC GoldSetter|1
+SVAL 2 2000
+ASMC SetGoldEvent|1
 SetChapterObjectiveText(_Seize, _SeizeEvans)
 ENDA
 
@@ -232,8 +238,33 @@ Text(StuffedUpArden)
 LOAD1 0x1 BridgeDestroyers
 ENUN
 CAM1 [7,1]
+
+//Legion easter egg
+CHECK_ALIVE Noish
+BNE 0x1 0xC 0x0
+
+    CHECK_ALIVE Alec
+    BNE 0x2 0xC 0x0
+
+        LOAD1 0x1 CliffBanditsLegion
+        ENUN
+
+        CAM1(Legion)
+        STAL 0x15
+        FlashCursor(Legion,60)
+        STAL 0x15
+        Text(LegionAppears)
+
+    ENIF 0x2
+
+ELSE 0x3
+ENIF 0x1
+
 LOAD1 0x1 CliffBandits
 ENUN
+
+ENIF 0x3
+
 CAM1 Gerrard
 GOTO 0x33
 LABEL 0x32
@@ -253,7 +284,7 @@ EndEvent
 
 PrettyFace:
 Text(AlecEthlyn)
-GiveItem(IronSword,Ethlyn)
+GiveItem(IronSwordEth,Ethlyn)
 EndEvent
 
 SigurdArvisTalkConvo:
@@ -275,9 +306,9 @@ AzelArvisTalkConvo:
 MUSC 0x2D
 Text(SalamanderTime)
 GiveItem(Salamander,Azel)
-MOVE 120 ArvisGen1 [17,0]
-ENUN
-SilentKillUnit(ArvisGen1)
+//MOVE 120 ArvisGen1 [17,0]
+//ENUN
+//SilentKillUnit(ArvisGen1)
 EndEvent
 
 MidirDieth:
@@ -323,6 +354,7 @@ MOVE 120 DiMaggio [29,18]
 ENUN
 Text(MilkTheVillage)
 SetAI(DiMaggio,0x03,0x03,0x04,0x20)
+EVBIT_F 9
 MoveByCoords(120, 28, 22, 28, 19)
 MoveByCoords(120, 29, 22, 29, 20)
 MoveByCoords(120, 30, 22, 30, 19)
@@ -333,8 +365,16 @@ AzelCometh:
 MUSC 0x30
 CAM1 [40,3]
 LOAD1 0x1 LexCometh
-Text(TheyArriveth)
 ENUN
+Text(TheyArriveth)
+SVAL 1 Azel
+ASMC GoldSetter|1
+SVAL 2 5000
+ASMC SetGoldEvent|1
+SVAL 1 Lex
+ASMC GoldSetter|1
+SVAL 2 5000
+ASMC SetGoldEvent|1
 EndEvent
 
 QuanCometh:
@@ -343,6 +383,18 @@ CAM1 [44,9]
 LOAD1 0x1 LensterCavalry
 ENUN
 Text(LensterArriveth)
+SVAL 1 Quan
+ASMC GoldSetter|1
+SVAL 2 5000
+ASMC SetGoldEvent|1
+SVAL 1 Ethlyn
+ASMC GoldSetter|1
+SVAL 2 4000
+ASMC SetGoldEvent|1
+SVAL 1 Finn
+ASMC GoldSetter|1
+SVAL 2 2000
+ASMC SetGoldEvent|1
 EndEvent
 
 BrothersTalketh:
@@ -363,6 +415,12 @@ EndEvent
 LexTalketh:
 MUSC 0x59
 Text(HowSirDo)
+EndEvent
+
+LegionJoins:
+MUSC 0x30
+Text(LegionArdenJoinConvo)
+TurnAlly(Legion)
 EndEvent
 
 VisitusSir:
@@ -397,9 +455,9 @@ ALIGN 4
 
 PlayerUnits:
 UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [56,5] 0x0 0x0 0x0 0x1 [SteelSword, IronLance] NoAI
-UNIT Alec UniCav 0x0 Level(2,Ally,0) [56,5] 0x0 0x0 0x1 REDA55R6 [IronSword] NoAI
-UNIT Noish UniCav 0x0 Level(3,Ally,0) [56,5] 0x0 0x0 0x1 REDA57R6 [SteelSword] NoAI
-UNIT Arden SwdArm 0x0 Level(3,Ally,0) [56,5] 0x0 0x0 0x1 REDA56R7 [IronSword] NoAI
+UNIT Alec UniCav 0x0 Level(2,Ally,0) [56,5] 0x0 0x0 0x1 REDA55R6 [IronSwordAl] NoAI
+UNIT Noish UniCav 0x0 Level(3,Ally,0) [56,5] 0x0 0x0 0x1 REDA57R6 [SteelSwordNoi] NoAI
+UNIT Arden SwdArm 0x0 Level(3,Ally,0) [56,5] 0x0 0x0 0x1 REDA56R7 [IronSwordAr] NoAI
 UNIT //Tells the game that the unit list has ended
 
 UselessBoi:
@@ -420,7 +478,7 @@ UNIT Lex AxeCav 0x0 Level(4,Ally,0) [42,0] 0x0 0x0 0x1 REDA42R4 [IronAxe] NoAI
 UNIT
 
 LensterCavalry:
-UNIT Finn LncCav 0x0 Level(1,Ally,0) [54,10] 0x0 0x0 0x1 REDA49R9 [IronLance] NoAI
+UNIT Finn LncCav 0x0 Level(1,Ally,0) [54,10] 0x0 0x0 0x1 REDA49R9 [IronLanceFin] NoAI
 UNIT Quan DukeKnt 0x0 Level(4,Ally,0) [57,8] 0x0 0x0 0x1 REDA44R9 [SteelLance, Javelin] NoAI
 UNIT Ethlyn Troub 0x0 Level(1,Ally,0) [57,7] 0x0 0x0 0x1 REDA46R11 [Heal, SlimSword] NoAI
 UNIT
@@ -451,14 +509,14 @@ UNIT Verdane1 Barbarian DiMaggio Level(10,Enemy,1) [32,11] 0x0 0x0 0x0 0x1 [Hand
 UNIT Verdane1 Barbarian DiMaggio Level(1,Enemy,1) [33,12] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
 UNIT Verdane1 Barbarian DiMaggio Level(1,Enemy,1) [33,10] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
 UNIT Verdane1 Brigand DiMaggio Level(1,Enemy,1) [39,19] 0x0 0x0 0x0 0x1 [IronAxe] TheWaitingBrigandAI
-UNIT Verdane1 Soldier DiMaggio Level(1,Enemy,1) [41,16] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Verdane1 Militia DiMaggio Level(1,Enemy,1) [41,16] 0x0 0x0 0x0 0x1 [IronLance] NoAI
 UNIT Verdane1 Myrm DiMaggio Level(1,Enemy,1) [38,12] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Verdane1 Soldier DiMaggio Level(1,Enemy,1) [43,13] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Verdane1 Militia DiMaggio Level(1,Enemy,1) [43,13] 0x0 0x0 0x0 0x1 [IronLance] NoAI
 UNIT Verdane1 Barbarian DiMaggio Level(1,Enemy,1) [47,7] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
 UNIT Verdane1 Barbarian DiMaggio Level(1,Enemy,1) [43,4] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
 UNIT Verdane1 Brigand DiMaggio Level(1,Enemy,1) [45,2] 0x0 0x0 0x0 0x1 [IronAxe] TheWaitingBrigandAI
 UNIT Verdane1 Barbarian DiMaggio Level(10,Enemy,1) [37,4] 0x0 0x0 0x0 0x1 [HandAxe] AttackInRangeAI
-UNIT Verdane1 Soldier DiMaggio Level(1,Enemy,1) [32,3] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Verdane1 Militia DiMaggio Level(1,Enemy,1) [32,3] 0x0 0x0 0x0 0x1 [IronLance] NoAI
 UNIT Verdane1 Brigand DiMaggio Level(1,Enemy,1) [28,0] 0x0 0x0 0x0 0x1 [IronAxe] TheWaitingBrigandAI
 UNIT Verdane1 Barbarian DiMaggio Level(1,Enemy,1) [29,0] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
 UNIT Verdane1 Archer DiMaggio Level(10,Enemy,1) [28,4] 0x0 0x0 0x0 0x1 [IronBow] AttackInRangeAI
@@ -466,12 +524,12 @@ UNIT Verdane1 Barbarian DiMaggio Level(1,Enemy,1) [20,14] 0x0 0x0 0x0 0x1 [IronA
 UNIT 
 
 BridgeDestroyers:
-UNIT Verdane1 Barbarian Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA0R9 [IronAxe] AttackInRangeAI
-UNIT Verdane1 Barbarian Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA1R10 [IronAxe] AttackInRangeAI
-UNIT Verdane1 Barbarian Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA2R9 [IronAxe] AttackInRangeAI
-UNIT Verdane1 Hunter Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA3R8 [IronBow] AttackInRangeAI
-UNIT Verdane1 Hunter Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA3R9 [IronBow] AttackInRangeAI
-UNIT Verdane1 Hunter Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA0R10 [IronBow] AttackInRangeAI
+UNIT Verdane1 Barbarian Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA0R9 [IronAxe] [0x0,0x3,0x0,0x1]
+UNIT Verdane1 Barbarian Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA1R10 [IronAxe] [0x0,0x3,0x0,0x1]
+UNIT Verdane1 Barbarian Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA2R9 [IronAxe] [0x0,0x3,0x0,0x1]
+UNIT Verdane1 Hunter Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA3R8 [IronBow] [0x0,0x3,0x0,0x1]
+UNIT Verdane1 Hunter Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA3R9 [IronBow] [0x0,0x3,0x0,0x1]
+UNIT Verdane1 Hunter Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA0R10 [IronBow] [0x0,0x3,0x0,0x1]
 UNIT Verdane1 Barbarian Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA5R7 [IronAxe] NoAI
 UNIT Verdane1 Hunter Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA7R8 [IronBow] NoAI
 UNIT Verdane1 Barbarian Gerrard Level(10,Enemy,1) [1,8] 0x0 0x0 0x1 REDA5R9 [IronAxe] NoAI
@@ -482,6 +540,14 @@ UNIT
 
 CliffBandits:
 UNIT Verdane1 Brigand Gerrard Level(10,Enemy,1) [7,0] 0x0 0x0 0x1 REDA10R1 [IronAxe] NoAI
+UNIT Verdane1 Brigand Gerrard Level(10,Enemy,1) [7,0] 0x0 0x0 0x1 REDA11R0 [IronAxe] NoAI
+UNIT Verdane1 Brigand Gerrard Level(10,Enemy,1) [7,0] 0x0 0x0 0x1 REDA12R1 [IronAxe] NoAI
+UNIT Verdane1 Brigand Gerrard Level(10,Enemy,1) [7,0] 0x0 0x0 0x1 REDA13R0 [IronAxe] NoAI
+UNIT Verdane1 Brigand Gerrard Level(10,Enemy,1) [7,0] 0x0 0x0 0x1 REDA14R1 [IronAxe] NoAI
+UNIT
+
+CliffBanditsLegion:
+UNIT Legion Berserker Gerrard Level(5,Enemy,0) [7,0] 0x0 0x0 0x1 REDA10R1 [Hammer] NoAI
 UNIT Verdane1 Brigand Gerrard Level(10,Enemy,1) [7,0] 0x0 0x0 0x1 REDA11R0 [IronAxe] NoAI
 UNIT Verdane1 Brigand Gerrard Level(10,Enemy,1) [7,0] 0x0 0x0 0x1 REDA12R1 [IronAxe] NoAI
 UNIT Verdane1 Brigand Gerrard Level(10,Enemy,1) [7,0] 0x0 0x0 0x1 REDA13R0 [IronAxe] NoAI
@@ -506,7 +572,7 @@ UNIT Nal Protector Heim Level(20,Ally,0) [9,9] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Bragi HPriest Heim Level(20,Ally,0) [3,9] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Od SwMast Heim Level(20,Ally,0) [5,9] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Fjalar MageFighterF Heim Level(20,Ally,0) [4,8] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Thrud Guardian Heim Level(20,Ally,0) [6,8] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Thrud MageKnt Heim Level(20,Ally,0) [6,8] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Ullr AdventF Heim Level(20,Ally,0) [7,9] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Heim Sage Heim Level(20,Ally,0) [8,8] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT
@@ -531,16 +597,11 @@ UNIT Loptrian Baron Julius Level(20,Enemy,0) [12,22] 0x0 0x0 0x0 0x1 [IronSword]
 UNIT
 
 Dragons:
-UNIT Julia Shaman Heim Level(20,NPC,0) [8,5] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Anna CivilF Heim Level(20,NPC,0) [3,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Anna CivilF Heim Level(20,NPC,0) [5,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Anna CivilF Heim Level(20,NPC,0) [7,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Anna CivilF Heim Level(20,NPC,0) [9,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Anna CivilF Heim Level(20,NPC,0) [11,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Anna CivilF Heim Level(20,NPC,0) [13,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT
-
-SwordDiscussion:
-UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [1,11] 0x0 0x0 0x0 0x1 [SteelSword, IronLance] NoAI
-UNIT Arden SwdArm 0x0 Level(8,Ally,1) [1,8] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Julia Dragon_Monarch Heim Level(20,NPC,0) [8,5] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Anna Manakete Heim Level(20,NPC,0) [3,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Anna Manakete Heim Level(20,NPC,0) [5,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Anna Manakete Heim Level(20,NPC,0) [7,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Anna Manakete Heim Level(20,NPC,0) [9,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Anna Manakete Heim Level(20,NPC,0) [11,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Anna Manakete Heim Level(20,NPC,0) [13,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT
