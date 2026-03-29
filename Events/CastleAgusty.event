@@ -59,6 +59,7 @@ Seize(10,2)
 END_MAIN
 
 MiscBasedEvents:
+
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -84,7 +85,7 @@ ALIGN 4
 
 BeginningScene:
 ASMC ClearArenaProgress|1
-LOAD1 0x0 AgustyGang
+LOAD3 0x0 AgustyGang
 ENUN
 LOAD1 0x1 HelperGuys
 ENUN

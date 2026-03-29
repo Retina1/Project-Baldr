@@ -34,6 +34,7 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
+TurnEventEnemy(0x7,ZaneCometh,1,255)
 END_MAIN
 
 ALIGN 4
@@ -48,6 +49,12 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEvent(0x18,ShyShyGirl,Lewyn,Erinys)
+CharacterEvent(0x1A,ChillHops,Lachesis,Hopper)
+CharacterEvent(0x23,BobbyAsaka,Lachesis,Clement)
+CharacterEventBothWays(0x19,YouLikeThat,Sylvia,Alec)
+CharacterEventBothWays(0x1B,IDoQuestioning,Sigurd,Erinys)
+CharacterEventBothWays(0x22,GetsomeGains,Lachesis,Beowolf)
 END_MAIN
 
 MiscBasedEvents:
@@ -55,6 +62,7 @@ CauseGameOverIfLordDies
 END_MAIN
 
 BeginningScene:
+ENUT 0x7
 CAM1 [18,30]
 FADU 16
 CleanText(0x15,MackilyMobilizes)
@@ -62,18 +70,28 @@ FADI 16
 CAM1 [28,6]
 FADU 16
 CleanText(0x15,ErinysReadyToGo)
+LOAD1 0x1 EnemyUnits
+ENUN
+CleanText(0x15,AgustiMobilizes)
 CAM1 [4,42]
 TILECHANGE 0x1C
 TILECHANGE 0x1D
 TILECHANGE 0x1E
-LOAD1 0x1 EnemyUnits
+LOAD1 0x1 ChagallUnits
 ENUN
 GotoPrepScreen
 EndEvent
 
 EndingScene:
+CLEE 0
+MUSC 0x27
+CHECK_EVENTID 0x4
+BEQ 0x30 0xc 0x0
+MNC2 0x5
+GOTO 0x31
+LABEL 0x30
 MNC2 0x9
-//no 2x oops
+LABEL 0x31
 EndEvent
 
 ZaneCometh:
@@ -90,6 +108,78 @@ Text(ZaneRally)
 EndEvent
 
 MackilyRekt:
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+CleanText(0x15,SeizingMackily)
+ENUF 0x7
+EndEvent
+
+ShyShyGirl:
+//fe7 silezha palace would go here, blame retina
+Text(RecruitingErinys)
+//I don't know how to switch music midtext, blame leo link
+TurnAlly(Erinys)
+TurnNPC(Silesse)
+TurnNPC(Silesse)
+TurnNPC(Silesse)
+TurnNPC(Silesse)
+MOVE 7 Silesse [29,0]
+MOVE 7 Silesse [29,0]
+MOVE 7 Silesse [29,0]
+MOVE 7 Silesse [29,0]
+ENUN
+FADU 16
+CLEN 0
+EndEvent
+
+GetsomeGains:
+Text(BeowolfLachesisTalk)
+AddUnitStatus(Lachesis,Strength,2)
+AddUnitStatus(Lachesis,Skill,2)
+AddUnitStatus(Lachesis,Defence,1)
+Notification(LachesisGotStatCH2)
+EndEvent
+
+ChillHops:
+MUSS 0x30
+Text(RecruitingHopper)
+TurnAlly(Hopper)
+MURE 60
+EndEvent
+
+YouLikeThat:
+Text(AlecSilviaTalk)
+//support points yes
+EndEvent
+
+IDoQuestioning:
+Text(ErinysSigurdTalk)
+EndEvent
+
+BobbyAsaka:
+MUSS 0x30
+Text(RecruitingClement)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+SFXKillUnit(Mackily)
+ENUT 0x13
+ENUF 0x7
+MURE 60
 EndEvent
 
 VillageOne:
@@ -129,11 +219,52 @@ UNIT Arden SwdArm 0x0 Level(1,Ally,0) [5,33] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT //Tells the game that the unit list has ended
 
 EnemyUnits:
+UNIT Clement Bishop Chagall Level(18,Enemy,0) [18,30] DropItem 0x0 0x0 0x1 [Thunder, Sleep] NeverMoveAI
+UNIT Elling FMage Clement Level(10,Enemy,0) [18,30] 0x0 0x0 0x1 REDA13R16 [Elfire] AttackInRangeAI
+UNIT Mackily FMage Elling Level(12,Enemy,1) [13,15] 0x0 0x0 0x0 REDA13R17 [Fire] NoAI
+UNIT Mackily FMage Elling Level(12,Enemy,1) [12,16] 0x0 0x0 0x0 REDA13R15 [Fire] NoAI
+UNIT Mackily FMage Elling Level(12,Enemy,1) [13,17] 0x0 0x0 0x0 REDA14R16 [Fire] NoAI
+UNIT Mackily FMage Elling Level(12,Enemy,1) [14,16] 0x0 0x0 0x0 REDA12R16 [Fire] NoAI
+UNIT Hopper BowArm Clement Level(12,Enemy,0) [18,27] 0x0 0x0 0x0 0x1 [BraveBow] NoAI
+UNIT Erinys PegKnt Lewyn Level(6,Enemy,0) [28,6] 0x0 0x0 0x1 REDA7R12 [SlimLance] NoAI
+UNIT Silesse PegKnt Lewyn Level(3,Enemy,1) [28,6] 0x0 0x0 0x1 REDA8R12 [Javelin] NoAI
+UNIT Silesse PegKnt Lewyn Level(3,Enemy,1) [28,6] 0x0 0x0 0x1 REDA6R12 [Javelin] NoAI
+UNIT Silesse PegKnt Lewyn Level(3,Enemy,1) [28,6] 0x0 0x0 0x1 REDA7R11 [Javelin] NoAI
+UNIT Silesse PegKnt Lewyn Level(3,Enemy,1) [28,6] 0x0 0x0 0x1 REDA7R13 [Javelin] NoAI
+UNIT Mackily Merc Clement Level(12,Enemy,1) [16,31] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mackily Merc Clement Level(12,Enemy,1) [17,31] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mackily Myrm Clement Level(12,Enemy,1) [18,32] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mackily Merc Clement Level(12,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mackily Merc Clement Level(12,Enemy,1) [20,31] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mackily TMage Clement Level(8,Enemy,1) [17,30] 0x0 0x0 0x0 0x0 [Thunder] NoAI
+UNIT Mackily TMage Clement Level(8,Enemy,1) [18,31] 0x0 0x0 0x0 0x0 [Thunder] NoAI
+UNIT Mackily TMage Clement Level(8,Enemy,1) [19,30] 0x0 0x0 0x0 0x0 [Thunder] NoAI
+UNIT Mackily Archer Clement Level(10,Enemy,1) [16,30] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Mackily Archer Clement Level(10,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Mackily Ballist Clement Level(8,Enemy,1) [18,37] 0x0 0x0 0x0 0x0 [Ballista] NoAI
+UNIT Mackily Ballist Clement Level(8,Enemy,1) [19,36] 0x0 0x0 0x0 0x0 [Ballista] NoAI
+UNIT Mackily Ballist Clement Level(8,Enemy,1) [17,36] 0x0 0x0 0x0 0x0 [Ballista] NoAI
+UNIT Mackily Ballist Clement Level(8,Enemy,1) [18,35] 0x0 0x0 0x0 0x0 [Ballista] NoAI
+UNIT Mackily Ballist Clement Level(12,Enemy,1) [18,36] 0x0 0x0 0x0 0x0 [Ballista] NoAI
+UNIT Mackily LncArm Clement Level(12,Enemy,1) [15,33] 0x0 0x0 0x0 0x1 [Javelin] AttackInRangeAI
+UNIT Commander LncArm Clement Level(20,Enemy,1) [33,35] DropItem 0x0 0x0 0x1 [Javelin, MemberCard] NeverMoveAI
+UNIT
+
+ChagallUnits:
 UNIT Chagall Baron Manfroy Level(10,Enemy,0) [28,6] DropItem 0x0 0x0 0x1 [SilverBlade, EarthSwd, Physic] NeverMoveAI
-UNIT Clement Bishop Chagall Level(18,Enemy,0) [18,30] 0x0 0x0 0x0 0x1 [Thunder, Sleep] NeverMoveAI
-UNIT Elling FMage Clement Level(10,Enemy,0) [11,29] 0x0 0x0 0x0 0x1 [Elfire] NoAI
-UNIT Hopper BowArm Clement Level(12,Enemy,0) [16,27] 0x0 0x0 0x0 0x1 [BraveBow] NoAI
-UNIT Erinys PegKnt Lewyn Level(12,Enemy,0) [16,27] 0x0 0x0 0x0 0x1 [BraveBow] NoAI
+UNIT Agusti LncCav Chagall Level(12,Enemy,1) [21,20] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Agusti LncCav Chagall Level(12,Enemy,1) [22,19] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Agusti LncCav Chagall Level(12,Enemy,1) [20,19] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Agusti LncCav Chagall Level(12,Enemy,1) [21,19] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Agusti DukeKnt Chagall Level(15,Enemy,1) [21,18] 0x0 0x0 0x0 0x1 [SteelLance, Javelin] NoAI
+UNIT Agusti LncArm Chagall Level(10,Enemy,1) [30,10] 0x0 0x0 0x0 0x1 [Javelin] AttackInRangeAI
+UNIT Agusti LncArm Chagall Level(10,Enemy,1) [32,9] 0x0 0x0 0x0 0x1 [Javelin] AttackInRangeAI
+UNIT Agusti LncArm Chagall Level(10,Enemy,1) [25,9] 0x0 0x0 0x0 0x1 [Javelin] AttackInRangeAI
+UNIT Agusti LncArm Chagall Level(10,Enemy,1) [26,10] 0x0 0x0 0x0 0x1 [Javelin] AttackInRangeAI
+UNIT Agusti LncArm Chagall Level(10,Enemy,1) [27,10] 0x0 0x0 0x0 0x1 [Javelin] AttackInRangeAI
+UNIT Agusti Ballist Chagall Level(6,Enemy,1) [27,7] 0x0 0x0 0x0 0x0 [Ballista] NoAI
+UNIT Agusti Ballist Chagall Level(6,Enemy,1) [28,8] 0x0 0x0 0x0 0x0 [Ballista] NoAI
+UNIT Agusti Ballist Chagall Level(6,Enemy,1) [29,7] 0x0 0x0 0x0 0x0 [Ballista] NoAI
 UNIT
 
 ZaneUnits:

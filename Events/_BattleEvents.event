@@ -11,4 +11,50 @@ LABEL 0x9001
 EndEvent
 
 ALIGN 4
+LachesisBattleQuoteEvent:
+CHECK_EVENTID 0x7B
+BEQ 0x1 0xc 0x0
+Text(ElliotLachesisRevenge)
+ENUT 0xC
+GOTO 0x2
+LABEL 0x1
+Text(LachesisandElliotBattle)
+LABEL 0x2
+EndEvent
+
+ALIGN 4
+HopperBattleQuoteEvent:
+CHECK_ALIVE Clement
+BEQ 0x1 0xC 0x0
+Text(HopperandRossBattle)
+GOTO 0x2
+LABEL 0x1
+Text(HopperandRossBattleClementDead)
+LABEL 0x2
+EndEvent
+
+//these don't work, contro retina help NOW
+
+ALIGN 4
 BossArena2Event:
+GetUnitStatus(Arena7, Item1)
+SVAL s1 SilverBow
+BEQ 0x9000 s1 sC
+Text(KeimosBattle)
+GOTO 0x9001
+LABEL 0x9000
+Text(MarilynBattle)
+LABEL 0x9001
+EndEvent
+
+ALIGN 4
+BossArena3Event:
+GetUnitStatus(Arena7, Item1)
+SVAL s1 BraveBow
+BEQ 0x9000 s1 sC
+Text(ThortonBattle)
+GOTO 0x9001
+LABEL 0x9000
+Text(MarioBattle)
+LABEL 0x9001
+EndEvent

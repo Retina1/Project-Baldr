@@ -79,5 +79,8 @@ For a Friend[X]
 # 0x17D
 Money and Men[X]
 
-# 0x181
+# 0x17E
+2nd End Agustria[X]
+
+# 0x184
 Blume's Ambush 2[X]

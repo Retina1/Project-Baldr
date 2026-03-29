@@ -247,6 +247,9 @@ Sandima[X]
 ##Name_Elliot
 Elliot[X]
 
+##Name_Schwartz
+Schwartz[X]
+
 ##Name_Graham
 Graham[X]
 
@@ -270,6 +273,9 @@ Waltz[X]
 
 ##Name_Elling
 Elling[X]
+
+##Name_Rissa
+Rissa[X]
 
 ##Name_Zane
 Zane[X]
@@ -357,6 +363,12 @@ Reptor[X]
 
 ##Name_Harold
 Harold[X]
+
+##Name_Hugo
+Hugo[X]
+
+##Name_Placeholder
+Placeholder[X]
 
 ##Name_Schmidt
 Schmidt[X]

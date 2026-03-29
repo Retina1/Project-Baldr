@@ -106,7 +106,7 @@ POIN ArenaChapter1 //0x1A Chapter ID
 POIN ArenaChapter1 //0x1B Chapter ID
 POIN ArenaChapter1 //0x1C Chapter ID
 POIN ArenaChapter2 //0x1D Chapter ID
-POIN ArenaChapter1 //0x1E Chapter ID
+POIN ArenaChapter2 //0x1E Chapter ID
 POIN ArenaChapter1 //0x1F Chapter ID
 POIN ArenaChapter1 //0x20 Chapter ID
 POIN ArenaChapter1 //0x21 Chapter ID

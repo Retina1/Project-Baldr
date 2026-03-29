@@ -45,7 +45,7 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x7,DewFoundIt,Edain,Dew,0x16)
+CharacterEventBothWays(0x7,DewFoundIt,Edain,Dew)
 CharacterEvent(0xA,WaitJomk,Edain,Jamke)
 END_MAIN
 
@@ -77,10 +77,56 @@ CleanText(0x17,SeizingVerdane)
 CHECK_ALIVE Jamke
 BEQ 0x1 0xC 0x0
 Text(SigurdJamkeTalk)
-GOTO 0x2
 LABEL 0x1
+//no forest checc
+CHECK_EVENTID 0x16
+BNE 0x2 0xc 0x0
+FADI 16
+CLEA 0x0
+CAM1 [7,29]
+MUSC 0x0
+FADU 16
+LOAD1 0x0 SiggyThinks
+Text(Iforgor)
+ENUN
+SystemText(GoBack)
+SVAL 0x7 0x2
+BEQ 0x3 0xC 0x7
+//yeah lets go see her
+Text(YesDiadora)
+MOVE 120 Sigurd [11,41]
+FADI 16
+ENUN
+CLEA 0x0
+LOMA 0x41
+CAM1 [8,2]
+FADU 16
+EVBIT_T 9
+LOAD1 0x1 ShyMaiden
+ENUN
+Text(Ladyanxious)
+EVBIT_F 9
+CleanText(0x35,StoriesofRetina)
+Text(Ladyhopes)
+LOAD1 0x0 PeekingMan
+ENUN
+Text(Ladywatches)
+MOVE 7 Deirdre [4,12]
+MOVE 7 Sigurd [5,12]
+ENUN
+MUSS 0x2B
+CleanText(0x20,Rivermoment)
+GOTO 0x2
+LABEL 0x3
+//I don't want to see her actually
+Text(NoDiadora)
+SetBackground(0x35)
+SystemText(NoCelis)
+StartGameOver
+GOTO 0x4
 LABEL 0x2
 MNC2 0x6
+LABEL 0x4
 EndEvent
 
 HowSheKnow:
@@ -100,8 +146,15 @@ CHECK_ACTIVE
 SVAL s1 Sigurd
 BNE 0x9000 s1 sC
     LOAD1 0x1 TheMaiden
+	ENUN
     MUSS 0x2B
+	CHECK_ALIVE Sandima
+	BEQ 0x2 0xc 0x0
 	Text(SigurdFindsDeirdre)
+	GOTO 0x1
+	LABEL 0x2
+	Text(SigurdFindsDeirdreAwkward)
+	LABEL 0x1
 	MURE 60
 	SetUnitStatus(Sigurd,Support1,ASupportLevel) 
 	SetUnitStatus(Deirdre,Support1,ASupportLevel) 
@@ -210,4 +263,16 @@ FirstZane:
 UNIT Burkaul Sniper Sandima Level(10,Enemy,0) [5,23] 0x0 0x0 0x1 REDA7R29 [SilverBow] AttackInRangeAI
 UNIT Verdane2 Warrior Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA6R28 [IronBow] AttackInRangeAI
 UNIT Verdane2 Warrior Sandima Level(5,Enemy,1) [5,23] 0x0 0x0 0x1 REDA8R28 [IronBow] AttackInRangeAI
+UNIT
+
+SiggyThinks:
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [5,23] 0x0 0x0 0x1 REDA8R32 [IronSword] NoAI
+UNIT
+
+ShyMaiden:
+UNIT Deirdre Shaman Sigurd Level(4,Ally,1) [8,2] 0x0 0x0 0x1 REDA8R10 [Silence, Aura, Circlet] NoAI
+UNIT
+
+PeekingMan:
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [5,0] 0x0 0x0 0x1 REDA9R7 [IronSword] NoAI
 UNIT

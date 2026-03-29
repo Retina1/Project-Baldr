@@ -30,7 +30,7 @@ SetChapterData(0x10, 1, 0, 0x38, 3, 0x49, MapData, 5, 0, 0x4A)
 
 ALIGN 4
 Map_Change_0:
-  SHORT $E9C $EA0 $EA4 $F1C $DAC $F24
+  SHORT $0 $EA0 $0 $F1C $DAC $F24
 
 ALIGN 4
 Map_Change_1:

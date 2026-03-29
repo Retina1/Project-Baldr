@@ -1,0 +1,86 @@
+PlayerUnits:
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [22,13] 0x0 0x0 0x0 0x1 [SilverSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [21,10] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [23,10] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [20,11] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [24,11] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [19,12] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [25,12] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [18,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [20,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [24,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [26,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [19,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [21,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [23,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [25,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [18,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [20,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [22,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [24,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [26,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [19,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [21,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [23,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwordArmour 0x0 Level(1,Ally,0) [25,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT
+
+EnemyUnits:
+UNIT Slayder GreatKnight Lombard Level(20,Enemy,0) [55,3] 0x0 0x0 0x0 0x1 [SilverAxe] NoAI
+UNIT Lubeck AxeKnight Slayder Level(17,Enemy,17) [51,2] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeKnight Slayder Level(17,Enemy,17) [52,2] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeKnight Slayder Level(17,Enemy,17) [53,2] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeKnight Slayder Level(17,Enemy,17) [54,2] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeKnight Slayder Level(17,Enemy,17) [55,2] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeKnight Slayder Level(17,Enemy,17) [51,3] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeKnight Slayder Level(17,Enemy,17) [52,3] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeKnight Slayder Level(17,Enemy,17) [53,3] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeKnight Slayder Level(17,Enemy,17) [54,3] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Commander General Lombard Level(20,Enemy,20) [1,19] 0x0 0x0 0x0 0x1 [BraveAxe] NoAI
+UNIT Lubeck AxeArmour Commander Level(17,Enemy,17) [2,17] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeArmour Commander Level(17,Enemy,17) [2,18] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeArmour Commander Level(17,Enemy,17) [2,19] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeArmour Commander Level(17,Enemy,17) [2,20] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck AxeArmour Commander Level(17,Enemy,17) [2,21] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
+UNIT Lubeck ThunderMageM Commander Level(17,Enemy,17) [1,18] 0x0 0x0 0x0 0x1 [Elthunder] NoAI
+UNIT Lubeck ThunderMageM Commander Level(17,Enemy,17) [1,20] 0x0 0x0 0x0 0x1 [Elthunder] NoAI
+UNIT Commander General Lombard Level(20,Enemy,20) [33,6] 0x0 0x0 0x0 0x1 [BraveAxe] AttackInRangeAI
+UNIT Lubeck AxeArmour Commander Level(17,Enemy,17) [32,4] 0x0 0x0 0x0 0x1 [SteelAxe] AttackInRangeAI
+UNIT Lubeck AxeArmour Commander Level(17,Enemy,17) [32,5] 0x0 0x0 0x0 0x1 [SteelAxe] AttackInRangeAI
+UNIT Lubeck AxeArmour Commander Level(17,Enemy,17) [32,6] 0x0 0x0 0x0 0x1 [SteelAxe] AttackInRangeAI
+UNIT Lubeck AxeArmour Commander Level(17,Enemy,17) [32,7] 0x0 0x0 0x0 0x1 [SteelAxe] AttackInRangeAI
+UNIT Lubeck AxeArmour Commander Level(17,Enemy,17) [32,8] 0x0 0x0 0x0 0x1 [SteelAxe] AttackInRangeAI
+UNIT Lubeck ThunderMageM Commander Level(17,Enemy,17) [33,5] 0x0 0x0 0x0 0x1 [Elthunder] AttackInRangeAI
+UNIT Lubeck ThunderMageM Commander Level(17,Enemy,17) [33,7] 0x0 0x0 0x0 0x1 [Elthunder] AttackInRangeAI
+UNIT Lubeck IronBallista Lombard Level(20,Enemy,20) [61,3] 0x0 0x0 0x0 0x1 [IronBallista] AttackInRangeAI
+UNIT Lubeck IronBallista Lombard Level(20,Enemy,20) [61,4] 0x0 0x0 0x0 0x1 [IronBallista] AttackInRangeAI
+UNIT Lubeck IronBallista Lombard Level(20,Enemy,20) [60,6] 0x0 0x0 0x0 0x1 [IronBallista] AttackInRangeAI
+UNIT Lubeck IronBallista Lombard Level(20,Enemy,20) [60,7] 0x0 0x0 0x0 0x1 [IronBallista] AttackInRangeAI
+UNIT Henson BerserkerM Henson Level(30,Enemy,0) [5,20] 0x0 0x0 0x0 0x1 [SilverAxe] NeverMoveAI
+UNIT Ruffian BrigandM Henson Level(30,Enemy,30) [32,3] 0x0 0x0 0x0 0x1 [SteelAxe] BrigandAI
+UNIT Ruffian BrigandM Henson Level(30,Enemy,30) [19,4] 0x0 0x0 0x0 0x1 [SteelAxe] BrigandAI
+UNIT Ruffian BrigandM Henson Level(30,Enemy,30) [37,22] 0x0 0x0 0x0 0x1 [SteelAxe] BrigandAI
+UNIT Ruffian BrigandM Henson Level(30,Enemy,30) [16,23] 0x0 0x0 0x0 0x1 [SteelAxe] BrigandAI
+UNIT
+
+BeigeRitter:
+UNIT Andrey ArchKnight Lombard Level(22,Enemy,0) [55,8] 0x0 0x0 0x1 REDA56R12 [BraveBow, DefenceRing] AttackInRangeAI
+UNIT BeigeRitter BowKnightM Andrey Level(18,Enemy,18) [55,8] 0x0 0x0 0x1 REDA53R11 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowKnightM Andrey Level(18,Enemy,18) [55,8] 0x0 0x0 0x1 REDA54R11 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowKnightM Andrey Level(18,Enemy,18) [55,8] 0x0 0x0 0x1 REDA55R11 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowKnightM Andrey Level(18,Enemy,18) [55,8] 0x0 0x0 0x1 REDA56R11 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowKnightM Andrey Level(18,Enemy,18) [55,8] 0x0 0x0 0x1 REDA53R12 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowKnightM Andrey Level(18,Enemy,18) [55,8] 0x0 0x0 0x1 REDA53R12 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowKnightM Andrey Level(18,Enemy,18) [55,8] 0x0 0x0 0x1 REDA53R12 [BraveBow] AttackInRangeAI
+UNIT
+
+LombardandGuards:
+UNIT Lombard Baron Lombard Level(30,Enemy,0) [55,8] 0x0 0x0 0x0 0x1 [Helswath] NeverMoveAI
+UNIT Lubeck General Lombard Level(25,Enemy,25) [55,8] 0x0 0x0 0x1 REDA54R9 [BraveAxe, SteelBow] AttackInRangeAI
+UNIT Lubeck General Lombard Level(25,Enemy,25) [55,8] 0x0 0x0 0x1 REDA56R9 [BraveAxe, SteelBow] AttackInRangeAI
+UNIT Lubeck General Lombard Level(25,Enemy,25) [55,8] 0x0 0x0 0x1 REDA55R10 [BraveAxe, SteelBow] AttackInRangeAI
+UNIT
+
+LordByron:
+UNIT Byron MasterKnightM Byron Level(30,NPC,0) [61,7] 0x0 0x0 0x1 REDA47R3 [Tyrfing] NoAI
+UNIT

@@ -59,7 +59,7 @@ Seize(9,19)
 END_MAIN
 
 MiscBasedEvents:
-AFEV 0x7 HolynCometh 0x9D
+AFEV 0x9D HolynCometh 0x7
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -85,7 +85,7 @@ ALIGN 4
 
 BeginningScene:
 ASMC ClearArenaProgress|1
-LOAD1 0x0 NordionGang
+LOAD3 0x0 NordionGang
 ENUN
 LOAD1 0x1 HelperGuys
 ENUN

@@ -153,7 +153,9 @@ FIG1 Elliot Eve Horseslayer
 SFXKillUnit(Eve)
 MOVE 60 Eldigan [17,9]
 CleanText(0x20,Elliotisacreep)
+TEXTSHOW2 LoadtheElliote
 SystemText(Sparethatdude)
+TEXTEND
 SVAL 0x7 0x2
 BEQ 0x34 0xC 0x7
 StartBattle 
@@ -249,6 +251,10 @@ LOAD1 0x1 SchemerCometh
 ENUN
 ENDWARP
 Text(Schemers)
+CHECK_EVENTID 0x7
+BEQ 0x40 0xc 0x0
+ENUT 0x7B
+LABEL 0x40
 MNC2 0x4
 LABEL 0x33
 EndEvent

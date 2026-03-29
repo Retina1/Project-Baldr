@@ -164,6 +164,7 @@
 [LoadWaltz] = [LoadFace][0xC5][0x1]
 [LoadElling] = [LoadFace][0xC4][0x1]
 [LoadClement] = [LoadFace][0x3D][0x1]
+[LoadRissa] = [LoadFace][0x68][0x2]
 [LoadZane] = [LoadFace][0x3E][0x1]
 [LoadChagall] = [LoadFace][0xD4][0x1]
 [LoadLino] = [LoadFace][0xEC][0x1]

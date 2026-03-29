@@ -1,0 +1,140 @@
+EventPointerTable(0x1E,ThisChapter)
+
+ALIGN 4
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits PlayerUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+END_MAIN
+
+ALIGN 4
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+AFEV 0x9D HolynCometh 0x7
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+LOAD1 0 PlayerUnits
+ENUN
+LOAD1 0 EnemyUnits
+ENUN
+CAM1 [9,0]
+FADU 60
+CURSOR [9, 0]
+STAL 60
+REMOVE_CURSORS
+FOGVISION 4
+MOVE 120 Chagall [10,0]
+ENUN
+SilentKillUnit(Chagall)
+CAM1 [17,27]
+GotoPrepScreen
+EndEvent
+
+EndingScene:
+CLEE 0
+MNC2 0x9
+EndEvent
+
+HolynCometh:
+MUSC 0x30
+CHECK_ACTIVE
+Text(RecruitingChulainn)
+LOAD1 0x1 HolynJoins
+ENUN
+EndEvent
+
+PlayerUnits:
+UNIT Sigurd KnightLord 0x00 Level(1, Ally, 0) [17,27] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Quan Hero 0x00 Level(1, Ally, 0) [16,26] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Quan Hero 0x00 Level(1, Ally, 0) [15,28] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Quan Hero 0x00 Level(1, Ally, 0) [18,29] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Quan Hero 0x00 Level(1, Ally, 0) [14,26] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Quan Hero 0x00 Level(1, Ally, 0) [19,26] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Quan Hero 0x00 Level(1, Ally, 0) [19,28] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Dew Thief 0x00 Level(5, Ally, 0) [16,29] 0x00 0x00 0x0 0x00 [BarrierSwd] NoAI 
+UNIT
+
+thenewoife:
+UNIT Oifey SeliphLord Sigurd Level(5, Ally, 0) [17,25] 0x00 0x00 0x0 0x00 [BarrierSwd] NoAI 
+UNIT
+
+EnemyUnits:
+UNIT Zane DukeKnt Chagall Level(30, Enemy, 0) [9,0] 0x00 0x00 0x0 0x00 [MasterLance, LifeRing] GuardTileAI 
+UNIT Rissa HeroF Clement Level(20, Enemy, 0) [13,13] 0x00 0x00 0x0 0x00 [DefenseSwd, MiracleRing] NoAI 
+UNIT Mackily MercF Clement Level(15, Enemy, 1) [11,14] 0x00 0x00 0x0 0x00 [ThiefSwd] NoAI 
+UNIT Mackily MercF Clement Level(15, Enemy, 1) [16,13] 0x00 0x00 0x0 0x00 [ThiefSwd] NoAI 
+UNIT Mackily MercF Clement Level(15, Enemy, 1) [16,16] 0x00 0x00 0x0 0x00 [ThiefSwd] NoAI 
+UNIT Mackily MercF Clement Level(15, Enemy, 1) [11,16] 0x00 0x00 0x0 0x00 [ThiefSwd] NoAI 
+UNIT Mackily MyrmF Clement Level(15, Enemy, 1) [14,18] 0x00 0x00 0x0 0x00 [ThiefSwd] NoAI 
+UNIT Mackily MyrmF Clement Level(15, Enemy, 1) [12,18] 0x00 0x00 0x0 0x00 [ThiefSwd] NoAI 
+UNIT Mackily MyrmF Clement Level(15, Enemy, 1) [16,18] 0x00 0x00 0x0 0x00 [ThiefSwd] NoAI 
+UNIT Mackily MyrmF Clement Level(15, Enemy, 1) [10,18] 0x00 0x00 0x0 0x00 [ThiefSwd] NoAI 
+UNIT Agusti SwdArm Zane Level(15, Enemy, 1) [12,28] 0x00 0x00 0x0 0x00 [ThiefSwd] NoAI 
+UNIT Agusti AxeArm Zane Level(15, Enemy, 1) [18,15] 0x00 0x00 0x0 0x00 [ThiefSwd] AttackInRangeAI 
+UNIT Agusti AxeArm Zane Level(15, Enemy, 1) [19,15] 0x00 0x00 0x0 0x00 [ThiefSwd] AttackInRangeAI 
+UNIT Agusti General Zane Level(15, Enemy, 1) [14,2] 0x00 0x00 0x0 0x00 [ThiefSwd] AttackInRangeAI 
+UNIT Agusti PalM Zane Level(15, Enemy, 1) [7,28] 0x00 0x00 0x0 0x00 [ThiefSwd] DoNothing 
+UNIT Agusti LncCav Zane Level(15, Enemy, 1) [18,7] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti LncCav Zane Level(15, Enemy, 1) [17,6] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti LncCav Zane Level(15, Enemy, 1) [19,6] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti AxeCav Zane Level(15, Enemy, 1) [0,22] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Agusti AxeCav Zane Level(15, Enemy, 1) [0,25] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Agusti AxeCav Zane Level(15, Enemy, 1) [3,25] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Agusti AxeCav Zane Level(15, Enemy, 1) [3,22] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Agusti GrtKnt Zane Level(15, Enemy, 1) [8,21] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Agusti Brigand Zane Level(15, Enemy, 1) [1,23] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Agusti Brigand Zane Level(15, Enemy, 1) [6,21] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Agusti Brigand Zane Level(15, Enemy, 1) [2,29] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Agusti Sniper Zane Level(15, Enemy, 1) [3,9] 0x00 0x00 0x0 0x00 [MagicBow] AttackInRangeAI 
+UNIT Agusti Sniper Zane Level(15, Enemy, 1) [3,13] 0x00 0x00 0x0 0x00 [MagicBow] AttackInRangeAI 
+UNIT Agusti Sniper Zane Level(15, Enemy, 1) [3,6] 0x00 0x00 0x0 0x00 [MagicBow] AttackInRangeAI 
+UNIT Agusti Soldier Zane Level(15, Enemy, 1) [18,20] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT Agusti Soldier Zane Level(15, Enemy, 1) [19,20] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT Agusti Soldier Zane Level(15, Enemy, 1) [0,13] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT Agusti Soldier Zane Level(15, Enemy, 1) [0,9] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT Agusti Soldier Zane Level(15, Enemy, 1) [0,4] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT Agusti Soldier Zane Level(15, Enemy, 1) [2,3] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT Agusti Soldier Zane Level(15, Enemy, 1) [3,3] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT Agusti Halberdier Zane Level(15, Enemy, 1) [5,3] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT Agusti ArchKnt Zane Level(15, Enemy, 1) [5,14] 0x00 0x00 0x0 0x00 [MagicBow] AttackInRangeAI 
+UNIT Agusti UniCav Zane Level(15, Enemy, 1) [8,2] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti UniCav Zane Level(15, Enemy, 1) [9,3] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti UniCav Zane Level(15, Enemy, 1) [11,2] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti UniCav Zane Level(15, Enemy, 1) [10,3] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti UniCav Zane Level(15, Enemy, 1) [7,7] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti UniCav Zane Level(15, Enemy, 1) [8,5] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti UniCav Zane Level(15, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti UniCav Zane Level(15, Enemy, 1) [13,7] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT Agusti UniCav Zane Level(15, Enemy, 1) [10,8] 0x00 0x00 0x0 0x00 [HeroicLance] AttackInRangeAI 
+UNIT
+
+HolynJoins:
+UNIT Holyn Merc Sigurd Level(12,Ally,0) [9,3] 0x0 0x0 0x1 REDA12R7 [ThunderSwd] NoAI
+UNIT

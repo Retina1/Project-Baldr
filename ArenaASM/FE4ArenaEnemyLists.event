@@ -107,7 +107,7 @@ BYTE 0xF7 LncCav LevelSetter(11) Javelin 0 0 0 0   41 10 1 9 9 9 1 0 0 151 Javel
 BYTE 0xF8 Archer LevelSetter(14) SteelBow 0 0 0 0   44 11 1 14 14 9 1 0 0 151 SteelBow 0 0 0 0    48 11 1 14 14 9 1 0 0 201 
 BYTE 0xF9 LncArm LevelSetter(17) Javelin 0 0 0 0   57 14 1 10 8 15 1 0 0 151 Javelin 0 0 0 0    60 14 1 10 8 15 1 0 0 201
 BYTE 0xFA TMage LevelSetter(20) Elthunder DefRing 0 0 0   46 2 13 15 12 3 11 0 0 151 Elthunder DefRing 0 0 0    50 2 13 15 12 3 11 0 0 201
-BYTE 0xFB Sniper LevelSetter(23) SilverBow 0 0 0 0   63 18 2 18 18 13 5 0 0 201 SilverBow 0 0 0 0 	63 18 2 18 18 13 5 0 0 201
+BYTE 0xFB SniperF LevelSetter(23) SilverBow 0 0 0 0   63 18 2 18 18 13 5 0 0 201 SilverBow 0 0 0 0 	63 18 2 18 18 13 5 0 0 201
 BYTE 0x0 0x0 0x0 0x0
 
 ALIGN 4

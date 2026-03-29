@@ -34,8 +34,8 @@ END_MAIN
 
 ALIGN 32 
 CharacterBasedEvents:
-CharacterEvent(0x10,LexBraveSwordConvo,Lex,Ayra)
-CharacterEvent(0x10,ChulainnBraveSwordConvo,Holyn,Ayra)
+CharacterEvent(0x11,LexBraveSwordConvo,Lex,Ayra)
+CharacterEvent(0x11,ChulainnBraveSwordConvo,Holyn,Ayra)
 END_MAIN
 
 MiscBasedEvents:
@@ -57,35 +57,57 @@ FADI 0x3c
 CLEAN
 CAM1 [18,6]
 LOAD1 0x1 JacoUnits
+ENUN
+MUSC 0x27
 FADU 16
+Location(Name_Madino)
 CleanText(0x10,ChagallAngry)
+FADI 16
+CLEE 0
+LOMA 0xB
+CAM1 [3,10]
+MUSC 0x26
+FADU 16
+Location(Name_Sylvale)
 CleanText(0x10,EldiganAnxious)
+FADI 16
+LOMA 0xD
+CAM1 [49,5]
+MUSC 0x11
+FADU 16
+Location(Name_Orgahil)
 CleanText(0x10,FunnyPirates)
 CleanText(0x10,AngryPirates)
+FADI 16
+LOMA 0xA
+CAM1 [13,35]
+MUSC 0x26
+FADU 16
+Location(Name_Agusti)
 CleanText(0x10,DireNews)
+LOAD1 0x1 JacoUnits
+ENUN
 GotoPrepScreen
 EndEvent
 
 EndingScene:
-
+CleanText(0x10,Silvailtaken)
 //See if all treasure pirates were killed
 CHECK_ALIVE Ruffian
-BNE 22 0x0 0xC
+BNE 0x22 0x0 0xC
 
 	CHECK_ALIVE Scragg
-	BNE 23 0x0 0xC
+	BNE 0x22 0x0 0xC
 
 	//If they're all dead, set the permanent event
 	ENUT PirateCrewWithTreasureDefeated
-
-	LABEL 0x23
 
 LABEL 0x22
 
 //Check if you defeated all pirates
 
 CHECK_EVENTID PirateCrewWithTreasureDefeated
-BEQ 24 0x0 0xC
+BEQ 0x24 0x0 0xC
 
 //New conversation and reward
 
@@ -93,17 +115,63 @@ BEQ 24 0x0 0xC
 
 LABEL 0x24
 
+LOAD1 0x2 NosyOnes
+ENUN
+CLEA 0x0
+CleanText(0x10,ClaudyClaud)
+LOAD1 0x2 LeaveUs
+ENUN
+CLEA 0x0
+CAM1 [13,35]
+FADI 16
+LOMA 0x9
+CAM1 [10,2]
+FADU 16
+Text(WorriedWife)
+MOVE 120 Deirdre [10,14]
+ENUN
+CHECK_EVENTID 0x78
+BEQ 0x30 0xc 0x0
+//Estrella, shannan fights
+GOTO 0x31
+LABEL 0x30
+//normal game
+FADI 16
+LOMA 0xA
+CAM1 [13,35]
+FADU 16
+LOAD3 0x0 RunSweetSummerChild
+MUSC 0x27
+WARPIN [15, 27]
+LOAD1 0x1 OhShit
+ENUN
+ENDWARP
+Text(DumbDeirdre)
+MOVE 120 Deirdre [12,27]
+ENUN
+MOVE 120 Manfroy [13,27]
+ENUN
+WARPIN [12, 27]
+SilentKillUnit(Deirdre)
+ENDWARP
+WARPIN [13, 27]
+SilentKillUnit(Manfroy)
+ENDWARP
+LABEL 0x31
+RemoveUnit(Deirdre)
 MNC2 0xB
 EndEvent
 
 LexBraveSwordConvo:
 Text(LexAyraTalk)
 GiveItem(BraveSword,Ayra)
+//support points go here
 EndEvent
 
 ChulainnBraveSwordConvo:
 Text(ChulainnAyraTalk)
 GiveItem(BraveSword,Ayra)
+//support points go here
 EndEvent
 
 CastleRekt:
@@ -173,7 +241,7 @@ UNIT Madino LncArm Commander Level(10,Enemy,1) [30,31] 0x0 0x0 0x0 0x1 [Javelin]
 UNIT Madino LncArm Commander Level(10,Enemy,1) [30,32] 0x0 0x0 0x0 0x1 [Javelin] NoAI
 UNIT Madino LncArm Commander Level(10,Enemy,1) [30,34] 0x0 0x0 0x0 0x1 [Javelin] NoAI
 UNIT Madino LncArm Commander Level(10,Enemy,1) [30,35] 0x0 0x0 0x0 0x1 [Javelin] NoAI
-UNIT Estrella DBishopF Jacobin Level(21,Enemy,0) [7,12] 0x0 0x0 0x0 0x1 [Elfire] NoAI
+UNIT Estrella DBishopF Jacobin Level(21,Enemy,0) [7,12] 0x0 0x0 0x0 0x1 [Elfire] AttackInRangeAI
 UNIT Loptrian MageF Estrella Level(8,Enemy,1) [5,12] 0x0 0x0 0x0 0x1 [Fire] NoAI
 UNIT Loptrian MageF Estrella Level(8,Enemy,1) [6,12] 0x0 0x0 0x0 0x1 [Fire] NoAI
 UNIT Loptrian MageF Estrella Level(8,Enemy,1) [8,12] 0x0 0x0 0x0 0x1 [Fire] NoAI
@@ -197,6 +265,24 @@ UNIT Ruffian Pirate Duvall Level(12,Enemy,1) [35,28] 0x0 0x0 0x0 0x1 [IronAxe] [
 UNIT Ruffian Pirate Duvall Level(12,Enemy,1) [35,29] 0x0 0x0 0x0 0x1 [IronAxe] [0x0,0xC,0x0,0x0]
 UNIT Ruffian Pirate Duvall Level(12,Enemy,1) [35,30] 0x0 0x0 0x0 0x1 [IronAxe] [0x0,0xC,0x0,0x0]
 UNIT Ruffian Pirate Duvall Level(12,Enemy,1) [35,31] 0x0 0x0 0x0 0x1 [IronAxe] [0x0,0xC,0x0,0x0]
+UNIT
+
+NosyOnes:
+UNIT Claud HPriest Sigurd Level(20,Ally,0) [13,36] 0x0 0x0 0x1 REDA18R6 [Fortify, ValkyrieStaff] NoAI
+UNIT Tailtiu TMageF Sigurd Level(3,Ally,0) [13,35] 0x0 0x0 0x1 REDA18R6 [Thoron, Thunder] NoAI
+UNIT
+
+LeaveUs:
+UNIT Claud HPriest Sigurd Level(20,Ally,0) [18,6] 0x0 0x0 0x1 REDA18R0 [Fortify, ValkyrieStaff] NoAI
+UNIT Tailtiu TMageF Sigurd Level(3,Ally,0) [18,6] 0x0 0x0 0x1 REDA17R0 [Thoron, Thunder] NoAI
+UNIT
+
+OhShit:
+UNIT Manfroy DBishop Elliot Level(8,Enemy,1) [15,27] 0x0 0x0 0x0 0x1 [SteelLance] NoAI
+UNIT
+
+RunSweetSummerChild:
+UNIT Deirdre Shaman Sigurd Level(3,Ally,0) [13,35] 0x0 0x0 0x1 REDA14R27 [Silence, Aura, Circlet] NoAI
 UNIT
 
 ALIGN 4

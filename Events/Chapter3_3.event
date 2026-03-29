@@ -68,6 +68,7 @@ LOAD1 0x1 PizareSquad
 ENUN
 CAM1 Pizare
 LOAD1 0x1 ChasingBrigidA
+ENUN
 LOAD1 0x1 ChasingBrigidB
 ENUN
 Text(Havoc)
@@ -130,8 +131,6 @@ ALIGN 4
 
 PlayerUnits:
 UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [38,25] 0x0 0x0 0x0 0x1 [SilverSword] NoAI
-UNIT Erinys PegKnt 0x0 Level(1,Ally,0) [14,27] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Callista WyvKntF 0x0 Level(1,Ally,0) [18,27] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Quan DukeKnt 0x0 Level(1,Ally,0) [38,22] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Quan DukeKnt 0x0 Level(1,Ally,0) [39,22] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Quan DukeKnt 0x0 Level(1,Ally,0) [36,23] 0x0 0x0 0x0 0x1 [IronSword] NoAI
@@ -153,6 +152,8 @@ UNIT Quan DukeKnt 0x0 Level(1,Ally,0) [39,26] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Quan DukeKnt 0x0 Level(1,Ally,0) [37,27] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Quan DukeKnt 0x0 Level(1,Ally,0) [38,27] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Quan DukeKnt 0x0 Level(1,Ally,0) [39,27] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Erinys PegKnt 0x0 Level(1,Ally,0) [14,27] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Callista WyvKntF 0x0 Level(1,Ally,0) [18,27] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT //Tells the game that the unit list has ended
 
 PirateLady:
@@ -160,7 +161,7 @@ UNIT Brigid SniperF Edain Level(12,Ally,0) [30,5] 0x0 0x0 0x0 0x1 [SteelBow] NoA
 UNIT
 
 BragiTowerDuo:
-UNIT Claud HPriest Sigurd Level(20,Ally,0) [4,16] 0x0 0x0 0x0 0x1 [Fortify, Valkyrie] NoAI
+UNIT Claud HPriest Sigurd Level(20,Ally,0) [4,16] 0x0 0x0 0x0 0x1 [Fortify, ValkyrieStaff] NoAI
 UNIT Tailtiu TMageF Sigurd Level(3,Ally,0) [5,16] 0x0 0x0 0x0 0x1 [Thoron, Thunder] NoAI
 UNIT
 

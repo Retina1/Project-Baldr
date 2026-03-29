@@ -1,0 +1,187 @@
+
+EventPointerTable(0x81,ThisChapter)
+
+ALIGN 4
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits PlayerUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+END_MAIN
+
+ALIGN 4
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+AFEV 0x9D HolynCometh 0x7
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+FADU 60
+LOAD1 0 PlayerUnits
+ENUN
+LOAD1 0 EnemyUnits
+ENUN
+NoFade
+EndEvent
+
+EndingScene:
+MNC2 0x7
+EndEvent
+
+HolynCometh:
+MUSC 0x30
+CHECK_ACTIVE
+Text(RecruitingChulainn)
+LOAD1 0x1 HolynJoins
+ENUN
+EndEvent
+
+PlayerUnits:
+UNIT Lewyn Bard 0x00 Level(6, Ally, 0) [26,2] 0x00 0x00 0x0 0x00 [Elwind] NoAI 
+UNIT Sylvia Dancer 0x00 Level(1, Ally, 0) [27,3] 0x00 0x00 0x0 0x00 [SlimSword] NoAI 
+UNIT Zane DukeKnt 0x00 Level(21, Ally, 0) [28,5] 0x00 0x00 0x0 0x00 [MasterLance] NoAI 
+UNIT
+
+EnemyUnits:
+UNIT Commander LncArm Othello Level(20, Enemy, 1) [11,17] 0x00 0x00 0x0 0x00 [MasterLance] GuardTileAI 
+UNIT Infini Brigand Ross Level(15, Enemy, 1) [21,9] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Infini Brigand Ross Level(15, Enemy, 1) [16,20] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Infini Brigand Ross Level(15, Enemy, 1) [19,24] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Infini Mage Ross Level(15, Enemy, 1) [10,17] 0x00 0x00 0x0 0x00 [Elfire] AttackInRangeAI 
+UNIT Infini Mage Ross Level(15, Enemy, 1) [12,17] 0x00 0x00 0x0 0x00 [Elfire] AttackInRangeAI 
+UNIT Infini Myrm Ross Level(15, Enemy, 1) [16,17] 0x00 0x00 0x0 0x00 [BarrierSwd] NoAI 
+UNIT Infini Myrm Ross Level(15, Enemy, 1) [20,11] 0x00 0x00 0x0 0x00 [BarrierSwd] NoAI 
+UNIT Infini Myrm Ross Level(15, Enemy, 1) [23,17] 0x00 0x00 0x0 0x00 [BarrierSwd] NoAI 
+UNIT Infini Myrm Ross Level(15, Enemy, 1) [19,12] 0x00 0x00 0x0 0x00 [BarrierSwd] NoAI 
+UNIT Infini Myrm Ross Level(15, Enemy, 1) [26,15] 0x00 0x00 0x0 0x00 [BarrierSwd] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [16,12] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [29,24] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [23,4] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [21,5] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [26,7] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [19,20] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [21,17] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [21,12] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [27,17] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [20,24] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Soldier Ross Level(15, Enemy, 1) [24,8] 0x00 0x00 0x0 0x00 [Flycatcher] NoAI 
+UNIT Infini Fighter Ross Level(15, Enemy, 1) [19,16] 0x00 0x00 0x0 0x00 [SeaAxe] AttackInRangeAI 
+UNIT Infini Fighter Ross Level(15, Enemy, 1) [25,11] 0x00 0x00 0x0 0x00 [SeaAxe] AttackInRangeAI 
+UNIT Infini Fighter Ross Level(15, Enemy, 1) [12,19] 0x00 0x00 0x0 0x00 [SeaAxe] AttackInRangeAI 
+UNIT Infini Fighter Ross Level(15, Enemy, 1) [29,12] 0x00 0x00 0x0 0x00 [SeaAxe] AttackInRangeAI 
+UNIT Infini Fighter Ross Level(15, Enemy, 1) [20,7] 0x00 0x00 0x0 0x00 [SeaAxe] AttackInRangeAI 
+UNIT Infini Fighter Ross Level(15, Enemy, 1) [27,23] 0x00 0x00 0x0 0x00 [SeaAxe] AttackInRangeAI 
+UNIT Infini Fighter Ross Level(15, Enemy, 1) [10,19] 0x00 0x00 0x0 0x00 [SeaAxe] AttackInRangeAI 
+UNIT
+
+HolynJoins:
+UNIT Holyn Merc Sigurd Level(12,Ally,0) [4,9] 0x0 0x0 0x1 REDA4R14 [WindSwd] NoAI
+UNIT
+
+SecondEnemies:
+UNIT Brawl Sentry Othello Level(15, Enemy, 0) [4,2] 0x00 0x00 0x0 0x00 [MasterLance, MagicBow] GuardTileAI 
+UNIT Sylvale Brigand Brawl Level(15, Enemy, 1) [1,8] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Sylvale Brigand Brawl Level(15, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Sylvale Brigand Brawl Level(15, Enemy, 1) [8,14] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Sylvale Brigand Brawl Level(15, Enemy, 1) [1,15] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Sylvale Fighter Brawl Level(15, Enemy, 1) [3,5] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Sylvale Fighter Brawl Level(15, Enemy, 1) [5,5] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [13,7] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [11,9] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [4,12] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [6,15] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [1,11] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [3,7] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [13,4] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [9,8] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [7,9] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [11,4] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [10,2] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [16,8] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [11,15] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [7,17] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [0,17] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [7,5] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [6,7] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [2,10] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [3,15] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [5,18] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [11,11] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [5,3] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [10,14] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [13,9] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [2,13] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [9,7] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [15,8] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT
+
+FunnyMercs:
+UNIT Voltz Ranger 0x00 Level(20, Enemy, 0) [14,24] 0x00 0x00 0x0 0x00 [ThunderSwd, ParagonRing] NoAI 
+UNIT Beowolf FreeCav 0x00 Level(9, Enemy, 0) [15,24] 0x00 0x00 0x0 0x00 [ThunderSwd] NoAI 
+UNIT
+
+TwoBros:
+UNIT Javarro FreeCav 0x00 Level(9, Enemy, 0) [17,2] 0x00 0x00 0x0 0x00 [ThunderSwd] NoAI 
+UNIT Boyce Myrm 0x00 Level(9, Enemy, 0) [18,2] 0x00 0x00 0x0 0x00 [ThunderSwd] NoAI 
+UNIT
+
+Helpers:
+UNIT Voltz Ranger 0x00 Level(20, Ally, 0) [5,23] 0x00 0x00 0x0 0x00 [ThunderSwd, ParagonRing] NoAI 
+UNIT Beowolf FreeCav 0x00 Level(9, Ally, 0) [4,23] 0x00 0x00 0x0 0x00 [ThunderSwd] NoAI 
+UNIT Agusti UniCav Zane Level(10, NPC, 1) [3,21] 0x00 0x00 0x0 0x00 [MasterLance, LoptSword] NoAI 
+UNIT Agusti UniCav Zane Level(10, NPC, 1) [7,23] 0x00 0x00 0x0 0x00 [MasterLance, LoptSword] NoAI 
+UNIT Agusti UniCav Zane Level(10, NPC, 1) [0,24] 0x00 0x00 0x0 0x00 [MasterLance, LoptSword] NoAI 
+UNIT Agusti UniCav Zane Level(10, NPC, 1) [0,22] 0x00 0x00 0x0 0x00 [MasterLance, LoptSword] NoAI 
+UNIT
+
+WhyHeHere:
+UNIT Holyn Merc 0x00 Level(12, Ally, 0) [4,9] 0x00 0x00 0x0 0x00 [ThunderSwd] NoAI 
+UNIT
+
+SecondReinforce:
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [12,0] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [13,0] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [12,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [13,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [6,24] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [9,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [0,10] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT
+
+FirstReinforce:
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [26,24] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [27,24] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [10,18] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [12,18] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [30,12] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [30,4] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [27,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [29,0] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [24,7] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT

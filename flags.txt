@@ -3,10 +3,14 @@ Free Plists
 20
 29
 40
+4E
+53
+55
 59
 63
 66
 6A
+82 (maybe)
 Flags
 //Global
 9D:Holyn is Recruited 
@@ -40,6 +44,8 @@ F:Village4
 1C:Arden Kill Gerrard
 1D:SigurdAzelle
 1E:SigurdQuan
+//Castle Evans
+20: Arena 7 guy
 //Chapter 1-1
 1:Kinbois Battle
 3:Seize
@@ -71,9 +77,10 @@ F:Ayra battle
 6:Routed
 7:Lachesis and Elliot Battle
 9:Elliot retreat
+A:Elliot COnfirm
 //Chapter 1-2
-3:Seize Nordion
 1:SandimaBattle
+3:Seize Verdane
 7:DewWarpEdain
 8:idk
 9:idk
@@ -96,7 +103,7 @@ F:JamkeEdainBattle
 7:Holyn AFEV ends
 8:Ethlyn Deidre Brand
 9:Holyn VS Ayra
-13:SeizeVerdane
+20:Arena 7 guy
 //Chapter 2-1
 1:Elliot fight againa
 3:routed
@@ -104,6 +111,8 @@ F:JamkeEdainBattle
 8:LachesisDewTalk
 9:LachesusJoin
 A:Sigurd vs Graham
+//Chapter 2xx
+lmao
 //Chapter 2-2
 1:Bordeaux Fight
 3:Seize Anphony
@@ -139,22 +148,67 @@ F:Village4
 //Chapter 2-3
 1:Clement Fight
 3:Seize Agusti
+7:ZaneSpawn
+8:Hopper Battle
+9:Hopper vs Arden
+A:Elling Battle
+B:Azelle vs Elling
 C:Village1
 D:Village2
 E:Village3
 F:Village4
+10:Ross Rematch
+11:Alec vs Ross
+12:Hopper vs Ross
+13:Seize Mackily
+14:Zane Fight
+15:Clement vs Sylvia
+16:Erinys Battle
+17:Erinys vs Lewyn
+18:Erinys Jointh
+19:Erinys talks to Sigurd
+1A:Hopper recruited
+1B:Alec talks to Sylvia
+1C:Sigurd vs Zane
+1D:Chagall Battle
+1E:Chagall vs Lachesis
+1F:Chagall vs Erinys
+20:Chagall vs Clement
+21:Lone Knight
+22:Lachesis Beowolf Talk
+23:Clement gets recruited
 //Chapter 2-x
 lol
+//Castle Agusty
+20:arena 7 guy again
 //Chapter 3-1
+1:Jacoban battle
+3:idk
+7:ayra vs jacoban
+8:holyn vs jacoban
+9:Estrella
+A:Estrella vs Sigurd
+B:Lino
+C:Village1
+D:Village2
+E:Village3
+F:Village4
+10:Village5
+11:Ayra gives her crush something
 //Chapter 3-2
 //Chapter 3-x
 //Chapter 3-3
-
+//Castle Sailane
+20:Arena 7 guy
 //Chapter 4-1
 1:Cuvuli Battle
 E:Dithorba Battle
 3:routed
 18:Jamke vs Cuvuli
 19:Dithorba vs Erin
-
+//Chapter 4-2
+//Chapter 4-x
+//Chapter 4-3
+//Castle Zaxon
+20: Arena 7 guy
 do bragi blade, salamander, arden blade and cursed blade

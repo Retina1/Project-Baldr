@@ -102,6 +102,11 @@ RaidTileChangeEntry(58, 13, 42)
 TileChangeArrayEnd
 
 ALIGN 4
+Chapter6_1RaidTileChangeArray:
+RaidTileChangeEntry(61, 5, 0)
+TileChangeArrayEnd
+
+ALIGN 4
 Chapter8_1RaidTileChangeArray:
 RaidTileChangeEntry(25, 16, 0)
 TileChangeArrayEnd
@@ -116,4 +121,5 @@ AssignTileChangeArray(11, Chapter3_2RaidTileChangeArray)
 AssignTileChangeArray(13, Chapter3_3RaidTileChangeArray)
 AssignTileChangeArray(15, Chapter4_1RaidTileChangeArray)
 AssignTileChangeArray(20, Chapter5_1RaidTileChangeArray)
+AssignTileChangeArray(24, Chapter6_1RaidTileChangeArray)
 AssignTileChangeArray(0x24, Chapter8_1RaidTileChangeArray)
