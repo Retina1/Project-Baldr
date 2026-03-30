@@ -187,9 +187,9 @@ PaletteIdentifier($AC,$72,$75,$6b,VerdaneMercPalette)
 PaletteIdentifier($AD,$72,$75,$6b,VerdaneMyrmPalette)
 PaletteIdentifier($AE,$72,$75,$6b,HeirheinTroubadourPalette)
 PaletteIdentifier($AF,$72,$75,$6b,MadinoCavalierPalette)
-PaletteIdentifier($B0,$72,$75,$6b,PlaceholderPalette)
-PaletteIdentifier($B1,$72,$75,$6b,PlaceholderPalette)
-PaletteIdentifier($B2,$72,$75,$6b,PlaceholderPalette)
+PaletteIdentifier($B0,$72,$75,$6b,VerdaneMilitiaPalette)
+PaletteIdentifier($B1,$72,$75,$6b,HeirheinGreatKntPalette)
+PaletteIdentifier($B2,$72,$75,$6b,LoptousArcherPalette)
 PaletteIdentifier($B3,$72,$75,$6b,PlaceholderPalette)
 PaletteIdentifier($B4,$72,$75,$6b,PlaceholderPalette)
 PaletteIdentifier($B5,$72,$75,$6b,PlaceholderPalette)
@@ -268,6 +268,15 @@ PaletteIdentifier($FD,$72,$75,$6b,HensonPurplePalette)
 PaletteIdentifier($FE,$72,$75,$6b,HensonYellowPalette)
 PaletteIdentifier($FF,$72,$75,$6b,HensonOrangePalette)
 PaletteIdentifier($100,$72,$75,$6b,TonnaminPalette)
+PaletteIdentifier($101,$72,$75,$6b,EmilPalette)
+PaletteIdentifier($102,$72,$75,$6b,GazzackPalette)
+PaletteIdentifier($103,$72,$75,$6b,CrotorPalette)
+PaletteIdentifier($104,$72,$75,$6b,WisemanPalette)
+PaletteIdentifier($105,$72,$75,$6b,SharkPalette)
+PaletteIdentifier($106,$72,$75,$6b,BacchusPalette)
+PaletteIdentifier($107,$72,$75,$6b,HoodPalette)
+
+
 
 /*
 POP

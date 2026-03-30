@@ -49,13 +49,13 @@ Jeanne,0x0
 Lene,0x0
 Laylea,CharmID
 Zagreus,0x0
-Melchior,LunaID
+Melchior,OpportunistID
 Tine,0x0
 Linda,WrathID
 Febail,0x0
 Asaello,AccostID
 Persephone,0x0
-Nehalennia,SolID
+Nehalennia,ArmsthriftID
 Ced,0x0
 Hawk,PursuitID
 Coirpre,0x0
@@ -164,8 +164,8 @@ Veld,0x0
 Manfroy,0x0
 Julius,0x0
 Julius (Loptous),0x0
-Heim,0x0
-Baldr,0x0
+Deadlord,0x0
+Legion,FierceStanceID
 Hodr,0x0
 Od,0x0
 Njorun,0x0
@@ -236,7 +236,7 @@ Alva,0x0
 Henson,0x0
 Byron,0x0
 Aida,0x0
-Palmarch,0x0
+Palmarch,LiveToServeID
 Augury,0x0
 ArenaGuy,0x0
 BlacksmithGuy,0x0

@@ -11,8 +11,8 @@ INLINE ClassSkillTable,Skill
 0x09 Myrmidon (F),PursuitID
 0x0A Mercenary (M),PursuitID
 0x0B Mercenary (F),PursuitID
-0x0C Swordmaster (M),0x0
-0x0D Swordmaster (F),0x0
+0x0C Swordmaster (M),PursuitID
+0x0D Swordmaster (F),PursuitID
 0x0E Hero (M),PursuitID
 0x0D Hero (F),PursuitID
 0x10 Thief (M),StealID
@@ -33,13 +33,13 @@ INLINE ClassSkillTable,Skill
 0x1F Pirate (F),0x0
 0x20 Berserker (M),CritUpID
 0x21 Berserker (F),CritUpID
-0x22 Archer (M),0x0
-0x23 Archer (F),0x0
-0x24 Sniper (M),0x0
-0x25 Sniper (F),0x0
-0x26 Adventurer (M),0x0
-0x27 Adventurer (F),0x0
-0x28 Freeblade,CritUpID
+0x22 Archer (M),PursuitID
+0x23 Archer (F),PursuitID
+0x24 Sniper (M),PursuitID
+0x25 Sniper (F),PursuitID
+0x26 Adventurer (M),PursuitID
+0x27 Adventurer (F),PursuitID
+0x28 Freeblade,0x0
 0x29 Soldier,0x0
 0x2A Halberdier,CritUpID
 0x2B Cavalier,CantoPlusID
@@ -66,28 +66,28 @@ INLINE ClassSkillTable,Skill
 0x40 Bow Armour,0x0
 0x41 Protector,0x0
 0x42 Sentry,0x0
-0x43 General,GreatShieldID
-0x44 Guardian,GreatShieldID
-0x45 Pegasus Knight,CantoID
-0x46 Falcon Knight,CantoID
-0x47 Harrier,CantoID
-0x48 Wyvern Rider (M),CantoID
-0x49 Wyvern Rider (F),CantoID
-0x4A Wyvern Knight (M),CantoID
-0x4B Wyvern Knight (F),CantoID
-0x4C Wyvern Master (M),CantoID
-0x4D Wyvern Master (F),CantoID
-0x4E Wyvern Lord (M),CantoID
-0x4F Wyvern Lord (F),CantoID
-0x50 Malig Knight,CantoID
+0x43 General,PaviseID
+0x44 Guardian,AegisID
+0x45 Pegasus Knight,CantoPlusID
+0x46 Falcon Knight,CantoPlusID
+0x47 Harrier,CantoPlusID
+0x48 Wyvern Rider (M),CantoPlusID
+0x49 Wyvern Rider (F),CantoPlusID
+0x4A Wyvern Knight (M),CantoPlusID
+0x4B Wyvern Knight (F),CantoPlusID
+0x4C Wyvern Master (M),CantoPlusID
+0x4D Wyvern Master (F),CantoPlusID
+0x4E Wyvern Lord (M),CantoPlusID
+0x4F Wyvern Lord (F),CantoPlusID
+0x50 Malig Knight,CantoPlusID
 0x51 Fire Mage (M),0x0
 0x52 Fire Mage (F),0x0
 0x53 Thunder Mage (M),0x0
 0x54 Thunder Mage (F),0x0
 0x55 Wind Mage (M),0x0
 0x56 Wind Mage (F),0x0
-0x57 Mage Fighter (M),AdeptID
-0x58 Mage Fighter (F),AdeptID
+0x57 Mage Fighter (M),0x0
+0x58 Mage Fighter (F),0x0
 0x59 Mage (M),0x0
 0x5A Mage (F),0x0
 0x5B Mage Knight (M),CantoPlusID
@@ -123,24 +123,24 @@ INLINE ClassSkillTable,Skill
 0x79 Queen,CharismaID
 0x7A Dark Mage (M),0x0
 0x7B Dark Mage (F),0x0
-0x7C Dark Bishop (M),0x0
-0x7D Dark Bishop (F),0x0
+0x7C Dark Bishop (M),PursuitID
+0x7D Dark Bishop (F),PursuitID
 0x7E Archbishop,0x0
 0x7F Dark Prince,0x0
 -0,0x0
 -0,0x0
+-0,ArmsthriftID
 -0,0x0
 -0,0x0
 -0,0x0
 -0,0x0
 -0,0x0
+-0,PursuitID
+-0,PursuitID
 -0,0x0
 -0,0x0
--0,0x0
--0,0x0
--0,0x0
--0,0x0
--0,0x0
+-0,PursuitID
+-0,CantoPlusID
 -0,0x0
 -0,0x0
 -0,0x0

@@ -61,6 +61,35 @@
 	add r0, #0x1E
 	add r0, r0, r4
 	ldrh r0, [r0, #0x0]		@get item from inventory position
+	mov r1,r5
+	mov r2,#0x30
+	ldrb r1,[r5,r2]
+	ldr r2,=#0x0F
+	and r1,r2
+	cmp r1,#0x2
+	bne CheckSilence
+	mov r0,#0x0
+	b Statused
+	
+	CheckSilence:	
+	cmp r1,#0x3
+	bne NoStatus
+	ldr r3,=#0x00FF
+	and r3,r0
+	ldr r2,=ItemTable
+	mov r1,#36
+	mul r1,r3,r1
+	add r2,r2,r1
+	ldrb r2,[r2,#0x8]
+	mov r1,#0x2
+	and r2,r1
+	cmp r2,#0x2
+	bne NoStatus
+	mov r0,#0x0
+	b Statused
+	
+	b Statused
+	NoStatus:
 	LDR r1, =0x0203A4D4 	@some battle buffer
     LDRB r1, [r1, #0x2] 	@(Appears to be range)
     MOV r2 ,r5				@battle struct
@@ -69,6 +98,7 @@
 	mov lr, r3
 	.short 0xf800
 
+	Statused:
     CMP r0, #0x0
 	BEQ CheckNextWeapon
 	

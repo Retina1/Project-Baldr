@@ -599,7 +599,7 @@
 //By Snakey1
 #define BracingStanceID 246
 #define DartingStanceID 247
-#define FierceStanceID 255
+#define FierceStanceID 183
 #define KestrelStanceID 248
 #define MirrorStanceID 249
 #define ReadyStanceID 250
@@ -630,7 +630,7 @@
 
 //Vanity: Gain +2 Damage and +10 Hit when fighting enemy at 2 range.
 //By Datagne
-#define VanityID 183
+#define VanityID 255
 
 //Vigilance: Avoid +20.
 //By Sme

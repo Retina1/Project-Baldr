@@ -1,4 +1,4 @@
-0x9a2e00,Animation pointer,Another pointer
+INLINE NewMovTable,Animation pointer,Another pointer
 Lord,LordMv|IsPointer,0x81c3d7c
 Knight Lord (Seliph),KntLordSeliphMv|IsPointer,0x81c52b4
 Knight Lord (Sigurd),SigurdMv|IsPointer,0x81c52b4
@@ -12,6 +12,134 @@ Mercenary (M),0x81ca27c,0x81caa20
 Mercenary (F),MercFMv|IsPointer,0x81c945c
 Swordmaster (M),0x81cdcb0,0x81ce4fc
 Swordmaster (F),0x81ce65c,0x81ceee0
+Hero (M),0x81cb438,0x81cbd94
+Hero (F),0x81cbef4,0x81cc874
+Thief (M),0x81c8be0,0x81c945c
+Thief (F),ThiefFMv|IsPointer,0x81c945c
+Rogue (M),0x81ded90,0x81df548
+Rogue (F),RogueFMv|IsPointer,0x81df548
+Assassin (M),AssassMMv|IsPointer,0x81e4ea4
+Assassin (F),AssassFMv|IsPointer,0x81e4ea4
+Dancer,0x81ec654,0x81ed1c8
+Fighter,FighterMv|IsPointer,0x81e4340
+Warrior (M),0x81e4498,0x81e4ea4
+Warrior (F),WarriorFMv|IsPointer,0x81e4ea4
+Hunter,HunterMv|IsPointer,0x81c3d7c
+Barbarian,PirateMMv|IsPointer,0x81c3d7c
+Brigand (M),BrigandMMv|IsPointer,0x81e582c
+Brigand (F),BrigandFMv|IsPointer,0x81e582c
+Pirate (M),0x81e5984,0x81e62b4
+Pirate (F),PirateFMv|IsPointer,0x81e62b4
+Berserker (M),0x81e640c,0x81e6df4
+Berserker (F),BerserkFMv|IsPointer,0x81e6df4
+Archer (M),ArcherMMv|IsPointer,0x81d0a7c
+Archer (F),ArcherFMv|IsPointer,0x81d13c8
+Sniper (M),SniperMMv|IsPointer,0x81d1d48
+Sniper (F),SniperFMv|IsPointer,0x81d2714
+Adventurer (M),AdventMMv|IsPointer,0x81e582c
+Adventurer (F),AdventFMv|IsPointer,0x81e582c
+Militia,MilitiaMv|IsPointer,0x81c52b4
+Soldier,SoldierMv|IsPointer,0x81edbc4
+Halberdier,HalbrdMv|IsPointer,0x81edbc4
+Cavalier,UniCavMv|IsPointer,0x81c692c
+Paladin (M),0x81c6a84,0x81c7428
+Holy Knight,HolyKntMv|IsPointer,0x81c7428
+Troubadour,0x81eaff8,0x81eb99c
+Valkyrie,0x81ebaf4,0x81ec4fc
+Paladin (F),PalFMv|IsPointer,0x81c7428
+Free Knight,FreeKntMv|IsPointer,0x81c46cc
+Ranger,ForrestMV|IsPointer,0x81d3194
+Wanderer,0x81d286c,0x81d3194
+DON'T TOUCH THIS,0x81df6a0,0x81dfacc
+Lance Knight,LanceCavMV|IsPointer,0x81c692c
+Duke Knight,DukeKnightMV|IsPointer,0x81c692c
+Axe Knight,AxeCavMv|IsPointer,0x81c692c
+Great Knight,GreatKntMv|IsPointer,0x81e058c
+Bow Knight (M),BowCavMv|IsPointer,0x81c692c
+Bow Knight (F),BowKntFMv|IsPointer,0x81c46cc
+Arch Knight,ArchKntMv|IsPointer,0x81c7428
+Black Knight,BlackKntMv|IsPointer,0x81c7428
+Sword Armour,SwdArmMv|IsPointer,0x81cdb58
+Lance Armour,LncArmMv|IsPointer,0x81cdb58
+Axe Armour,AxeArmMv|IsPointer,0x81cdb58
+Bow Armour,BowArmMv|IsPointer,0x81cdb58
+Protector,ProtectorMv|IsPointer,0x81caa20
+Sentry,SentryMv|IsPointer,0x81caa20
+General,GeneralMv|IsPointer,0x81c8a80
+Guardian,GuardianMv|IsPointer,0x81c3d7c
+Pegasus Knight,0x81e89d0,0x81e96f0
+Falcon Knight,0x81e9848,0x81ea5dc
+Harrier,HarrierMv|IsPointer,0x81ea5dc
+Wyvern Rider (M),WyvRiderMMv|IsPointer,0x81d403c
+Wyvern Rider (F),WyvRiderFMv|IsPointer,0x81d403c
+Wyvern Knight (M),0x81d32ec,0x81d403c
+Wyvern Knight (F),0x81d32ec,0x81d403c
+Wyvern Master (M),0x81d6ec4,0x81d7cc8
+Wyvern Master (F),0x81d6ec4,0x81d7cc8
+Wyvern Lord (M),0x81d504c,0x81d5e58
+Wyvern Lord (F),0x81d5fc0,0x81d5e58
+Malig Knight,MaligKntMv|IsPointer,0x81d5e58
+Fire Mage (M),FirMageMMv|IsPointer,0x81d8668
+Fire Mage (F),0x81d87c0,0x81d908c
+Thunder Mage (M),ThrMageMMv|IsPointer,0x81d8668
+Thunder Mage (F),ThrMageFMv|IsPointer,0x81d908c
+Wind Mage (M),WndMageMMv|IsPointer,0x81d8668
+Wind Mage (F),WndMageFMv|IsPointer,0x81d908c
+Mage Fighter (M),MageWarMMv|IsPointer,0x81d9b58
+Mage Fighter (F),MageWarFMv|IsPointer,0x81da694
+Mage (M),MageMMv|IsPointer,0x81d8668
+Mage (F),MageFMv|IsPointer,0x81d908c
+Mage Knight (M),0x81da7ec,0x81db0f8
+Mage Knight (F),0x81db250,0x81dbbcc
+Bard,0x81e80b0,0x81e8840
+Shaman,ShamanMv|IsPointer,0x82039a0
+Sage (M),0x81d91e4,0x81d9b58
+Sage (F),0x81d9cb0,0x81da694
+Gorgon,0x81f88c4,0x81f90a0
+DON'T TOUCH THIS,0x81f91f8,0x81f95f4
+Baron,BaronMv|IsPointer,0x81c3d7c
+Emperor,EmperorMv|IsPointer,0x81d2714
+DON'T TOUCH THIS,0x81fb098,0x81fbe5c
+DON'T TOUCH THIS,0x81fbfbc,0x81fd028
+Ballista,0x81fd180,0x81fd808
+Iron Ballista,0x81fd960,0x81fdfe8
+Killer Ballista,0x81fe140,0x81fe7c8
+Ballista,0x81fe920,0x81fee74
+Iron Ballista,0x81fefdc,0x81ff4c8
+Killer Ballista,0x81ff620,0x81ffbbc
+Child,0x81ffd24,0x8200348
+Child (F),0x82004a0,0x8200afc
+Civilian,0x8200c54,0x8201338
+Civilian (F),0x8201490,0x8201b84
+Civilian,0x8200c54,0x8201338
+Civilian (F),0x8201490,0x8201b84
+Priest,0x81e7790,0x81e7f58
+Cleric,0x81ea734,0x81eaea0
+High Priest,0x81dbd24,0x81dc590
+High Priestess,0x81dc6f0,0x81dcf44
+Bishop (M),0x81de41c,0x81dec38
+Bishop (F),BishopFMv|IsPointer,0x81dec38
+Queen,EmpressMv|IsPointer,0x82039a0
+Dark Mage (M),0x81dd0a4,0x81dd888
+Dark Mage (F),DrkMageFMv|IsPointer,0x81eb99c
+Dark Bishop (M),0x81dd9e0,0x81de2c4
+Dark Bishop (F),DrkBishopFMv|IsPointer,0x81c7428
+Archbishop,ArchbishopMv|IsPointer,0x81ec4fc
+Dark Prince,DarkPrinceMv|IsPointer,0x81d6d6c
+Arena Master,ArenaMv|IsPointer,0x81c3d7c
+Augury,AuguryMv|IsPointer,0x81c3d7c
+Blacksmith,BlacksmithMv|IsPointer,0x81c52b4
+Pawnkeeper,PawnkeeperMv|IsPointer,0x81c52b4
+Vendor,VendorMv|IsPointer,0x81c52b4
+Supplier (M),SupplierMMv|IsPointer,0x81c46cc
+Supplier (F),SupplierFMv|IsPointer,0x81c52b4
+Queen (Silesse),QueenMv|IsPointer,0x81c5e84
+Trueblade,TruebladeMv|IsPointer,0x81cd1bc
+Freeblade,FreebldMv|IsPointer,0x81cdb58
+Manakete,ManaketeMv|IsPointer,0x81caa20
+Dragon Monarch,DragonMv|IsPointer,0x81c945c
+Bowfighter,BowfighterMv|IsPointer,0x81ce4fc
+Lionheart,LionheartMv|IsPointer,0x81ceee0
 Hero (M),0x81cb438,0x81cbd94
 Hero (F),0x81cbef4,0x81cc874
 Thief (M),0x81c8be0,0x81c945c
@@ -101,9 +229,9 @@ Baron,BaronMv|IsPointer,0x81c3d7c
 Emperor,EmperorMv|IsPointer,0x81d2714
 DON'T TOUCH THIS,0x81fb098,0x81fbe5c
 DON'T TOUCH THIS,0x81fbfbc,0x81fd028
-Archer on Ballista,0x81fd180,0x81fd808
-Archer on Iron Ballista,0x81fd960,0x81fdfe8
-Archer on Killer Ballista,0x81fe140,0x81fe7c8
+Ballista,0x81fd180,0x81fd808
+Iron Ballista,0x81fd960,0x81fdfe8
+Killer Ballista,0x81fe140,0x81fe7c8
 Ballista,0x81fe920,0x81fee74
 Iron Ballista,0x81fefdc,0x81ff4c8
 Killer Ballista,0x81ff620,0x81ffbbc

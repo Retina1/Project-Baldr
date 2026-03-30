@@ -45,10 +45,10 @@ RepairItems_Internal:
       cmp  r2, #0
       beq  Next
 
-      mov  r2, #(ItemAttributeUnbreakable | ItemAttributeUnsellable)
-      and  r2, r1
-      cmp  r2, #0
-      bne  Next
+      @mov  r2, #(ItemAttributeUnbreakable | ItemAttributeUnsellable)
+      @and  r2, r1
+      @cmp  r2, #0
+      @bne  Next
 
         @ Item is valid, cap durability
 
@@ -61,9 +61,9 @@ RepairItems_Internal:
 
       Next:
 
-    add  r5, #2
-    cmp  r5, #(UnitInventory + (UNIT_ITEM_COUNT * 2))
-    bne  Loop
+    @add  r5, #2
+    @cmp  r5, #(UnitInventory + (UNIT_ITEM_COUNT * 2))
+    @bne  Loop
 
   Continue:
 

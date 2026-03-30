@@ -207,6 +207,7 @@ BYTE 00 00
 ALIGN 4
 
 CallistaSonSubSkillList:
+BYTE 1 ShadowgiftID
 BYTE 00 00
 ALIGN 4
 
@@ -640,6 +641,7 @@ BYTE 00 00
 ALIGN 4
 
 ScipioSkillList:
+BYTE 1 BowRangeUpID
 BYTE 00 00
 ALIGN 4
 
@@ -966,7 +968,6 @@ BYTE 00 00
 ALIGN 4
 
 RangerSkillList:
-BYTE 1 DesperationID
 BYTE 00 00
 ALIGN 4
 
@@ -979,7 +980,6 @@ BYTE 00 00
 ALIGN 4
 
 DukeKnightSkillList:
-BYTE 1 AegisID
 BYTE 00 00
 ALIGN 4
 
@@ -988,7 +988,6 @@ BYTE 00 00
 ALIGN 4
 
 GreatKnightSkillList:
-BYTE 1 PaviseID
 BYTE 00 00
 ALIGN 4
 
@@ -1049,11 +1048,13 @@ ALIGN 4
 
 FalconKnightSkillList:
 BYTE 1 RepositionID
+BYTE 1 AdeptID
 BYTE 00 00
 ALIGN 4
 
 HarrierSkillList:
 BYTE 1 RepositionID
+BYTE 1 AdeptID
 BYTE 00 00
 ALIGN 4
 
@@ -1074,24 +1075,29 @@ BYTE 00 00
 ALIGN 4
 
 WyvernMasterMSkillList:
-BYTE 1 VengeanceID
+BYTE 1 PursuitID
+BYTE 1 DesperationID
 BYTE 00 00
 ALIGN 4
 
 WyvernMasterFSkillList:
-BYTE 1 VengeanceID
+BYTE 1 PursuitID
+BYTE 1 DesperationID
 BYTE 00 00
 ALIGN 4
 
 WyvernLordMSkillList:
+BYTE 1 PursuitID
 BYTE 00 00
 ALIGN 4
 
 WyvernLordFSkillList:
+BYTE 1 PursuitID
 BYTE 00 00
 ALIGN 4
 
 MaligKnightSkillList:
+BYTE 1 TrampleID
 BYTE 00 00
 ALIGN 4
 
@@ -1120,10 +1126,12 @@ BYTE 00 00
 ALIGN 4
 
 MageFighterMSkillList:
+BYTE 1 AdeptID
 BYTE 00 00
 ALIGN 4
 
 MageFighterFSkillList:
+BYTE 1 AdeptID
 BYTE 00 00
 ALIGN 4
 
@@ -1152,10 +1160,12 @@ BYTE 00 00
 ALIGN 4
 
 SageMSkillList:
+BYTE 1 AdeptID
 BYTE 00 00
 ALIGN 4
 
 SageFSkillList:
+BYTE 1 AdeptID
 BYTE 00 00
 ALIGN 4
 

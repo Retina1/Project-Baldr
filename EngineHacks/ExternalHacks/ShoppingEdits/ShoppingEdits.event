@@ -193,11 +193,11 @@ SHLI SteelBlade Boots 1 2 3 4 5 /*6*/ 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
 ALIGN 4
 
 Chapter1BattlePrepShop:
-SHLI SlimSword IronLance Javelin SteelAxe  
+SHLI 0x1 SlimSword IronLance JavelinChpOne SteelAxe  
 ALIGN 4
 
 Chapter2BattlePrepShop:
-SHLI SteelBlade SlimSword IronLance SteelLance Javelin SteelAxe SteelBow 
+SHLI 0x2 SteelBlade SteelLance SteelBow Fire Thunder Wind Lightning Heal
 ALIGN 4
 
 Chapter2BattlePrepVendor:
@@ -247,14 +247,17 @@ ALIGN 4
 	
 	
 	Chapter1BattlePrepShopBargains:
-	
-	SHORT SlimSword 0x7
+
+	SHORT 0x1 0x0
 	WORD 0
 	
-	SHORT IronLance 0x8
+	SHORT SlimSwordChpOne 0x7
+	WORD 0
+	
+	SHORT IronLanceChpOne 0x8
 	WORD 0
 
-	SHORT Javelin 0x9
+	SHORT JavelinChpOne 0x9
 	WORD 0
 	
 	SHORT SteelAxe 0xA
@@ -278,7 +281,7 @@ ALIGN 4
 	SHORT SteelLance 0xC
 	WORD 0
 
-	SHORT Javelin 0xD
+	SHORT JavelinChpOne 0xD
 	WORD 0
 	
 	SHORT SteelAxe 0xE

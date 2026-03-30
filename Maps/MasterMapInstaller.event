@@ -11,6 +11,7 @@
 #include "CuvuliAmbush.event"
 #include "DahnaFort.event"
 #include "DoorstoDestiny.event"
+#include "ForAFriend.event"
 #include "HeirOfLight.event"
 #include "JacoAttack.event"
 #include "LeonsterReign.event"
@@ -24,3 +25,4 @@
 #include "ThoveLiberation.event"
 #include "ThresholdtoFate.event"
 #include "YiedGenocide.event"
+#include "ZaxonCastle.event"

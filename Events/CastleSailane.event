@@ -83,7 +83,7 @@ ALIGN 4
 
 BeginningScene:
 ASMC ClearArenaProgress|1
-LOAD3 0x0 SailaneGang
+LOAD1 0x0 SailaneGang
 ENUN
 LOAD1 0x1 HelperGuys
 ENUN

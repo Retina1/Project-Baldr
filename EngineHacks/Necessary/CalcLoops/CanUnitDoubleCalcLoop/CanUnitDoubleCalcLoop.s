@@ -86,11 +86,14 @@ SetASTrue:
 ldr r4,=#0x203A4EC @attacker struct
 ldr r5,=#0x203A56C @defender struct
 mov r0,r4
-add r0,#0x5E
-ldrh r0,[r0]
+//add r0,#0x5E
+push {r3}
+mov r3,#0x5E
+ldsh r0,[r0,r3]
 mov r1,r5
-add r1,#0x5E
-ldrh r1,[r1]
+//add r1,#0x5E
+ldsh r1,[r1,r3]
+pop {r3}
 cmp r0,r1
 blt SetASTrue_TargetDoubles
 str r4,[r6]
@@ -142,11 +145,14 @@ pop {r6-r7}
 ldr r4,=#0x203A4EC @attacker struct
 ldr r5,=#0x203A56C @defender struct
 mov r0,r4
-add r0,#0x5E
-ldrh r0,[r0]
+//add r0,#0x5E
+push {r3}
+mov r3,#0x5E
+ldsh r0,[r0,r3]
 mov r1,r5
-add r1,#0x5E
-ldrh r1,[r1]
+//add r1,#0x5E
+ldsh r1,[r1,r3]
+pop {r3}
 cmp r0,r1
 blt UnitCanDouble_TargetDoubles
 str r4,[r6]

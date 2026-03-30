@@ -116,7 +116,7 @@
 #define General 0x0B
 #define General_F 0x0C
 #define Thief 0x0D
-#define Manakete 0x0E
+#define Manakete_old 0x0E
 #define Mercenary 0x0F
 #define Mercenary_F 0x10
 #define Hero 0x11

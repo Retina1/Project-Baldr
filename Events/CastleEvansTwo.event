@@ -1,0 +1,907 @@
+EventPointerTable(0x75,PointerList)
+
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN NordionGang NordionGang  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+ALIGN 4
+TurnBasedEvents:
+END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+CharacterEvent(0x0,TheTestOfLove,0x0,AuguryGuy)
+CharacterEvent(0x0,PromotedLol,Sigurd,Oifey)
+CharacterEvent(0x0,OifeyPromoAlec,Alec,Oifey)
+CharacterEvent(0x0,OifeyPromoNoish,Noish,Oifey)
+CharacterEvent(0x0,OifeyPromoArden,Arden,Oifey)
+CharacterEvent(0x0,OifeyPromoAzel,Azel,Oifey)
+CharacterEvent(0x0,OifeyPromoLex,Lex,Oifey)
+CharacterEvent(0x0,PromotedLol,Quan,Oifey)
+CharacterEvent(0x0,OifeyPromoEthlyn,Ethlyn,Oifey)
+CharacterEvent(0x0,OifeyPromoFinn,Finn,Oifey)
+CharacterEvent(0x0,OifeyPromoMidir,Midir,Oifey)
+CharacterEvent(0x0,OifeyPromoEdain,Edain,Oifey)
+CharacterEvent(0x0,OifeyPromoDew,Dew,Oifey)
+CharacterEvent(0x0,OifeyPromoAyra,Ayra,Oifey)
+CharacterEvent(0x0,OifeyPromoJamke,Jamke,Oifey)
+CharacterEvent(0x0,PromotedLol,Deirdre,Oifey)
+CharacterEvent(0x0,OifeyPromoLachesis,Lachesis,Oifey)
+CharacterEvent(0x0,OifeyPromoHolyn,Holyn,Oifey)
+CharacterEvent(0x0,OifeyPromoBeowolf,Beowolf,Oifey)
+CharacterEvent(0x0,OifeyPromoLewyn,Lewyn,Oifey)
+CharacterEvent(0x0,PromotedLol,Sylvia,Oifey)
+CharacterEvent(0x0,OifeyPromoErinys,Erinys,Oifey)
+CharacterEvent(0x0,OifeyPromoHopper,Hopper,Oifey)
+CharacterEvent(0x0,PromotedLol,Indech,Oifey)
+CharacterEvent(0x0,PromotedLol,Claud,Oifey)
+CharacterEvent(0x0,OifeyPromoTailtiu,Tailtiu,Oifey)
+CharacterEvent(0x0,OifeyPromoCallista,Callista,Oifey)
+CharacterEvent(0x0,PromotedLol,Brigid,Oifey)
+CharacterEvent(0x0,RepairDaStuff,0x0,BlacksmithGuy)
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+Seize(9,19)
+Armory(Chapter1BattlePrepShop,16,12)
+House(0x0,SupplyHouse,0,2) //supply
+House(0x0,SupplyHouse,1,3) //supply
+House(0x0,SupplyHouse,0,4) //supply
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x0 NordionGang
+ENUN
+LOAD1 0x1 HelperGuys
+ENUN
+EndEvent
+
+EndingScene:
+MNC2 0x6
+EndEvent
+
+TheTestOfLove:
+Text(AuguryOne)
+CHECK_ACTIVE //Quicker and easier to check the active unit since this applies to everyone.
+SADD s1 sC s0
+ASMC ASMC_GetUnitASupportPartner
+
+//Check Ayra
+SVAL s1 Ayra
+BEQ 0x9000 s1 sC
+//Check Erinys
+SVAL s1 Erinys
+BEQ 0x9001 s1 sC
+//Check Edain
+SVAL s1 Edain
+BEQ 0x9002 s1 sC
+//Check Ethlyn
+SVAL s1 Ethlyn
+BEQ 0x9003 s1 sC
+//Check Deirdre
+SVAL s1 Deirdre
+BEQ 0x9004 s1 sC
+//Check Lachesis
+SVAL s1 Lachesis
+BEQ 0x9005 s1 sC
+//Check Sylvia
+SVAL s1 Sylvia
+BEQ 0x9006 s1 sC
+//Check Tailtiu
+SVAL s1 Tailtiu
+BEQ 0x9007 s1 sC
+//Check Callista
+SVAL s1 Callista
+BEQ 0x9008 s1 sC
+//Check Brigid
+SVAL s1 Brigid
+BEQ 0x9009 s1 sC
+//Check Sigurd
+SVAL s1 Sigurd
+BEQ 0x900A s1 sC
+//Check Alec
+SVAL s1 Alec
+BEQ 0x900B s1 sC
+//Check Noish
+SVAL s1 Noish
+BEQ 0x900C s1 sC
+//Check Arden
+SVAL s1 Arden
+BEQ 0x900D s1 sC
+//Check Azel
+SVAL s1 Azel
+BEQ 0x900E s1 sC
+//Check Lex
+SVAL s1 Lex
+BEQ 0x900F s1 sC
+//Check Quan
+SVAL s1 Quan
+BEQ 0x9010 s1 sC
+//Check Finn
+SVAL s1 Finn
+BEQ 0x9011 s1 sC
+//Check Midir
+SVAL s1 Midir
+BEQ 0x9012 s1 sC
+//Check Dew
+SVAL s1 Dew
+BEQ 0x9013 s1 sC
+//Check Jamke
+SVAL s1 Jamke
+BEQ 0x9014 s1 sC
+//Check Holyn
+SVAL s1 Holyn
+BEQ 0x9015 s1 sC
+//Check Beowolf
+SVAL s1 Beowolf
+BEQ 0x9016 s1 sC
+//Check Lewyn
+SVAL s1 Lewyn
+BEQ 0x9017 s1 sC
+//Check Hopper
+SVAL s1 Hopper
+BEQ 0x9018 s1 sC
+//Check Claud
+SVAL s1 Claud
+BEQ 0x9019 s1 sC
+//Follow the pattern for as long as needed
+Text(Loner)
+GOTO 0x9020 //End
+
+//Ayra
+LABEL 0x9000
+Text(AuguryAyra)
+GOTO 0x9020 //End
+
+//Erinys
+LABEL 0x9001
+Text(AuguryFury)
+GOTO 0x9020 //End
+
+//Edain
+LABEL 0x9002
+Text(AuguryEdain)
+GOTO 0x9020 //End
+
+//Ethlyn
+LABEL 0x9003
+Text(AuguryEthlyn)
+GOTO 0x9020 //End
+
+//Deirdre
+LABEL 0x9004
+Text(AuguryDeirdre)
+GOTO 0x9020 //End
+
+//Lachesis
+LABEL 0x9005
+Text(AuguryLachesis)
+GOTO 0x9020 //End
+
+//Sylvia
+LABEL 0x9006
+Text(AugurySylvia)
+GOTO 0x9020 //End
+
+//Tailtiu
+LABEL 0x9007
+Text(AuguryTailtiu)
+GOTO 0x9020 //End
+
+//Callista
+LABEL 0x9008
+Text(AuguryCallista)
+GOTO 0x9020 //End
+
+//Brigid
+LABEL 0x9009
+Text(AuguryBrigid)
+GOTO 0x9020 //End
+
+//Sigurd
+LABEL 0x900A
+Text(AugurySigurd)
+GOTO 0x9020 //End
+
+//Alec
+LABEL 0x900B
+Text(AuguryAlec)
+GOTO 0x9020 //End
+
+//Noish
+LABEL 0x900C
+Text(AuguryNoish)
+GOTO 0x9020 //End
+
+//Arden
+LABEL 0x900D
+Text(AuguryArden)
+GOTO 0x9020 //End
+
+//Azel
+LABEL 0x900E
+Text(AuguryAzel)
+GOTO 0x9020 //End
+
+//Lex
+LABEL 0x900F
+Text(AuguryLex)
+GOTO 0x9020 //End
+
+//Quan
+LABEL 0x9010
+Text(AuguryQuan)
+GOTO 0x9020 //End
+
+//Finn
+LABEL 0x9011
+Text(AuguryFinn)
+GOTO 0x9020 //End
+
+//Midir
+LABEL 0x9012
+Text(AuguryMidir)
+GOTO 0x9020 //End
+
+//Dew
+LABEL 0x9013
+Text(AuguryDew)
+GOTO 0x9020 //End
+
+//Jamke
+LABEL 0x9014
+Text(AuguryJamke)
+GOTO 0x9020 //End
+
+//Holyn
+LABEL 0x9015
+Text(AuguryHolyn)
+GOTO 0x9020 //End
+
+//Beowolf
+LABEL 0x9016
+Text(AuguryBeowolf)
+GOTO 0x9020 //End
+
+//Lewyn
+LABEL 0x9017
+Text(AuguryLewyn)
+GOTO 0x9020 //End
+
+//Hopper
+LABEL 0x9018
+Text(AuguryHopper)
+GOTO 0x9020 //End
+
+//Claud
+LABEL 0x9019
+Text(AuguryClaud)
+GOTO 0x9020 //End
+
+//Follow the pattern for as long as needed
+
+LABEL 0x9020 //End
+Text(AuguryThree)
+EndEvent
+
+PromotedLol:
+Text(UAlreadyPromo)
+EndEvent
+
+OifeyPromoAlec:
+CHECK_CLASS Alec
+SVAL 0x7 PalM
+BEQ 0x1 0xC 0x7
+CheckLevel(Alec)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Alec PalM 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoNoish:
+CHECK_CLASS Noish
+SVAL 0x7 PalM
+BEQ 0x1 0xC 0x7
+CheckLevel(Noish)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Noish PalM 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoArden:
+CHECK_CLASS Arden
+SVAL 0x7 General
+BEQ 0x1 0xC 0x7
+CheckLevel(Arden)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Arden General 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoAzel:
+CHECK_CLASS Azel
+SVAL 0x7 MageKnt
+BEQ 0x1 0xC 0x7
+CheckLevel(Azel)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Azel MageKnt 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoLex:
+CHECK_CLASS Lex
+SVAL 0x7 GrtKnt
+BEQ 0x1 0xC 0x7
+CheckLevel(Lex)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Lex GrtKnt 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoEthlyn:
+CHECK_CLASS Ethlyn
+SVAL 0x7 PalF
+BEQ 0x1 0xC 0x7
+CheckLevel(Ethlyn)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Ethlyn PalF 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoFinn:
+CHECK_CLASS Finn
+SVAL 0x7 DukeKnt
+BEQ 0x1 0xC 0x7
+CheckLevel(Finn)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Finn DukeKnt 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoMidir:
+CHECK_CLASS Midir
+SVAL 0x7 ArchKnt
+BEQ 0x1 0xC 0x7
+CheckLevel(Midir)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Midir ArchKnt 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoEdain:
+CHECK_CLASS Edain
+SVAL 0x7 HPriestF
+BEQ 0x1 0xC 0x7
+CheckLevel(Edain)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Edain HPriestF 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoDew:
+CHECK_CLASS Dew
+SVAL 0x7 Rogue
+BEQ 0x1 0xC 0x7
+CheckLevel(Dew)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Dew Rogue 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoAyra:
+CHECK_CLASS Ayra
+SVAL 0x7 SwMastF
+BEQ 0x1 0xC 0x7
+CheckLevel(Ayra)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Ayra SwMastF 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoJamke:
+CHECK_CLASS Jamke
+SVAL 0x7 Sniper
+BEQ 0x1 0xC 0x7
+CheckLevel(Jamke)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Jamke Sniper 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoLachesis:
+CHECK_CLASS Lachesis
+SVAL 0x7 MasterKntF
+BEQ 0x1 0xC 0x7
+CheckLevel(Lachesis)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Lachesis MasterKntF 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoHolyn:
+CHECK_CLASS Holyn
+SVAL 0x7 Hero
+BEQ 0x1 0xC 0x7
+CheckLevel(Holyn)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Holyn Hero 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoBeowolf:
+CHECK_CLASS Beowolf
+SVAL 0x7 Ranger
+BEQ 0x1 0xC 0x7
+CheckLevel(Beowolf)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Beowolf Ranger 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoLewyn:
+CHECK_CLASS Lewyn
+SVAL 0x7 Sage
+BEQ 0x1 0xC 0x7
+CheckLevel(Lewyn)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Lewyn Sage 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoErinys:
+CHECK_CLASS Erinys
+SVAL 0x7 Falco
+BEQ 0x1 0xC 0x7
+CheckLevel(Lex)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Erinys Falco 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoHopper:
+CHECK_CLASS Hopper
+SVAL 0x7 General
+BEQ 0x1 0xC 0x7
+CheckLevel(Hopper)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Hopper General 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoTailtiu:
+CHECK_CLASS Tailtiu
+SVAL 0x7 MageFighterF
+BEQ 0x1 0xC 0x7
+CheckLevel(Tailtiu)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Tailtiu MageFighterF 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+OifeyPromoCallista:
+CHECK_CLASS Callista
+SVAL 0x7 WyvLordF
+BEQ 0x1 0xC 0x7
+CheckLevel(Callista)
+SVAL 0x7 0x13
+BGT 0x0 0xC 0x7
+Text(NotEnoughLevel)
+GOTO 0x2
+LABEL 0x0
+Text(CongratsYouPromo)
+SystemText(UWannaPromo)
+SVAL 0x7 0x2
+BEQ 0x2 0xC 0x7
+SetBackground(0x35)
+PROMOTE Callista WyvLordF 0x0
+FADI 16
+CLEAN
+FADU 16
+MUSC 0xA
+GOTO 0x2
+LABEL 0x1
+Text(UAlreadyPromo)
+GOTO 0x2
+LABEL 0x2
+EndEvent
+
+RepairDaStuff:
+macroASMC_RepairItems_CalculateRepairCost(RI_Target_Active_Unit)
+SVAL r1 (-1)
+BEQ 1 rC r1
+macroASMC_MemorySlotToString(rC)
+macroASMC_StandardRepair($09, RI_Standard_First, RI_Standard_Subsequent, RI_Standard_Prompt, RI_Standard_Yes, RI_Standard_No, RI_Standard_CannotAfford, RI_Standard_FullDurability)
+LABEL 1
+EndEvent
+
+ALIGN 4
+
+NordionGang:
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [9,10] 0x0 0x0 0x0 0x1 [SteelSword, IronLance] NoAI
+UNIT Alec UniCav 0x0 Level(3,Ally,0) [6,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arden SwdArm 0x0 Level(3,Ally,0) [9,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Noish UniCav 0x0 Level(3,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Lex AxeCav 0x0 Level(3,Ally,0) [12,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Azel Mage 0x0 Level(3,Ally,0) [13,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Quan DukeKnt 0x0 Level(3,Ally,0) [6,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Finn LncCav 0x0 Level(3,Ally,0) [6,14] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Ethlyn Troub 0x0 Level(3,Ally,0) [5,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Midir BowCav 0x0 Level(3,Ally,0) [5,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Dew Thief 0x0 Level(3,Ally,0) [7,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Edain Cleric 0x0 Level(3,Ally,0) [6,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Ayra MyrmF 0x0 Level(3,Ally,0) [10,16] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Jamke Hunter 0x0 Level(3,Ally,0) [5,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Deirdre Shaman 0x0 Level(3,Ally,0) [10,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+HelperGuys:
+UNIT VendorDude Vendor 0x0 Level(1,NPC,0) [17,13] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT AuguryGuy Augury 0x0 Level(1,NPC,0) [0,13] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT BlacksmithGuy Blacksmith 0x0 Level(1,NPC,0) [2,12] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT PawnshopGuy Pawnkeeper 0x0 Level(1,NPC,0) [15,13] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ArenaGuy Arena_Master 0x0 Level(1,NPC,0) [8,4] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Anna Supplier_F 0x0 Level(1,NPC,0) [0,3] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Jake Supplier_M 0x0 Level(1,NPC,0) [3,3] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Oifey Child 0x0 Level(1,NPC,0) [17,6] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Shannan Myrm 0x0 Level(1,NPC,0) [18,6] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT
+
+EnemyUnits:
+UNIT

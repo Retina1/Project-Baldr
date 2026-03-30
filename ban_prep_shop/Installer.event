@@ -1,0 +1,88 @@
+#ifdef _FE8_
+
+#include "EAstdlib.event"
+#include "Extensions/Hack Installation.txt"
+
+PUSH
+ORG $99414		//FE8U
+jumpToHack(ban_prep_shop_on_drawmenu)
+ORG $99868		//FE8U
+jumpToHack(ban_prep_shop_on_selected)
+ORG $99364
+BYTE 0x01 0x22
+ORG $99382
+BYTE 0x01 0x22
+ORG $99790
+BYTE 0x0 0x0 0x0 0x0
+ORG $997A0
+BYTE 0x0 0x0 0x0 0x0
+POP
+
+
+ALIGN 4
+ban_prep_shop_on_drawmenu:
+#incbin "ban_prep_shop_on_drawmenu.dmp"
+POIN BAN_PREP_SHOP_TABLE
+
+ALIGN 4
+ban_prep_shop_on_selected:
+#incbin "ban_prep_shop_on_selected.dmp"
+POIN BAN_PREP_SHOP_TABLE
+
+ALIGN 4
+BAN_PREP_SHOP_TABLE:
+BYTE 0x00  //ban ch4 prep shop.
+BYTE 0x01  //ban ch4 prep shop.
+BYTE 0x02  //ban ch4 prep shop.
+BYTE 0x03  //ban ch4 prep shop.
+BYTE 0x04  //ban ch4 prep shop.
+BYTE 0x05  //ban ch4 prep shop.
+BYTE 0x06  //ban ch4 prep shop.
+BYTE 0x07  //ban ch4 prep shop.
+BYTE 0x08  //ban ch4 prep shop.
+BYTE 0x09  //ban ch4 prep shop.
+BYTE 0x0A  //ban ch4 prep shop.
+BYTE 0x0B  //ban ch4 prep shop.
+BYTE 0x0C  //ban ch4 prep shop.
+BYTE 0x0D  //ban ch4 prep shop.
+BYTE 0x0E  //ban ch4 prep shop.
+BYTE 0x0F  //ban ch4 prep shop.
+BYTE 0x10  //ban ch4 prep shop.
+BYTE 0x11  //ban ch4 prep shop.
+BYTE 0x12  //ban ch4 prep shop.
+BYTE 0x13  //ban ch4 prep shop.
+BYTE 0x14  //ban ch4 prep shop.
+BYTE 0x15  //ban ch4 prep shop.
+BYTE 0x16  //ban ch4 prep shop.
+BYTE 0x17  //ban ch4 prep shop.
+BYTE 0x18  //ban ch4 prep shop.
+BYTE 0x19  //ban ch4 prep shop.
+BYTE 0x1A  //ban ch4 prep shop.
+BYTE 0x1B  //ban ch4 prep shop.
+BYTE 0x1C  //ban ch4 prep shop.
+BYTE 0x1D  //ban ch4 prep shop.
+BYTE 0x1E  //ban ch4 prep shop.
+BYTE 0x1F  //ban ch4 prep shop.
+BYTE 0x20  //ban ch4 prep shop.
+BYTE 0x21  //ban ch4 prep shop.
+BYTE 0x22  //ban ch4 prep shop.
+BYTE 0x23  //ban ch4 prep shop.
+BYTE 0x24  //ban ch4 prep shop.
+BYTE 0x25  //ban ch4 prep shop.
+BYTE 0x26  //ban ch4 prep shop.
+BYTE 0x27  //ban ch4 prep shop.
+BYTE 0x28  //ban ch4 prep shop.
+BYTE 0x29  //ban ch4 prep shop.
+BYTE 0x2A  //ban ch4 prep shop.
+BYTE 0x2B  //ban ch4 prep shop.
+BYTE 0x2C  //ban ch4 prep shop.
+BYTE 0x2D  //ban ch4 prep shop.
+BYTE 0x2E  //ban ch4 prep shop.
+BYTE 0x2F  //ban ch4 prep shop.
+BYTE 0xFF    //term
+
+ALIGN 4
+
+#else
+    ERROR This version of Selection Quotes is for FE8!
+#endif

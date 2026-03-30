@@ -86,10 +86,12 @@ setMugEntry(0xC,EthlynPortrait,2,6,3,4)
 
 ALIGN 4
 FinnYoungPortrait:
-#incbin "FinnYoung_mug.dmp"
-#incbin "FinnYoung_frames.dmp"
-#incbin "FinnYoung_palette.dmp"
-#incbin "FinnYoung_minimug.dmp"
+//#incbin "FinnYoung_mug.dmp"
+//#incbin "FinnYoung_frames.dmp"
+//#incbin "FinnYoung_palette.dmp"
+//#incbin "FinnYoung_minimug.dmp"
+//setMugEntry(0xE,FinnYoungPortrait,2,6,3,4)
+#incext PortraitFormatter "finn2.png"
 setMugEntry(0xE,FinnYoungPortrait,2,6,3,4)
 
 ALIGN 4
@@ -630,11 +632,14 @@ setMugEntry(0x34,ArionPortrait,2,5,2,3)
 
 ALIGN 4
 DimaggioPortrait:
-#incbin "Dimaggio_mug.dmp"
-#incbin "Dimaggio_frames.dmp"
-#incbin "Dimaggio_palette.dmp"
-#incbin "Dimaggio_minimug.dmp"
-setMugEntry(0x36,DimaggioPortrait,3,5,3,3)
+//#incbin "Dimaggio_mug.dmp"
+//#incbin "Dimaggio_frames.dmp"
+//#incbin "Dimaggio_palette.dmp"
+//#incbin "Dimaggio_minimug.dmp"
+//setMugEntry(0x36,DimaggioPortrait,3,5,3,3)
+#incext PortraitFormatter "Di_Maggio.png"
+setMugEntry(0x36,DimaggioPortrait,2,5,3,3)
+
 
 ALIGN 4
 GerrardPortrait:
@@ -717,12 +722,12 @@ BanquoPortrait:
 setMugEntry(0xBB,BanquoPortrait,2,5,3,3)
 
 ALIGN 4
-RossPortrait:
-#incbin "Ross_mug.dmp"
-#incbin "Ross_frames.dmp"
-#incbin "Ross_palette.dmp"
-#incbin "Ross_minimug.dmp"
-setMugEntry(0xCD,RossPortrait,2,5,3,3)
+//RossPortrait:
+//#incbin "Ross_mug.dmp"
+//#incbin "Ross_frames.dmp"
+//#incbin "Ross_palette.dmp"
+//#incbin "Ross_minimug.dmp"
+//setMugEntry(0xCD,RossPortrait,2,6,4,3)
 
 ALIGN 4
 MacbethPortrait:
@@ -1993,6 +1998,91 @@ BaronPhotoPortrait:
 setMugEntry(0x13F,BaronPhotoPortrait,2,5,3,3)
 
 ALIGN 4
+Jake_Portrait:
+#incext PortraitFormatter "Jake_Eden.png"
+setMugEntry(0x161, Jake_Portrait, 2, 5, 3, 3)
+
+ALIGN 4
+Wolfen_Portrait:
+#incext PortraitFormatter "Wolfen.png"
+setMugEntry(0x162, Wolfen_Portrait, 3, 5, 3, 3)
+
+ALIGN 4
+Xenon_Portrait:
+#incext PortraitFormatter "Xenon.png"
+setMugEntry(0x163, Xenon_Portrait, 3, 5, 3, 3)
+
+ALIGN 4
+Jackson_Portrait:
+#incext PortraitFormatter "Jackson.png"
+setMugEntry(0x164, Jackson_Portrait, 3, 5, 3, 3)
+
+ALIGN 4
+Canaan_Portrait:
+#incext PortraitFormatter "Canaan.png"
+setMugEntry(0x165, Canaan_Portrait, 3, 5, 3, 3)
+
+ALIGN 4
+Indra_Portrait:
+#incext PortraitFormatter "Indra.png"
+setMugEntry(0x166, Indra_Portrait, 3, 5, 3, 3)
+
+ALIGN 4
+AnnaGen2_Portrait:
+#incext PortraitFormatter "Anna_Melia.png"
+setMugEntry(0x167, AnnaGen2_Portrait, 4, 6, 4, 4)
+
+ALIGN 4
+BurkaulPortrait:
+#incext PortraitFormatter "Burkaul.png"
+setMugEntry(0x3A,BurkaulPortrait,3,5,3,3)
+
+ALIGN 4
+RossPortrait:
+#incext PortraitFormatter "Ross.png"
+setMugEntry(0xCD,RossPortrait,2,5,3,3)
+
+ALIGN 4
+ClementPortrait:
+#incext PortraitFormatter "Clement.png"
+setMugEntry(0x3D,ClementPortrait,3,5,3,3)
+
+ALIGN 4
+SnevejrPortrait:
+#incext PortraitFormatter "Snevejr.png"
+setMugEntry(0x4C,SnevejrPortrait, 3, 5, 3, 3)
+
+ALIGN 4
+MusarPortrait:
+#incext PortraitFormatter "Musar.png"
+setMugEntry(0xD9,MusarPortrait,3,5,3,3)
+
+ALIGN 4
+BatuPortrait:
+#incext PortraitFormatter "Batu.png"
+setMugEntry(0xE4,BatuPortrait,3,6,3,4)
+
+BenoitPortrait:
+#incbin "Benoit_mug.dmp"
+#incbin "Benoit_frames.dmp"
+#incbin "Benoit_palette.dmp"
+#incbin "Benoit_minimug.dmp"
+setMugEntry(0x16B,BenoitPortrait,3,5,3,3)
+
+HugoPortrait:
+#incbin "Hugo_mug.dmp"
+#incbin "Hugo_frames.dmp"
+#incbin "Hugo_palette.dmp"
+#incbin "Hugo_minimug.dmp"
+setMugEntry(0x16A,HugoPortrait,3,5,3,3)
+
+SchwartzPortrait:
+#incbin "Schwartz_mug.dmp"
+#incbin "Schwartz_frames.dmp"
+#incbin "Schwartz_palette.dmp"
+#incbin "Schwartz_minimug.dmp"
+setMugEntry(0x169,SchwartzPortrait,3,5,3,3)
+
 RissaPortrait:
 #incbin "Rissa_mug.dmp"
 #incbin "Rissa_frames.dmp"
@@ -2001,25 +2091,6 @@ RissaPortrait:
 setMugEntry(0x0168,RissaPortrait,2,5,2,3)
 
 ALIGN 4
-SchwartzPortrait:
-#incbin "Schwartz_mug.dmp"
-#incbin "Schwartz_frames.dmp"
-#incbin "Schwartz_palette.dmp"
-#incbin "Schwartz_minimug.dmp"
-setMugEntry(0x169,SchwartzPortrait,3,5,3,3)
-
-ALIGN 4
-HugoPortrait:
-#incbin "Hugo_mug.dmp"
-#incbin "Hugo_frames.dmp"
-#incbin "Hugo_palette.dmp"
-#incbin "Hugo_minimug.dmp"
-setMugEntry(0x16A,HugoPortrait,3,5,3,3)
-
-ALIGN 4
-BenoitPortrait:
-#incbin "Benoit_mug.dmp"
-#incbin "Benoit_frames.dmp"
-#incbin "Benoit_palette.dmp"
-#incbin "Benoit_minimug.dmp"
-setMugEntry(0x16B,BenoitPortrait,3,5,3,3)
+LegionPortrait:
+#incext PortraitFormatter "Legion.png"
+setMugEntry(0x16C,LegionPortrait,2,5,2,3)

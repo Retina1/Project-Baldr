@@ -98,9 +98,13 @@ assist their allies. Equip: [BowIcon][StaffIcon][X]
 Unequaled heroes who battle for [N]
 their freedom. Equip: [SwordIcon][BowIcon][X]
 
-##Desc_Truebld ^
+##Desc_Trueblade ^
 Peerless swordsmen with fascinating [N]
 mastery of the blade. Equip: [SwordIcon][X]
+
+##Desc_Militia ^
+Civilian who took arms to supplement [N]
+the army. Equip: [LanceIcon][X]
 
 ##Desc_Soldier ^
 Average foot soldiers possessing no unique [N]
@@ -346,3 +350,56 @@ Equip: [DarkIcon][AnimaIcon][StaffIcon][X]
 ##Desc_DarkPrince ^
 Corrupted spirits own that appellation. [N]
 Equip: [DarkIcon][AnimaIcon][StaffIcon][X]
+
+##Desc_ArenaC ^
+Units can challenge a set of seven arena[N]
+opponents of increasing difficulty[N]
+for gold rewards and experience gain.[X]
+
+##Desc_AuguryC ^
+The augury's services provide information on the[N]
+visiting unit's love status, their win/loss record,[N]
+and the identities of the unit's parents.[X]
+
+##Desc_BlacksmithC ^
+The Blacksmith can fully repair any weapon in[N]
+exchange for a fee. The fee for repairing a weapon is[N]
+calculated based on its current remaining uses.[X]
+
+##Desc_Pawnkeeper ^
+Units can sell their items to the pawn shop[N]
+for half the weapon's worth. Any unit can buy[N]
+the item back for its full worth for themselves.[X]
+
+##Desc_VendorC ^
+The vendor allows the purchase of weapons,[N]
+staves and occasionally ring items.[X]
+
+##Desc_SupplierM ^
+Jake can sell many rare items found nowhere else.[N]
+But his merchandises change every time.[N]
+Make sure to buy them while you can.[X]
+
+##Desc_SupplierF ^
+Anna's item storage system provides a[N]
+personal storage box for a unit's items.[X]
+
+##Desc_Queen2 ^
+Rulers of high authority and power. [N]
+Equip: [AnimaIcon][LightIcon][StaffIcon][X]
+
+##Desc_Manakete ^
+Manakete[X]
+
+##Desc_Dragon ^
+Dragon Monarch[X]
+
+##Desc_Bowfighter ^
+Verdane Prince not inclined toward senseless[N]
+violence with great accuracy and abilities.[N]
+Equip: [BowIcon][X]
+
+##Desc_Lionheart ^
+Paladin with a great sense of justice.[N]
+Wielder of the Demon Sword Mystletainn.[N]
+Equip: [SwordIcon][LanceIcon][AxeIcon][X]

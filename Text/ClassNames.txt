@@ -70,8 +70,11 @@ Adventurer[X]
 ##_Freebld ^
 Freeblade[X]
 
-##_Truebld ^
+##_Trueblade ^
 Trueblade[X]
+
+##_Militia ^
+Militia[X]
 
 ##_Soldier ^
 Soldier[X]
@@ -249,3 +252,33 @@ Archbishop[X]
 
 ##_DarkPrince ^
 Dark Prince[X]
+
+##_Arena ^
+Arena Master[X]
+
+##_Augury ^
+Augury[X]
+
+##_Blacksmith ^
+Blacksmith[X]
+
+##_Pawnkeeper ^
+Pawnkeeper[X]
+
+##_Vendor ^
+Vendor[X]
+
+##_Supplier ^
+Supplier[X]
+
+##_Manakete ^
+Manakete[X]
+
+##_Dragon ^
+Dragon Monarch[X]
+
+##_Bowfighter ^
+Bowfighter[X]
+
+##_Lionheart ^
+Lionheart[X]

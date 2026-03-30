@@ -207,8 +207,8 @@ frequently to ensure victory![A][X]
 [OpenMidLeft][LoadArenaGuy][OpenMidRight][LoadOifey]
 Here you can fight an[N]
 assortment of powerful opponents.[A][N]
-Make sure everyone can get a[N]
-try, to level up faster![A][X]
+Make sure everyone can get a try,[N]
+to level up faster![A][X]
 
 ##Castletorial7
 [OpenMidLeft][LoadAnna][OpenMidRight][LoadOifey]

@@ -1,8 +1,34 @@
 .thumb
 .equ CriticalIDList, SkillTester+4
 push {r4-r7, lr}
-mov     r4,#0 @loop counter
 mov 	r5, r0
+
+mov     r0,r5       @Move unit data into r0.
+ldr r1,=#0x020281F0
+mov r3,#0x48
+add r0,r0,r3
+ldrb r0,[r0]
+add r1,r1,r0
+ldrb r4,[r1]
+mov r3,#0x31
+cmp r4,r3
+blt CheckLooper
+sub r4,r4,r3
+@check unit is player or don't add bonus
+mov     r0,r5       @Move unit data into r0.
+add 	r0,#0x0B
+ldrb 	r0,[r0]
+mov 	r3,#0x40
+cmp r0,r3
+bgt CheckLooper
+@Normal calc
+mov     r0,r5       @Move unit data into r0.
+add     r0,#0x66    @Move to the attacker's crit.
+ldrh    r3,[r0]     @Load the attacker's crit into r3.
+add		r3,r3,r4	@add weapon kill bonus
+strh    r3,[r0]     @Store attacker avoid.
+CheckLooper:
+mov     r4,#0 @loop counter
 CheckLoop:
 mov 	r0, r5
 ldr     r2,CriticalIDList   @Load in the list of critical Skills.

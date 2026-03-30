@@ -35,9 +35,47 @@
 		blh		SetPartyGoldAmount, r1
 		
 		@set bargain items as being purchased
-		ldr		r0, [r5,#0x34]
-		mov		r1, r6
-		blh		SetPurchasedBargainItem, r2
+		@ldr		r0, [r5,#0x34]
+		@mov		r1, r6
+		@blh		SetPurchasedBargainItem, r2
+
+		push {r0-r6}
+
+		ldr     r0,=#0x3003750
+		mov 	r3,#0
+		mov 	r4,#0
+		ldr 	r1,=#0x20282F0
+		ldr 	r5,=#0x100
+		ThirdLoop:
+		ldrh 	r2,[r0,r4]
+		skipped:
+		cmp 	r2,r6
+		beq 	skipLoop
+		strh 	r2,[r0,r3]
+		strh 	r2,[r1,r3]
+		add 	r3,r3,#2
+		add 	r4,r4,#2
+		cmp		r3,r5
+		blt 	ThirdLoop
+		b 		done
+
+		skipLoop:
+		add 	r4,r4,#2
+		ldrh 	r2,[r0,r4]
+		strh 	r2,[r0,r3]
+		strh 	r2,[r1,r3]
+		add 	r3,r3,#2
+		add 	r4,r4,#2
+		cmp		r3,r5
+		blt 	ThirdLoop
+		b 		done
+
+		done:
+		pop {r0-r6}
+
+		@Remove bought item from the list
+
+
 		
 		@remove coupon if non-coupon bought and coupon affected final price
 		@ldr		r0, [r5,#0x2C]

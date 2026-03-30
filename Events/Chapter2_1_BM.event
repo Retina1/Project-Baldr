@@ -1,0 +1,657 @@
+
+EventPointerTable(0x24,ThisChapter)
+
+ThisChapter:
+
+POIN TurnBasedEvents
+
+POIN CharacterBasedEvents
+
+POIN LocationBasedEvents
+
+POIN MiscBasedEvents
+
+POIN Dunno Dunno Dunno
+
+POIN Tutorial
+
+POIN TrapData TrapData
+
+POIN PlayerUnits PlayerUnits
+
+POIN $0 $0 $0 $0 $0 $0
+
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+TurnEventPlayer(0x0,ComethHeirhein,5)
+TurnEventPlayer(0x0,InfiniBanditsShow,2)
+TurnEventPlayer(0x14,InfiniMercs,1,255)
+TurnEventEnemy(0x0,PhillipTalks,1)
+//TurnEventPlayer(0x0,LachyCheck,1)
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+Village(0xA,VillageOne,17,30)
+Village(0xB,VillageTwo,22,23)
+Village(0xC,VillageThree,27,27)
+Village(0xD,VillageFour,21,32)
+Village(0xE,VillageFive,25,33)
+Village(0xF,VillageSix,24,36)
+Seize(0x13,InfiniAttack,2,30)
+Seize(9,2)
+END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+CharacterEventBothWays(0x7,StealSword,Dew,Lachesis)
+CharacterEventBothWays(0x15,TheBrand,Deirdre,Ethlyn)
+CharacterEvent(0x9,LachesisJoineth,Sigurd,Lachesis)
+CharacterEventBothWays(0x23,LewynJoineth,Sigurd,Lewyn)
+CharacterEventBothWays(0x26,FinnQuanBrave,Finn,Quan,0x27)
+CharacterEvent(0x8,label22,0x0,Beowolf)
+END_MAIN
+
+MiscBasedEvents:
+AreaEvent(0x11,ArdenPursuit,4,48,4,48)
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+TILECHANGE 0x2A
+TILECHANGE 0x2B
+CAM1 [24,46]
+FADU 16
+MUSC 0x24
+Location(Name_Nordion)
+CleanText(0x10,ImcaDied)
+LOAD1 0x1 EldieLeaves
+ENUN
+SilentKillUnit(Eldigan)
+FADI 16
+STAL 0x15
+CAM1 [2,30]
+STAL 0x15
+FADU 16
+Location(Meanwhile)
+STAL 0x15
+MUSC 0x14
+Location(Name_Heirhein)
+CHECK_EVENTID 0x7A
+BEQ 0x3A 0xc 0x0
+//graham
+CleanText(0xE,BordeauxCommandsGraham)
+GOTO 0x3B
+LABEL 0x3A
+CleanText(0xE,BordeauxCommandsElliot)
+LABEL 0x3B
+STAL 0x15
+MUSC 0x18
+CAM1 [9,2]
+Location(Name_Infini)
+STAL 0x15
+CleanText(0xC,DeviousMacbeth)
+STAL 0x15
+CAM1 [22,23]
+CURSOR [22, 23]
+STAL 60
+REMOVE_CURSORS
+CleanText(0x5,PisuergaDefends)
+LOAD1 0x1 ItsPisuerga
+ENUN
+SilentKillUnit(Leonster)
+FADI 16
+//LOMA 0x1c
+CAM1 [4,30]
+FADU 16
+MUSC 0x14
+CHECK_EVENTID 0x79
+BEQ 0x36 0xc 0x0
+CHECK_EVENTID 0x7A
+BEQ 0x37 0xc 0x0
+//elliot dead
+LOAD1 0x1 GrahamUnits
+ENUN
+LOAD1 0x1 AngryUncle
+ENUN
+CAM1 Graham
+STAL 0x15
+Text(GrahamMonologue)
+GOTO 0x35
+LABEL 0x37
+//elliot alive
+LOAD1 0x1 EnemyUnits
+ENUN
+LOAD1 0x1 StronkElliot
+ENUN
+CAM1 Elliot
+STAL 0x15
+Text(ElliotMad)
+GOTO 0x35
+LABEL 0x36
+//normal elliot
+LOAD1 0x1 EnemyUnits
+ENUN
+LOAD1 0x1 Elliotatitagain
+ENUN
+CAM1 Elliot
+STAL 0x15
+Text(ElliotMonologue)
+LABEL 0x35
+
+CAM1 [24,46]
+
+CHECK_EVENTID 0x79
+BEQ 0x30 0xc 0x0
+UnremoveUnit(Lachesis)
+CHECK_EVENTID 0x7A
+BEQ 0x29 0xc 0x0
+//eve dead but brothers ok
+CleanText(0x10,EldiganMissingElliotDead)
+//LOAD1 0x1 TheTwoStooges
+//ENUN
+GOTO 0x28
+//eve dead and brothers angry
+LABEL 0x29
+CleanText(0x10,EldiganMissingElliotAlive)
+//LOAD1 0x1 SuckyKnights 
+//ENUN
+GOTO 0x28
+// it never happened
+LABEL 0x30
+CleanText(0x10,EldiganMissingEve)
+//LOAD1 0x1 TheThreeStooges
+//ENUN
+LABEL 0x28
+CleanText(0x10,NordionUnderAttack)
+FADI 5
+LOAD1 0x1 PhilipUnits
+ENUN
+LOAD1 0x1 BordeauxUnits
+ENUN
+LOAD1 0x1 InfiniUnits
+ENUN
+ENUT 0x14
+ENUT 0x12
+GotoPrepScreen
+EndEvent
+
+EndingScene:
+FADI 16
+CLEN 0x0
+CLEA 0x0
+CLEE 0x0
+FADU 16
+MUSC 0x31
+LOAD1 0x0 PisuergaReports
+ENUN
+STAL 0x15
+FlashCursor(Leonster,60)
+STAL 0x15
+Text(0xC,SeizingInfini)
+//LOAD1 0x0 IndechBadNews
+//ENUN
+//FADU 16
+//LOMA 0x8
+//CAM1 [18,30]
+//MUSC 0x18
+//FADU 16
+//LOAD1 0x0 EltoCameo
+//ENUN
+//Location(Name_Mackily)
+MNC2 0x7
+EndEvent
+
+TheBrand:
+MUSC 0x2B
+Text(EthlynDeirdreTalk)
+GiveItem(LightBrand,Ethlyn)
+EndEvent
+
+FinnQuanBrave:
+MUSC 0x59
+Text(BraveLanceTime)
+GiveItem(BraveLance,Finn)
+EndEvent
+
+PhillipTalks:
+CAM1 Phillip
+STAL 0x15
+FlashCursor(Phillip,60)
+STAL 0x15
+Text(PhillipSpeech)
+STAL 0x15
+CleanText(0x10,ClementReflexion)
+STAL 0x15
+EndEvent
+
+ArdenPursuit:
+CHECK_ACTIVE
+SVAL s1 Arden
+BNE 0x9000 s1 sC
+    Text(ArdenFindsPursuit)
+    GiveItem(0xD4,Arden)
+    GOTO 0x9001
+LABEL 0x9000
+ENUF 0x18
+LABEL 0x9001
+EndEvent
+
+InfiniAttack:
+CAM1 Ross
+STAL 0x15
+FlashCursor(Ross,60)
+STAL 0x15
+Text(RossRunsAway)
+DISA Ross
+DISA Infini
+DISA Infini
+SetChapterObjectiveText(_Seize, _SeizeAnphony)
+CLEE 0x0
+MUSC 0x31
+CleanText(0xE,SeizingHeirhein)
+STAL 0x15
+MUSC 0x18
+CAM1 [9,2]
+Location(Name_Infini)
+STAL 0x15
+CleanText(0xC,FEE3Script1)
+STAL 0x15
+STAL 0x15
+LOAD1 0x1 InfiniUnitsTwo
+ENUN
+ENUF 0x14
+CAM1 [24,27]
+STAL 0x25
+FlashCursor(27,27,60)
+STAL 0x15
+CleanText(0x5,LewynEmerges)
+STAL 0x15
+LOAD1 0x0 LewynGroup
+ENUN
+TILEREVERSE 0x2A
+TILEREVERSE 0x2B
+EndEvent
+
+InfiniMercs:
+CAM1 [9,4]
+STAL 0x15
+CleanText(0xC,MacBethChagall)
+STAL 0x15
+LOAD1 0x1 VoltzUnits
+LOAD1 0x1 BeoVoltz
+ENUN
+STAL 0x15
+CAM1 Voltz
+STAL 0x15
+Text(MercenaryTalk)
+STAL 0x15
+MOVE 0x0 Beowolf [20,2]
+MOVE 0x0 Voltz [28,2]
+ENUN
+STAL 0x15
+Text(WaltzCharges)
+STAL 0x15
+ENUT 0x27
+EndEvent
+
+//LachyCheck:
+//CHECK_EVENTID 0x79
+//BEQ 0x7 0xc 0x0
+//UnremoveUnit(Lachesis)
+//OffAllUnitState(Lachesis, Undeployed, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+//LABEL 0x7
+//LOAD1 0x0 AloneLachesus
+//ENUN
+//EndEvent
+
+ComethHeirhein:
+LoadReinforcements(HeirheinFodder)
+ENUN
+EndEvent
+
+InfiniBanditsShow:
+CAM1 [9,4]
+STAL 0x15
+FlashCursor(9,4,60)
+STAL 0x15
+MUSC 0x18
+LoadReinforcements(InfiniBandits)
+ENUN
+EndEvent
+
+LachesisJoineth:
+MUSS 0x30
+Text(RecruitingLachesis)
+//TurnAlly(Lachesis)
+//MURE 60
+EndEvent
+
+LewynJoineth:
+MUSS 0x30
+Text(SigurdLewynTalk)
+//TurnAlly(Lewyn)
+//MURE 60
+EndEvent
+
+StealSword:
+MUSS 0x5E
+Text(DewLachesisTalk)
+GiveItem(ThiefSwd,Lachesis)
+//MURE 60
+EndEvent
+
+PlayerUnits:
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [22,46] 0x0 0x0 0x0 0x1 [SteelSword, IronLance] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [19,48] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(3,Ally,0) [23,47] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [21,47] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [18,49] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [19,50] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [17,46] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [18,47] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [19,46] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [24,48] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [24,46] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [23,45] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [21,44] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [20,45] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [16,47] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [17,50] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [16,49] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT //Tells the game that the unit list has ended
+
+EnemyUnits:
+UNIT Heirhein Troub Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA10R37 [Heal] [0xE,0x12,0x0,0x0]
+UNIT Heirhein Troub Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA10R39 [Heal] [0xE,0x12,0x0,0x0]
+UNIT Heirhein Troub Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA9R38 [Heal] [0xE,0x0,0x0,0x0]
+UNIT Heirhein Mage Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA9R37 [Fire] [0x0,0x12,0x0,0x0]
+UNIT Heirhein Mage Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA9R39 [Fire] [0x0,0x12,0x0,0x0]
+UNIT Heirhein Mage Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA8R38 [Fire] [0x0,0x12,0x0,0x0]
+UNIT Heirhein AxeCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA11R40 [IronAxe] NoAI
+UNIT Heirhein AxeCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA11R36 [IronAxe] NoAI
+UNIT Heirhein AxeCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA13R38 [IronAxe] [0x0,0x12,0x0,0x0]
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA10R41 [IronLance] NoAI
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA10R35 [IronLance] NoAI
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA13R36 [IronLance] [0x0,0x12,0x0,0x0]
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA13R40 [IronLance] NoAI
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA12R39 [IronLance] [0x0,0x12,0x0,0x0]
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA12R37 [IronLance] [0x0,0x12,0x0,0x0]
+UNIT
+
+GrahamUnits:
+UNIT Heirhein Troub Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA10R37 [Heal] [0xE,0x0,0x0,0x0]
+UNIT Heirhein Troub Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA10R39 [Heal] [0xE,0x0,0x0,0x0]
+UNIT Heirhein Troub Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA9R38 [Heal] [0xE,0x0,0x0,0x0]
+UNIT Heirhein Mage Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA9R37 [Fire] NoAI
+UNIT Heirhein Mage Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA9R39 [Fire] NoAI
+UNIT Heirhein Mage Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA8R38 [Fire] NoAI
+UNIT Heirhein AxeCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA11R40 [IronAxe] NoAI
+UNIT Heirhein AxeCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA11R36 [IronAxe] NoAI
+UNIT Heirhein AxeCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA13R38 [IronAxe] NoAI
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA10R41 [IronLance] NoAI
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA10R35 [IronLance] NoAI
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA13R36 [IronLance] NoAI
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA13R40 [IronLance] NoAI
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA12R39 [IronLance] NoAI
+UNIT Heirhein LncCav Elliot Level(8,Enemy,1) [2,30] 0x0 0x0 0x1 REDA12R37 [IronLance] NoAI
+UNIT
+
+PhilipUnits:
+UNIT Phillip General Bordeaux Level(18,Enemy,False) [8,31] DropItem 0x0 0x0 0x0 [SilverLance,HandAxe,Rescue] [0x0,0x3,0x0,0x01]
+UNIT Heirhein LncArm Bordeaux Level(3,Enemy,1) [4,34] 0x0 0x0 0x0 0x0 [IronLance] [0x0,0x3,0x01,0x01]
+UNIT Heirhein AxeArm Bordeaux Level(3,Enemy,1) [10,33] 0x0 0x0 0x0 0x0 [IronAxe] [0x0,0x3,0x01,0x01]
+UNIT Heirhein AxeArm Bordeaux Level(3,Enemy,1) [6,33] 0x0 0x0 0x0 0x0 [HandAxe] [0x0,0x3,0x01,0x01]
+UNIT Heirhein SwdArm Bordeaux Level(2,Enemy,1) [5,33] 0x0 0x0 0x0 0x0 [IronSword] [0x0,0x3,0x01,0x01]
+UNIT Heirhein Ballist Bordeaux Level(4,Enemy,1) [7,32] 0x0 0x0 0x0 0x0 [Ballista] [0x0,0x3,0x01,0x01]
+UNIT Heirhein Ballist Bordeaux Level(4,Enemy,1) [9,32] 0x0 0x0 0x0 0x0 [Ballista] [0x0,0x3,0x01,0x01]
+UNIT Heirhein SwdArm Bordeaux Level(3,Enemy,1) [11,33] 0x0 0x0 0x0 0x0 [IronSword] [0x0,0x3,0x01,0x01]
+UNIT Heirhein Priest Bordeaux Level(16,Enemy,1) [8,33] 0x0 0x0 0x0 0x0 [Recover] [0x0F,0x3,0x0,0x01]
+UNIT Heirhein LncArm Bordeaux Level(3,Enemy,1) [12,35] 0x0 0x0 0x0 0x0 [IronLance] [0x0,0x3,0x0,0x01]
+UNIT Heirhein LncArm Bordeaux Level(3,Enemy,1) [12,34] 0x0 0x0 0x0 0x0 [IronLance] [0x0,0x3,0x0,0x01]
+UNIT Heirhein LncArm Bordeaux Level(3,Enemy,1) [4,35] 0x0 0x0 0x0 0x0 [IronLance] [0x0,0x3,0x0,0x01]
+UNIT
+
+BordeauxUnits:
+UNIT Bordeaux General Bordeaux Level(14,Enemy,0) [2,30] DropItem 0x0 0x0 0x0 [SteelBlade,SteelBow,Talisman] [0x03,0x3,0x01,0x20]
+UNIT Heirhein LncArm Bordeaux Level(9,Enemy,1) [1,31] 0x0 0x0 0x0 0x0 [Javelin] [0x0,0x3,0x0,0x20]
+UNIT Heirhein LncArm Bordeaux Level(9,Enemy,1) [3,31] 0x0 0x0 0x0 0x0 [Javelin] [0x0,0x3,0x0,0x20]
+UNIT Heirhein LncArm Bordeaux Level(9,Enemy,1) [2,32] 0x0 0x0 0x0 0x0 [Javelin] [0x0,0x3,0x0,0x20]
+UNIT
+
+InfiniUnits:
+UNIT Infini LncCav Macbeth Level(10,NeutralForce,1) [8,14] 0x0 0x0 0x0 0 [IronLance] [0x0,0x3,0x0,0x0]
+UNIT Infini LncCav Macbeth Level(10,NeutralForce,1) [10,16] 0x0 0x0 0x0 0 [IronLance] [0x0,0x3,0x0,0x0]
+UNIT Ross PalM Macbeth Level(14,NeutralForce,0) [9,15] 0x0 0x0 0x0 0 [SteelLance] [0x0,0x3,0x0,0x0]
+UNIT
+
+InfiniBandits:
+UNIT Infini Brigand Macbeth Level(10,NeutralForce,1) [9,2] 0x0 0x0 0x1 REDA12R8 [IronAxe] [0x0,0x4,0x0,0x0]
+UNIT Infini Brigand Macbeth Level(10,NeutralForce,1) [9,2] 0x0 0x0 0x1 REDA14R9 [IronAxe] [0x0,0x4,0x0,0x0]
+UNIT Infini Brigand Macbeth Level(10,NeutralForce,1) [9,2] 0x0 0x0 0x1 REDA10R6 [IronAxe] [0x0,0x4,0x0,0x0]
+UNIT Infini Brigand Macbeth Level(10,NeutralForce,1) [9,2] 0x0 0x0 0x1 REDA13R7 [IronAxe] [0x0,0x4,0x0,0x0]
+UNIT
+
+InfiniUnitsTwo:
+UNIT Infini SwdArm Macbeth Level(14,Enemy,0) [11,3] 0x0 0x0 0x0 0 [IronSword] [0x0,0x3,0x0,0x2]
+UNIT Infini SwdArm Macbeth Level(14,Enemy,0) [7,3] 0x0 0x0 0x0 0 [IronSword] [0x0,0x3,0x0,0x2]
+UNIT Infini SwdArm Macbeth Level(14,Enemy,0) [7,4] 0x0 0x0 0x0 0 [IronSword] [0x0,0x3,0x0,0x2]
+UNIT Infini SwdArm Macbeth Level(14,Enemy,0) [11,4] 0x0 0x0 0x0 0 [IronSword] [0x0,0x3,0x0,0x2]
+UNIT Infini AxeArm Macbeth Level(14,Enemy,0) [8,4] 0x0 0x0 0x0 0 [IronAxe] [0x0,0x3,0x0,0x2]
+UNIT Infini AxeArm Macbeth Level(14,Enemy,0) [9,5] 0x0 0x0 0x0 0 [IronAxe] [0x0,0x3,0x0,0x2]
+UNIT Infini AxeArm Macbeth Level(14,Enemy,0) [10,4] 0x0 0x0 0x0 0 [IronAxe] [0x0,0x3,0x0,0x2]
+UNIT Infini BowArm Macbeth Level(14,Enemy,0) [8,3] 0x0 0x0 0x0 0 [IronBow] [0x0,0x3,0x0,0x2]
+UNIT Infini BowArm Macbeth Level(14,Enemy,0) [9,4] 0x0 0x0 0x0 0 [IronBow] [0x0,0x3,0x0,0x2]
+UNIT Infini BowArm Macbeth Level(14,Enemy,0) [10,3] 0x0 0x0 0x0 0 [IronBow] [0x0,0x3,0x0,0x2]
+UNIT Banquo GrtKnt Macbeth Level(18,Enemy,0) [9,3] DropItem 0x0 0x0 0 [SteelAxe,HandAxe,Swordslayer,Swordslayer] [0x0,0x3,0x0,0x2]
+UNIT Macbeth General Macbeth Level(22,Enemy,0) [9,2] DropItem 0x0 0x0 0 [SteelLance,Javelin,DefRing] [0x03,0x3,0x0,0x20]
+UNIT
+
+BeoVoltz:
+UNIT Beowolf FreeCav Macbeth Level(9,Enemy,0) [9,2] 0x0 0x0 0x1 REDA15R3 [SteelSword] [0x0,0x0,0x0,0x0] //28,2
+UNIT Voltz Ranger Macbeth Level(20,Enemy,0) [9,2] DropItem 0x0 0x1 REDA15R4 [SteelBlade,ParagonRing] [0x0,0x0,0x0,0x0] //20,2
+UNIT
+
+VoltzUnits:
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [21,1] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [21,3] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [22,2] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [23,1] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [23,3] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [24,2] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [25,1] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [25,3] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [26,2] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [27,1] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT Infini FreeCav Macbeth Level(7,Enemy,1) [27,3] 0x0 0x0 0x0 0 [IronSword] [0x0B,0x0,0x0,0x0]
+UNIT
+
+Elliotatitagain:
+UNIT Elliot DukeKnt Bordeaux Level(15,Enemy,0) [2,30] DropItem 0x0 0x1 REDA11R38 [SilverLance] ChaseOnceApproachedAI
+UNIT
+
+StronkElliot:
+UNIT Elliot DukeKnt Bordeaux Level(15,Enemy,1) [2,30] DropItem 0x0 0x1 REDA11R38 [SilverLance] ChaseOnceApproachedAI
+UNIT
+
+TheTwoStooges:
+UNIT Eva PalF Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA12R11 [Javelin, SteelSword] GreenStationaryAI
+UNIT Alva PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA10R10 [Javelin, SteelSword] GreenStationaryAI
+UNIT
+
+AngryUncle:
+UNIT Graham DukeKnt Bordeaux Level(15,Enemy,0) [2,30] DropItem 0x0 0x1 REDA11R38 [SilverLance] ChaseOnceApproachedAI
+UNIT
+
+AloneLachesus:
+UNIT Lachesis Princess Sigurd Level(2,NPC,0) [10,9] 0x0 0x0 0x0 0x1 [MiracleSwd, Heal] GuardTileAI
+UNIT
+
+TheThreeStooges:
+UNIT Eve PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA11R10 [Javelin, SteelSword] GreenStationaryAI
+UNIT Eva PalF Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA9R10 [Javelin, SteelSword] GreenStationaryAI
+UNIT Alva PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA10R11 [Javelin, SteelSword] GreenStationaryAI
+UNIT
+
+SuckyKnights:
+UNIT CrossKnight PalM Eldigan Level(18,NPC,1) [10,9] 0x0 0x0 0x1 REDA11R10 [Javelin, SteelSword] GreenRangeAI
+UNIT CrossKnight PalM Eldigan Level(18,NPC,1) [10,9] 0x0 0x0 0x1 REDA9R10 [Javelin, SteelSword] GreenRangeAI
+UNIT CrossKnight PalM Eldigan Level(18,NPC,1) [10,9] 0x0 0x0 0x1 REDA10R11 [Javelin, SteelSword] GreenRangeAI
+UNIT
+
+EldieLeaves:
+UNIT Eldigan Lionheart Chagall Level(20,NPC,0) [24,50] 0x0 0x0 0x1 REDA24R40 [Mystletainn, SteelLance] NoAI
+UNIT
+
+ItsPisuerga:
+UNIT Leonster UniCav Quan Level(20,NPC,0) [22,23] 0x0 0x0 0x1 REDA9R2 [IronLance] NoAI
+UNIT
+
+EltoCameo:
+UNIT Eldigan Lionheart Chagall Level(20,NPC,0) [10,37] 0x0 0x0 0x1 REDA22R22 [Mystletainn, SteelLance] NoAI
+UNIT
+
+PisuergaReports:
+UNIT Leonster UniCav Quan Level(20,NPC,0) [3,0] 0x0 0x0 0x1 REDA9R2 [IronLance] NoAI
+UNIT
+
+IndechBadNews:
+UNIT Indech HolyKnt Eldigan Level(14,Enemy,0) [17,0] 0x0 0x0 0x1 REDA10R9 [SteelLance, Lightning] NoAI
+UNIT
+
+HeirheinFodder:
+UNIT Heirhein AxeCav Bordeaux Level(5,Enemy,1) [0,15] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Heirhein AxeCav Bordeaux Level(5,Enemy,1) [0,16] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Heirhein AxeCav Bordeaux Level(5,Enemy,1) [0,17] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Heirhein AxeCav Bordeaux Level(5,Enemy,1) [0,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Heirhein AxeCav Bordeaux Level(5,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Heirhein AxeCav Bordeaux Level(5,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Heirhein AxeCav Bordeaux Level(5,Enemy,1) [0,21] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Heirhein GrtKnt Bordeaux Level(5,Enemy,0) [1,18] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Heirhein GrtKnt Bordeaux Level(5,Enemy,0) [1,19] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT
+
+LewynGroup:
+UNIT Sylvia Dancer Sigurd Level(1,Ally,0) [27,27] 0x0 0x0 0x1 REDA25R28 [SlimSwordSylvia] NoAI
+UNIT Lewyn Bard Sigurd Level(6,Ally,0) [27,27] 0x0 0x0 0x1 REDA28R28 [Elwind] NoAI
+UNIT
+
+label22:
+SVAL 0x2 0x9
+SVAL 0x3 Beowolf
+SVAL 0x4 0x2719
+SVAL 0xD 0x0
+SVAL 0x1 RecruitingBeowolfA
+SAVETOQUEUE
+SVAL 0x1 RecruitingBeowolfA
+SAVETOQUEUE
+SVAL 0x1 RecruitingBeowolf
+SAVETOQUEUE
+SVAL 0x1 AcceptingBeowolf
+SAVETOQUEUE
+SVAL 0x1 RejectingBeowolf
+SAVETOQUEUE
+SVAL 0x1 TooPoor
+SAVETOQUEUE
+CALL label50
+ENDA
+
+label50:
+EVBIT_MODIFY 0x3
+MUNO
+TEXTSTART
+IFET 0xFFFF
+BNE 0x0 0xC 0x0
+ENUT_SLOT2
+SLOTS_SETFROMQUEUE 0x2
+TEXTSHOW 0xFFFF
+TEXTEND
+SLOTS_SETFROMQUEUE 0x2
+GOTO 0x1
+LABEL 0x0
+SLOTS_SETFROMQUEUE 0x2
+SLOTS_SETFROMQUEUE 0x2
+TEXTSHOW 0xFFFF
+TEXTEND
+LABEL 0x1
+CALL label32
+ENDA
+
+label32:
+CHECK_MONEY
+BLT 0x0 0xC 0x4
+EVBIT_F 0x3
+SLOTS_SETFROMQUEUE 0x2
+TEXTSHOW2 0xFFFF
+TEXTEND
+SVAL 0x7 0x1
+BNE 0x1 0xC 0x7
+SLOTS_SETFROMQUEUE 0x2
+MUSS 0x30
+STAL 33
+TEXTSHOW2 0xFFFF
+TEXTEND
+REMA
+SADD 0x32
+CUSA 0xFFFD
+SADD 0x43
+GIVETOSLOT3
+MURE 0x2
+GOTO 0x2
+LABEL 0x0
+SLOTS_SETFROMQUEUE 0x2
+SLOTS_SETFROMQUEUE 0x2
+SLOTS_SETFROMQUEUE 0x2
+SLOTS_SETFROMQUEUE 0x2
+TEXTSHOW2 0xFFFF
+TEXTEND
+REMA
+MUSI
+CALL label28
+LABEL 0x1
+SLOTS_SETFROMQUEUE 0x2
+SLOTS_SETFROMQUEUE 0x2
+TEXTSHOW2 0xFFFF
+TEXTEND
+REMA
+MUSI
+CALL label28
+LABEL 0x2
+EVBIT_T 0x7
+ENDA
+
+label28:
+CHECK_EVENTID
+SADD 0xC2
+ENUF_SLOT2
+EVBIT_T 0x7
+ENDB
+
+VillageOne:
+VillageEventItem(C2_1VillageOne, 0x2, BargainRing)
+
+VillageTwo:
+VillageEventMoney(C2_1VillageTwo, 0x2, 0x1388)
+
+VillageThree:
+VillageEventMoney(C2_1VillageThree, 0x2, 0x1388)
+
+VillageFour:
+VillageEventMoney(C2_1VillageFour, 0x2, 0x1388)
+
+VillageFive:
+VillageEventMoney(C2_1VillageFive, 0x2, 0x1388)
+
+VillageSix:
+VillageEventItem(C2_1VillageSix, 0x2, Armorslayer)

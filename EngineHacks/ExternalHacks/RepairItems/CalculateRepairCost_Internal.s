@@ -98,9 +98,9 @@ RepairItems_CalculateRepairCost_Internal:
 
     Next:
 
-    add  r5, #2
-    cmp  r5, #(UnitInventory + (UNIT_ITEM_COUNT * 2))
-    bne  Loop
+    @add  r5, #2
+    @cmp  r5, #(UnitInventory + (UNIT_ITEM_COUNT * 2))
+    @bne  Loop
 
   Continue:
 

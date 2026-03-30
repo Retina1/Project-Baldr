@@ -327,3 +327,4 @@
 [LoadPawnshop] = [LoadFace][0xE1][0x1]
 [LoadAnna] = [LoadFace][0xE3][0x1]
 [LoadBlacksmith] = [LoadFace][0xDF][0x1]
+[LoadLegion] = [LoadFace][0x6C][0x2]

@@ -46,7 +46,7 @@ END_MAIN
 
 MiscBasedEvents:
 DefeatAll(EndingScene)
-AFEV 0xA ElliotEscapes 0x9
+AFEV 0xA ElliotEscapes 0x12
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -117,6 +117,14 @@ CAM1 [10,9]
 LOAD1 0x1 NordionUnits
 Text(EldiganConfrontsElliot)
 ENUN
+SVAL 1 Lachesis
+ASMC GoldSetter|1
+SVAL 2 10000
+ASMC SetGoldEvent|1
+SVAL 1 Indech
+ASMC GoldSetter|1
+SVAL 2 3000
+ASMC SetGoldEvent|1
 EndEvent
 
 EndingScene:
@@ -153,15 +161,24 @@ FIG1 Elliot Eve Horseslayer
 SFXKillUnit(Eve)
 MOVE 60 Eldigan [17,9]
 CleanText(0x20,Elliotisacreep)
-TEXTSHOW2 LoadtheElliote
-SystemText(Sparethatdude)
+
+EVBIT_MODIFY 0x4
+FADI 10
+FADU 10
+TUTORIALTEXTBOXSTART
+SVAL 0xB 0xFFFFFFFF
+TEXTSHOW Sparethatdude
 TEXTEND
-SVAL 0x7 0x2
-BEQ 0x34 0xC 0x7
-StartBattle 
-NormalDamage(0,56)
-EndAttack
-FIG1 Eldigan Elliot Mystletainn
+SVAL 0x1 0x1
+BNE 0x34 0xC 0x1
+
+EVBIT_MODIFY 0x0
+
+
+//StartBattle 
+//NormalDamage(0,35)
+//EndAttack
+//FIG1 Eldigan Elliot Mystletainn
 MOVE 120 Elliot [13,0]
 ENUN
 SilentKillUnit(Elliot)
@@ -251,10 +268,6 @@ LOAD1 0x1 SchemerCometh
 ENUN
 ENDWARP
 Text(Schemers)
-CHECK_EVENTID 0x7
-BEQ 0x40 0xc 0x0
-ENUT 0x7B
-LABEL 0x40
 MNC2 0x4
 LABEL 0x33
 EndEvent
@@ -266,11 +279,11 @@ SilentKillUnit(Elliot)
 EndEvent
 
 NordionUnits:
-UNIT Eldigan PalM Chagall Level(25,Ally,0) [10,9] 0x0 0x0 0x1 REDA10R12 [Mystletainn, SteelLance] NoAI
-UNIT Indech HolyKnt Eldigan Level(14,Ally,0) [10,9] 0x0 0x0 0x1 REDA12R10 [SteelLance, Lightning] NoAI
-UNIT Eve PalM Eldigan Level(18,Ally,0) [10,9] 0x0 0x0 0x1 REDA11R11 [SteelSword, Javelin] NoAI
-UNIT Eva PalM Eldigan Level(18,Ally,0) [10,9] 0x0 0x0 0x1 REDA9R11 [SteelSword, Javelin] NoAI
-UNIT Alva PalF Eldigan Level(18,Ally,0) [10,9] 0x0 0x0 0x1 REDA8R10 [SteelSword, Javelin] NoAI
+UNIT Eldigan Lionheart Chagall Level(25,Ally,0) [10,9] 0x0 0x0 0x1 REDA10R12 [Mystletainn, SteelLance] NoAI
+UNIT Indech HolyKnt Eldigan Level(14,Ally,0) [10,9] 0x0 0x0 0x1 REDA12R10 [SteelLance, Shine] NoAI
+UNIT Eve PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA11R11 [SteelSword, Javelin] [0x3,0x3,0x0,0x20]
+UNIT Eva PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA9R11 [SteelSword, Javelin] [0x3,0x3,0x0,0x20]
+UNIT Alva PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA8R10 [SteelSword, Javelin] [0x3,0x3,0x0,0x20]
 UNIT Lachesis Princess Eldigan Level(2,Ally,0) [10,9] 0x0 0x0 0x0 0x1 [MiracleSwd, Heal] NoAI
 UNIT //Tells the game that the unit list has ended
 

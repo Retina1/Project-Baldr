@@ -64,4 +64,6 @@ pop {r5-r7}
 
 blh      DrawSupports
 
+draw_gold_at 26, 16
+
 page_end

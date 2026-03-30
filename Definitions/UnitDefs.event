@@ -75,3 +75,4 @@
 #define Altena 0x48
 #define Saias 0x49
 #define Arion 0x4A
+#define Legion 0xA6 				//Easter Egg unit

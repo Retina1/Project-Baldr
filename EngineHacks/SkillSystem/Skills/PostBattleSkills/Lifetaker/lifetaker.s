@@ -10,8 +10,49 @@ push	{lr}
 @check if dead
 ldrb	r0, [r4,#0x13]
 cmp	r0, #0x00
-beq	End
+beq	DefenderWon
 
+@check if killed enemy
+ldrb	r0, [r5, #0x13]	@currhp
+cmp	r0, #0
+bne	End
+
+@If player unit, increase weapon kill count
+ldr r0,=#0x203A4EC
+ldrb r0,[r0,#0xB]
+mov r1,#0x54
+cmp r0,r1
+bgt LifeTakerSkillTest
+ldr r0,=#0x203A4EC
+ldr r1,=#0x020281F0
+mov r3,#0x48
+add r0,r0,r3
+ldrb r0,[r0]
+add r1,r1,r0
+ldrb r0,[r1]
+add r0,r0,#1
+strb r0,[r1]
+
+b LifeTakerSkillTest
+
+DefenderWon:
+@If player unit, increase weapon kill count
+ldr r0,=#0x203A56C
+ldrb r0,[r0,#0xB]
+mov r1,#0x54
+cmp r0,r1
+bgt LifeTakerSkillTest
+ldr r0,=#0x203A56C
+ldr r1,=#0x020281F0
+mov r3,#0x48
+add r0,r0,r3
+ldrb r0,[r0]
+add r1,r1,r0
+ldrb r0,[r1]
+add r0,r0,#1
+strb r0,[r1]
+
+LifeTakerSkillTest:
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
 cmp	r0, #0x2 @attack

@@ -1,257 +1,257 @@
-INLINE MagClassTable,Base Magic,Magic Growth,Magic Cap,Magic Promotion Bonus,,,,,,
-None,0,0,20,0,,,,,,
-Lord,0,10,15,0,,,,,,
-Knight Lord (Seliph),0,10,15,0,,,,,,
-Knight Lord (Sigurd),0,10,15,0,,,,,,
-Prince,3,10,18,0,,,,,,
-Princess,7,20,22,0,,,,,,
-Master Knight (M),7,10,22,4,,,,,,
-Master Knight (F),7,10,22,0,,,,,,
-Myrmidon (M),0,10,15,0,,,,,,
-Myrmidon (F),0,10,15,0,,,,,,
-Mercenary (M),0,10,15,0,,,,,,
-Mercenary (F),0,10,15,0,,,,,,
-Swordmaster (M),0,10,15,0,,,,,,
-Swordmaster (F),0,10,15,0,,,,,,
-Hero (M),3,10,18,3,,,,,,
-Hero (F),3,10,18,3,,,,,,
-Thief (M),0,10,15,0,,,,,,
-Thief (F),0,10,15,0,,,,,,
-Rogue (M),3,10,18,3,,,,,,
-Rogue (F),3,10,18,3,,,,,,
-Assassin (M),0,10,15,0,,,,,,
-Assassin (F),0,10,15,0,,,,,,
-Dancer,0,10,15,0,,,,,,
-Fighter,0,0,15,0,,,,,,
-Warrior (M),0,0,15,0,,,,,,
-Warrior (F),0,0,15,0,,,,,,
-Hunter,0,0,15,0,,,,,,
-Barbarian,0,0,15,0,,,,,,
-Brigand,0,0,15,0,,,,,,
-Brigand (F),0,0,15,0,,,,,,
-Pirate (M),0,0,15,0,,,,,,
-Pirate (F),0,0,15,0,,,,,,
-Berserker (M),0,0,15,0,,,,,,
-Berserker (F),0,0,15,0,,,,,,
-Archer (M),0,10,15,0,,,,,,
-Archer (F),0,10,15,0,,,,,,
-Sniper (M),0,10,15,0,,,,,,
-Sniper (F),0,10,15,0,,,,,,
-Adventurer (M),3,20,18,5,,,,,,
-Adventurer (F),3,20,18,5,,,,,,
-Freeblade,0,10,15,0,,,,,,
-Soldier,0,10,15,0,,,,,,
-Halberdier,0,10,15,0,,,,,,
-Cavalier,0,10,15,0,,,,,,
-Paladin (M),5,10,20,5,,,,,,
-Holy Knight,7,20,22,7,,,,,,
-Troubadour,3,10,18,0,,,,,,
-Walkyrie,10,30,25,7,,,,,,
-Paladin (F),5,10,20,2,,,,,,
-Free Knight,0,10,15,0,,,,,,
-Ranger,0,10,15,0,,,,,,
-Wanderer,0,10,15,0,,,,,,
-DON'T TOUCH THIS,0,10,15,0,,,,,,
-Lance Knight,0,10,15,0,,,,,,
-Duke Knight,0,10,15,0,,,,,,
-Axe Knight,0,10,15,0,,,,,,
-Great Knight,0,10,15,0,,,,,,
-Bow knight (M),0,10,15,0,,,,,,
-Bow knight (F),0,10,15,0,,,,,,
-Arch knight,0,10,15,0,,,,,,
-Black knight,3,20,18,3,,,,,,
-Sword Armour,0,10,15,0,,,,,,
-Lance Armour,0,10,15,0,,,,,,
-Axe Armour,0,10,15,0,,,,,,
-Bow Armour,0,10,15,0,,,,,,
-Protector,0,10,15,0,,,,,,
-Sentry,0,10,15,0,,,,,,
-General,0,10,15,0,,,,,,
-Guardian,12,30,27,0,,,,,,
-Pegasus Knight,0,10,15,0,,,,,,
-Falcon Knight,7,10,22,7,,,,,,
-Harrier,10,20,25,10,,,,,,
-Wyvern Rider (M),0,10,15,0,,,,,,
-Wyvern Rider (F),0,10,15,0,,,,,,
-Wyvern Knight (M),0,10,15,0,,,,,,
-Wyvern Knight (F),0,10,15,0,,,,,,
-Wyvern Master (M),0,10,15,0,,,,,,
-Wyvern Master (F),0,10,15,0,,,,,,
-Wyvern Lord (M),0,10,15,0,,,,,,
-Wyvern Lord (F),0,10,15,0,,,,,,
-Malig Knight,7,20,22,7,,,,,,
-Fire Mage (M),10,30,25,0,,,,,,
-Fire Mage (F),10,30,25,0,,,,,,
-Thunder Mage (M),7,30,22,0,,,,,,
-Thunder Mage (F),7,30,22,0,,,,,,
-Wind Mage (M),7,30,22,0,,,,,,
-Wind Mage (F),7,30,22,0,,,,,,
-Mage Fighter (M),12,20,27,5,,,,,,
-Mage Fighter (F),12,20,27,5,,,,,,
-Mage (M),7,30,22,0,,,,,,
-Mage (F),7,30,22,0,,,,,,
-Mage Knight (M),10,20,25,3,,,,,,
-Mage Knight (F),10,20,25,3,,,,,,
-Bard,7,30,22,0,,,,,,
-Shaman,8,30,23,0,,,,,,
-Sage (M),15,30,30,8,,,,,,
-Sage (F),15,30,30,7,,,,,,
-Gorgon,0,0,30,0,,,,,,
-Gorgon Egg,0,0,30,0,,,,,,
-Baron,7,10,22,0,,,,,,
-Emperor,15,10,30,0,,,,,,
-Dracozombie,1,30,50,0,,,,,,
-Demon King,23,40,50,0,,,,,,
-Archer on Ballista,0,10,15,0,,,,,,
-Archer on Iron Ballista,0,10,15,0,,,,,,
-Archer on Killer Ballista,0,10,15,0,,,,,,
-Ballista,0,10,15,0,,,,,,
-Iron Ballista,0,10,15,0,,,,,,
-Killer Ballista,0,10,15,0,,,,,,
-Child,0,0,15,0,,,,,,
-Child (F),0,0,15,0,,,,,,
-Civilian,0,0,15,0,,,,,,
-Civilian (F),0,0,15,0,,,,,,
-Civilian,0,0,15,0,,,,,,
-Civilian (F),0,0,15,0,,,,,,
-Priest,7,30,22,0,,,,,,
-Cleric,7,30,22,0,,,,,,
-High Priest,12,30,27,5,,,,,,
-High Priestess,12,30,27,5,,,,,,
-Bishop (M),10,30,25,3,,,,,,
-Bishop (F),10,30,25,3,,,,,,
-Queen,15,20,30,0,,,,,,
-Dark Mage (M),10,30,25,0,,,,,,
-Dark Mage (F),10,30,25,0,,,,,,
-Dark Bishop (M),15,30,30,5,,,,,,
-Dark Bishop (F),15,30,30,5,,,,,,
-Archbishop,15,30,30,0,,,,,,
-Dark Prince,15,0,30,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
-Ephraim Lord,1,10,20,0,,,,,,
+INLINE MagClassTable,Base Magic,Magic Growth,Magic Cap,Magic Promotion Bonus
+None,0,0,20,0
+Lord,0,10,15,0
+Knight Lord (Seliph),0,10,15,0
+Knight Lord (Sigurd),0,10,15,0
+Prince,3,10,18,0
+Princess,7,20,22,0
+Master Knight (M),7,10,22,4
+Master Knight (F),7,10,22,0
+Myrmidon (M),0,10,15,0
+Myrmidon (F),0,10,15,0
+Mercenary (M),0,10,15,0
+Mercenary (F),0,10,15,0
+Swordmaster (M),0,10,15,0
+Swordmaster (F),0,10,15,0
+Hero (M),3,10,18,3
+Hero (F),3,10,18,3
+Thief (M),0,10,15,0
+Thief (F),0,10,15,0
+Rogue (M),3,10,18,3
+Rogue (F),3,10,18,3
+Assassin (M),0,10,15,0
+Assassin (F),0,10,15,0
+Dancer,0,10,15,0
+Fighter,0,0,15,0
+Warrior (M),0,0,15,0
+Warrior (F),0,0,15,0
+Hunter,0,0,15,0
+Barbarian,0,0,15,0
+Brigand (M),0,0,15,0
+Brigand (F),0,0,15,0
+Pirate (M),0,0,15,0
+Pirate (F),0,0,15,0
+Berserker (M),0,0,15,0
+Berserker (F),0,0,15,0
+Archer (M),0,10,15,0
+Archer (F),0,10,15,0
+Sniper (M),0,10,15,0
+Sniper (F),0,10,15,0
+Adventurer (M),3,20,18,5
+Adventurer (F),3,20,18,5
+Militia,0,10,15,0
+Soldier,0,10,15,0
+Halberdier,0,10,15,0
+Cavalier,0,10,15,0
+Paladin (M),5,10,20,5
+Holy Knight,7,20,22,7
+Troubadour,3,10,18,0
+Valkyrie,10,30,25,7
+Paladin (F),5,10,20,2
+Free Knight,0,10,15,0
+Ranger,0,10,15,0
+Wanderer,0,10,15,0
+DON'T TOUCH THIS,0,10,15,0
+Lance Knight,0,10,15,0
+Duke Knight,0,10,15,0
+Axe Knight,0,10,15,0
+Great Knight,0,10,15,0
+Bow Knight (M),0,10,15,0
+Bow Knight (F),0,10,15,0
+Arch Knight,0,10,15,0
+Black Knight,3,20,18,3
+Sword Armour,0,10,15,0
+Lance Armour,0,10,15,0
+Axe Armour,0,10,15,0
+Bow Armour,0,10,15,0
+Protector,0,10,15,0
+Sentry,0,10,15,0
+General,0,10,15,0
+Guardian,12,30,27,0
+Pegasus Knight,0,10,15,0
+Falcon Knight,7,10,22,7
+Harrier,10,20,25,10
+Wyvern Rider (M),0,10,15,0
+Wyvern Rider (F),0,10,15,0
+Wyvern Knight (M),0,10,15,0
+Wyvern Knight (F),0,10,15,0
+Wyvern Master (M),0,10,15,0
+Wyvern Master (F),0,10,15,0
+Wyvern Lord (M),0,10,15,0
+Wyvern Lord (F),0,10,15,0
+Malig Knight,7,20,22,7
+Fire Mage (M),10,30,25,0
+Fire Mage (F),10,30,25,0
+Thunder Mage (M),7,30,22,0
+Thunder Mage (F),7,30,22,0
+Wind Mage (M),7,30,22,0
+Wind Mage (F),7,30,22,0
+Mage Fighter (M),12,20,27,5
+Mage Fighter (F),12,20,27,5
+Mage (M),7,30,22,0
+Mage (F),7,30,22,0
+Mage Knight (M),10,20,25,3
+Mage Knight (F),10,20,25,3
+Bard,7,30,22,0
+Shaman,8,30,23,0
+Sage (M),15,30,30,8
+Sage (F),15,30,30,7
+Gorgon,0,0,30,0
+DON'T TOUCH THIS,0,0,30,0
+Baron,7,10,22,0
+Emperor,15,10,30,0
+DON'T TOUCH THIS,1,30,50,0
+DON'T TOUCH THIS,23,40,50,0
+Ballista,0,10,15,0
+Iron Ballista,0,10,15,0
+Killer Ballista,0,10,15,0
+Ballista,0,10,15,0
+Iron Ballista,0,10,15,0
+Killer Ballista,0,10,15,0
+Child,0,0,15,0
+Child (F),0,0,15,0
+Civilian,0,0,15,0
+Civilian (F),0,0,15,0
+Civilian,0,0,15,0
+Civilian (F),0,0,15,0
+Priest,7,30,22,0
+Cleric,7,30,22,0
+High Priest,12,30,27,5
+High Priestess,12,30,27,5
+Bishop (M),10,30,25,3
+Bishop (F),10,30,25,3
+Queen,15,20,30,0
+Dark Mage (M),10,30,25,0
+Dark Mage (F),10,30,25,0
+Dark Bishop (M),15,30,30,5
+Dark Bishop (F),15,30,30,5
+Archbishop,15,30,30,0
+Dark Prince,15,0,30,0
+Arena Master,0,0,15,0
+Augury,10,30,25,0
+Blacksmith,0,0,15,0
+Pawnkeeper,3,10,18,0
+Vendor,0,10,15,0
+Supplier (M),3,20,18,0
+Supplier (F),3,20,18,0
+Queen (Silesse),15,20,30,0
+Trueblade,0,10,15,0
+Freeblade,0,10,15,0
+Manakete,0,20,15,0
+Dragon Monarch,0,20,15,0
+Bowfighter,0,10,15,0
+Lionheart,5,10,20,5
+Hero (M),1,10,20,0
+Hero (F),1,10,20,0
+Thief (M),1,10,20,0
+Thief (F),1,10,20,0
+Rogue (M),1,10,20,0
+Rogue (F),1,10,20,0
+Assassin (M),1,10,20,0
+Assassin (F),1,10,20,0
+Dancer,1,10,20,0
+Fighter,1,10,20,0
+Warrior (M),1,10,20,0
+Warrior (F),1,10,20,0
+Hunter,1,10,20,0
+Barbarian,1,10,20,0
+Brigand (M),1,10,20,0
+Brigand (F),1,10,20,0
+Pirate (M),1,10,20,0
+Pirate (F),1,10,20,0
+Berserker (M),1,10,20,0
+Berserker (F),1,10,20,0
+Archer (M),1,10,20,0
+Archer (F),1,10,20,0
+Sniper (M),1,10,20,0
+Sniper (F),1,10,20,0
+Adventurer (M),1,10,20,0
+Adventurer (F),1,10,20,0
+Freeblade,1,10,20,0
+Soldier,1,10,20,0
+Halberdier,1,10,20,0
+Cavalier,1,10,20,0
+Paladin (M),1,10,20,0
+Holy Knight,1,10,20,0
+Troubadour,1,10,20,0
+Valkyrie,1,10,20,0
+Paladin (F),1,10,20,0
+Free Knight,1,10,20,0
+Ranger,1,10,20,0
+Wanderer,1,10,20,0
+DON'T TOUCH THIS,1,10,20,0
+Lance Knight,1,10,20,0
+Duke Knight,1,10,20,0
+Axe Knight,1,10,20,0
+Great Knight,1,10,20,0
+Bow Knight (M),1,10,20,0
+Bow Knight (F),1,10,20,0
+Arch Knight,1,10,20,0
+Black Knight,1,10,20,0
+Sword Armour,1,10,20,0
+Lance Armour,1,10,20,0
+Axe Armour,1,10,20,0
+Bow Armour,1,10,20,0
+Protector,1,10,20,0
+Sentry,1,10,20,0
+General,1,10,20,0
+Guardian,1,10,20,0
+Pegasus Knight,1,10,20,0
+Falcon Knight,1,10,20,0
+Harrier,1,10,20,0
+Wyvern Rider (M),1,10,20,0
+Wyvern Rider (F),1,10,20,0
+Wyvern Knight (M),1,10,20,0
+Wyvern Knight (F),1,10,20,0
+Wyvern Master (M),1,10,20,0
+Wyvern Master (F),1,10,20,0
+Wyvern Lord (M),1,10,20,0
+Wyvern Lord (F),1,10,20,0
+Malig Knight,1,10,20,0
+Fire Mage (M),1,10,20,0
+Fire Mage (F),1,10,20,0
+Thunder Mage (M),1,10,20,0
+Thunder Mage (F),1,10,20,0
+Wind Mage (M),1,10,20,0
+Wind Mage (F),1,10,20,0
+Mage Fighter (M),1,10,20,0
+Mage Fighter (F),1,10,20,0
+Mage (M),1,10,20,0
+Mage (F),1,10,20,0
+Mage Knight (M),1,10,20,0
+Mage Knight (F),1,10,20,0
+Bard,1,10,20,0
+Shaman,1,10,20,0
+Sage (M),1,10,20,0
+Sage (F),1,10,20,0
+Gorgon,1,10,20,0
+DON'T TOUCH THIS,1,10,20,0
+Baron,1,10,20,0
+Emperor,1,10,20,0
+DON'T TOUCH THIS,1,10,20,0
+DON'T TOUCH THIS,1,10,20,0
+Ballista,1,10,20,0
+Iron Ballista,1,10,20,0
+Killer Ballista,1,10,20,0
+Ballista,1,10,20,0
+Iron Ballista,1,10,20,0
+Killer Ballista,1,10,20,0
+Child,1,10,20,0
+Child (F),1,10,20,0
+Civilian,1,10,20,0
+Civilian (F),1,10,20,0
+Civilian,1,10,20,0
+Civilian (F),1,10,20,0
+Priest,1,10,20,0
+Cleric,1,10,20,0
+High Priest,1,10,20,0
+High Priestess,1,10,20,0
+Bishop (M),1,10,20,0
+Bishop (F),1,10,20,0
+Queen,1,10,20,0
+Dark Mage (M),1,10,20,0
+Dark Mage (F),1,10,20,0
+Dark Bishop (M),1,10,20,0
+Dark Bishop (F),1,10,20,0
+Archbishop,1,10,20,0
+Dark Prince,1,10,20,0

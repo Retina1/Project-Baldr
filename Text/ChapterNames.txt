@@ -5,7 +5,7 @@ Birth of a Crusader[X]
 Castle Evans[X]
 
 # 0x162
-Aideen's Rescue[X]
+Edain's Rescue[X]
 
 # 0x163
 Nordion's Defense[X]
@@ -17,7 +17,7 @@ Girl of the Spirit Forest[X]
 The End of Agustria[X]
 
 # 0x166
-Castle Nordion[X]
+Castle Evans[X]
 
 # 0x167
 Crisis in Agustria[X]
@@ -79,8 +79,5 @@ For a Friend[X]
 # 0x17D
 Money and Men[X]
 
-# 0x17E
-2nd End Agustria[X]
-
-# 0x184
+# 0x181
 Blume's Ambush 2[X]

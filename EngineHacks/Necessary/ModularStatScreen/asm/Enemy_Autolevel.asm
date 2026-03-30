@@ -14,12 +14,12 @@ beq		NormalGrowths
 mov		r1,#0x8		@ if it is on, does fixed mode affect enemy autolevelling
 tst		r0,r1
 beq		NormalGrowths
-lsr		r0,#0x10	@ event id
-ldr		r1,Check_Event_ID
-mov		r14,r1
-.short	0xF800
-cmp		r0,#0x0
-beq		NormalGrowths
+@lsr		r0,#0x10	@ event id
+@ldr		r1,Check_Event_ID
+@mov		r14,r1
+@.short	0xF800
+@cmp		r0,#0x0
+@beq		NormalGrowths
 
 @Fixed growths mode
 mov		r0,#0x0

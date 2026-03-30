@@ -488,8 +488,8 @@ It is said he hails from a large family.[X]
 
 ##Desc_Sandima ^
 Priest of the Loptr church, sent to Verdane to [N]
-capture a certain maiden's daughter. The mastermind [N]
-manipulating King Batu and his sons.[X]
+capture a certain maiden's daughter. The [N]
+mastermind manipulating King Batu and his sons.[X]
 // Priest of the Loptr church, entrusted by Manfroy.
 // He was asked to capture Deirdre and uses
 // King Batu as a mindless puppet.
@@ -1155,7 +1155,7 @@ Aida[X]
 
 ##Desc_Palmarch ^
 A bishop from the church of Bragi and a [N]
-confidante of Sigurd's. Though unassuming at [N] 
+confidante of Sigurd's. Though unassuming at [N]
 a glance, he's earned the trust of his lord.[X]
 
 ##Desc_Palmarch2 ^
@@ -1167,25 +1167,39 @@ empire, he still believes in Sigurd's innocence.[X]
 // he never ceased to believe in Sigurd's innocence.
 
 ##Desc_Augury ^
-Augury[X]
+Wise and knowledgeable, he grew up in[N]
+the Spirit Forest and can now read[N]
+one's fate and their true feelings.[X]
 
 ##Desc_Arena ^
-Arena[X]
+He recruits the best gladiators around[N]
+the continent of Jugdral. He was once[N]
+a well-respected warrior himself.[X]
 
 ##Desc_Blacksmith ^
-Blacksmith[X]
+Originally from Verdane, this tough-looking man[N]
+is a master of weapons. His craftsmanship allows[N]
+him to repair any weapon, even legendary ones.[X]
 
 ##Desc_Vendor ^
-Vendor[X]
+Humble villager who now makes a living[N]
+selling various items after his village[N]
+got destroyed in the war.[X]
 
 ##Desc_Pawnshop ^
-Pawnshop[X]
+He might look sly, but this travelling merchant[N]
+from Miletos knows his way and can pass around[N]
+your items alongside your party.[X]
 
 ##Desc_Anna ^
-Anna[X]
+Often playful, this lovely lady will keep[N]
+your precious items safe in case you need them.[N]
+Although, she never misses a shot to make profit.[X]
 
 ##Desc_Jake ^
-Jake[X]
+He travels the world in search of rare artefacts.[N]
+His business Partner and love of his life, Anna[N]
+always try to sell them at the best price.[X]
 
 ##Desc_Arena1 ^
 Enemy[X]

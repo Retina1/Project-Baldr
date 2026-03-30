@@ -4,6 +4,10 @@
 PUSH
 ORG $2AF94
 jumpToHack(CanUnitDoubleCalcLoopFunc)
+
+//For negative speed
+ORG $2ABA0
+BYTE 0x00 0x0C
 POP
 
 DoublingThresholdLink:
