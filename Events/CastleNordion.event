@@ -20,7 +20,7 @@ END_MAIN
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x8,TheBrand,Deirdre,Ethlyn)
-CharacterEvent(0x0,TheTestOfLove,0x0,Augury)
+CharacterEvent(0x0,TheTestOfLove,0x0,AuguryGuy)
 CharacterEvent(0x0,PromotedLol,Sigurd,Oifey)
 CharacterEvent(0x0,OifeyPromoAlec,Alec,Oifey)
 CharacterEvent(0x0,OifeyPromoNoish,Noish,Oifey)
@@ -59,7 +59,7 @@ Seize(9,19)
 END_MAIN
 
 MiscBasedEvents:
-AFEV 0x7 HolynCometh 0x9D
+AFEV 0x9D HolynCometh 0x7
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -84,11 +84,8 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-MUSC 0x4
-Narration(0x8,Ch2_Narration)
-CLEAN
 ASMC ClearArenaProgress|1
-LOAD2 0x0 NordionGang
+LOAD3 0x0 NordionGang
 ENUN
 LOAD1 0x1 HelperGuys
 ENUN

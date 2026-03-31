@@ -737,8 +737,8 @@ Guh[...][A][X]
 
 ##SigurdKindaSucks
 [OpenMidLeft][LoadSigurdLeft]
-We were too late. Edain...[N]
-How will I ever face Lord Ring now?[A][X]
+We were too late. Edain...[N][CloseEyes]
+How will I ever face Lord Ling now?[A][X]
 
 ##DeirdreScreameth
 [OpenMidRight][LoadHenson][OpenMidLeft][LoadDeirdre]
@@ -1928,7 +1928,7 @@ assured for the ones history thought[N]
 were gone from the continent.[A][N]
 With the cursed lady at their disposal,[N]
 their blasphemous trial could take place,[N]
-ensuring a great catastrophe upon Jugdral.[A][N]
+ensuring a great catastrophe on Jugdral.[A][N]
 [Red]Have a nice day![Red][A][X]
 
 ##Ladyanxious
@@ -2026,7 +2026,7 @@ So[...] This war was not the will[N]
 of Munnir[...][A][N]
 Now I cannot turn back. I must[N]
 find the root of the problem.[A][N][OpenFarRight]
-Sigurd[...] If I can't stop you[...]
+Sigurd[...] If I can't stop you[...][N]
 Then I'll have to join you[...][A][N]
 I will lend you my power.[A][N][OpenRight]
 Your power?[A][N][OpenFarRight]

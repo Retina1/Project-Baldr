@@ -74,12 +74,14 @@ ENUN
 CLEN 0x0
 Location(Name_Agusti)
 CleanText(0x11,ChagallMustStop)
+MUSC 0x27
 FADI 16
 LOMA 0x7
 CAM1 [22,50]
 TILECHANGE 0x2A
 TILECHANGE 0x2B
 FADU 16
+MUSC 0x24
 CleanText(0x10,BackAtNordion)
 CAM1 [2,30]
 CHECK_EVENTID 0x7A
@@ -113,12 +115,18 @@ EVBIT_T 9
 LOAD1 0x1 RodanAgain
 ENUN
 CleanText(0x25,SeizingInfini)
+MUSC 0x58
+CleanText(0xF,DomesticAbuse)
+CleanText(0x14,CounselingKurth)
+CleanText(0x25,TheyDidWhat)
+CleanText(0x16,WhatSheReaps)
+CleanText(0x25,SoThatsWhy)
 EVBIT_F 9
 MUSCSLOW 0x7FFF
 LOAD1 0x1 ThoseTwo
 ENUN
 CAM1 Elling
-CURSOR [26, 41]
+CURSOR [24, 40]
 STAL 60
 REMOVE_CURSORS
 Text(YoungMackilyKnights)
@@ -166,7 +174,15 @@ EndEvent
 AgustriaMoment:
 MUSC 0x14
 CAM1 [9,38]
+CHECK_EVENTID 0x7A
+BEQ 0x2 0xc 0x0
+GOTO 0x3
+LABEL 0x2
+CURSOR [11, 38]
+STAL 60
+REMOVE_CURSORS
 Text(GrahamMonologue)
+LABEL 0x3
 CURSOR [8, 32]
 STAL 60
 REMOVE_CURSORS
@@ -203,7 +219,6 @@ REMOVE_CURSORS
 Text(RossRunsAway)
 MOVE 120 Ross [11,10]
 ENUN
-DISA Ross
 SOUN 0xAB
 TILEREVERSE 0x2A
 TILEREVERSE 0x2B
@@ -262,7 +277,7 @@ Text(TooPoor)
 ENUF 0x12
 GOTO 0x2
 LABEL 0x1
-SystemText(RecruitingBeowolf)
+Text(RecruitingBeowolf)
 IfNoSelectedGoto(0x3)
 Text(AcceptingBeowolf)
 SVAL 0x3 0x2710
@@ -426,8 +441,8 @@ UNIT Roberto UniCav Rodan Level(21,NPC,1) [7,20] 0x0 0x0 0x1 REDA9R3 [SilverLanc
 UNIT
 
 ThoseTwo:
-UNIT Elling FMage Clement Level(10,Enemy,0) [11,29] 0x0 0x0 0x0 REDA11R15 [Elfire] NoAI
-UNIT Hopper BowArm Clement Level(12,Enemy,0) [12,29] 0x0 0x0 0x0 REDA12R15 [BraveBow] NoAI
+UNIT Elling FMage Clement Level(10,Enemy,0) [28,40] 0x0 0x0 0x1 REDA24R39 [Elfire] NoAI
+UNIT Hopper BowArm Clement Level(12,Enemy,0) [28,41] 0x0 0x0 0x1 REDA24R40 [BraveBow] NoAI
 UNIT
 
 RestingSquad:

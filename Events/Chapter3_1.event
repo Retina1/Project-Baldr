@@ -226,31 +226,31 @@ UNIT Madino SwdArm Jacobin Level(12,Enemy,1) [18,9] 0x0 0x0 0x0 0x1 [SteelSword]
 UNIT Commander Archer Jacobin Level(13,Enemy,0) [18,2] 0x0 0x0 0x0 0x1 [IronBallista] AttackInRangeAI
 UNIT Madino Archer Commander Level(8,Enemy,1) [17,2] 0x0 0x0 0x0 0x1 [Ballista] AttackInRangeAI
 UNIT Madino Archer Commander Level(8,Enemy,1) [19,2] 0x0 0x0 0x0 0x1 [Ballista] AttackInRangeAI
-UNIT Commander General Jacobin Level(15,Enemy,0) [19,14] 0x0 0x0 0x0 0x1 [SteelAxe, SteelBow] NoAI
-UNIT Madino AxeArm Commander Level(10,Enemy,1) [17,14] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
-UNIT Madino AxeArm Commander Level(10,Enemy,1) [18,14] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
-UNIT Madino AxeArm Commander Level(10,Enemy,1) [20,14] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
-UNIT Madino AxeArm Commander Level(10,Enemy,1) [21,14] 0x0 0x0 0x0 0x1 [SteelAxe] NoAI
-UNIT Commander General Jacobin Level(15,Enemy,0) [0,25] 0x0 0x0 0x0 0x1 [SilverSword] NoAI
-UNIT Madino SwdArm Commander Level(10,Enemy,1) [0,23] 0x0 0x0 0x0 0x1 [SteelSword] NoAI
-UNIT Madino SwdArm Commander Level(10,Enemy,1) [0,24] 0x0 0x0 0x0 0x1 [SteelSword] NoAI
-UNIT Madino SwdArm Commander Level(10,Enemy,1) [0,26] 0x0 0x0 0x0 0x1 [SteelSword] NoAI
-UNIT Madino SwdArm Commander Level(10,Enemy,1) [0,27] 0x0 0x0 0x0 0x1 [SteelSword] NoAI
-UNIT Commander General Jacobin Level(15,Enemy,0) [30,33] 0x0 0x0 0x0 0x1 [SilverLance] NoAI
-UNIT Madino LncArm Commander Level(10,Enemy,1) [30,31] 0x0 0x0 0x0 0x1 [Javelin] NoAI
-UNIT Madino LncArm Commander Level(10,Enemy,1) [30,32] 0x0 0x0 0x0 0x1 [Javelin] NoAI
-UNIT Madino LncArm Commander Level(10,Enemy,1) [30,34] 0x0 0x0 0x0 0x1 [Javelin] NoAI
-UNIT Madino LncArm Commander Level(10,Enemy,1) [30,35] 0x0 0x0 0x0 0x1 [Javelin] NoAI
+UNIT Commander General Jacobin Level(15,Enemy,0) [19,14] 0x0 0x0 0x0 0x1 [SteelAxe, SteelBow] CastleRaidAI
+UNIT Madino AxeArm Commander Level(10,Enemy,1) [17,14] 0x0 0x0 0x0 0x1 [SteelAxe] CastleRaidAI
+UNIT Madino AxeArm Commander Level(10,Enemy,1) [18,14] 0x0 0x0 0x0 0x1 [SteelAxe] CastleRaidAI
+UNIT Madino AxeArm Commander Level(10,Enemy,1) [20,14] 0x0 0x0 0x0 0x1 [SteelAxe] CastleRaidAI
+UNIT Madino AxeArm Commander Level(10,Enemy,1) [21,14] 0x0 0x0 0x0 0x1 [SteelAxe] CastleRaidAI
+UNIT Commander General Jacobin Level(15,Enemy,0) [0,25] 0x0 0x0 0x0 0x1 [SilverSword] CastleRaidAI
+UNIT Madino SwdArm Commander Level(10,Enemy,1) [0,23] 0x0 0x0 0x0 0x1 [SteelSword] CastleRaidAI
+UNIT Madino SwdArm Commander Level(10,Enemy,1) [0,24] 0x0 0x0 0x0 0x1 [SteelSword] CastleRaidAI
+UNIT Madino SwdArm Commander Level(10,Enemy,1) [0,26] 0x0 0x0 0x0 0x1 [SteelSword] CastleRaidAI
+UNIT Madino SwdArm Commander Level(10,Enemy,1) [0,27] 0x0 0x0 0x0 0x1 [SteelSword] CastleRaidAI
+UNIT Commander General Jacobin Level(15,Enemy,0) [30,33] 0x0 0x0 0x0 0x1 [SilverLance] CastleRaidAI
+UNIT Madino LncArm Commander Level(10,Enemy,1) [30,31] 0x0 0x0 0x0 0x1 [Javelin] CastleRaidAI
+UNIT Madino LncArm Commander Level(10,Enemy,1) [30,32] 0x0 0x0 0x0 0x1 [Javelin] CastleRaidAI
+UNIT Madino LncArm Commander Level(10,Enemy,1) [30,34] 0x0 0x0 0x0 0x1 [Javelin] CastleRaidAI
+UNIT Madino LncArm Commander Level(10,Enemy,1) [30,35] 0x0 0x0 0x0 0x1 [Javelin] CastleRaidAI
 UNIT Estrella DBishopF Jacobin Level(21,Enemy,0) [7,12] 0x0 0x0 0x0 0x1 [Elfire] AttackInRangeAI
-UNIT Loptrian MageF Estrella Level(8,Enemy,1) [5,12] 0x0 0x0 0x0 0x1 [Fire] NoAI
-UNIT Loptrian MageF Estrella Level(8,Enemy,1) [6,12] 0x0 0x0 0x0 0x1 [Fire] NoAI
-UNIT Loptrian MageF Estrella Level(8,Enemy,1) [8,12] 0x0 0x0 0x0 0x1 [Fire] NoAI
-UNIT Loptrian MageF Estrella Level(8,Enemy,1) [9,12] 0x0 0x0 0x0 0x1 [Fire] NoAI
-UNIT Lino Wanderer Jacobin Level(17,Enemy,0) [24,11] 0x0 0x0 0x0 0x1 [SteelBlade, SteelBow, Longbow] NoAI
-UNIT MercenaryFaction BowCavF Lino Level(8,Enemy,1) [24,12] 0x0 0x0 0x0 0x1 [SteelBow] NoAI
-UNIT MercenaryFaction BowCavF Lino Level(8,Enemy,1) [24,13] 0x0 0x0 0x0 0x1 [SteelBow] NoAI
-UNIT MercenaryFaction BowCavF Lino Level(8,Enemy,1) [24,14] 0x0 0x0 0x0 0x1 [SteelBow] NoAI
-UNIT MercenaryFaction BowCavF Lino Level(8,Enemy,1) [24,15] 0x0 0x0 0x0 0x1 [SteelBow] NoAI
+UNIT Loptrian MageF Estrella Level(8,Enemy,1) [5,12] 0x0 0x0 0x0 0x1 [Fire] CastleRaidAI
+UNIT Loptrian MageF Estrella Level(8,Enemy,1) [6,12] 0x0 0x0 0x0 0x1 [Fire] CastleRaidAI
+UNIT Loptrian MageF Estrella Level(8,Enemy,1) [8,12] 0x0 0x0 0x0 0x1 [Fire] CastleRaidAI
+UNIT Loptrian MageF Estrella Level(8,Enemy,1) [9,12] 0x0 0x0 0x0 0x1 [Fire] CastleRaidAI
+UNIT Lino Wanderer Jacobin Level(17,Enemy,0) [24,11] 0x0 0x0 0x0 0x1 [SteelBlade, SteelBow, Longbow] CastleRaidAI
+UNIT MercenaryFaction BowCavF Lino Level(8,Enemy,1) [24,12] 0x0 0x0 0x0 0x1 [SteelBow] CastleRaidAI
+UNIT MercenaryFaction BowCavF Lino Level(8,Enemy,1) [24,13] 0x0 0x0 0x0 0x1 [SteelBow] CastleRaidAI
+UNIT MercenaryFaction BowCavF Lino Level(8,Enemy,1) [24,14] 0x0 0x0 0x0 0x1 [SteelBow] CastleRaidAI
+UNIT MercenaryFaction BowCavF Lino Level(8,Enemy,1) [24,15] 0x0 0x0 0x0 0x1 [SteelBow] CastleRaidAI
 UNIT Orgahil Pirate Duvall Level(8,Enemy,1) [10,0] 0x0 0x0 0x0 0x1 [IronAxe] BrigandAI
 UNIT Orgahil Pirate Duvall Level(8,Enemy,1) [27,2] 0x0 0x0 0x0 0x1 [IronAxe] BrigandAI
 UNIT Orgahil Pirate Duvall Level(8,Enemy,1) [6,4] 0x0 0x0 0x0 0x1 [IronAxe] BrigandAI

@@ -645,21 +645,12 @@
 #include "TroubF/Staff Installer.event"
 }
 {
-ALIGN 4
-#include "Militia/Lance_2 Installer.event"
-ALIGN 4
-#include "Militia/Unarmed Installer.event"
-ALIGN 4
-ALIGN 4
 #include "Militia/Lance Installer.event"
-ALIGN 4
+#include "Militia/Unarmed Installer.event"
 }
 {
-ALIGN 4
 #include "Trueblade/Sword Installer.event"
-ALIGN 4
 #include "Trueblade/Unarmed Installer.event"
-ALIGN 4
 }
 
   //#include "my animation Installer.event"

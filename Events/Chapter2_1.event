@@ -210,6 +210,7 @@ LOAD1 0x1 TheThreeStooges
 ENUN
 LABEL 0x28
 CAM1 [42,17]
+MUSC 0x26
 CleanText(0x10,NordionUnderAttack)
 GotoPrepScreen
 EndEvent
@@ -220,11 +221,22 @@ CLEN 0x0
 CLEA 0x0
 CLEE 0
 FADU 16
+MUSC 0x31
+CleanText(0xA,SubduedHeirhein)
+CHECK_ALIVE Quan
+BEQ 0x50 0xC 0x0
 LOAD1 0x0 PisuergaReports
 ENUN
+CleanText(0xA,PisuergaBringsNews)
+MOVE 7 Leonster [10,9]
+CleanText(0xA,SubduedHeirhein2)
+LABEL 0x50
 LOAD1 0x0 IndechBadNews
 ENUN
 FADI 16
+CLEN 0x0
+CLEA 0x0
+CLEE 0
 LOMA 0x8
 CAM1 [18,30]
 MUSC 0x18
@@ -234,7 +246,15 @@ LOAD1 0x0 EltoCameo
 ENUN
 Location(Name_Mackily)
 CleanText(0x10,ClementReflexion)
+CHECK_ALIVE Quan
+BEQ 0x30 0xC 0x0
+CHECK_EVENTID 0xC
+BEQ 0x30 0xc 0x0
+MNC2 0x1D
+GOTO 0x31
+LABEL 0x30
 MNC2 0x7
+LABEL 0x31
 EndEvent
 
 LachyCheck:
@@ -249,6 +269,7 @@ EndEvent
 
 ComethHeirhein:
 LOAD1 0x1 HeirheinFodder
+ENUN
 EndEvent
 
 LachesisJoineth:
@@ -356,7 +377,7 @@ UNIT CrossKnight PalM Eldigan Level(18,NPC,1) [13,14] 0x0 0x0 0x1 REDA14R15 [Jav
 UNIT
 
 EldieLeaves:
-UNIT Eldigan PalM Chagall Level(20,NPC,0) [13,14] 0x0 0x0 0x1 REDA13R0 [Mystletainn, SteelLance] NoAI
+UNIT Eldigan Lionheart Chagall Level(20,NPC,0) [13,14] 0x0 0x0 0x1 REDA13R0 [Mystletainn, SteelLance] NoAI
 UNIT
 
 ItsPisuerga:
@@ -364,7 +385,7 @@ UNIT Leonster UniCav Quan Level(20,NPC,0) [22,23] 0x0 0x0 0x1 REDA9R2 [SteelLanc
 UNIT
 
 EltoCameo:
-UNIT Eldigan PalM Chagall Level(20,NPC,0) [10,37] 0x0 0x0 0x1 REDA22R22 [Mystletainn, SteelLance] NoAI
+UNIT Eldigan Lionheart Chagall Level(20,NPC,0) [10,37] 0x0 0x0 0x1 REDA22R22 [Mystletainn, SteelLance] NoAI
 UNIT
 
 PisuergaReports:
@@ -372,7 +393,7 @@ UNIT Leonster UniCav Quan Level(20,NPC,0) [1,0] 0x0 0x0 0x1 REDA10R9 [SteelLance
 UNIT
 
 IndechBadNews:
-UNIT Indech HolyKnt Eldigan Level(14,Enemy,0) [17,0] 0x0 0x0 0x1 REDA10R9 [SteelLance, Lightning] NoAI
+UNIT Indech HolyKnt Eldigan Level(14,NPC,0) [17,0] 0x0 0x0 0x1 REDA10R9 [SteelLance, Lightning] NoAI
 UNIT
 
 HeirheinFodder:

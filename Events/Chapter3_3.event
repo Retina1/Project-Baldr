@@ -46,7 +46,6 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEvent(0x10,GaeBolgConvo,Ethlyn,Quan)
 CharacterEvent(0x11,SigurdBrigidConvo,Sigurd,Brigid)
 CharacterEvent(0x12,MidirBrigidConvo,Midir,Brigid)
 CharacterEvent(0x13,YewfelleConvo,Edain,Brigid)
@@ -83,11 +82,6 @@ EndEvent
 
 DebugMap:
 MNC2 Debugmap
-EndEvent
-
-GaeBolgConvo:
-Text(EthlynQuanTalk)
-GiveItem(Gaebolg,Quan)
 EndEvent
 
 YewfelleConvo:

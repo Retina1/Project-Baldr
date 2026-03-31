@@ -49,15 +49,32 @@ CauseGameOverIfLordDies
 END_MAIN
 
 BeginningScene:
-LOAD1 0x0 PlayerUnits
-ENUN
+FADI 16
 LOAD1 0x1 EnemyUnits
 LOAD1 0x1 SnevejrElites
 LOAD1 0x1 MyosGuards
 ENUN
+CleanText(0x15,RaisingTheBridge)
+TILECHANGE 0x7
+GotoPrepScreen
 ENDA
 
 EndingScene:
+CLEE 0
+CleanText(0x15,SeizingTofa)
+MNC2 0x12
+EndEvent
+
+DewFunny:
+CHECK_ACTIVE
+SVAL s1 Dew
+BNE 0x9000 s1 sC
+    Text(SneakyDew)
+    TILEREVERSE 0x7
+    GOTO 0x9001
+LABEL 0x9000
+ENUF 0x15
+LABEL 0x9001
 EndEvent
 
 PlayerUnits:

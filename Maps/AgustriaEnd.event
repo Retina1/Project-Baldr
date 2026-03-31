@@ -58,7 +58,19 @@ Map_Change_6:
 
 ALIGN 4
 Map_Change_7:
-  SHORT $684 $684 $684 $684 $684 $684
+  SHORT $704 $684 $684 $680 $684 $684
+
+ALIGN 4
+Map_Change_8:
+  SHORT $784 $788
+
+ALIGN 4
+Map_Change_9:
+  SHORT $784 $788
+
+ALIGN 4
+Map_Change_10:
+  SHORT $784 $788
 
 ALIGN 4
 MapChangesData:
@@ -70,6 +82,9 @@ MapChangesData:
   TileMap(5, 0, 16, 2, 2, 0, Map_Change_5)
   TileMap(6, 18, 23, 2, 2, 0, Map_Change_6)
   TileMap(7, 12, 11, 3, 2, 0, Map_Change_7)
+  TileMap(8, 3, 28, 2, 1, 0, Map_Change_8)
+  TileMap(9, 2, 18, 2, 1, 0, Map_Change_9)
+  TileMap(10, 9, 14, 2, 1, 0, Map_Change_10)
   TileMapEnd
 
 EventPointerTable(0x1D, MapChangesData)

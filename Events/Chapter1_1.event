@@ -60,8 +60,8 @@ CharacterEvent(0x9,AyraJoineth,Sigurd,Ayra,0x13)
 END_MAIN
 
 MiscBasedEvents:
-AreaEvent(0x1A,AyraAttack,28,25,35,32)
 CauseGameOverIfLordDies
+AreaEvent(0x1A,AyraAttack,28,25,35,32)
 END_MAIN
 
 BeginningScene:
@@ -126,6 +126,16 @@ GotoPrepScreen
 EndEvent
 
 EndingScene:
+SFXKillUnit(Verdane2)
+SFXKillUnit(Verdane2)
+SFXKillUnit(Verdane2)
+SFXKillUnit(Verdane2)
+SFXKillUnit(Verdane2)
+SFXKillUnit(Verdane2)
+SFXKillUnit(Verdane2)
+SFXKillUnit(Verdane2)
+SFXKillUnit(Verdane2)
+CLEE 0
 CHECK_ALIVE Edain
 BEQ 0x1 0xC 0x0
 MUSC 0x2B
@@ -317,18 +327,12 @@ UNIT Quan DukeKnt Sigurd Level(1,Ally,0) [26,1] 0x0 0x0 0x0 0x1 [IronLance] NoAI
 UNIT //Tells the game that the unit list has ended
 
 AyraUnits:
-UNIT Commander Warrior Kinbois Level(10,Enemy,1) [34,29] 0x0 0x0 0x0 0x1 [HandAxe] NeverMoveAI
+UNIT Commander AxeArm Kinbois Level(10,Enemy,1) [34,29] 0x0 0x0 0x0 0x1 [HandAxe] NeverMoveAI
 UNIT Verdane1 Fighter Kinbois Level(1,Enemy,1) [34,29] 0x0 0x0 0x1 REDA34R32 [IronAxe, HandAxe] [0x0,0x3,0x0,0x1]
 UNIT Verdane1 Fighter Kinbois Level(1,Enemy,1) [34,29] 0x0 0x0 0x1 REDA33R30 [IronAxe, HandAxe] [0x0,0x3,0x0,0x1]
 UNIT Verdane1 Fighter Kinbois Level(1,Enemy,1) [34,29] 0x0 0x0 0x1 REDA35R30 [IronAxe, HandAxe] [0x0,0x3,0x0,0x1]
 UNIT Verdane1 Militia Kinbois Level(5,Enemy,1) [21,6] 0x0 0x0 0x0 0x1 [IronLance] NoAI
 UNIT Verdane1 Militia Kinbois Level(5,Enemy,1) [27,6] 0x0 0x0 0x0 0x1 [IronLance] NoAI
-UNIT Commander AxeArm Kinbois Level(10,Enemy,1) [34,29] 0x0 0x0 0x0 0x1 [HandAxe] NeverMoveAI
-UNIT Verdane1 Fighter Kinbois Level(1,Enemy,1) [34,29] 0x0 0x0 0x1 REDA34R32 [IronAxe, HandAxe] [0x0,0x3,0x0,0x3]
-UNIT Verdane1 Fighter Kinbois Level(1,Enemy,1) [34,29] 0x0 0x0 0x1 REDA33R30 [IronAxe, HandAxe] [0x0,0x3,0x0,0x3]
-UNIT Verdane1 Fighter Kinbois Level(1,Enemy,1) [34,29] 0x0 0x0 0x1 REDA35R30 [IronAxe, HandAxe] [0x0,0x3,0x0,0x3]
-UNIT Verdane1 Soldier Kinbois Level(5,Enemy,1) [21,6] 0x0 0x0 0x0 0x1 [IronLance] NoAI
-UNIT Verdane1 Soldier Kinbois Level(5,Enemy,1) [27,6] 0x0 0x0 0x0 0x1 [IronLance] NoAI
 UNIT Verdane1 Archer Kinbois Level(5,Enemy,1) [27,8] 0x0 0x0 0x0 0x1 [IronBow] NoAI
 UNIT Verdane1 AxeCav Kinbois Level(5,Enemy,1) [24,9] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
 UNIT Ruffian Brigand Henson Level(1,Enemy,1) [26,12] 0x0 0x0 0x0 0x1 [IronAxe] TheWaitingBrigandAI

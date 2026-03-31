@@ -52,6 +52,7 @@ END_MAIN
 ALIGN 32
 CharacterBasedEvents:
 CharacterEvent(0x0,EarthSwordConvo,Lachesis,Eldigan)
+CharacterEvent(0x10,GaeBolgConvo,Ethlyn,Quan)
 CharacterEvent(0x11,HopperClementConvo,Clement,Hopper)
 CharacterEvent(0x12,SparingEldigan,Sigurd,Eldigan)
 CharacterEvent(0x13,IndechRecruitment,Lachesis,Indech)
@@ -107,6 +108,11 @@ EndEvent
 
 DebugMap:
 MNC2 Debugmap
+EndEvent
+
+GaeBolgConvo:
+Text(EthlynQuanTalk)
+GiveItem(Gaebolg,Quan)
 EndEvent
 
 HopperClementConvo:
