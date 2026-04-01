@@ -45,7 +45,7 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEventBothWays(0x7,DewFoundIt,Edain,Dew,0x16)
+CharacterEventBothWays(0x7,DewFoundIt,Edain,Dew)
 CharacterEvent(0xA,WaitJomk,Edain,Jamke)
 END_MAIN
 
@@ -77,6 +77,7 @@ EndEvent
 
 EndingScene:
 CLEE 0
+MUSC 0x32
 CleanText(0x17,SeizingVerdane)
 CHECK_ALIVE Jamke
 BEQ 0x1 0xC 0x0

@@ -199,6 +199,20 @@ CHECK_EVENTID 0x1B
 BEQ 0x30 0xc 0x0
 CHECK_EVENTID 0x1C
 BEQ 0x30 0xc 0x0
+FADI 0x3C
+CLEA 0
+CLEN 0x0
+MUSC 0x0
+LOAD1 0x1 SwordDiscussion
+SetBackground(0x20)
+Text(OifeyPunishment)
+FADI 0x3c
+MOVE 120 Arden [1,10]
+FADU 16
+Text(SigurdProudofHard)
+FADI 0x3c
+CLEAN
+FADU 16
 GiveItem(ArdenSword,Arden)
 LABEL 0x30
 
@@ -359,7 +373,6 @@ MOVE 120 DiMaggio [29,18]
 ENUN
 Text(MilkTheVillage)
 SetAI(DiMaggio,0x03,0x03,0x04,0x20)
-EVBIT_F 9
 MoveByCoords(120, 28, 22, 28, 19)
 MoveByCoords(120, 29, 22, 29, 20)
 MoveByCoords(120, 30, 22, 30, 19)
@@ -609,4 +622,9 @@ UNIT Anna Manakete Heim Level(20,NPC,0) [7,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Anna Manakete Heim Level(20,NPC,0) [9,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Anna Manakete Heim Level(20,NPC,0) [11,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT Anna Manakete Heim Level(20,NPC,0) [13,6] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT
+
+SwordDiscussion:
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [1,11] 0x0 0x0 0x0 0x1 [SteelSword, IronLance] NoAI
+UNIT Arden SwdArm 0x0 Level(8,Ally,1) [1,8] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT

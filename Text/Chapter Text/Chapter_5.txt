@@ -52,7 +52,7 @@ Damn that insolent worm.[A][N]
 To think, he isn't even the slightest bit[N]
 remorseful for slaying his own father![A][N]
 Duke Ring[...][N][CloseEyes]
-May you be at peace[...][A][N]
+May you be at peace[...][A][X]
 
 ##KnightSpotted
 [OpenMidRight][LoadSigurd][OpenMidLeft][LoadOifey]

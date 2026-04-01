@@ -38,10 +38,21 @@ END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
+Seize(52,8)
+TurnEventPlayer(0x0,ArvisLies,2)
+Village(0xC,VillageOne,20,31)
+Village(0xD,VillageTwo,21,21)
+Village(0xE,VillageThree,16,15)
+Village(0xF,VillageFour,23,8)
+Village(0x10,VillageFive,33,24)
+Village(0x11,VillageSix,28,7)
+Village(0x12,VillageSeven,37,4)
 END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0x24,SistersTalketh,Edain,Brigid)
+CharacterEvent(0x13,TakeItMySon,Sigurd,Byron)
 END_MAIN
 
 MiscBasedEvents:
@@ -49,45 +60,101 @@ CauseGameOverIfLordDies
 END_MAIN
 
 BeginningScene:
+CAM1 [43,8]
 MUSC 0x5
 Narration(0x8,Ch5_Narration)
 CLEAN
+CamOn
+LOAD1 0x1 LordByron
+ENUN
+Text(Byronflees)
+CAM1 [52,8]
+MUSC 0x27
+CleanText(0x13,SlayderMeetsLombard)
 LOAD1 0x1 EnemyUnits
 ENUN
+CleanText(0x13,AndreyMeetsLombard)
+LOAD1 0x1 BeigeRitterCometh
+ENUN
+CleanText(0x13,LombardDisgusted)
+LOAD1 0x1 LangbaltandGuards
+ENUN
+CamOff
+CleanText(0x15,KnightSpotted)
 GotoPrepScreen
 EndEvent
 
 EndingScene:
+MUSC 0x0
+CleanText(0x13,SeizingLubeck)
 MNC2 0x17
 EndEvent
+
+TakeItMySon:
+MUSC 0x58
+Text(SigurdReceivesTyrfing)
+SFXKillUnit(Byron)
+GiveItem(Tyrfing,Sigurd)
+EndEvent
+
+ArvisLies:
+MUSC 0x2D
+CleanText(0x10,ArvisGaslighting)
+EndEvent
+
+SistersTalketh:
+MUSC 0x59
+Text(BrigidEdainTalk)
+EndEvent
+
+VillageOne:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageTwo:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageThree:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageFour:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageFive:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageSix:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageSeven:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
 
 ALIGN 4
 
 PlayerUnits:
-UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [22,13] 0x0 0x0 0x0 0x1 [SilverSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [21,10] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [23,10] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [20,11] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [24,11] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [19,12] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [25,12] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [18,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [20,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [24,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [26,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [19,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [21,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [23,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [25,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [18,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [20,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [22,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [24,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [26,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [19,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [21,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [23,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Arden SwdArm 0x0 Level(1,Ally,0) [25,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [21,13] 0x0 0x0 0x0 0x1 [SilverSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [20,10] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [22,10] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [19,11] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [23,11] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [18,12] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [24,12] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [17,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [19,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [23,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [25,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [18,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [20,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [22,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [24,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [17,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [19,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [21,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [23,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [25,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [18,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [20,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [22,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Arden SwdArm 0x0 Level(1,Ally,0) [24,16] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT
 
 EnemyUnits:
@@ -117,8 +184,8 @@ UNIT Lubeck AxeArm Commander Level(17,Enemy,1) [31,5] 0x0 0x0 0x0 0x1 [SteelAxe]
 UNIT Lubeck AxeArm Commander Level(17,Enemy,1) [31,6] 0x0 0x0 0x0 0x1 [SteelAxe] AttackInRangeAI
 UNIT Lubeck TMage Commander Level(17,Enemy,1) [32,3] 0x0 0x0 0x0 0x1 [Elthunder] AttackInRangeAI
 UNIT Lubeck TMage Commander Level(17,Enemy,1) [32,5] 0x0 0x0 0x0 0x1 [Elthunder] AttackInRangeAI
-UNIT Lubeck IronBallist Langbalt Level(20,Enemy,1) [58,3] 0x0 0x0 0x0 0x1 [IronBallista] NeverMoveAI
-UNIT Lubeck IronBallist Langbalt Level(20,Enemy,1) [58,4] 0x0 0x0 0x0 0x1 [IronBallista] NeverMoveAI
+UNIT Lubeck IronBallist Langbalt Level(20,Enemy,1) [57,3] 0x0 0x0 0x0 0x1 [IronBallista] NeverMoveAI
+UNIT Lubeck IronBallist Langbalt Level(20,Enemy,1) [57,4] 0x0 0x0 0x0 0x1 [IronBallista] NeverMoveAI
 UNIT Lubeck IronBallist Langbalt Level(20,Enemy,1) [58,9] 0x0 0x0 0x0 0x1 [IronBallista] NeverMoveAI
 UNIT Lubeck IronBallist Langbalt Level(20,Enemy,1) [58,10] 0x0 0x0 0x0 0x1 [IronBallista] NeverMoveAI
 UNIT Henson Berserker Henson Level(30,Enemy,1) [4,19] 0x0 0x0 0x0 0x1 [SilverAxe] NeverMoveAI
@@ -129,23 +196,23 @@ UNIT Ruffian Brigand Henson Level(30,Enemy,1) [15,24] 0x0 0x0 0x0 0x1 [SteelAxe]
 UNIT
 
 BeigeRitterCometh:
-UNIT Andrey ArchKnt Langbalt Level(22,Enemy,0) [53,8] 0x0 0x0 0x1 REDA55R12 [BraveBow, DefRing] AttackInRangeAI
-UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [53,8] 0x0 0x0 0x1 REDA52R11 [BraveBow] AttackInRangeAI
-UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [53,8] 0x0 0x0 0x1 REDA53R11 [BraveBow] AttackInRangeAI
-UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [53,8] 0x0 0x0 0x1 REDA54R11 [BraveBow] AttackInRangeAI
-UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [53,8] 0x0 0x0 0x1 REDA55R11 [BraveBow] AttackInRangeAI
-UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [53,8] 0x0 0x0 0x1 REDA52R12 [BraveBow] AttackInRangeAI
-UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [53,8] 0x0 0x0 0x1 REDA53R12 [BraveBow] AttackInRangeAI
-UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [53,8] 0x0 0x0 0x1 REDA54R12 [BraveBow] AttackInRangeAI
+UNIT Andrey ArchKnt Langbalt Level(22,Enemy,0) [52,8] 0x0 0x0 0x1 REDA55R14 [BraveBow, DefRing] AttackInRangeAI
+UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [52,8] 0x0 0x0 0x1 REDA52R13 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [52,8] 0x0 0x0 0x1 REDA53R13 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [52,8] 0x0 0x0 0x1 REDA54R13 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [52,8] 0x0 0x0 0x1 REDA55R13 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [52,8] 0x0 0x0 0x1 REDA52R14 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [52,8] 0x0 0x0 0x1 REDA53R14 [BraveBow] AttackInRangeAI
+UNIT BeigeRitter BowCav Andrey Level(18,Enemy,1) [52,8] 0x0 0x0 0x1 REDA54R14 [BraveBow] AttackInRangeAI
 UNIT
 
 LangbaltandGuards:
-UNIT Langbalt Baron Langbalt Level(30,Enemy,0) [53,8] 0x0 0x0 0x0 0x1 [Helswath] NeverMoveAI
-UNIT Lubeck General Langbalt Level(25,Enemy,1) [53,8] 0x0 0x0 0x1 REDA52R9 [BraveAxe, SteelBow] AttackInRangeAI
-UNIT Lubeck General Langbalt Level(25,Enemy,1) [53,8] 0x0 0x0 0x1 REDA54R9 [BraveAxe, SteelBow] AttackInRangeAI
-UNIT Lubeck General Langbalt Level(25,Enemy,1) [53,8] 0x0 0x0 0x1 REDA53R10 [BraveAxe, SteelBow] AttackInRangeAI
+UNIT Langbalt Baron Langbalt Level(30,Enemy,0) [52,8] 0x0 0x0 0x0 0x1 [Helswath] NeverMoveAI
+UNIT Lubeck General Langbalt Level(25,Enemy,1) [52,8] 0x0 0x0 0x1 REDA51R9 [BraveAxe, SteelBow] AttackInRangeAI
+UNIT Lubeck General Langbalt Level(25,Enemy,1) [52,8] 0x0 0x0 0x1 REDA53R9 [BraveAxe, SteelBow] AttackInRangeAI
+UNIT Lubeck General Langbalt Level(25,Enemy,1) [52,8] 0x0 0x0 0x1 REDA52R10 [BraveAxe, SteelBow] AttackInRangeAI
 UNIT
 
 LordByron:
-UNIT Byron MasterKnt Byron Level(30,NPC,0) [45,4] 0x0 0x0 0x1 REDA47R3 [Tyrfing] NoAI
+UNIT Byron MasterKnt Byron Level(30,NPC,0) [46,8] 0x0 0x0 0x1 REDA41R6 [Tyrfing] CastleRaidAI
 UNIT

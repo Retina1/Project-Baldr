@@ -1,0 +1,181 @@
+
+EventPointerTable(0x56,ThisChapter)
+
+ThisChapter:
+
+POIN TurnBasedEvents
+
+POIN CharacterBasedEvents
+
+POIN LocationBasedEvents
+
+POIN MiscBasedEvents
+
+POIN Dunno Dunno Dunno
+
+POIN Tutorial
+
+POIN TrapData TrapData
+
+POIN PlayerUnits PlayerUnits
+
+POIN $0 $0 $0 $0 $0 $0
+
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+TurnEventEnemy(0x0,WhereMyVictims,1)
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+LOAD1 0x1 MeanPegasi
+ENUN
+LOAD1 0x1 DaccarBoys
+ENUN
+MUSC 0x27
+CleanText(0x2D,DonovanIsHere)
+LOAD1 0x1 DonovanGoeth
+ENUN
+SilentKillUnit(Donovan)
+CleanText(0x2D,SaveTheCivilians)
+CleanText(0x2D,DaccarLamia)
+LOAD1 0x1 ScaryGirls
+ENUN
+GotoPrepScreen
+ENDA
+
+EndingScene:
+CLEE 0
+MUSC 0x31
+CleanText(0x2D,SeizingZaxon)
+MNC2 0x13
+EndEvent
+
+WhereMyVictims:
+CleanText(0x2D,DonovanAttacks)
+LOAD1 0x1 DonovanDudes
+ENUN
+EndEvent
+
+Forsetus:
+MUSC 0x58
+CleanText(0x2D,LewynReceivesForseti)
+GiveItem(Forseti,Lewyn)
+ENUF 0x7
+EndEvent
+
+AccursedRebels:
+MUSC 0x25
+Text(DaccarReaction)
+//changing ai would go here but lol
+Text(LamiaAttacks)
+EndEvent
+
+PlayerUnits:
+UNIT Sigurd KnightLord 0x00 Level(1, Ally, 0) [5,11] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [4,10] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [5,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [3,11] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [2,12] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [6,8] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [7,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [3,8] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [4,6] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [1,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [1,11] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [5,7] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [8,7] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [7,7] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [2,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [3,13] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [2,7] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [2,4] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [3,5] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [6,6] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [7,5] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [1,6] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [16,6] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Arden Soldier 0x00 Level(1, Ally, 0) [14,7] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT //Tells the game that the unit list has ended
+
+MeanPegasi:
+UNIT Pamela Falco Daccar Level(23, Enemy, 0) [30,3] 0x00 0x00 0x0 0x00 [SilverLance, DefRing] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [32,2] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [32,4] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [31,5] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [29,4] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [34,5] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [35,2] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [28,1] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [27,3] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [27,7] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [28,6] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT Zaxon PegKnt Pamela Level(12, Enemy, 1) [30,7] 0x00 0x00 0x0 0x00 [Javelin] NoAI 
+UNIT
+
+DonovanGoeth:
+UNIT Donovan General Daccar Level(20, Enemy, 0) [47,12] 0x00 0x00 0x1 REDA16R27 [SteelBlade, Longbow] NoAI 
+UNIT
+
+DonovanDudes:
+UNIT Donovan General Daccar Level(20, Enemy, 0) [16,27] 0x00 0x00 0x0 0x00 [SteelBlade, Longbow] NeverMoveAI 
+UNIT Zaxon Fighter Daccar Level(12, Enemy, 1) [13,24] 0x00 0x00 0x0 0x00 [SteelAxe] NoAI 
+UNIT Zaxon Fighter Daccar Level(12, Enemy, 1) [14,24] 0x00 0x00 0x0 0x00 [SteelAxe] NoAI 
+UNIT Zaxon Fighter Daccar Level(12, Enemy, 1) [14,25] 0x00 0x00 0x0 0x00 [SteelAxe] NoAI 
+UNIT Zaxon Fighter Daccar Level(12, Enemy, 1) [14,28] 0x00 0x00 0x0 0x00 [SteelAxe] NoAI 
+UNIT Zaxon Fighter Daccar Level(12, Enemy, 1) [14,27] 0x00 0x00 0x0 0x00 [SteelAxe] NoAI 
+UNIT Zaxon Fighter Daccar Level(12, Enemy, 1) [13,28] 0x00 0x00 0x0 0x00 [SteelAxe] NoAI 
+UNIT Zaxon Warrior Daccar Level(15, Enemy, 1) [15,29] 0x00 0x00 0x0 0x00 [SteelAxe, SteelBow] NoAI 
+UNIT Zaxon Warrior Daccar Level(15, Enemy, 1) [16,30] 0x00 0x00 0x0 0x00 [SteelAxe, SteelBow] NoAI 
+UNIT Zaxon Warrior Daccar Level(15, Enemy, 1) [17,29] 0x00 0x00 0x0 0x00 [SteelAxe, SteelBow] NoAI 
+UNIT Zaxon WMage Daccar Level(18, Enemy, 1) [15,28] 0x00 0x00 0x0 0x00 [Eclipse] NoAI 
+UNIT Zaxon WMage Daccar Level(18, Enemy, 1) [16,29] 0x00 0x00 0x0 0x00 [Eclipse] NoAI 
+UNIT Zaxon WMage Daccar Level(18, Enemy, 1) [17,28] 0x00 0x00 0x0 0x00 [Eclipse] NoAI 
+UNIT
+
+ScaryGirls:
+UNIT Lamia SwMastF Daccar Level(25, Enemy, 0) [43,15] 0x00 0x00 0x0 0x00 [SilverBlade, LifeRing] NoAI 
+UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [44,14] 0x00 0x00 0x0 0x00 [PoisonSword] NoAI 
+UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [44,16] 0x00 0x00 0x0 0x00 [PoisonSword] NoAI 
+UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [43,17] 0x00 0x00 0x0 0x00 [PoisonSword] NoAI 
+UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [43,13] 0x00 0x00 0x0 0x00 [PoisonSword] NoAI 
+UNIT AssassinFaction TMageF Lamia Level(22, Enemy, 1) [42,16] 0x00 0x00 0x0 0x00 [Thunder] NoAI 
+UNIT AssassinFaction TMageF Lamia Level(22, Enemy, 1) [42,14] 0x00 0x00 0x0 0x00 [Thunder] NoAI 
+UNIT AssassinFaction ArcherF Lamia Level(22, Enemy, 1) [41,17] 0x00 0x00 0x0 0x00 [KillerBow] NoAI 
+UNIT AssassinFaction ArcherF Lamia Level(22, Enemy, 1) [41,13] 0x00 0x00 0x0 0x00 [KillerBow] NoAI 
+UNIT AssassinFaction Cleric Lamia Level(22, Enemy, 1) [41,15] 0x00 0x00 0x0 0x00 [Physic] NoAI 
+UNIT
+
+DaccarBoys:
+UNIT Daccar Baron 0x00 Level(26, Enemy, 0) [47,12] 0x00 0x00 0x0 0x00 [Blizzard, Tornado] NeverMoveAI 
+UNIT Zaxon General Daccar Level(20, Enemy, 1) [46,13] 0x00 0x00 0x0 0x00 [SilverLance, SteelBow] NoAI 
+UNIT Zaxon General Daccar Level(20, Enemy, 1) [47,14] 0x00 0x00 0x0 0x00 [SilverLance, SteelBow] NoAI 
+UNIT Zaxon General Daccar Level(20, Enemy, 1) [48,13] 0x00 0x00 0x0 0x00 [SilverLance, SteelBow] NoAI 
+UNIT Zaxon WMage Daccar Level(20, Enemy, 1) [7,23] 0x00 0x00 0x0 0x00 [Elwind] NoAI 
+UNIT Zaxon WMage Daccar Level(20, Enemy, 1) [6,22] 0x00 0x00 0x0 0x00 [Elwind] NoAI 
+UNIT Zaxon WMage Daccar Level(20, Enemy, 1) [9,23] 0x00 0x00 0x0 0x00 [Elwind] NoAI 
+UNIT Zaxon WMage Daccar Level(20, Enemy, 1) [10,22] 0x00 0x00 0x0 0x00 [Elwind] NoAI 
+UNIT Ivan WMage Daccar Level(20, Enemy, 0) [8,22] 0x00 0x00 0x0 0x00 [Elwind, Blizzard] NoAI 
+UNIT

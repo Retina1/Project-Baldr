@@ -46,7 +46,6 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEvent(0x10,GaeBolgConvo,Ethlyn,Quan)
 CharacterEvent(0x11,SigurdBrigidConvo,Sigurd,Brigid)
 CharacterEvent(0x12,MidirBrigidConvo,Midir,Brigid)
 CharacterEvent(0x13,YewfelleConvo,Edain,Brigid)
@@ -91,19 +90,15 @@ DebugMap:
 MNC2 Debugmap
 EndEvent
 
-GaeBolgConvo:
-Text(EthlynQuanTalk)
-GiveItem(Gaebolg,Quan)
-EndEvent
-
 YewfelleConvo:
+MUSC 0x58
 Text(EdainBrigidTalk)
 GiveItem(Yewfelle,Brigid)
 EndEvent
 
 SigurdBrigidConvo:
+MUSC 0x30
 Text(SigurdBrigidTalk)
-TurnAlly(Brigid)
 EndEvent
 
 MidirBrigidConvo:
@@ -111,23 +106,51 @@ Text(MidirBrigidTalk)
 EndEvent
 
 ClaudSigurdConvo:
+MUSC 0x59
 Text(ClaudSigurdTalk)
 EndEvent
 
 DewAdventure:
+CHECK_ACTIVE
+SVAL s1 Dew
+BNE 0x9000 s1 sC
+    Text(DewSecret)
+    SilentKillUnit(Dew)
+    MUSC 0x0
+    CleanText(0x2D,DewInTheTower)
+    LOAD1 0x1 DewBacc
+    ENUN
+    Text(DewKickedOut)
+    GiveItem(WindSwd,Dew)
+    GOTO 0x9001
+LABEL 0x9000
+ENUF 0xB
+LABEL 0x9001
 EndEvent
 
 BrigidTime:
 FADI 16
 LOAD1 0x1 PirateLady
 ENUN
-FADU 16 
+FADU 16
+SVAL 1 Brigid
+ASMC GoldSetter|1
+SVAL 2 7000
+ASMC SetGoldEvent|1
 EndEvent
 
 TheyReturned:
 Text(ISawTheTruth)
 LOAD1 0x1 BragiTowerDuo 
 ENUN
+SVAL 1 Claud
+ASMC GoldSetter|1
+SVAL 2 7000
+ASMC SetGoldEvent|1
+SVAL 1 Tailtiu
+ASMC GoldSetter|1
+SVAL 2 4000
+ASMC SetGoldEvent|1
 EndEvent
 
 VillageOne:
@@ -228,4 +251,8 @@ UNIT Orgahil Merc Duvall Level(10,Enemy,1) [49,6] 0x0 0x0 0x1 REDA40R11 [SteelSw
 UNIT Orgahil Pirate Duvall Level(10,Enemy,1) [49,6] 0x0 0x0 0x1 REDA40R9 [HandAxe] NoAI
 UNIT Orgahil Merc Duvall Level(10,Enemy,1) [49,6] 0x0 0x0 0x1 REDA41R12 [SteelSword] NoAI
 UNIT Orgahil Pirate Duvall Level(10,Enemy,1) [49,6] 0x0 0x0 0x1 REDA41R10 [HandAxe] NoAI
+UNIT
+
+DewBacc:
+UNIT Dew Rogue Brigid Level(12,Ally,0) [4,15] 0x0 0x0 0x0 0x1 [SteelSword] NoAI
 UNIT

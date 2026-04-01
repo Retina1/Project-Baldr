@@ -34,11 +34,19 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
+TurnEventEnemy(0x0,CuvuliAnnnounceth,1)
 TurnEventPlayer(0x0,DithorbaCometh,25)
 END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
+Village(0xC,VillageOne,20,31)
+Village(0xD,VillageTwo,21,21)
+Village(0xE,VillageThree,16,15)
+Village(0xF,VillageFour,23,8)
+Village(0x10,VillageFive,33,24)
+Village(0x11,VillageSix,28,7)
+Village(0x12,VillageSeven,37,4)
 END_MAIN
 
 ALIGN 32
@@ -54,20 +62,101 @@ BeginningScene:
 MUSC 0x4
 Narration(0x8,Ch4_Narration)
 CLEAN
+FADI 16
+LOMA 0x12
+CAM1 [16,27]
+FADU 16
+Location(Name_Silesse)
+CamOn
+LOAD1 0x1 Messengers
+ENUN
+FADI 16
+CLEN 0x0
+CAM1 [17,38]
+LOMA 0xF
+FADU 16
+LOAD1 0x1 Messengers2
+ENUN
+CLEN 0x0
+Location(Name_Sailane)
+FADI 16
+LOMA 0xE
+FADU 16
+CAM1 [11,1]
+LOAD1 0x0 AWelcomeCrew
+ENUN
+Text(MeetingQueenLahna)
+LOAD1 0x1 QuangoesBye
+ENUN
+Text(QuanLeavesTheArmy)
+FADI 16
+CLEN 0x0
+CLEA 0x0
+LOMA 0xF
+CAM1 [3,34]
+FADU 16
+CamOff
+LOAD 0x1 ByeToallThose
+ENUN
+CLEN 0x0
+RemoveUnit(Quan)
+RemoveUnit(Finn)
+RemoveUnit(Ethlyn)
+CAM1 [38,7]
+FADI 16
+LOMA 0x10
+CAM1 [39,9]
+FADU 16
+MUSC 0x25
+Location(Name_Tofa)
+CleanText(0x2D,TofaPrepareForAction)
+FADI 16
+LOMA 0xF
 LOAD1 0x1 EnemyUnits
+ENUN
 GotoPrepScreen
 EndEvent
 
 EndingScene:
-CAM1 [38,12]
-MOVE 60 Sigurd [36,11]
-ENUN
+FADI 16
+MUSC 0x27
+LOMA 0x12
+CAM1 [47,12]
+FADU 16
+Location(Name_Zaxon)
+CleanText(0x2D,DaccarScheming)
+MNC2 0x10
+EndEvent
+
+CuvuliAnnnounceth:
+Text(CuvuliAdvances)
 EndEvent
 
 DithorbaCometh:
 CAM1 [38,12]
 LOAD1 0x1 DithorbaSquad
 EndEvent
+
+VillageOne:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageTwo:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageThree:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageFour:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageFive:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageSix:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageSeven:
+VillageEventItem(Placeholder, 0x2, DefenseSwd)
 
 ALIGN 4
 
@@ -118,15 +207,38 @@ UNIT Ruffian Pirate Henson Level(20,Enemy,1) [22,31] 0x0 0x0 0x0 0x1 [IronAxe] B
 UNIT Ivan WMage Daccar Level(15,NPC,0) [18,37] 0x0 0x0 0x0 0x1 [Wind, RescueRing] NeverMoveAI
 UNIT
 
-FriendStoves:
-UNIT Beowolf Ranger 0x0 Level(20,Ally,0) [5,31] 0x0 0x0 0x0 0x1 [IronSword] NoAI
-UNIT Lewyn Bard 0x0 Level(19,Ally,0) [7,31] 0x0 0x0 0x0 0x1 [Wind] NoAI
-UNIT Brigid SniperF 0x0 Level(21,Ally,0) [9,31] 0x0 0x0 0x0 0x1 [Yewfelle] NoAI
-UNIT Sylvia Dancer 0x0 Level(23,Ally,0) [11,31] 0x0 0x0 0x0 0x1 [DefenseSwd] NoAI
-UNIT Erinys Falco 0x0 Level(22,Ally,0) [13,31] 0x0 0x0 0x0 0x1 [SilverLance] NoAI
-UNIT Claud HPriest 0x0 Level(20,Ally,0) [6,32] 0x0 0x0 0x0 0x1 [Fortify] NoAI
-UNIT Tailtiu TMageF 0x0 Level(20,Ally,0) [8,32] 0x0 0x0 0x0 0x1 [Thunder] NoAI
+Messengers:
+UNIT Silesse PegKnt 0x0 Level(3,NPC,0) [16,27] 0x0 0x0 0x1 REDA0R6 [0x0] NoAI
+UNIT Silesse PegKnt 0x0 Level(3,NPC,0) [16,27] 0x0 0x0 0x1 REDA0R6 [0x0] NoAI
 UNIT
+
+Messengers2:
+UNIT Silesse PegKnt 0x0 Level(3,NPC,0) [18,38] 0x0 0x0 0x1 REDA3R34 [0x0] NoAI
+UNIT Silesse PegKnt 0x0 Level(3,NPC,0) [18,38] 0x0 0x0 0x1 REDA3R34 [0x0] NoAI
+UNIT
+
+AWelcomeCrew:
+UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [11,1] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Lewyn Bard Sigurd Level(1,Ally,0) [12,2] 0x0 0x0 0x0 0x1 [Wind] NoAI
+UNIT Hilda Queen 0x0 Level(3,NPC,0) [11,14] 0x0 0x0 0x1 REDA11R5 [0x0] NoAI
+UNIT Silesse PegKnt 0x0 Level(3,NPC,0) [11,14] 0x0 0x0 0x1 REDA10R6 [0x0] NoAI
+UNIT Silesse PegKnt 0x0 Level(3,NPC,0) [11,14] 0x0 0x0 0x1 REDA12R6 [0x0] NoAI
+UNIT
+
+QuangoesBye:
+UNIT Finn LncCav 0x0 Level(1,Ally,0) [22,0] 0x0 0x0 0x1 REDA10R4 [IronLanceFin] NoAI
+UNIT Quan DukeKnt 0x0 Level(4,Ally,0) [22,0] 0x0 0x0 0x1 REDA11R3 [SteelLance, Javelin] NoAI
+UNIT Ethlyn Troub 0x0 Level(1,Ally,0) [22,0] 0x0 0x0 0x1 REDA12R4 [Heal, SlimSword] NoAI
+UNIT
+
+ByeToallThose:
+UNIT Finn LncCav 0x0 Level(1,Ally,0) [3,34] 0x0 0x0 0x1 REDA18R38 [IronLanceFin] NoAI
+UNIT Quan DukeKnt 0x0 Level(4,Ally,0) [3,34] 0x0 0x0 0x1 REDA18R38 [SteelLance, Javelin] NoAI
+UNIT Ethlyn Troub 0x0 Level(1,Ally,0) [3,34] 0x0 0x0 0x1 REDA18R38 [Heal, SlimSword] NoAI
+UNIT Silesse PegKnt 0x0 Level(3,NPC,0) [3,34] 0x0 0x0 0x1 REDA18R38 [0x0] NoAI
+UNIT Silesse PegKnt 0x0 Level(3,NPC,0) [3,34] 0x0 0x0 0x1 REDA18R38 [0x0] NoAI
+UNIT
+
 
 DithorbaSquad:
 UNIT Dithorba Falco Myos Level(21,Enemy,0) [38,8] 0x0 0x0 0x1 REDA37R12 [SilverSword, MiracleRing] NoAI

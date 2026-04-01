@@ -73,10 +73,19 @@ ALIGN 4
 #include "Chapter4_2.event"
 }
 {
+#include "Chapter4_3.event"
+}
+{
+#include "CastleZaxon.event"
+}
+{
 #include "Chapter5_1.event"
 }
 {
 #include "Chapter5_2.event"
+}
+{
+#include "Chapter5_3.event"
 }
 {
 #include "Chapter6_1.event"

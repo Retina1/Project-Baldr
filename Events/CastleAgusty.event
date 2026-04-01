@@ -19,7 +19,7 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
-CharacterEvent(0x0,TheTestOfLove,0x0,Augury)
+CharacterEvent(0x0,TheTestOfLove,0x0,AuguryGuy)
 CharacterEvent(0x0,PromotedLol,Sigurd,Oifey)
 CharacterEvent(0x0,OifeyPromoAlec,Alec,Oifey)
 CharacterEvent(0x0,OifeyPromoNoish,Noish,Oifey)
@@ -84,7 +84,7 @@ ALIGN 4
 
 BeginningScene:
 ASMC ClearArenaProgress|1
-LOAD1 0x0 AgustyGang
+LOAD3 0x0 AgustyGang
 ENUN
 LOAD1 0x1 HelperGuys
 ENUN

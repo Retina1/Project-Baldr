@@ -51,7 +51,7 @@ ALIGN 32
 CharacterBasedEvents:
 CharacterEvent(0x18,ShyShyGirl,Lewyn,Erinys)
 CharacterEvent(0x1A,ChillHops,Lachesis,Hopper)
-CharacterEvent(0x23,BobbyAsaka,Lachesis,Clement)
+CharacterEvent(0x23,BobbyAsaka,Lachesis,Clement,0x1A)
 CharacterEventBothWays(0x19,YouLikeThat,Sylvia,Alec)
 CharacterEventBothWays(0x1B,IDoQuestioning,Sigurd,Erinys)
 CharacterEventBothWays(0x22,GetsomeGains,Lachesis,Beowolf)
@@ -62,13 +62,16 @@ CauseGameOverIfLordDies
 END_MAIN
 
 BeginningScene:
+MUSC 0x27
 ENUT 0x7
 CAM1 [18,30]
 FADU 16
+Location(Mackily)
 CleanText(0x15,MackilyMobilizes)
 FADI 16
 CAM1 [28,6]
 FADU 16
+Location(Name_Agusti)
 CleanText(0x15,ErinysReadyToGo)
 LOAD1 0x1 EnemyUnits
 ENUN
@@ -83,25 +86,39 @@ GotoPrepScreen
 EndEvent
 
 EndingScene:
+SFXKillUnit(Agusti)
+SFXKillUnit(Agusti)
+SFXKillUnit(Agusti)
+SFXKillUnit(Agusti)
+SFXKillUnit(Agusti)
+SFXKillUnit(Agusti)
 CLEE 0
 MUSC 0x27
-CHECK_EVENTID 0x4
-BEQ 0x30 0xc 0x0
-MNC2 0x5
-GOTO 0x31
-LABEL 0x30
+CHECK_EVENTID 0x79
+BNE 0x36 0xc 0x0
+CHECK_ALIVE Eve
+BEQ 0x1 0xC 0x0
+CHECK_ALIVE Alva
+BEQ 0x1 0xC 0x0
+CHECK_ALIVE Eva
+BEQ 0x1 0xC 0x0
+CleanText(0x11,NordionKnightsAreAlive)
+GiveItem(KnightRing,Lachesis)
+RemoveUnit(Eve)
+RemoveUnit(Alva)
+RemoveUnit(Eva)
+GOTO 0x1
+LABEL 0x36
+CHECK_ALIVE Indech
+BEQ 0x1 0xC 0x0
+GiveItem(KnightRing,Lachesis)
+LABEL 0x1
+CleanText(0x11,SeizingAgusti)
 MNC2 0x9
-
-FADI 5
-CALL GiveGoldAtChapterEndGenOne
-CALL GiveGoldAtChapterEndGenOne
-CALL GiveGoldAtChapterEndGenOne
-CALL GiveGoldAtChapterEndGenOne
-
-LABEL 0x31
 EndEvent
 
 ZaneCometh:
+MUSC 0x27
 CAM1 [28,6]
 CleanText(0x15,ZaneEntersBattle)
 FADI 16
@@ -125,6 +142,7 @@ SFXKillUnit(Mackily)
 SFXKillUnit(Mackily)
 SFXKillUnit(Mackily)
 SFXKillUnit(Mackily)
+MUSC 0x31
 CleanText(0x15,SeizingMackily)
 ENUF 0x7
 EndEvent
@@ -145,6 +163,10 @@ MOVE 7 Silesse [29,0]
 ENUN
 FADU 16
 CLEN 0
+SVAL 1 Erinys
+ASMC GoldSetter|1
+SVAL 2 5000
+ASMC SetGoldEvent|1
 EndEvent
 
 GetsomeGains:
@@ -160,6 +182,10 @@ MUSS 0x30
 Text(RecruitingHopper)
 TurnAlly(Hopper)
 MURE 60
+SVAL 1 Hopper
+ASMC GoldSetter|1
+SVAL 2 8000
+ASMC SetGoldEvent|1
 EndEvent
 
 YouLikeThat:
@@ -187,6 +213,11 @@ SFXKillUnit(Mackily)
 ENUT 0x13
 ENUF 0x7
 MURE 60
+TurnAlly(Clement)
+SVAL 1 Clement
+ASMC GoldSetter|1
+SVAL 2 20000
+ASMC SetGoldEvent|1
 EndEvent
 
 VillageOne:
@@ -275,5 +306,27 @@ UNIT Agusti Ballist Chagall Level(6,Enemy,1) [29,7] 0x0 0x0 0x0 0x0 [Ballista] N
 UNIT
 
 ZaneUnits:
-UNIT Zane DukeKnt Chagall Level(21,Enemy,0) [11,38] DropItem 0x0 0x0 0x1 [Horseslayer, Javelin] NoAI
+UNIT Zane DukeKnt Chagall Level(21,Enemy,0) [28,6] DropItem 0x0 0x1 REDA26R0 [Horseslayer, Javelin] NoAI
+UNIT Agusti LncCav Chagall Level(13,Enemy,1) [24,0] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Agusti LncCav Chagall Level(13,Enemy,1) [24,1] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Agusti LncCav Chagall Level(13,Enemy,1) [25,1] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Agusti LncCav Chagall Level(13,Enemy,1) [28,1] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Agusti LncCav Chagall Level(13,Enemy,1) [29,1] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Agusti LncCav Chagall Level(13,Enemy,1) [29,0] 0x0 0x0 0x0 0x1 [IronLance] NoAI
+UNIT Agusti AxeCav Chagall Level(10,Enemy,1) [23,0] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT Agusti AxeCav Chagall Level(10,Enemy,1) [23,1] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT Agusti AxeCav Chagall Level(10,Enemy,1) [30,1] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT Agusti AxeCav Chagall Level(10,Enemy,1) [30,0] 0x0 0x0 0x0 0x1 [IronAxe] NoAI
+UNIT Agusti BowCav Chagall Level(9,Enemy,1) [22,0] 0x0 0x0 0x0 0x1 [IronBow] NoAI
+UNIT Agusti BowCav Chagall Level(9,Enemy,1) [22,1] 0x0 0x0 0x0 0x1 [IronBow] NoAI
+UNIT Agusti BowCav Chagall Level(9,Enemy,1) [31,1] 0x0 0x0 0x0 0x1 [IronBow] NoAI
+UNIT Agusti BowCav Chagall Level(9,Enemy,1) [31,0] 0x0 0x0 0x0 0x1 [IronBow] NoAI
+UNIT Agusti Troub Chagall Level(12,Enemy,1) [25,0] 0x0 0x0 0x0 0x1 [SlimSword, Mend] NoAI
+UNIT Agusti Troub Chagall Level(12,Enemy,1) [27,0] 0x0 0x0 0x0 0x1 [SlimSword, Mend] NoAI
+UNIT Agusti Troub Chagall Level(12,Enemy,1) [26,1] 0x0 0x0 0x0 0x1 [SlimSword, Mend] NoAI
+UNIT Ross PalM Chagall Level(16,Enemy,0) [27,14] DropItem 0x0 0x0 0x1 [SilverLance, ConRing] NeverMoveAI
+UNIT Agusti UniCav Chagall Level(13,Enemy,1) [26,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Agusti UniCav Chagall Level(13,Enemy,1) [28,14] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Agusti UniCav Chagall Level(13,Enemy,1) [27,15] 0x0 0x0 0x0 0x1 [IronSword] NoAI
+UNIT Agusti UniCav Chagall Level(13,Enemy,1) [27,13] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT

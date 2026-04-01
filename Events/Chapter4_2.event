@@ -38,6 +38,7 @@ END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
+Village(0xC,VillageOne,27,9)
 END_MAIN
 
 ALIGN 32
@@ -49,21 +50,36 @@ CauseGameOverIfLordDies
 END_MAIN
 
 BeginningScene:
-LOAD1 0x0 PlayerUnits
-ENUN
+FADI 16
 LOAD1 0x1 EnemyUnits
 LOAD1 0x1 SnevejrElites
 LOAD1 0x1 MyosGuards
 ENUN
+CleanText(0x15,RaisingTheBridge)
+TILECHANGE 0x7
+GotoPrepScreen
 ENDA
 
 EndingScene:
-
-FADI 5
-CALL GiveGoldAtChapterEndGenOne
-CALL GiveGoldAtChapterEndGenOne
-
+CLEE 0
+CleanText(0x15,SeizingTofa)
+MNC2 0x12
 EndEvent
+
+DewFunny:
+CHECK_ACTIVE
+SVAL s1 Dew
+BNE 0x9000 s1 sC
+    Text(SneakyDew)
+    TILEREVERSE 0x7
+    GOTO 0x9001
+LABEL 0x9000
+ENUF 0x15
+LABEL 0x9001
+EndEvent
+
+VillageOne:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
 
 PlayerUnits:
 UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [5,25] 0x0 0x0 0x0 0x1 [SilverSword] NoAI

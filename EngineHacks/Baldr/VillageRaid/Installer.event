@@ -93,12 +93,12 @@ TileChangeArrayEnd
 ALIGN 4
 Chapter5_1RaidTileChangeArray:
 RaidTileChangeEntry(1, 23, 0)
-RaidTileChangeEntry(18, 22, 7)
-RaidTileChangeEntry(19, 6, 14)
-RaidTileChangeEntry(34, 1, 21)
-RaidTileChangeEntry(35, 19, 28)
-RaidTileChangeEntry(55, 3, 35)
-RaidTileChangeEntry(58, 13, 42)
+RaidTileChangeEntry(17, 22, 7)
+RaidTileChangeEntry(18, 6, 14)
+RaidTileChangeEntry(33, 1, 21)
+RaidTileChangeEntry(34, 19, 28)
+RaidTileChangeEntry(54, 3, 35)
+RaidTileChangeEntry(57, 13, 42)
 TileChangeArrayEnd
 
 ALIGN 4

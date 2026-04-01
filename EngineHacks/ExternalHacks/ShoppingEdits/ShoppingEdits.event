@@ -216,6 +216,14 @@ Chapter4BattlePrepVendor:
 SHLI Elfire Wind Recover FleursDuMal
 ALIGN 4
 
+Chapter5BattlePrepShop:
+SHLI SilverSword SteelBlade SlimSword IronLance SteelLance SilverLance Javelin SilverAxe SteelBow SilverBow  
+ALIGN 4
+
+Chapter5BattlePrepVendor:
+SHLI Elfire Thunder Wind Recover AndorAxe
+ALIGN 4
+
 #ifdef USE_BARGAINS
 
 	ShopBargainPairingList:
@@ -227,6 +235,8 @@ ALIGN 4
 	POIN Chapter3BattlePrepShop Chapter3BattlePrepShopBargains
 	POIN Chapter4BattlePrepShop Chapter4BattlePrepShopBargains
 	POIN Chapter4BattlePrepVendor Chapter4BattlePrepShopBargains
+	POIN Chapter5BattlePrepShop Chapter5BattlePrepShopBargains
+	POIN Chapter5BattlePrepVendor Chapter5BattlePrepShopBargains
 	WORD 0 //Terminator
 	
 	PrologueBattlePrepShopBargains:
@@ -374,13 +384,58 @@ ALIGN 4
 	SHORT FleursDuMal 0x11
 	WORD 0
 	
+	SHORT SilverAxe 0x12
+	WORD 0
+	
 	//Terminator
 	WORD 0
 	
 	
 	Chapter5BattlePrepShopBargains:
 	
-	SHORT SteelBow 0x67
+	SHORT SilverSword 0x7
+	WORD 0
+	
+	SHORT SteelBlade 0x8
+	WORD 0
+	
+	SHORT SlimSword 0x9
+	WORD 0
+	
+	SHORT IronLance 0xA
+	WORD 0
+	
+	SHORT SteelLance 0xB
+	WORD 0
+	
+	SHORT SilverLance 0xC
+	WORD 0
+	
+	SHORT SilverBow 0xD
+	WORD 0
+	
+	SHORT Elfire 0xE
+	WORD 0
+	
+	SHORT Wind 0xF
+	WORD 0
+	
+	SHORT Recover 0x10
+	WORD 0
+	
+	SHORT AndorAxe 0x11
+	WORD 0
+	
+	SHORT SilverAxe 0x12
+	WORD 0
+	
+	SHORT Javelin 0x13
+	WORD 0
+	
+	SHORT SteelBow 0x14
+	WORD 0
+	
+	SHORT Thunder 0x15
 	WORD 0
 	
 	//Terminator

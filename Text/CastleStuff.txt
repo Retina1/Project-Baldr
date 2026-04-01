@@ -188,8 +188,15 @@ make sure to check it out![A][X]
 
 ##Castletorial3
 [OpenMidLeft][LoadPawnshop][OpenMidRight][LoadOifey]
-This doesn't do anything yet.[A][N][OpenMidLeft]
-I'm Leslie.[A][X]
+This is the pawn shop![A][N] 
+You can use the gold earned[N] 
+to buy and sell stuff![A][N]
+Sold items and weaponry will[N]
+always remain available to be[A][N] 
+bought by anybody with enough[N]
+gold on their person.[A][N]
+New items will appear in every[N]
+castle, so be sure to check it out![A][X]
 
 ##Castletorial4
 [OpenMidLeft][LoadAugury][OpenMidRight][LoadOifey]
