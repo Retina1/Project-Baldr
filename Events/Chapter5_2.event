@@ -37,7 +37,7 @@ END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
-Seize(11,23)
+Seize(10,23)
 Seize(0x3,DebugMap,25,2)
 House(0x0,HouseOne,5,18)
 House(0x0,HouseTwo,7,24)
@@ -57,7 +57,7 @@ CauseGameOverIfLordDies
 END_MAIN
 
 BeginningScene:
-MUSC 0x01
+MUSC 0x25
 LOAD1 0x1 EnemyUnits
 ENUN
 CAM1 [11,23]
@@ -73,14 +73,15 @@ EndEvent
 EndingScene:
 CLEE 0
 CAM1 [11, 23]
-MUSC 0x02
+MUSC 0x31
 TEXTSTART
 TEXTSHOW SeizingPhinora
 TEXTEND
 MUSC 0x0
 TEXTCONT
 TEXTEND
-MUSC 0x3
+//sad music
+MUSC 0x65
 TEXTCONT
 TEXTEND
 MNC2 0x16
@@ -99,6 +100,7 @@ Text(LexAzelleTalk)
 EndEvent
 
 DewJamkeConvo:
+MUSC 0x58
 Text(DewJamkeTalk)
 EndEvent
 
