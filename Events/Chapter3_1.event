@@ -137,11 +137,6 @@ FADU 16
 Text(WorriedWife)
 MOVE 120 Deirdre [10,14]
 ENUN
-CHECK_EVENTID 0x78
-BEQ 0x30 0xc 0x0
-//Estrella, shannan fights
-GOTO 0x31
-LABEL 0x30
 //normal game
 FADI 16
 LOMA 0xA
