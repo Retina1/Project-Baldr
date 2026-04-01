@@ -26,10 +26,12 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
+TurnEventPlayer(0x0,BountySteal,3)
 END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
+Seize(18,6)
 Village(0xC,VillageOne,10,11)
 Village(0xD,VillageTwo,15,2)
 Village(0xE,VillageThree,21,2)
@@ -116,7 +118,7 @@ BEQ 0x24 0x0 0xC
 
 //New conversation and reward
 
-//GiveItem(,Sigurd)
+GiveItem(Flycatcher,Sigurd)
 
 LABEL 0x24
 
@@ -177,6 +179,13 @@ ChulainnBraveSwordConvo:
 Text(ChulainnAyraTalk)
 GiveItem(BraveSword,Ayra)
 //support points go here
+EndEvent
+
+BountySteal:
+CamOn
+LOAD1 0x1 PirateTreasureUnits
+ENUN
+CamOff
 EndEvent
 
 CastleRekt:
