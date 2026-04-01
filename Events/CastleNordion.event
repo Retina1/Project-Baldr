@@ -112,6 +112,10 @@ CHECK_ACTIVE
 Text(RecruitingChulainn)
 LOAD1 0x1 HolynJoins
 ENUN
+SVAL 1 Holyn
+ASMC GoldSetter|1
+SVAL 2 9000
+ASMC SetGoldEvent|1
 EndEvent
 
 TheTestOfLove:
