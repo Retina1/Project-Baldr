@@ -114,6 +114,11 @@ BEQ 0x1 0xC 0x0
 GiveItem(KnightRing,Lachesis)
 LABEL 0x1
 CleanText(0x11,SeizingAgusti)
+FADI 5
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
 MNC2 0x9
 EndEvent
 
