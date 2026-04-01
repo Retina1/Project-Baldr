@@ -57,7 +57,7 @@ CharacterEvent(0x0,EarthSwordConvo,Lachesis,Eldigan)
 CharacterEvent(0x10,GaeBolgConvo,Ethlyn,Quan)
 CharacterEvent(0x11,HopperClementConvo,Clement,Hopper)
 CharacterEvent(0x12,SparingEldigan,Sigurd,Eldigan)
-CharacterEvent(0x13,IndechRecruitment,Lachesis,Indech)
+CharacterEvent(0x13,IndechRecruitment,Sigurd,Indech,0x1D)
 CharacterEvent(0x14,CallistaRecruitment,Sigurd,Callista,0x25)
 END_MAIN
 
@@ -67,7 +67,7 @@ END_MAIN
 
 BeginningScene:
 ENUT 0x25
-ENUT 0x1F
+ENUT 0x1E
 STAL 60
 CAM1 [3,10]
 FADU 16
@@ -141,7 +141,7 @@ EndEvent
 
 IndechRecruitment:
 MUSC 0x30
-Text(ChagallIsEvil)
+Text(IndechJoinsTheArmy)
 TurnAlly(Indech)
 EndEvent
 
@@ -163,7 +163,7 @@ MUSC 0x00
 CAM1 Sigurd
 Text(SigurdSad)
 STAL 60
-ENUF 0x1F
+ENUF 0x1E
 GOTO 0x2
 LABEL 0x1
 ENUF 0x1D
