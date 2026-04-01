@@ -35,7 +35,7 @@ ENDTRAP
 ALIGN 4
 TurnBasedEvents:
 TurnEventEnemy(0x0,CuvuliAnnnounceth,1)
-TurnEventPlayer(0x0,DithorbaCometh,25)
+TurnEventPlayer(0x0,DithorbaCometh,10)
 END_MAIN
 
 ALIGN 4
@@ -51,6 +51,9 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0x8,TakeItEasy,Azel,Tailtiu)
+CharacterEventBothWays(0x12,FatherHelp,Sigurd,Claud)
+CharacterEventBothWays(0x13,Trio,Sylvia,Erinys)
 END_MAIN
 
 MiscBasedEvents:
@@ -128,7 +131,21 @@ CleanText(0x2D,DaccarScheming)
 MNC2 0x10
 EndEvent
 
+TakeItEasy:
+Text(TailtiuAzelleTalk)
+AddUnitStatus(Tailtiu,HP,5)
+EndEvent
+
+FatherHelp:
+Text(SigurdClaudTalk)
+EndEvent
+
+Trio:
+Text(SilviaErinysTalk)
+EndEvent
+
 CuvuliAnnnounceth:
+CAM1 Cuvuli
 Text(CuvuliAdvances)
 EndEvent
 
