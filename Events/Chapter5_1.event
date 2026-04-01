@@ -38,6 +38,8 @@ END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
+Seize(52,8)
+TurnEventPlayer(0x0,ArvisLies,2)
 Village(0xC,VillageOne,20,31)
 Village(0xD,VillageTwo,21,21)
 Village(0xE,VillageThree,16,15)
@@ -49,6 +51,7 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0x24,SistersTalketh,Edain,Brigid)
 CharacterEvent(0x13,TakeItMySon,Sigurd,Byron)
 END_MAIN
 
@@ -79,6 +82,8 @@ GotoPrepScreen
 EndEvent
 
 EndingScene:
+MUSC 0x0
+CleanText(0x13,SeizingLubeck)
 MNC2 0x17
 EndEvent
 
@@ -88,6 +93,37 @@ Text(SigurdReceivesTyrfing)
 SFXKillUnit(Byron)
 GiveItem(Tyrfing,Sigurd)
 EndEvent
+
+ArvisLies:
+MUSC 0x2D
+CleanText(0x10,ArvisGaslighting)
+EndEvent
+
+SistersTalketh:
+MUSC 0x59
+Text(BrigidEdainTalk)
+EndEvent
+
+VillageOne:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageTwo:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageThree:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageFour:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageFive:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageSix:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageSeven:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
 
 ALIGN 4
 
