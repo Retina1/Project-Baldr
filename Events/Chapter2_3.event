@@ -112,6 +112,7 @@ LABEL 0x36
 CHECK_ALIVE Indech
 BEQ 0x1 0xC 0x0
 GiveItem(KnightRing,Lachesis)
+RemoveUnit(Indech)
 LABEL 0x1
 CleanText(0x11,SeizingAgusti)
 FADI 5
