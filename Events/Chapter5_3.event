@@ -102,6 +102,7 @@ Text(Sadness)
 MOVE 120 Deirdre [3,32]
 ENUN
 Text(BelhallaFireFestival)
+TurnEnemy(ArvisGen1)
 StartBattle 
 CriticalHit(1,33)
 CriticalHit(0,99)
