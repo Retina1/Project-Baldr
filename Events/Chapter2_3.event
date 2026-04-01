@@ -86,8 +86,33 @@ GotoPrepScreen
 EndEvent
 
 EndingScene:
+SFXKillUnit(Agusti)
+SFXKillUnit(Agusti)
+SFXKillUnit(Agusti)
+SFXKillUnit(Agusti)
+SFXKillUnit(Agusti)
+SFXKillUnit(Agusti)
 CLEE 0
 MUSC 0x27
+CHECK_EVENTID 0x79
+BNE 0x36 0xc 0x0
+CHECK_ALIVE Eve
+BEQ 0x1 0xC 0x0
+CHECK_ALIVE Alva
+BEQ 0x1 0xC 0x0
+CHECK_ALIVE Eva
+BEQ 0x1 0xC 0x0
+CleanText(0x11,NordionKnightsAreAlive)
+GiveItem(KnightRing,Lachesis)
+RemoveUnit(Eve)
+RemoveUnit(Alva)
+RemoveUnit(Eva)
+GOTO 0x1
+LABEL 0x36
+CHECK_ALIVE Indech
+BEQ 0x1 0xC 0x0
+GiveItem(KnightRing,Lachesis)
+LABEL 0x1
 CleanText(0x11,SeizingAgusti)
 MNC2 0x9
 EndEvent

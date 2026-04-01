@@ -35,7 +35,8 @@ ALIGN 4
 TurnBasedEvents:
 TurnEventEnemy(0x0,Warning,1)
 TurnEventEnemy(0x0,ReinforcementsArrive,4)
-TurnEventEnemy(0x1F,EldiganDies,1,255)
+TurnEventEnemy(0x1E,EldiganDies,1,255)
+TurnEventPlayer(0x1D,YouKilledYourFriend,1,255)
 END_MAIN
 
 ALIGN 4
@@ -45,7 +46,7 @@ Seize(0x3,DebugMap,29,24)
 Village(0xA,VillageOne,4,6)
 Village(0xB,VillageTwo,17,2)
 Village(0xC,VillageThree,29,2)
-Village(0xD,VillageFour,45,3)
+Village(0xD,VillageFour,46,3)
 Village(0xE,VillageFive,53,10)
 END_MAIN
 
@@ -64,7 +65,6 @@ CauseGameOverIfLordDies
 END_MAIN
 
 BeginningScene:
-MUSC 0x01
 ENUT 0x1F
 STAL 60
 CAM1 [3,10]
@@ -89,7 +89,7 @@ MOVE 120 Eldigan [9,10]
 ENUN
 Text(EldiganRally)
 EVBIT_F 9
-MUSC 0x02
+MUSC 0x25
 CAM1 [3,10]
 CleanText(0x10,ChagallTakesCommand)
 LOAD1 0x1 EnemyUnits
@@ -103,7 +103,7 @@ CLEE 0
 MUSC 0x08
 CAM1 [3,10]
 CleanText(0x10,BadNews)
-MNC2 0xC
+MNC2 0xD
 EndEvent
 
 DebugMap:
@@ -122,6 +122,9 @@ EndEvent
 EarthSwordConvo:
 Text(LachesisEldiganTalk)
 GiveItem(EarthSwd,Lachesis)
+MOVE 120 Eldigan [3,10]
+SilentKillUnit(Eldigan)
+CleanText(0x10,ChagallIsEvil)
 EndEvent
 
 SparingEldigan:
@@ -130,6 +133,7 @@ EndEvent
 
 IndechRecruitment:
 Text(ChagallIsEvil)
+TurnAlly(Indech)
 EndEvent
 
 CallistaRecruitment:
@@ -143,19 +147,20 @@ EndEvent
 
 YouKilledYourFriend:
 CHECK_ALIVE Eldigan
+BNE 0x1 0xC 0x0
 MUSC 0x03
 CAM1 Sigurd
 Text(SigurdSad)
 STAL 60
-EndEvent
-
-EldiganDies:
-CHECK_ALIVE Eldigan
-BEQ 0x1 0xC 0x0
 ENUF 0x1F
 GOTO 0x2
 LABEL 0x1
-MUSC 0x04
+ENUF 0x1D
+LABEL 0x2
+EndEvent
+
+EldiganDies:
+MUSC 0x28
 CAM1 [3,10]
 CleanText(0x10,TravantScheme)
 CAM1 [3,0]
@@ -163,11 +168,10 @@ LOAD 0x1 ThraciaAttacks
 ENUN
 Text(PapillonRally)
 Text(QuirkyCallista)
-LABEL 0x2
 EndEvent
 
 Warning:
-MUSC 0x05
+MUSC 0x27
 CAM1 [3,10]
 CleanText(0x10,ChagallNeedsHelp)
 EndEvent
