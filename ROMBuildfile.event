@@ -288,6 +288,14 @@
 
     ALIGN 4
     
+    GoldSetterTwo:
+    #incbin "asmcs/GoldSetterTwo.dmp"
+    POIN sub_8024E20
+
+    ALIGN 4
+
+    ALIGN 4
+    
     #include "asmcs/Weaponkills.lyn.event"
 
     ALIGN 4

@@ -215,6 +215,11 @@ CLEAN
 FADU 16
 GiveItem(ArdenSword,Arden)
 LABEL 0x30
+
+FADI 5
+
+CALL GiveGoldAtChapterEndGenOne
+
 MNC2 0x1
 EndEvent
 

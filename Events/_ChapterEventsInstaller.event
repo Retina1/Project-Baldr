@@ -12,6 +12,7 @@
 #include "_DeathQuotes.event"
 #include "_ForceDeployer.event"
 #include "_BossMusic.event"
+#include "GiveGoldAtEndOfChapter.event"
 
 ALIGN 4
 {
