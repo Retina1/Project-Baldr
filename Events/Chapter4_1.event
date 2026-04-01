@@ -40,6 +40,13 @@ END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
+Village(0xC,VillageOne,20,31)
+Village(0xD,VillageTwo,21,21)
+Village(0xE,VillageThree,16,15)
+Village(0xF,VillageFour,23,8)
+Village(0x10,VillageFive,33,24)
+Village(0x11,VillageSix,28,7)
+Village(0x12,VillageSeven,37,4)
 END_MAIN
 
 ALIGN 32
@@ -129,6 +136,27 @@ DithorbaCometh:
 CAM1 [38,12]
 LOAD1 0x1 DithorbaSquad
 EndEvent
+
+VillageOne:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageTwo:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageThree:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageFour:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageFive:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageSix:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageSeven:
+VillageEventItem(Placeholder, 0x2, DefenseSwd)
 
 ALIGN 4
 

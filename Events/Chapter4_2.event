@@ -38,6 +38,7 @@ END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
+Village(0xC,VillageOne,27,9)
 END_MAIN
 
 ALIGN 32
@@ -76,6 +77,9 @@ LABEL 0x9000
 ENUF 0x15
 LABEL 0x9001
 EndEvent
+
+VillageOne:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
 
 PlayerUnits:
 UNIT Sigurd KnightLord Sigurd Level(1,Ally,0) [5,25] 0x0 0x0 0x0 0x1 [SilverSword] NoAI

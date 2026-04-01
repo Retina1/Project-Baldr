@@ -189,6 +189,21 @@ ENUF 0x16
 LABEL 0x9001
 EndEvent
 
+VillageOne:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageTwo:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageThree:
+VillageEventItem(Placeholder, 0x2, WingClipper)
+
+VillageFour:
+VillageEventMoney(Placeholder, 0x2, 0x1388)
+
+VillageFive:
+VillageEventItem(Placeholder, 0x2, Restore)
+
 ALIGN 4
 
 AgustGrandbell:

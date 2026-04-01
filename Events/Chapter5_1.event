@@ -38,6 +38,13 @@ END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
+Village(0xC,VillageOne,20,31)
+Village(0xD,VillageTwo,21,21)
+Village(0xE,VillageThree,16,15)
+Village(0xF,VillageFour,23,8)
+Village(0x10,VillageFive,33,24)
+Village(0x11,VillageSix,28,7)
+Village(0x12,VillageSeven,37,4)
 END_MAIN
 
 ALIGN 32
