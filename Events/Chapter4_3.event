@@ -70,6 +70,9 @@ EndingScene:
 CLEE 0
 MUSC 0x31
 CleanText(0x2D,SeizingZaxon)
+FADI 5
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
 MNC2 0x13
 EndEvent
 
