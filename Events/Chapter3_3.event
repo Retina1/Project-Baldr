@@ -58,7 +58,8 @@ CauseGameOverIfLordDies
 END_MAIN
 
 BeginningScene:
-Text(PirateTime)
+MUSC 0x25
+CleanText(0x2E,PirateTime)
 LOAD1 0x1 EnemyUnits
 Text(HuntingDownBrigid)
 ENUN
@@ -77,7 +78,23 @@ GotoPrepScreen
 EndEvent
 
 EndingScene:
-
+MUSC 0x31
+CleanText(0x15,SeizingOrgahil)
+FADI 16
+LOMA 0xA
+CAM1 [13,35]
+//units go here
+FADU 16
+MUSC 0x27
+Text(BigTroubleInAgustria)
+Text(DoubleTrouble)
+FADI 16
+LOMA 0xD
+CAM1 [49,6]
+MUSC 0x26
+FADU 16
+CleanText(0x15,Treason)
+Text(MessengerFromSilesse)
 FADI 5
 
 CALL GiveGoldAtChapterEndGenOne
