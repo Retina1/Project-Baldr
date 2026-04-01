@@ -42,27 +42,114 @@ END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0x0,LegLocked,Sigurd,Aida)
+21,13
 END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AreaEvent(0x1A,Tricked,17,5,27,32)
 END_MAIN
 
 BeginningScene:
+FADI 16
+MUSC 0x27
 LOAD1 0x0 PlayerUnits
 ENUN
 LOAD1 0x1 ReptorUnits
 ENUN
+CAM1 Reptor
 LOAD1 0x1 MeteorGuys
 ENUN
+FADU 16
+Text(ReptorandAidaMobilize)
+MOVE 120 Aida [21,3]
+ENUN
+SilentKillUnit(Aida)
+CleanText(0x25,AidaTrueIntentions)
+Text(ReptorSpeech)
 GotoPrepScreen
 ENDA
 
 EndingScene:
 LOAD1 0x0 ArvisUnitsGood
 ENUN
-LOAD1 0x1 BBQAllies
+CAM1 [14,16]
+CamOn
+LOAD1 0x0 ZigludoFE4A
 ENUN
+FADU 16
+MOVE 7 Sigurd [4,27]
+ENUN
+FADI 16
+LOAD3 0x0 BBQAllies
+ENUN
+FADU 16
+MUSC 0x31
+TEXTSTART
+TEXTSHOW HappyReunion
+TEXTEND
+MUSC 0x0
+TEXTCONT
+TEXTEND
+//sad music
+MUSC 0x0
+TEXTCONT
+TEXTEND
+LOAD1 0x0 Robbed
+ENUN
+Text(Sadness)
+MOVE 120 Deirdre [3,32]
+ENUN
+Text(BelhallaFireFestival)
+StartBattle 
+CriticalHit(1,33)
+CriticalHit(0,99)
+EndAttack
+FIG1 ArvisGen1 Sigurd Valflame
+SFXKillUnit(Sigurd)
+NarrationText(EndOfAnEra)
+StartGameOver
+EndEvent
+
+Tricked:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CAM1 [21,13]
+Text(ReptorRally)
+CleanText(0x25,AidaTrap)
+LOAD1 0x0 AidaSwinger
+ENUN
+TurnNPC(Aida)
+TurnNPC(Velthomer)
+TurnNPC(Velthomer)
+TurnNPC(Velthomer)
+TurnNPC(Velthomer)
+TurnNPC(Velthomer)
+TurnNPC(Velthomer)
+TurnNPC(Velthomer)
+TurnNPC(Velthomer)
+Text(ReptorTrapped)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x1A
+LABEL 0x2
+EndEvent
+
+LegLocked:
+CHECK_ALIVE Reptor
+BEQ 0x1 0xC 0x0
+Text(SigurdTalksToAidaBeforeDefeatingReptor)
+GOTO 0x2
+LABEL 0x1
+MUSC 0x2D
+Text(SigurdAidaTalk)
+FADI 16
+ENUT 0x3
+CLEN 0x0
+CLEA 0
+CLEE 0
+LABEL 0x2
 EndEvent
 
 PlayerUnits:
@@ -92,8 +179,8 @@ UNIT Arden LncCav 0x00 Level(22, Ally, 1) [34,5] 0x00 0x00 0x0 0x00 [IronSword] 
 UNIT
 
 ReptorUnits:
-UNIT Reptor Baron 0x00 Level(1, Ally, 0) [24,16] 0x00 0x00 0x0 0x00 [Mjolnir] AttackInRangeAI 
-UNIT Aida MageFighterF 0x00 Level(1, Enemy, 0) [24,15] 0x00 0x00 0x0 0x00 [Elfire] AttackInRangeAI 
+UNIT Reptor Baron 0x00 Level(30, Ally, 0) [24,16] 0x00 0x00 0x0 0x00 [Mjolnir] AttackInRangeAI 
+UNIT Aida MageFighterF 0x00 Level(23, Enemy, 0) [24,15] 0x00 0x00 0x0 0x00 [MiracleSwd, Meteor] AttackInRangeAI 
 UNIT Friege MageFighterF 0x00 Level(22, Enemy, 1) [23,20] 0x00 0x00 0x0 0x00 [SteelLance, Javelin] AttackInRangeAI 
 UNIT Friege MageFighterF 0x00 Level(22, Enemy, 1) [24,20] 0x00 0x00 0x0 0x00 [SteelLance, Javelin] AttackInRangeAI 
 UNIT Friege MageFighterF 0x00 Level(22, Enemy, 1) [25,20] 0x00 0x00 0x0 0x00 [SteelLance, Javelin] AttackInRangeAI 
@@ -129,7 +216,7 @@ UNIT Velthomer FMage 0x00 Level(22, Enemy, 1) [17,5] 0x00 0x00 0x0 0x00 [Meteor,
 UNIT
 
 ArvisUnitsGood:
-UNIT ArvisGen1 Sage 0x00 Level(22, NPC, 1) [4,28] 0x00 0x00 0x0 0x00 [Valflame, Runesword] NeverMoveAI
+UNIT ArvisGen1 Sage 0x00 Level(22, NPC, 1) [4,28] 0x00 0x00 0x0 0x00 [Valflame] NeverMoveAI
 UNIT Belhalla MageKnt 0x00 Level(20, NPC, 1) [3,27] 0x00 0x00 0x0 0x00 [Elwind] NoAI
 UNIT Belhalla MageKnt 0x00 Level(20, NPC, 1) [3,26] 0x00 0x00 0x0 0x00 [Elwind] NoAI
 UNIT Belhalla MageKnt 0x00 Level(20, NPC, 1) [3,25] 0x00 0x00 0x0 0x00 [Elwind] NoAI
@@ -152,6 +239,10 @@ UNIT Belhalla General 0x00 Level(20, NPC, 1) [13,17] 0x00 0x00 0x0 0x00 [SilverB
 UNIT Belhalla General 0x00 Level(20, NPC, 1) [9,15] 0x00 0x00 0x0 0x00 [SilverBlade, SilverLance, SilverAxe, SilverBow] NoAI 
 UNIT Belhalla General 0x00 Level(20, NPC, 1) [11,15] 0x00 0x00 0x0 0x00 [SilverBlade, SilverLance, SilverAxe, SilverBow] NoAI 
 UNIT Belhalla General 0x00 Level(20, NPC, 1) [13,15] 0x00 0x00 0x0 0x00 [SilverBlade, SilverLance, SilverAxe, SilverBow] NoAI 
+UNIT
+
+ZigludoFE4A:
+UNIT Sigurd KnightLord 0x00 Level(22, Ally, 1) [14,16] 0x00 0x00 0x0 0x00 [IronSword] NoAI 
 UNIT
 
 BBQAllies:
@@ -177,4 +268,12 @@ UNIT Ayra SwMastF 0x00 Level(20, Ally, 0) [4,18] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT Hopper Sentry 0x00 Level(20, Ally, 0) [5,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
 UNIT Indech HolyKnt 0x00 Level(20, Ally, 0) [3,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
 UNIT Callista WyvLordF 0x00 Level(20, Ally, 0) [4,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT
+
+AidaSwinger:
+UNIT Aida MageFighterF 0x00 Level(23, NPC, 0) [21,13] 0x00 0x00 0x0 0x00 [MiracleSwd, Meteor] NeverMoveAI
+UNIT
+
+Robbed:
+UNIT Deirdre Shaman Sigurd Level(4,Ally,1) [3,32] 0x0 0x0 0x1 REDA5R28 [Silence, Aura, Circlet] NoAI
 UNIT
