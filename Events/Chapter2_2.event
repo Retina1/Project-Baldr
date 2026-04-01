@@ -253,6 +253,14 @@ MUSC 0x26
 CleanText(0x5,LewynEmerges)
 LOAD1 0x1 Dancers
 ENUN
+SVAL 1 Lewyn
+ASMC GoldSetter|1
+SVAL 2 6000
+ASMC SetGoldEvent|1
+SVAL 1 Sylvia
+ASMC GoldSetter|1
+SVAL 2 4000
+ASMC SetGoldEvent|1
 RefreshSMS
 EndEvent
 
@@ -283,6 +291,10 @@ Text(AcceptingBeowolf)
 SVAL 0x3 0x2710
 TAKEMONEY
 TurnAlly(Beowolf)
+SVAL 1 Beowolf
+ASMC GoldSetter|1
+SVAL 2 10000
+ASMC SetGoldEvent|1
 GOTO 0x2
 LABEL 0x3
 Text(RejectingBeowolf)
