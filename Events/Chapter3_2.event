@@ -37,6 +37,7 @@ TurnEventEnemy(0x0,Warning,1)
 TurnEventEnemy(0x0,ReinforcementsArrive,4)
 TurnEventEnemy(0x1E,EldiganDies,1,255)
 TurnEventPlayer(0x1D,YouKilledYourFriend,1,255)
+TurnEventEnemy(0x25,TravantLeaves,1,255)
 END_MAIN
 
 ALIGN 4
@@ -57,7 +58,7 @@ CharacterEvent(0x10,GaeBolgConvo,Ethlyn,Quan)
 CharacterEvent(0x11,HopperClementConvo,Clement,Hopper)
 CharacterEvent(0x12,SparingEldigan,Sigurd,Eldigan)
 CharacterEvent(0x13,IndechRecruitment,Lachesis,Indech)
-CharacterEvent(0x14,CallistaRecruitment,0x0,Callista)
+CharacterEvent(0x14,CallistaRecruitment,Sigurd,Callista,0x25)
 END_MAIN
 
 MiscBasedEvents:
@@ -65,6 +66,7 @@ CauseGameOverIfLordDies
 END_MAIN
 
 BeginningScene:
+ENUT 0x25
 ENUT 0x1F
 STAL 60
 CAM1 [3,10]
@@ -111,18 +113,24 @@ MNC2 Debugmap
 EndEvent
 
 GaeBolgConvo:
+MUSC 0xC0
 Text(EthlynQuanTalk)
 GiveItem(Gaebolg,Quan)
 EndEvent
 
 HopperClementConvo:
+MUSC 0x59
 Text(HopperClementTalk)
 EndEvent
 
 EarthSwordConvo:
+MUSC 0x58
 Text(LachesisEldiganTalk)
 GiveItem(EarthSwd,Lachesis)
+CamOn
 MOVE 120 Eldigan [3,10]
+CamOff
+MUSC 0x0
 SilentKillUnit(Eldigan)
 CleanText(0x10,ChagallIsEvil)
 EndEvent
@@ -132,11 +140,14 @@ Text(SigurdEldiganTalk)
 EndEvent
 
 IndechRecruitment:
+MUSC 0x30
 Text(ChagallIsEvil)
 TurnAlly(Indech)
 EndEvent
 
 CallistaRecruitment:
+MUSC 0x30
+Text(CallistaRecruited)
 TurnAlly(Callista)
 EndEvent
 
@@ -148,7 +159,7 @@ EndEvent
 YouKilledYourFriend:
 CHECK_ALIVE Eldigan
 BNE 0x1 0xC 0x0
-MUSC 0x03
+MUSC 0x00
 CAM1 Sigurd
 Text(SigurdSad)
 STAL 60
@@ -166,6 +177,7 @@ CleanText(0x10,TravantScheme)
 CAM1 [3,0]
 LOAD 0x1 ThraciaAttacks
 ENUN
+ENUF 0x25
 Text(PapillonRally)
 Text(QuirkyCallista)
 EndEvent
@@ -188,6 +200,7 @@ EndEvent
 
 TravantLeaves:
 CHECK_ALIVE Papillon
+BNE 0x1 0xC 0x0
 MUSC 0x07
 CAM1 [3,10]
 CleanText(0x10,ByeTravant)
@@ -195,6 +208,14 @@ LOAD 0x1 KingOfThracia
 ENUN
 MOVE 120 Travant [3,24]
 SilentKillUnit(Travant)
+CHECK_ALIVE Callista
+BEQ 0x2 0xC 0x0
+CAM1 Callista
+Text(CallistaDillema)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x25
+LABEL 0x2
 EndEvent
 
 VillageOne:
