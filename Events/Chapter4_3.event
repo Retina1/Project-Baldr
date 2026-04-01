@@ -189,10 +189,10 @@ UNIT
 
 ScaryGirls:
 UNIT Lamia SwMastF Daccar Level(25, Enemy, 0) [43,15] 0x00 0x00 0x0 0x00 [SilverBlade, LifeRing] NoAI 
-UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [44,14] 0x00 0x00 0x0 0x00 [PoisonSword] NoAI 
-UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [44,16] 0x00 0x00 0x0 0x00 [PoisonSword] NoAI 
-UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [43,17] 0x00 0x00 0x0 0x00 [PoisonSword] NoAI 
-UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [43,13] 0x00 0x00 0x0 0x00 [PoisonSword] NoAI 
+UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [44,14] 0x00 0x00 0x0 0x00 [SleepSwd] NoAI 
+UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [44,16] 0x00 0x00 0x0 0x00 [SleepSwd] NoAI 
+UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [43,17] 0x00 0x00 0x0 0x00 [SleepSwd] NoAI 
+UNIT AssassinFaction MyrmF Lamia Level(22, Enemy, 1) [43,13] 0x00 0x00 0x0 0x00 [SleepSwd] NoAI 
 UNIT AssassinFaction TMageF Lamia Level(22, Enemy, 1) [42,16] 0x00 0x00 0x0 0x00 [Thunder] NoAI 
 UNIT AssassinFaction TMageF Lamia Level(22, Enemy, 1) [42,14] 0x00 0x00 0x0 0x00 [Thunder] NoAI 
 UNIT AssassinFaction ArcherF Lamia Level(22, Enemy, 1) [41,17] 0x00 0x00 0x0 0x00 [KillerBow] NoAI 
