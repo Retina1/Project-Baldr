@@ -34,22 +34,29 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
+TurnEventEnemy(0xF,AccursedRebels,1,255)
 TurnEventEnemy(0x0,WhereMyVictims,1)
 END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
+Seize(47,12)
+Seize(0xA,LahnaInYourArea,16,27)
 END_MAIN
 
 ALIGN 32
 CharacterBasedEvents:
+CharacterEventBothWays(0x20,SorryAboutThat,Sigurd,Lewyn,0xA)
+CharacterEventBothWays(0x21,YouFreeNow,Lewyn,Erinys,0xA)
 END_MAIN
 
 MiscBasedEvents:
+AreaEvent(0x22,Forsetus,16,27,16,27)
 CauseGameOverIfLordDies
 END_MAIN
 
 BeginningScene:
+ENUT 0xF
 LOAD1 0x1 MeanPegasi
 ENUN
 LOAD1 0x1 DaccarBoys
@@ -60,6 +67,8 @@ LOAD1 0x1 DonovanGoeth
 ENUN
 SilentKillUnit(Donovan)
 CleanText(0x2D,SaveTheCivilians)
+CleanText(0x2D,ConfusedDonovan)
+CAM1 [47,12]
 CleanText(0x2D,DaccarLamia)
 LOAD1 0x1 ScaryGirls
 ENUN
@@ -82,11 +91,31 @@ LOAD1 0x1 DonovanDudes
 ENUN
 EndEvent
 
-Forsetus:
+LahnaInYourArea:
+ENUF 0xF
+CleanText(0x2D,SeizingSilesse)
+EndEvent
+
+SorryAboutThat:
 MUSC 0x58
-CleanText(0x2D,LewynReceivesForseti)
-GiveItem(Forseti,Lewyn)
-ENUF 0x7
+Text(LewynSigurdTalk)
+EndEvent
+
+YouFreeNow
+Text(ErinysLewynTalk)
+EndEvent
+
+Forsetus:
+CHECK_ACTIVE
+SVAL s1 Lewyn
+BNE 0x9000 s1 sC
+    MUSC 0x58
+    CleanText(0x2D,LewynReceivesForseti)
+    GiveItem(Forseti,Lewyn)
+    GOTO 0x9001
+LABEL 0x9000
+ENUF 0x22
+LABEL 0x9001
 EndEvent
 
 AccursedRebels:
