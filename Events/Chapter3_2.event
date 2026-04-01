@@ -143,12 +143,20 @@ IndechRecruitment:
 MUSC 0x30
 Text(IndechJoinsTheArmy)
 TurnAlly(Indech)
+SVAL 1 Indech
+ASMC GoldSetter|1
+SVAL 2 6000
+ASMC SetGoldEvent|1
 EndEvent
 
 CallistaRecruitment:
 MUSC 0x30
 Text(CallistaRecruited)
 TurnAlly(Callista)
+SVAL 1 Callista
+ASMC GoldSetter|1
+SVAL 2 4000
+ASMC SetGoldEvent|1
 EndEvent
 
 SigurdNearEldigan:
