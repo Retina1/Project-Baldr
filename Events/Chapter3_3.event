@@ -78,6 +78,12 @@ GotoPrepScreen
 EndEvent
 
 EndingScene:
+
+FADI 5
+
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
+
 MNC2 0xE
 EndEvent
 

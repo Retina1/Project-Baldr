@@ -91,6 +91,13 @@ MNC2 0x5
 GOTO 0x31
 LABEL 0x30
 MNC2 0x9
+
+FADI 5
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
+
 LABEL 0x31
 EndEvent
 

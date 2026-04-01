@@ -129,6 +129,12 @@ SystemText(NoCelis)
 StartGameOver
 GOTO 0x4
 LABEL 0x2
+
+FADI 5
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
+
 MNC2 0x6
 LABEL 0x4
 EndEvent

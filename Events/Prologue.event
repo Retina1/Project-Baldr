@@ -201,6 +201,11 @@ CHECK_EVENTID 0x1C
 BEQ 0x30 0xc 0x0
 GiveItem(ArdenSword,Arden)
 LABEL 0x30
+
+FADI 5
+
+CALL GiveGoldAtChapterEndGenOne
+
 MNC2 0x1
 EndEvent
 

@@ -58,6 +58,11 @@ ENUN
 ENDA
 
 EndingScene:
+
+FADI 5
+CALL GiveGoldAtChapterEndGenOne
+CALL GiveGoldAtChapterEndGenOne
+
 EndEvent
 
 PlayerUnits:
