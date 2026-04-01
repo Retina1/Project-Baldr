@@ -163,6 +163,10 @@ MOVE 7 Silesse [29,0]
 ENUN
 FADU 16
 CLEN 0
+SVAL 1 Erinys
+ASMC GoldSetter|1
+SVAL 2 5000
+ASMC SetGoldEvent|1
 EndEvent
 
 GetsomeGains:
@@ -178,6 +182,10 @@ MUSS 0x30
 Text(RecruitingHopper)
 TurnAlly(Hopper)
 MURE 60
+SVAL 1 Hopper
+ASMC GoldSetter|1
+SVAL 2 8000
+ASMC SetGoldEvent|1
 EndEvent
 
 YouLikeThat:
@@ -205,6 +213,11 @@ SFXKillUnit(Mackily)
 ENUT 0x13
 ENUF 0x7
 MURE 60
+TurnAlly(Clement)
+SVAL 1 Clement
+ASMC GoldSetter|1
+SVAL 2 20000
+ASMC SetGoldEvent|1
 EndEvent
 
 VillageOne:
