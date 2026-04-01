@@ -226,4 +226,40 @@ ASMC GoldSetterTwo|1
 
 ENIF 0x18
 
+CHECK_ALIVE Deirdre
+BEQ 0x1C 0xC 0x0
+
+SET_ACTIVE Deirdre
+SVAL 1 1000
+ASMC GoldSetterTwo|1
+
+ENIF 0x1C
+
+CHECK_ALIVE Ayra
+BEQ 0x19 0xC 0x0
+
+SET_ACTIVE Ayra
+SVAL 1 1000
+ASMC GoldSetterTwo|1
+
+ENIF 0x19
+
+CHECK_ALIVE Erinys
+BEQ 0x1A 0xC 0x0
+
+SET_ACTIVE Erinys
+SVAL 1 1000
+ASMC GoldSetterTwo|1
+
+ENIF 0x1A
+
+CHECK_ALIVE Clement
+BEQ 0x1B 0xC 0x0
+
+SET_ACTIVE Clement
+SVAL 1 1000
+ASMC GoldSetterTwo|1
+
+ENIF 0x1B
+
 ENDA
