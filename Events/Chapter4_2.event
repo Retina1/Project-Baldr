@@ -38,6 +38,7 @@ END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
+Seize(39,9)
 Village(0xC,VillageOne,27,9)
 END_MAIN
 
@@ -46,6 +47,7 @@ CharacterBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
+AreaEvent(0xB,DewFunny,25,14,25,14)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -74,7 +76,7 @@ BNE 0x9000 s1 sC
     TILEREVERSE 0x7
     GOTO 0x9001
 LABEL 0x9000
-ENUF 0x15
+ENUF 0xB
 LABEL 0x9001
 EndEvent
 
