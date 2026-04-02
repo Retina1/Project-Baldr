@@ -133,7 +133,7 @@ EndEvent
 
 TakeItEasy:
 Text(TailtiuAzelleTalk)
-AddUnitStatus(Tailtiu,HP,5)
+AddUnitStatus(Tailtiu,MaxHP,5)
 EndEvent
 
 FatherHelp:

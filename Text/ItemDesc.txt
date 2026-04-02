@@ -1052,6 +1052,8 @@ ally for a few turns.[X]
 Allows the user to steal a single[N]
 item from a target's inventory.[X]
 
+##DBronzeJavelin ^
+Cannot critical.[X]
 
 ##D0xfc ^
  [X]

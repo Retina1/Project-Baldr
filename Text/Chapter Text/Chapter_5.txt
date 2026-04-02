@@ -1497,7 +1497,7 @@ who are perverting all it holds dear![A][X]
 [OpenMidRight][LoadReptor]
 This is it. The time to strike is upon us![A][N]
 With the fire mages of Velthomer at our side,[N]
-we shall crush the rebels in one fell swoop![A][N]
+we shall crush the rebels in one fell swoop![A][N][X]
 
 ##AidaTrap
 [OpenMidRight][LoadAida]
@@ -1512,7 +1512,7 @@ Am I clear?[A][X]
 [OpenMidRight][LoadReptor]
 W-what?[N]
 Velthomer has turned on us?![A][N]
-Argh[...] So this is what Arvis planned all along[...][A][N]
+Argh[...] So this is what Arvis planned all along[...][A][N][X]
 
 ##SigurdTalksToAidaBeforeDefeatingReptor
 [OpenMidRight][LoadSigurd][OpenMidLeft][LoadAida]

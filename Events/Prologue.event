@@ -183,6 +183,9 @@ SVAL 1 Noish
 ASMC GoldSetter|1
 SVAL 2 2000
 ASMC SetGoldEvent|1
+
+ASMC ClearStore|1
+
 EndEvent
 
 EndingScene:

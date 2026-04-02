@@ -65,7 +65,7 @@ ChapterDeathQuote(Daccar,0x12,0x0,DaccarDeath)
 ChapterDeathQuote(Lamia,0x12,0x0,LamiaDeath)
 ChapterDeathQuote(Donovan,0x12,0x0,DonovanDeath)
 ChapterDeathQuote(Pamela,0x12,0x0,PamelaDeath)
-ChapterDeathQuote(Ivan,0x12,0x0,IvanDeath)
+//ChapterDeathQuote(Ivan,0x12,0x0,IvanDeath)
 //Chapter 5
 ChapterDeathQuote(Slayder,0x14,0x0,SlayderDeath)
 ChapterDeathQuote(Andrey,0x14,0x0,AndreyDeath)

@@ -263,7 +263,7 @@ UNIT Arden SwdArm 0x0 Level(1,Ally,0) [5,33] 0x0 0x0 0x0 0x1 [IronSword] NoAI
 UNIT //Tells the game that the unit list has ended
 
 EnemyUnits:
-UNIT Clement Bishop Chagall Level(18,Enemy,0) [18,30] DropItem 0x0 0x0 0x1 [Thunder, Sleep] NeverMoveAI
+UNIT Clement Bishop Chagall Level(18,Enemy,0) [18,30] DropItem 0x0 0x0 0x1 [ThunderClement, Sleep] NeverMoveAI
 UNIT Elling FMage Clement Level(10,Enemy,0) [18,30] 0x0 0x0 0x1 REDA13R16 [Elfire] AttackInRangeAI
 UNIT Mackily FMage Elling Level(12,Enemy,1) [13,15] 0x0 0x0 0x0 REDA13R17 [Fire] NoAI
 UNIT Mackily FMage Elling Level(12,Enemy,1) [12,16] 0x0 0x0 0x0 REDA13R15 [Fire] NoAI
