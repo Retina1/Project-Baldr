@@ -87,7 +87,7 @@ EndEvent
 EndingScene:
 MUSC 0x0
 CleanText(0x13,SeizingLubeck)
-MNC2 0x17
+MNC2 0x15
 EndEvent
 
 TakeItMySon:
