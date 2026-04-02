@@ -431,12 +431,12 @@ UNIT
 
 MercPals:
 UNIT Voltz Ranger Macbeth Level(20,Enemy,0) [9,2] DropItem 0x0 0x1 REDA15R4 [SteelBlade, ParagonRing] NoAI 
-UNIT Beowolf FreeCav Voltz Level(9,Enemy,0) [9,2] 0x0 0x0 0x1 REDA15R3 [SteelSword] NoAI 
+UNIT Beowolf FreeCav Voltz Level(9,Enemy,0) [9,2] 0x0 0x0 0x1 REDA15R3 [SteelSwordBeowolf] NoAI 
 UNIT
 
 Dancers:
 UNIT Lewyn Bard Sigurd Level(6,Ally,0) [28,28] 0x0 0x0 0x1 REDA25R29 [Elwind] NoAI 
-UNIT Sylvia Dancer Sigurd Level(1,Ally,0) [28,29] 0x0 0x0 0x1 REDA25R28 [SlimSword] NoAI 
+UNIT Sylvia Dancer Sigurd Level(1,Ally,0) [28,29] 0x0 0x0 0x1 REDA25R28 [SlimSwordSylvia] NoAI 
 UNIT
 
 MadZane:

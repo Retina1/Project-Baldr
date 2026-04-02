@@ -284,11 +284,11 @@ SilentKillUnit(Elliot)
 EndEvent
 
 NordionUnits:
-UNIT Eldigan Lionheart Chagall Level(25,Ally,0) [10,9] 0x0 0x0 0x1 REDA10R12 [Mystletainn, SteelLance] NoAI
-UNIT Indech HolyKnt Eldigan Level(14,Ally,0) [10,9] 0x0 0x0 0x1 REDA12R10 [SteelLance, Shine] NoAI
-UNIT Eve PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA11R11 [SteelSword, Javelin] [0x3,0x3,0x0,0x20]
-UNIT Eva PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA9R11 [SteelSword, Javelin] [0x3,0x3,0x0,0x20]
-UNIT Alva PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA8R10 [SteelSword, Javelin] [0x3,0x3,0x0,0x20]
+UNIT Eldigan Lionheart Chagall Level(25,Ally,0) [10,9] 0x0 0x0 0x1 REDA10R12 [Mystletainn] NoAI
+UNIT Indech HolyKnt Eldigan Level(14,Ally,0) [10,9] 0x0 0x0 0x1 REDA12R10 [SteelLanceIn, Shine] NoAI
+UNIT Eve PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA11R11 [BronzeJavelin] [0x3,0x3,0x0,0x20]
+UNIT Eva PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA9R11 [BronzeJavelin] [0x3,0x3,0x0,0x20]
+UNIT Alva PalM Eldigan Level(18,NPC,0) [10,9] 0x0 0x0 0x1 REDA8R10 [BronzeJavelin] [0x3,0x3,0x0,0x20]
 UNIT Lachesis Princess Eldigan Level(2,Ally,0) [10,9] 0x0 0x0 0x0 0x1 [MiracleSwd, Heal] NoAI
 UNIT //Tells the game that the unit list has ended
 

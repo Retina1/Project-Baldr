@@ -880,9 +880,9 @@ Forgive[...]me[...][A][X]
 We're the Cross Knights,[N]
 Agustria's pride![A][N]
 We're here to[N]
-reclaim our nation![A][N]
+reclaim our nation![A][N][X]
 
-##LachesisandIndechBattle
+##LachesisIndechBattle
 [OpenMidLeft][LoadIndech]
 Lady Lachesis?![N]
 Move out of the way![A][N][ClearFace][OpenMidRight][LoadLachesis]
@@ -1053,7 +1053,7 @@ country is dispose of its monstrous king.[A][N][ClearFace][OpenMidLeft][LoadChag
 It's a pity you've declined my offers[...][N]
 All I have left to give you[...] IS DEATH!![A][X]
 
-##IndechanadChagallBattle
+##IndechandChagallBattle
 [OpenMidLeft][LoadChagall]
 You[...][N]
 Are you done running around?[A][N]

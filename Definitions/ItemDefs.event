@@ -40,6 +40,15 @@
 #define JavelinChpOne 0x80
 #define SlimSwordSylvia 0x88
 #define IronLanceFin 0x8A
+#define SteelLanceIn 0x9A
+#define BronzeJavelin 0x9B
+#define ThunderClement 0x9C
+#define ThunderTail 0x9D
+#define SteelBowBrigid 0x9E
+#define FireChpSeven 0x9F
+#define SteelLanceChpTwo 0xA0
+#define SilverSwordChpThree 0xA7
+#define SilverLanceChpThree 0xA3
 
 #define VolantAxe 0x5A
 #define SeaAxe 0x83

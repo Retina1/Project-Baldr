@@ -101,7 +101,7 @@ MUSC 0x58
 Text(LewynSigurdTalk)
 EndEvent
 
-YouFreeNow
+YouFreeNow:
 Text(ErinysLewynTalk)
 EndEvent
 

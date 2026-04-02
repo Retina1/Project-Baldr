@@ -37,6 +37,7 @@
 #define Slayder 0x6E  //chapter 5
 #define Andrey 0x6F
 #define Langbalt 0x70
+#define Lombard 0x70
 #define Magorn 0x71 //zaneeeeeeeeee
 #define Vaja 0x72
 #define Reptor 0x73

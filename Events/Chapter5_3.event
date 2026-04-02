@@ -43,7 +43,6 @@ END_MAIN
 ALIGN 32
 CharacterBasedEvents:
 CharacterEventBothWays(0x0,LegLocked,Sigurd,Aida)
-21,13
 END_MAIN
 
 MiscBasedEvents:
@@ -192,11 +191,11 @@ UNIT Friege Sniper 0x00 Level(22, Enemy, 1) [25,18] 0x00 0x00 0x0 0x00 [SilverBo
 UNIT Friege General 0x00 Level(22, Enemy, 1) [23,15] 0x00 0x00 0x0 0x00 [SilverLance, SteelBow] AttackInRangeAI 
 UNIT Friege General 0x00 Level(22, Enemy, 1) [24,14] 0x00 0x00 0x0 0x00 [SilverLance, SteelBow] AttackInRangeAI 
 UNIT Friege General 0x00 Level(22, Enemy, 1) [25,15] 0x00 0x00 0x0 0x00 [SilverLance, SteelBow] AttackInRangeAI 
-UNIT Friege TMage 0x00 Level(22, Enemy, 1) [22,16] 0x00 0x00 0x0 0x00 [ElThunder] AttackInRangeAI 
-UNIT Friege TMage 0x00 Level(22, Enemy, 1) [26,16] 0x00 0x00 0x0 0x00 [ElThunder] AttackInRangeAI 
-UNIT Friege TMageF 0x00 Level(22, Enemy, 1) [23,17] 0x00 0x00 0x0 0x00 [ElThunder] AttackInRangeAI 
-UNIT Friege TMageF 0x00 Level(22, Enemy, 1) [25,17] 0x00 0x00 0x0 0x00 [ElThunder] AttackInRangeAI 
-UNIT Friege HPriest 0x00 Level(22, Enemy, 1) [24,18] 0x00 0x00 0x0 0x00 [ELFortify] AttackInRangeAI 
+UNIT Friege TMage 0x00 Level(22, Enemy, 1) [22,16] 0x00 0x00 0x0 0x00 [Elthunder] AttackInRangeAI 
+UNIT Friege TMage 0x00 Level(22, Enemy, 1) [26,16] 0x00 0x00 0x0 0x00 [Elthunder] AttackInRangeAI 
+UNIT Friege TMageF 0x00 Level(22, Enemy, 1) [23,17] 0x00 0x00 0x0 0x00 [Elthunder] AttackInRangeAI 
+UNIT Friege TMageF 0x00 Level(22, Enemy, 1) [25,17] 0x00 0x00 0x0 0x00 [Elthunder] AttackInRangeAI 
+UNIT Friege HPriest 0x00 Level(22, Enemy, 1) [24,18] 0x00 0x00 0x0 0x00 [Fortify] AttackInRangeAI 
 UNIT Friege BowArm 0x00 Level(22, Enemy, 1) [21,17] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
 UNIT Friege BowArm 0x00 Level(22, Enemy, 1) [21,18] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
 UNIT Friege BowArm 0x00 Level(22, Enemy, 1) [27,18] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 

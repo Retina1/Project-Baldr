@@ -976,6 +976,10 @@ Charm Staff[X]
 Thief Staff[X]
 
 
+##NBronzeJavelin ^
+Thin Javelin[X]
+
+
 ##N0xfc ^
 0xfc[X]
 

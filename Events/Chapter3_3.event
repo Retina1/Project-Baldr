@@ -203,12 +203,12 @@ UNIT Callista WyvKntF 0x0 Level(1,Ally,0) [18,27] 0x0 0x0 0x0 0x1 [IronSword] No
 UNIT //Tells the game that the unit list has ended
 
 PirateLady:
-UNIT Brigid SniperF Edain Level(12,Ally,0) [30,5] 0x0 0x0 0x0 0x1 [SteelBow] NoAI
+UNIT Brigid SniperF Edain Level(12,Ally,0) [30,5] 0x0 0x0 0x0 0x1 [SteelBowBrigid] NoAI
 UNIT
 
 BragiTowerDuo:
 UNIT Claud HPriest Sigurd Level(20,Ally,0) [4,16] 0x0 0x0 0x0 0x1 [Fortify, ValkyrieStaff] NoAI
-UNIT Tailtiu TMageF Sigurd Level(3,Ally,0) [5,16] 0x0 0x0 0x0 0x1 [Thoron, Thunder] NoAI
+UNIT Tailtiu TMageF Sigurd Level(3,Ally,0) [5,16] 0x0 0x0 0x0 0x1 [Thoron, ThunderTail] NoAI
 UNIT
 
 EnemyUnits:

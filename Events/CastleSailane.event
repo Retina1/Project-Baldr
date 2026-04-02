@@ -52,7 +52,7 @@ END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
-Vendor(Chapter4BattlePrepVendor,14,21)
+Armory(Chapter4BattlePrepShop,14,21)
 Armory(Chapter4BattlePrepShop,8,21)
 Seize(22,24)
 END_MAIN

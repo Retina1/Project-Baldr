@@ -682,12 +682,12 @@ SandimaPortrait:
 setMugEntry(0xE0,SandimaPortrait,3,6,4,4)
 
 ALIGN 4
-ElliotPortrait:
-#incbin "Elliot_mug.dmp"
-#incbin "Elliot_frames.dmp"
-#incbin "Elliot_palette.dmp"
-#incbin "Elliot_minimug.dmp"
-setMugEntry(0x3B,ElliotPortrait,2,5,3,3)
+//ElliotPortrait:
+//#incbin "Elliot_mug.dmp"
+//#incbin "Elliot_frames.dmp"
+//#incbin "Elliot_palette.dmp"
+//#incbin "Elliot_minimug.dmp"
+//setMugEntry(0x3B,ElliotPortrait,2,5,3,3)
 
 ALIGN 4
 GrahamPortrait:
@@ -2068,3 +2068,8 @@ ALIGN 4
 LegionPortrait:
 #incext PortraitFormatter "Legion.png"
 setMugEntry(0x16C,LegionPortrait,2,5,2,3)
+
+ALIGN 4
+ElliotPortrait:
+#incext PortraitFormatter "Elliot2026.png"
+setMugEntry(0x3B,ElliotPortrait,2,5,3,3)

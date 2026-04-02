@@ -193,31 +193,31 @@ SHLI SteelBlade Boots 1 2 3 4 5 /*6*/ 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 
 ALIGN 4
 
 Chapter1BattlePrepShop:
-SHLI 0x1 SlimSword IronLance JavelinChpOne SteelAxe  
+SHLI 0x1 SlimSwordChpOne IronLanceChpOne JavelinChpOne SteelAxe  
 ALIGN 4
 
 Chapter2BattlePrepShop:
-SHLI 0x2 SteelBlade SteelLance SteelBow Fire Thunder Wind Lightning Heal
+SHLI 0x2 SteelBlade SteelLanceChpTwo SteelBow Thunder
 ALIGN 4
 
 Chapter2BattlePrepVendor:
-SHLI Fire Thunder Wind Lightning Heal
+SHLI 0x3 Fire Thunder Wind Lightning Heal
 ALIGN 4
 
 Chapter3BattlePrepShop:
-SHLI SilverSword SteelBlade SlimSword IronLance SteelLance SilverLance SilverAxe SilverBow Elfire 
+SHLI 0x3 SilverSwordChpThree SilverLanceChpThree SilverAxe SilverBow Elfire 
 ALIGN 4
 
 Chapter4BattlePrepShop:
-SHLI SilverSword SteelBlade SlimSword IronLance SteelLance SilverLance SilverAxe SilverBow  
+SHLI 0x4 Wind Recover KillerLance
 ALIGN 4
 
 Chapter4BattlePrepVendor:
-SHLI Elfire Wind Recover FleursDuMal
+SHLI Elfire Wind Recover
 ALIGN 4
 
 Chapter5BattlePrepShop:
-SHLI SilverSword SteelBlade SlimSword IronLance SteelLance SilverLance Javelin SilverAxe SteelBow SilverBow  
+SHLI 0x5 MasterAxe
 ALIGN 4
 
 Chapter5BattlePrepVendor:
@@ -228,7 +228,7 @@ ALIGN 4
 
 	ShopBargainPairingList:
 	//POIN ShopListPointer BargainPointer
-	POIN PrologueBattlePrepShop PrologueBattlePrepShopBargains
+	//POIN PrologueBattlePrepShop PrologueBattlePrepShopBargains
 	POIN Chapter1BattlePrepShop Chapter1BattlePrepShopBargains
 	POIN Chapter2BattlePrepShop Chapter2BattlePrepShopBargains
 	POIN Chapter2BattlePrepVendor Chapter2BattlePrepShopBargains
@@ -278,41 +278,20 @@ ALIGN 4
 	
 	
 	Chapter2BattlePrepShopBargains:
+
+	SHORT 0x2 0x0
+	WORD 0
 	
 	SHORT SteelBlade 0x9
 	WORD 0
 	
-	SHORT SlimSword 0xA
-	WORD 0
-	
-	SHORT IronLance 0xB
-	WORD 0
-	
-	SHORT SteelLance 0xC
+	SHORT SteelLanceChpTwo 0xC
 	WORD 0
 
-	SHORT JavelinChpOne 0xD
-	WORD 0
-	
-	SHORT SteelAxe 0xE
-	WORD 0
-	
 	SHORT SteelBow 0xF
 	WORD 0
 	
-	SHORT Fire 0x10
-	WORD 0
-	
 	SHORT Thunder 0x11
-	WORD 0
-	
-	SHORT Wind 0x12
-	WORD 0
-	
-	SHORT Lightning 0x13
-	WORD 0
-	
-	SHORT Heal 0x14
 	WORD 0
 	
 	//Terminator
@@ -320,23 +299,17 @@ ALIGN 4
 	
 	
 	Chapter3BattlePrepShopBargains:
-	
-	SHORT SilverSword 0x7
+
+	SHORT 0x3 0x0
 	WORD 0
 	
-	SHORT SteelBlade 0x8
+	SHORT SilverSwordChpThree 0x7
 	WORD 0
 	
-	SHORT SlimSword 0x9
+	SHORT SilverLanceChpThree 0xC
 	WORD 0
-	
-	SHORT IronLance 0xA
-	WORD 0
-	
-	SHORT SteelLance 0xB
-	WORD 0
-	
-	SHORT SilverLance 0xC
+
+	SHORT SilverAxe 0xC
 	WORD 0
 	
 	SHORT SilverBow 0xD
@@ -350,29 +323,8 @@ ALIGN 4
 	
 	
 	Chapter4BattlePrepShopBargains:
-	
-	SHORT SilverSword 0x7
-	WORD 0
-	
-	SHORT SteelBlade 0x8
-	WORD 0
-	
-	SHORT SlimSword 0x9
-	WORD 0
-	
-	SHORT IronLance 0xA
-	WORD 0
-	
-	SHORT SteelLance 0xB
-	WORD 0
-	
-	SHORT SilverLance 0xC
-	WORD 0
-	
-	SHORT SilverBow 0xD
-	WORD 0
-	
-	SHORT Elfire 0xE
+
+	SHORT 0x4 0x0
 	WORD 0
 	
 	SHORT Wind 0xF
@@ -384,58 +336,13 @@ ALIGN 4
 	SHORT FleursDuMal 0x11
 	WORD 0
 	
-	SHORT SilverAxe 0x12
-	WORD 0
-	
 	//Terminator
 	WORD 0
 	
 	
 	Chapter5BattlePrepShopBargains:
-	
-	SHORT SilverSword 0x7
-	WORD 0
-	
-	SHORT SteelBlade 0x8
-	WORD 0
-	
-	SHORT SlimSword 0x9
-	WORD 0
-	
-	SHORT IronLance 0xA
-	WORD 0
-	
-	SHORT SteelLance 0xB
-	WORD 0
-	
-	SHORT SilverLance 0xC
-	WORD 0
-	
-	SHORT SilverBow 0xD
-	WORD 0
-	
-	SHORT Elfire 0xE
-	WORD 0
-	
-	SHORT Wind 0xF
-	WORD 0
-	
-	SHORT Recover 0x10
-	WORD 0
-	
+
 	SHORT AndorAxe 0x11
-	WORD 0
-	
-	SHORT SilverAxe 0x12
-	WORD 0
-	
-	SHORT Javelin 0x13
-	WORD 0
-	
-	SHORT SteelBow 0x14
-	WORD 0
-	
-	SHORT Thunder 0x15
 	WORD 0
 	
 	//Terminator
