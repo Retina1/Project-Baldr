@@ -189,7 +189,7 @@ make sure to check it out![A][X]
 ##Castletorial3
 [OpenMidLeft][LoadPawnshop][OpenMidRight][LoadOifey]
 This is the pawn shop![A][N] 
-You can use the gold earned[N] 
+You can use the gold earned[N]
 to buy and sell stuff![A][N]
 Sold items and weaponry will[N]
 always remain available to be[A][N] 

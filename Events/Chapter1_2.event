@@ -180,6 +180,7 @@ LABEL 0x9001
 EndEvent
 
 WaitJomk:
+ENUT 0xF //Stop Jamke/Edain boss convo
 MUSS 0x30
 Text(RecruitingJamke)
 TurnAlly(Jamke)

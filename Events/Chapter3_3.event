@@ -132,11 +132,13 @@ CHECK_ACTIVE
 SVAL s1 Dew
 BNE 0x9000 s1 sC
     Text(DewSecret)
-    SilentKillUnit(Dew)
+    //SilentKillUnit(Dew)
+    FADI 5
     MUSC 0x0
     CleanText(0x2D,DewInTheTower)
-    LOAD1 0x1 DewBacc
-    ENUN
+    //LOAD1 0x1 DewBacc
+    //ENUN
+    FADU 5
     Text(DewKickedOut)
     GiveItem(WindSwd,Dew)
     GOTO 0x9001
