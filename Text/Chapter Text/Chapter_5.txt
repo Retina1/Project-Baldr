@@ -56,7 +56,7 @@ May you be at peace[...][A][X]
 
 ##KnightSpotted
 [OpenMidRight][LoadSigurd][OpenMidLeft][LoadOifey]
-Sire![N] We've sighted a lone knight to our east,[N]
+Sire![N]We've sighted a lone knight to our east,[N]
 who appears to be headed our way.[A][N][OpenMidRight]
 Hm?[N]
 Is he an enemy?[A][N][OpenMidLeft]

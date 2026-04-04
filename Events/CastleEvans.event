@@ -87,6 +87,8 @@ BeginningScene:
 LOAD3 0x0 EvansGang
 LOAD1 0x1 HelperGuys
 CAM1 Sigurd
+FADU 16
+STAL 0x16
 Text(Castletorial1)
 FADI 16
 MOVE 120 Oifey [16,13]

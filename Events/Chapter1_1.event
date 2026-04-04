@@ -143,15 +143,15 @@ CleanText(0x2C,SeizingMarpha)
 GOTO 0x2
 LABEL 0x1
 Text(SigurdKindaSucks)
-CleanText(0x2C,DeirdreScreameth)
+CleanText(0x07,DeirdreScreameth)
 Text(SigurdNoticeth)
 MUSC 0x2B
-CleanText(0x2C,SigurdSaveLady)
+CleanText(0x07,SigurdSaveLady)
 LABEL 0x2
 LOAD1 0x1 DeirdreShy
 ENUN
 SilentKillUnit(Deirdre)
-CleanText(0x2C,SigurdInLove)
+CleanText(0x07,SigurdInLove)
 CHECK_EVENTID 0x1B
 BEQ 0x30 0xc 0x0
 MNC2 0x4

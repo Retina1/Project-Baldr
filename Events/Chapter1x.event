@@ -247,6 +247,9 @@ MOVE 60 Clement [9,5]
 ENUN
 CamOff
 FlashCursor(Heim,16)
+
+//ADD MUSC HERE
+
 CHECK_EVENTID 0x7A
 BEQ 0x37 0xc 0x0
 Text(AgustriaReunion)

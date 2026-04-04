@@ -98,12 +98,12 @@ POP
 
 //Female Aid Fix
 // by Serif
-PUSH
-ORG 0x14FFDA0
-BYTE 24
-ORG 0x14FFDF4
-BYTE 0
-POP
+//PUSH
+//ORG 0x14FFDA0
+//BYTE 24
+//ORG 0x14FFDF4
+//BYTE 0
+//POP
 
 //Gate Nerf
 #define TerrainHealStatus 0x80C785

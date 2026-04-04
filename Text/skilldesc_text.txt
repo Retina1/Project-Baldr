@@ -91,7 +91,7 @@ Trigger: Current HP < 50%[X]
 ## SD_LunaPlus ^ 
 Moonbow: This unit's attacks ignore half[N]
 of the foe's Def/Res.[N]
-Trigger: Foe's current HP = 100%[X]
+Trigger: Foe's current HP = %[X]
 
 ## SD_RenewalPlus
 Renewal+: Recover all health.[X]

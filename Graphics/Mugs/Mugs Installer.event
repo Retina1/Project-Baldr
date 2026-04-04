@@ -941,13 +941,13 @@ DonovanPortrait:
 #incbin "Donovan_minimug.dmp"
 setMugEntry(0x40,DonovanPortrait,3,5,3,3)
 
-ALIGN 4
-LamiaPortrait:
-#incbin "Lamia_mug.dmp"
-#incbin "Lamia_frames.dmp"
-#incbin "Lamia_palette.dmp"
-#incbin "Lamia_minimug.dmp"
-setMugEntry(0x124,LamiaPortrait,2,5,3,3)
+//ALIGN 4
+//LamiaPortrait:
+//#incbin "Lamia_mug.dmp"
+//#incbin "Lamia_frames.dmp"
+//#incbin "Lamia_palette.dmp"
+//#incbin "Lamia_minimug.dmp"
+//setMugEntry(0x124,LamiaPortrait,2,5,3,3)
 
 ALIGN 4
 DaccarPortrait:
@@ -2073,3 +2073,7 @@ ALIGN 4
 ElliotPortrait:
 #incext PortraitFormatter "Elliot2026.png"
 setMugEntry(0x3B,ElliotPortrait,2,5,3,3)
+
+LamiaPortrait:
+#incext PortraitFormatter "Lamia2026.png"
+setMugEntry(0x124,LamiaPortrait,2,6,3,4)
