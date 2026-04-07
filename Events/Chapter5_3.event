@@ -46,7 +46,7 @@ CharacterEventBothWays(0x0,LegLocked,Sigurd,Aida)
 END_MAIN
 
 MiscBasedEvents:
-AFEV 0x0 EndingScene 0x3
+//AFEV 0x0 EndingScene 0x3
 CauseGameOverIfLordDies
 AreaEvent(0x1A,Tricked,17,5,27,32)
 END_MAIN
@@ -72,9 +72,13 @@ GotoPrepScreen
 ENDA
 
 EndingScene:
+CLEN 0x0
+CLEA 0
+CLEE 0
 LOAD1 0x0 ArvisUnitsGood
 ENUN
 CAM1 [14,16]
+STAL 0x15
 CamOn
 LOAD1 0x0 ZigludoFE4A
 ENUN
@@ -82,7 +86,7 @@ FADU 16
 MOVE 7 Sigurd [4,27]
 ENUN
 FADI 16
-LOAD3 0x0 BBQAllies
+LOAD2 0x0 BBQAllies
 ENUN
 FADU 16
 MUSC 0x31
@@ -146,10 +150,8 @@ LABEL 0x1
 MUSC 0x2D
 Text(SigurdAidaTalk)
 FADI 16
+CALL EndingScene
 ENUT 0x3
-CLEN 0x0
-CLEA 0
-CLEE 0
 LABEL 0x2
 EndEvent
 
