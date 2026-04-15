@@ -440,6 +440,26 @@ never change![X]
 N-no[...][N]
 What have I[...][A][X]
 
+##SnevejrPlan
+[OpenMidRight][LoadMarlon][OpenMidLeft][LoadSnevejr]
+Looks like that old fool Cuvuli failed.[N]
+Protecting Tofa now befalls upon us.[A][N]
+I have a plan, you lure the enemy within[N]
+the forest while my squad and I await[A][N]
+them with our blizzard magic.[N]
+They won't see what's coming![A][N][OpenMidRight]
+Sounds good.[A][N][OpenMidLeft]
+Is that all you have to say?[A][N]
+This is a masterful strategy,[N]
+I deserve some praise![A][N][OpenMidRight]
+Look, I don't care about your fragile ego[N]
+even if you're an esteemed general or whatever.[A][N]
+I obey Lord Myos 'cause he pays me.[N]
+I was asked to do a job, so I'll do it.[A][N]
+As simple as that.[A][N][ClearFace][OpenMidLeft]
+Grr[ToggleMouthMove]...[ToggleMouthMove] that arrogant fool[ToggleMouthMove]...[ToggleMouthMove][N]
+The nerve of some people[ToggleMouthMove]...[ToggleMouthMove] I swear![A][X]
+
 ##RaisingTheBridge
 [OpenMidRight][LoadMyos]
 Hm?[A][N]
@@ -461,39 +481,48 @@ Ta-da![A][X]
 
 ##MarlonBattle
 [OpenMidLeft][LoadMarlon]
-[N]
-[A][X]
+You won't go any further.[A][X]
 
 ##ChulainnandMarlonBattle
 [OpenMidLeft][LoadMarlon]
-[N]
-[A][N][ClearFace][OpenMidRight][LoadChulainn]
-[N]
-[A][N]
-[A][X]
+That face, I recognize you.[A][N][ClearFace][OpenMidRight][LoadChulainn]
+Hey, we've already fought before![A][N]
+You may be strong, but you're[N]
+still no match for me.[A][N][ClearFace][OpenMidLeft][LoadMarlon]
+I won't go down this easily this time.[N]
+That wound you inflicted, it scarred me.[A][N]
+I was eagerly waiting for the day[N]
+I could return the favor.[A][N][ClearFace][OpenMidRight][LoadChulainn]
+Is that so?[N][ToggleSmile]
+Prepare yourself![A][X]
 
 ##MarlonDeath
 [OpenMidLeft][LoadMarlon]
-[N]
-[A][X]
+This is it[ToggleMouthMove]...[ToggleMouthMove][N]
+I've fought 'til the end[ToggleMouthMove]...[ToggleMouthMove][A][N][ToggleSmile][CloseEyes]
+There's nothing else I can do[ToggleMouthMove]...[ToggleMouthMove][A][X]
 
 ##SnevejrBattle
 [OpenMidLeft][LoadSnevejr]
-[N]
-[A][X]
+I pity you, you aren't ready for this.[N]
+Take this! My Blizzard spell![A][X]
 
 ##TailtiuandSnevejrBattle
 [OpenMidLeft][LoadSnevejr]
-[N]
-[A][N][ClearFace][OpenMidRight][LoadTailtiu]
-[N]
-[A][N]
-[A][X]
+Pff. Ridiculous![A][N]
+What are you going to[N]
+do with thunder magic?[A][N]
+Don't you know it lets you[N]
+vulnerable to our wind attacks?[A][N][ClearFace][OpenMidRight][LoadTailtiu]
+Don't underestimate me![A][N]
+I'll smite you with all[N] 
+the might of House Friege![A][X]
 
 ##SnevejrDeath
 [OpenMidLeft][LoadSnevejr]
-[N]
-[A][X]
+No[ToggleMouthMove]...[ToggleMouthMove] this can't be happening![A][N]
+I can't fall here[ToggleMouthMove]...[ToggleMouthMove][N]
+I don't[ToggleMouthMove]...[ToggleMouthMove] want to die[ToggleMouthMove]...[ToggleMouthMove][A][X]
 
 ##MyosBattle
 [OpenMidLeft][LoadMyos]

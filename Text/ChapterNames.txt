@@ -26,7 +26,7 @@ Crisis in Agustria[X]
 Chagall's Disturbance[X]
 
 # 0x169
-Castle Agusty[X]
+Castle Agusti[X]
 
 # 0x16A
 Jacobin's Attack[X]
@@ -68,7 +68,7 @@ Threshold of Fate[X]
 Battle of Belhalla[X]
 
 # 0x177
-The Yied Massacre[X]
+The Aed Massacre[X]
 
 # 0x178
 Inheritor of Light[X]

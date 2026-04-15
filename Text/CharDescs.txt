@@ -520,9 +520,9 @@ Diligent servant of House Anphony. [NL]
 He served Macbeth for as long as he can remember.[X]
 
 ##Desc_Ross ^
-A powerhungry knight who wishes to usurp Infini's lordship [N]
-from Macbeth by pretending to be a bootlicker, but [N]
-his plans haven't succeeded despite years of preparation.[X]
+A power-hungry knight who wishes to usurp[N]
+Infini's lordship from Macbeth by pretending[N]
+to be a bootlicker.[X]
 // A sneaky knight who wishes to usurp the Infini
 // throne by sucking up to Macbeth. He prepared his
 // plan in detail for years but never to fruition.
@@ -566,9 +566,9 @@ surplus of arrows in two quivers.[X]
 // so she never runs low on arrows.
 
 ##Desc_Jacobin ^
-An experienced mercenary with a distaste for Grannvale. [NL]
+An ace mercenary with a distaste for Grannvale. [NL]
 Eldest brother of three, with whom he forms the [N]
-Elemental Sword Trio, a famous name amongst sellswords.[X]
+Elemental Sword Trio, famous amongst sellswords.[X]
 // He often expresses his
 // disapproval of the empire regime.
 // Eldest brother of the elemental sword trio.
