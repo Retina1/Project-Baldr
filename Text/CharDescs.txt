@@ -665,7 +665,7 @@ Daccar as long as he gets paid enough.[X]
 ##Desc_Lamia ^
 The leader of a female mercenary [N]
 group feared all across Jugdral. [NL]
-She's known as the Ice Empress.[X]
+She's known as the Hellspawn.[X]
 
 ##Desc_Daccar ^
 Second oldest brother of the [N]
