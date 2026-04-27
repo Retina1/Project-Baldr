@@ -1007,7 +1007,8 @@ Nonsense. I have nothing to[N]
 hear from a filthy traitor![A][X]
 
 ##OthelloDeath
-[X]
+So speaking as I think,[N]
+[...]alas, I die.[A][X]
 
 ##QuirkyCallista
 [X]
@@ -1483,10 +1484,14 @@ But in my heart[...] I[...][N]
 I can't stop[...][CloseEyes] sniff[A][X]
 
 ##PayneBattle
-[X]
+[OpenMidLeft][LoadPayne]
+I can't believe a veteran like[N]
+me has to spend his time doing[A][N]
+all the dirty work[...][A][X]
 
 ##PayneDeath
-[X]
+[OpenMidLeft][LoadPayne]
+This[...] This is insane![A][X]
 
 ##EthlynQuanTalk
 [OpenMidRight][LoadQuan][OpenMidLeft][LoadEthlyn]
