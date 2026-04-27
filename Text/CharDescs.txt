@@ -338,7 +338,7 @@ Very self-critical and pessimistic to a fault, [N]
 but it doesn't stop him from giving it his all.[X]
 
 ##Desc_Tristan ^
-Son of the Cross Knight Eve and brother of Jeanne. [NL]
+Son of the Cross Knight Evan and brother of Jeanne. [NL]
 An abrasive, yet tempered knight that [N]
 wants to be like his father.[X]
 
@@ -590,8 +590,8 @@ in banquets, quite enjoying his status as nobility.[X]
 // Highly enjoys his noble status.
 
 ##Desc_Papillon ^
-A mercenary from Thracia named after after a butterfly, [N]
-a fact that he wholeheartetly embraces from his love of them. [NL] 
+A mercenary from Thracia named after a butterfly,[N]
+a fact that he wholeheartetly embraces.[NL] 
 It is said he hails from a large family.[X]
 // He now soars through the sky,
 // like the butterflies he loves so much.
@@ -622,7 +622,9 @@ He however always stayed faithful [N]
 to Silesse and especially Myos.[X]
 
 ##Desc_Ayron ^ 
-Ayron[X]
+Mage General of House Friege. [NL]
+Said to be a fair man despite [N]
+his ruthlessness on the battlefield.[X]
 
 ##Desc_Marlon ^
 A mercenary acting under Myos, [N]
@@ -1125,17 +1127,17 @@ cares for his half brother Azelle.[X]
 
 ##Desc_Eve ^
 Member of Nordion's Elite Cross knights [N]
-alongisde their siblings Alva and Eva. [NL]
+alongisde their siblings Alvar and Evar. [NL]
 Their job is to protect Princess Lachesis.[X]
 
 ##Desc_Eva ^
 Member of Nordion's Elite Cross knights [N]
-alongisde their siblings Alva and Eve. [NL]
+alongisde their siblings Alvar and Evan. [NL]
 Their job is to protect Princess Lachesis.[X]
 
 ##Desc_Alva ^
 Member of Nordion's Elite Cross knights [N]
-alongisde their siblings Eve and Eva. [NL]
+alongisde their siblings Evan and Evar. [NL]
 Their job is to protect Princess Lachesis.[X]
 
 ##Desc_Henson ^
