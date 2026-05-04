@@ -689,13 +689,13 @@ Eldigan[X]
 Annand[X]
 
 ##Name_Eve
-Eve[X]
+Evan[X]
 
 ##Name_Eva
-Eva[X]
+Evar[X]
 
 ##Name_Alva
-Alva[X]
+Alvar[X]
 
 ##Name_Henson
 Henson[X]
