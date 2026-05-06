@@ -120,6 +120,10 @@
 #include "Dew/Sword Installer.event"
 }
 {
+#include "Brigid/Bow Installer.event"
+#include "Brigid/Unarmed Installer.event"
+}
+{
 #include "Holyn/Sword Installer.event"
 #include "Holyn/Unarmed Installer.event"
 }
@@ -713,6 +717,12 @@ ALIGN 4
 DewAnims:
 SwordAnim(0xA2)
 UnarmedAnim(0xA2)
+EndAnim
+
+ALIGN 4
+BrigidAnims:
+BowAnim(0x153)
+UnarmedAnim(0x154)
 EndAnim
 
 ALIGN 4

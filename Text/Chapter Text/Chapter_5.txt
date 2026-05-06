@@ -303,12 +303,12 @@ Wh- Ack! [...]mnnnurraaaaagh! Whoa![A][N]
 What's this feeling?! Everything's looking,[N]
 feeling and sounding so much clearer now![A][X]
 
-##HensonBattle
+##HensonBattleThree
 [OpenMidLeft][LoadHenson]
 You lot knights are annoying![N]
 Those villages ain't ya business![A][X]
 
-##SigurdandHensonBattle
+##SigurdandHensonBattleThree
 [OpenMidLeft][LoadHenson]
 Is this the nasty knight[N]
 my brothers warned me about?[N][A][OpenMidRight][LoadSigurd]
@@ -318,9 +318,6 @@ you long ago[...][N][A]
 This time is the last I[N]
 deal with you fiends.[A][N]
 Here I come![A][X]
-
-##HensonDeath
-I[...] always come back[...][ToggleSmile][A][X]
 
 ##SlayderBattle
 [OpenMidLeft][LoadSlayder]
