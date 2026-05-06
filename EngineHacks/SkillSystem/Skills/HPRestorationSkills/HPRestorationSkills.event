@@ -13,6 +13,9 @@
 
 #include "Renewal/Renewal.lyn.event"
 
+Circlet_IdLink:
+BYTE Circlet
+
 
 ALIGN 4
 AmaterasuIDLink:
