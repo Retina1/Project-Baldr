@@ -1,0 +1,164 @@
+
+EventPointerTable(0x6B,ThisChapter)
+
+ThisChapter:
+
+POIN TurnBasedEvents
+
+POIN CharacterBasedEvents
+
+POIN LocationBasedEvents
+
+POIN MiscBasedEvents
+
+POIN Dunno Dunno Dunno
+
+POIN Tutorial
+
+POIN TrapData TrapData
+
+POIN PlayerUnits PlayerUnits
+
+POIN $0 $0 $0 $0 $0 $0
+
+POIN BeginningScene EndingScene
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+TurnBasedEvents:
+END_MAIN
+
+ALIGN 4
+LocationBasedEvents:
+END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+BeginningScene:
+RemoveUnit(Sigurd)
+RemoveUnit(Alec)
+RemoveUnit(Noish)
+RemoveUnit(Arden)
+RemoveUnit(Lex)
+RemoveUnit(Azel)
+RemoveUnit(Quan)
+RemoveUnit(Finn)
+RemoveUnit(Ethlyn)
+RemoveUnit(Midir)
+RemoveUnit(Ayra)
+RemoveUnit(Dew)
+RemoveUnit(Edain)
+RemoveUnit(Jamke)
+RemoveUnit(Lachesis)
+RemoveUnit(Beowolf)
+RemoveUnit(Holyn)
+RemoveUnit(Lewyn)
+RemoveUnit(Sylvia)
+RemoveUnit(Erinys)
+RemoveUnit(Hopper)
+RemoveUnit(Indech)
+RemoveUnit(Claud)
+RemoveUnit(Tailtiu)
+RemoveUnit(Callista)
+RemoveUnit(Brigid)
+MUSS 0xC0
+LOAD1 0x0 PlayerUnits
+ENUN
+UnremoveUnit(Quan)
+OffAllUnitState(Quan, Undeployed, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+UnremoveUnit(Ethlyn)
+OffAllUnitState(Ethlyn, Undeployed, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+Text(LeonsterArmyIsHere)
+//musc travant
+LOAD1 0x1 EnemyUnits
+ENUN
+Text(ThraciaHunting)
+MUSC 0x26
+Text(Ambush)
+EndEvent
+
+EndingScene:
+UnremoveUnit(Sigurd)
+UnremoveUnit(Alec)
+UnremoveUnit(Noish)
+UnremoveUnit(Arden)
+UnremoveUnit(Lex)
+UnremoveUnit(Azel)
+UnremoveUnit(Quan)
+UnremoveUnit(Finn)
+UnremoveUnit(Ethlyn)
+UnremoveUnit(Midir)
+UnremoveUnit(Ayra)
+UnremoveUnit(Dew)
+UnremoveUnit(Edain)
+UnremoveUnit(Jamke)
+UnremoveUnit(Lachesis)
+UnremoveUnit(Beowolf)
+UnremoveUnit(Holyn)
+UnremoveUnit(Lewyn)
+UnremoveUnit(Sylvia)
+UnremoveUnit(Erinys)
+UnremoveUnit(Hopper)
+UnremoveUnit(Indech)
+UnremoveUnit(Claud)
+UnremoveUnit(Tailtiu)
+UnremoveUnit(Callista)
+UnremoveUnit(Brigid)
+MNC2 0x15
+EndEvent
+
+AlvisCaresAbout:
+CleanText(0x15,VelthomerScheme)
+EndEvent
+
+
+PlayerUnits:
+UNIT Quan DukeKnt Sigurd Level(30, Enemy, 0) [24,30] 0x00 0x00 0x0 0x00 [Gaebolg] CastleRaidAI 
+UNIT Ethlyn PalF Sigurd Level(30, Enemy, 0) [23,30] 0x00 0x00 0x0 0x00 [Fortify, SilverBlade] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [24,31] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [23,31] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [24,32] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [23,32] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [24,33] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [23,33] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [24,34] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [23,34] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [24,35] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [23,35] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [24,36] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [23,36] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [24,37] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT Leonster LncCav Quan Level(30, Enemy, 1) [23,37] 0x00 0x00 0x0 0x00 [SilverLance] CastleRaidAI 
+UNIT //Tells the game that the unit list has ended
+
+EnemyUnits:
+UNIT Travant WyvMast 0x00 Level(25, Ally, 0) [15,44] 0x00 0x00 0x0 0x00 [Gungnir] NoAI 
+UNIT Magorn WyvLord 0x00 Level(28, Ally, 0) [15,43] 0x00 0x00 0x0 0x00 [BraveLance, DefRing] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [14,43] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [13,43] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [12,43] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [18,43] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [17,43] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [16,43] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [18,42] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [17,42] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [16,42] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [15,42] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [14,42] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [13,42] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT Thracia WyvKnt 0x00 Level(18, Ally, 1) [12,42] 0x00 0x00 0x0 0x00 [Horseslayer] NoAI 
+UNIT

@@ -172,7 +172,7 @@ ALIGN 4
 
 WyvLordPaletteList:
 PaletteAssociationEntry(Thracia, $82)
-PaletteAssociationEntry(Magorn, $ED)
+PaletteAssociationEntry(Magorn, $EC)
 PaletteAssociationEntry(Travant, $ED)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4

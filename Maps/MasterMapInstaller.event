@@ -16,6 +16,7 @@
 #include "JacoAttack.event"
 #include "LeonsterReign.event"
 #include "Lionheart.event"
+#include "LoveBattle.event"
 #include "MaidenOfForest.event"
 #include "MenandGreed.event"
 #include "NordionDefense.event"

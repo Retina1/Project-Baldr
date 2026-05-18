@@ -52,7 +52,7 @@ POP
 // Unit id and higher to class grow with autolevel
 PUSH 
 ORG 0x17C4C 
-BYTE 0xE7
+BYTE 0x4A
 POP
 
 // Unit ID Cannot be hit by sleep, berserk, and silence 
