@@ -880,7 +880,7 @@ I couldn't possibly thank you enough![A][X]
 
 ##IvanBattle
 [OpenMidLeft][LoadIvan]
-Sorry. I can’t let you[N]
+Sorry. I can't let you[N]
 reach the capital.[A][X]
 
 ##LewynandIvanBattle
@@ -888,13 +888,13 @@ reach the capital.[A][X]
 Is that[...] Prince Lewyn?[A][N][ClearFace][OpenMidRight][LoadLewyn]
 Ivan, what a surprise.[A][N]
 I always knew my uncles were[N]
-after the throne,[A] but I didn’t[N]
+after the throne,[A] but I didn't[N]
 expect you to sink this low.[A][N][ClearFace][OpenMidLeft][LoadIvan]
 How dare you?[A] You fled your[N]
 country, your people,[A] and you[N]
 come back as if nothing happened,[A][N]
 dressed up as a clown?![N]
-You’re a disgrace to this nation.[A][N][ClearFace][OpenMidRight][LoadLewyn]
+You're a disgrace to this nation.[A][N][ClearFace][OpenMidRight][LoadLewyn]
 This is Farewell, then.[A][X]
 
 ##IvanDeath
