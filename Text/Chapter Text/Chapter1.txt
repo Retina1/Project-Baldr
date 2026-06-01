@@ -596,7 +596,7 @@ I'll do all I can to return his kindness.[A][X]
 ##QuanAyraTalk
 [OpenMidRight][LoadAyra][OpenMidLeft][LoadQuan]
 Princess Ayra of Isaach, I presume?[A][N]
-I heard your story story from Sigurd.[N]
+I heard your story from Sigurd.[N]
 I am Quan of Leonster.[A][N][OpenMidLeft]
 A pleasure.[A][N][OpenMidLeft]
 I'd hate to press you for information[N]
