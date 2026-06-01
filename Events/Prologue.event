@@ -310,6 +310,11 @@ PrettyFace:
 MUSC 0x59
 Text(AlecEthlyn)
 GiveItem(IronSwordEth,Ethlyn)
+//SETVAL 0x1 0xFFFFFFFF
+//SETVAL 0x4 0x64
+//ASMC give_exp_Install|1
+
+
 EndEvent
 
 SigurdArvisTalkConvo:

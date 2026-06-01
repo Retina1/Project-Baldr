@@ -1,11 +1,10 @@
 .thumb
 .align
 
+.equ GetUnitItemSlot, 0x801702C|1
 
 .global Renewal
 .type Renewal, %function
-
-
 
 Renewal:
 push {r4-r5,r14}
@@ -19,8 +18,18 @@ ldr r1,=RenewalIDLink
 ldrb r1,[r1]
 .short 0xF800
 cmp r0,#0
-beq GoBack
+bne Effect
 
+ldr r2, =GetUnitItemSlot
+mov r14, r2
+mov r0, r4
+ldr r1, =Circlet_IdLink
+ldrb r1, [r1]
+.short 0xF800
+cmp r0, #0
+blt GoBack
+
+Effect:
 add r5,#30
 
 GoBack:

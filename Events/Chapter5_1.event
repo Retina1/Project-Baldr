@@ -34,19 +34,19 @@ ENDTRAP
 
 ALIGN 4
 TurnBasedEvents:
+TurnEventPlayer(0x0,ArvisLies,2)
 END_MAIN
 
 ALIGN 4
 LocationBasedEvents:
 Seize(52,8)
-TurnEventPlayer(0x0,ArvisLies,2)
-Village(0xC,VillageOne,20,31)
-Village(0xD,VillageTwo,21,21)
-Village(0xE,VillageThree,16,15)
-Village(0xF,VillageFour,23,8)
-Village(0x10,VillageFive,33,24)
-Village(0x11,VillageSix,28,7)
-Village(0x12,VillageSeven,37,4)
+Village(0xC,VillageOne,1,24)
+Village(0xD,VillageTwo,17,23)
+Village(0xE,VillageThree,18,7)
+Village(0xF,VillageFour,33,2)
+Village(0x10,VillageFive,34,20)
+Village(0x11,VillageSix,54,4)
+Village(0x12,VillageSeven,57,14)
 END_MAIN
 
 ALIGN 32
@@ -87,7 +87,8 @@ EndEvent
 EndingScene:
 MUSC 0x0
 CleanText(0x13,SeizingLubeck)
-MNC2 0x15
+RemoveUnit(Clement)
+MNC2 0x17
 EndEvent
 
 TakeItMySon:
@@ -214,5 +215,5 @@ UNIT Lubeck General Langbalt Level(25,Enemy,1) [52,8] 0x0 0x0 0x1 REDA52R10 [Bra
 UNIT
 
 LordByron:
-UNIT Byron MasterKnt Byron Level(30,NPC,0) [46,8] 0x0 0x0 0x1 REDA41R6 [Tyrfing] CastleRaidAI
+UNIT Byron MasterKnt Byron Level(30,NPC,0) [46,8] 0x0 0x0 0x1 REDA41R6 [Tyrfing] TalkyAI
 UNIT

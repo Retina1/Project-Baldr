@@ -303,7 +303,7 @@ one to deliver us to it[...][A][X]
 ##ScraggBattle
 [OpenMidLeft][LoadScragg]
 Bwahaha.[ToggleSmile][N]
-I’ll loot your corpses![A][X]
+I'll loot your corpses![A][X]
 
 ##EdainandScraggBattle
 [OpenMidLeft][LoadScragg]
@@ -919,16 +919,16 @@ I will not fight you![A][X]
 
 ##BeowolfandEldiganBattle
 [OpenMidRight][LoadBeowolf]
-Eldie, it’s been a while.[A][N][ClearFace][OpenMidLeft][LoadEldigan]
+Eldie, it's been a while.[A][N][ClearFace][OpenMidLeft][LoadEldigan]
 Beowolf?[A][N]
-I didn’t expect to meet[N]
+I didn't expect to meet[N]
 you again on the battlefield,[A][N]
 or you siding with Grannvale.[A][N][ClearFace][OpenMidRight][LoadBeowolf]
 A lot has happened since[N]
 we last saw each other.[A][N]
 But who cares?[A][N]
-I’m a mercenary now, and[N]
-I’m simply doing my job.[A][N][ClearFace][OpenMidLeft][LoadEldigan]
+I'm a mercenary now, and[N]
+I'm simply doing my job.[A][N][ClearFace][OpenMidLeft][LoadEldigan]
 Then do your worst![A][X]
 
 ##ClementandEldiganBattle

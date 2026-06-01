@@ -96,6 +96,10 @@
 	#include "ArenaASM/ArenaASM.event"
 	ALIGN 4
 
+    #include "asmcs/give_exp/give_exp_Install.event"
+
+    ALIGN 4
+
     // Weapon triangle
     ALIGN 4
     
