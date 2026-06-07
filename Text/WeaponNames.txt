@@ -788,8 +788,8 @@ Maera[X]
 0xcb[X]
 
 
-##N0xcc ^
-0xcc[X]
+##NFuryRing ^
+Fury Ring[X]
 
 
 ##N0xcd ^

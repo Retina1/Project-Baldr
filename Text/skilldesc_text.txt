@@ -787,9 +787,8 @@ Gives unit's Devil Reversal to the enemy.[N]
 (31-Luck % chance of Devil Reversal).[X]
 
 ## SD_DevilsPact
-Devil's Pact: Immune to Devil Reversal.[N]
-Curses the enemy with Devil Reversal.[N]
-(31-Luck % chance of Devil Reversal).[X]
+Devil's Curse: Take 10 damage[N]
+after every battle.[X]
 
 ## SD_DevilsWhim
 Devil's Whim: This unit is cursed, but[N]
