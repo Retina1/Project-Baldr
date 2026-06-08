@@ -32,6 +32,7 @@
 #define IronSwordDew 0xC9
 #define IronBladeHolyn 0xCA
 #define SteelSwordBeowolf 0xCB
+#define FuryRing 0xCC
 
 #define HeroicLance 0x82
 #define MasterLance 0xBD

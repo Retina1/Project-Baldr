@@ -32,6 +32,13 @@ POIN FuryEvent
 #include "Fury/FuryEvent.event"
 
 ALIGN 4
+DevilWound:
+#incbin "Devil/fury.dmp"
+POIN SkillTester
+WORD DevilsPactID
+POIN FuryEvent
+
+ALIGN 4
 #include "PoisonStrikeGrislyWound/PoisonStrikeGrislyWound.lyn.event"
 
 #ifdef RESIDUAL_DAMAGE_REQUIRES_BATTLE_DAMAGE

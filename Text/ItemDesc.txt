@@ -152,7 +152,7 @@ Effective against armored units.[X]
 
 
 ##DDevilAxe ^
-Might injure its wielder.[X]
+Lose 10 HP after battle.[X]
 
 
 ##DHandAxe ^
@@ -859,8 +859,8 @@ Loptyr savior.[X]
  [X]
 
 
-##D0xcc ^
- [X]
+##DFuryRing ^
+Grants the fury skill.[X]
 
 
 ##D0xcd ^
