@@ -67,7 +67,6 @@ END_MAIN
 BeginningScene:
 MUSC 0x4
 Narration(0x8,Ch1_Narration)
-CLEAN
 LOMA 0x3
 CAM1 [10,9]
 LOAD1 0x1 SoldierGuy1

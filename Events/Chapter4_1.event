@@ -64,7 +64,6 @@ END_MAIN
 BeginningScene:
 MUSC 0x4
 Narration(0x8,Ch4_Narration)
-CLEAN
 FADI 16
 LOMA 0x12
 CAM1 [16,27]
