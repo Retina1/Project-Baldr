@@ -29,9 +29,6 @@ ReplaceTextList:
 
 //Classic Mode modifiers
 
-SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Sigurd text_Zigludo
-SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Oifey text_Oifaye
-
 
 
 WORD 0 0 0// terminator 
@@ -42,18 +39,6 @@ WORD 0 0 0// terminator
 #ifdef _FE8_ 
 #include "Patches/FE8.lyn.event" 
 #include "Patches/FE8_asm.lyn.event" 
-
-
-code_Sigurd:
-tx("[Sigurd]")
-code_Oifey: 
-tx("[Oifey]")
-
-
-text_Zigludo:
-tx("Zigludo") 
-text_Oifaye:
-tx("Oifaye")
 
 #endif 
 
