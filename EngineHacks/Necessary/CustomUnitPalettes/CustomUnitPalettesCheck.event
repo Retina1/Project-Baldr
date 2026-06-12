@@ -1,0 +1,373 @@
+/***\
+By: EgalLau37/SageMatthis
+
+A significant rework of the FE7 variant that rewrites much
+of the code and adds some additional features.
+This also changes Wall/Snag to use the fourth faction palettes
+instead of the player faction palettes.
+This allows specifying custom:
+-map sprite palettes
+-HP box palettes
+-battle forecast palettes
+-battle screen palettes
+-map battle stats palettes
+-arrow path palettes
+on a per-parameter(s) basis.
+The parameters include:
+-unit ID
+-class ID
+-faction allegiance(s)
+-event flags
+-custom ASM routine
+ALL conditions must be met for a particular entry to take effect.
+If a particular palette pointer is set to 0x0, the default for
+that entry is used instead.
+
+How to use:
+
+Example entry:
+SHORT 0x1 0x2 0x3 0x89; WORD 0; POIN PaletteList_Lau
+How to interpret:
+0x1 - unit ID
+	If == 0x0, then ANY unit
+0x2 - class ID
+	If == 0x0, then ANY class
+0x3 - faction flag(s)
+	This is a field of flags for which faction(s) this entry
+	should apply to.
+	0x1 - player | 0x2 - enemy | 0x4 - other | 0x8 - fourth
+	Thus, 0x9 = player OR fourth (0x1 + 0x8 = 0x9)
+	If == 0x0 OR 0xF=> # => 0xFF, then ANY faction
+0x89 - event ID
+	If == 0x0, then NO flag check
+WORD [ASM] - custom ASM routine check
+	IF == 0x0, then NO ASM check
+	In case the above parameters are not sufficient or a more
+	complex check is desired, use this to achieve that effect.
+	The return value should zero for false; ANY other non-zero
+	value will be interpreted as true.
+	There are sample custom ASM checks in the
+	/GeneralASMChecks folder that can be used for this.
+	To use any of them, simply create a label and #incbin the
+	file in this text file at the end. 
+	The map ID and name checks have parameters that need
+	to be specified.
+	For the map ID check, use "WORD ID_1 ID_2" for the
+	lower and upper bounds (inclusive), specifically.
+	For the name check, use "WORD textID" with the text ID
+	of the unit name text ID to match.
+POIN [pointer] - pointer to list of palettes
+	This is a list of 6 pointers to palettes.
+	If any of the following is set to 0x0, the default
+	palette is used:
+	1 - map sprite palette
+		This can be either an OAM palette ID OR pointer to an
+		actual palette.  If a palette is specified, then it will
+		be loaded to OAM palette 0xA. Note that only one unique
+		palette can be loaded at a time, so if multiple units
+		use a unique palette, then the palette for the most
+		recently selected/highlighted unit will be displayed.
+		0xC = player, 0xD = enemy, 0xE = NPC
+	2 - HP box palette
+	3 - battle forecast palette
+	4 - battle screen palette
+	5 - map battle box palette
+	6 - arrow path palette
+
+No pre-requisites are required.
+Notable interactions with other patches:
+	The map sprite palettes are compatible with Vesly's map
+	sprite palette hack.
+	The arrow path palettes are NOT compatible with Vesly's
+	arrow path hack; they conflict.  However, this can be
+	used as an effective substitute.
+	The minibox palettes are compatible with the modular
+	minibox hack.
+
+\***/
+
+ALIGN 0x4
+Lau_CustomUniversalUnitPalettesCheck:
+#incbin "Lau_UniversalPalettesCheck.bin"
+POIN Lau_CustomUniversalUnitPalettesCheck+0x80+1	//flag return
+POIN Lau_CustomUniversalUnitPalettesCheck+0x90+1	//asm return
+POIN UnitCustomPalettesTable
+
+ALIGN 0x4
+Lau_CustomMapSpritesRoutine:
+#incbin "Lau_CustomMapSpritePalettesB.bin"
+POIN Lau_CustomMapSpritesRoutine+0xE
+POIN Lau_CustomMapSpritesRoutine+0x28+1
+
+ALIGN 0x4
+Lau_CustomForecastRoutine:
+#incbin "Lau_CustomForecastPalettesB.bin"
+POIN Lau_CustomForecastRoutine+0x14+1
+POIN Lau_CustomForecastRoutine+0x3A+1
+
+ALIGN 0x4
+Lau_CustomBattleScreenRoutine:
+#incbin "Lau_CustomBattleScreenPalettes.bin"
+POIN Lau_CustomUniversalUnitPalettesCheck+1
+POIN Lau_CustomBattleScreenRoutine+0xC+1
+POIN Lau_CustomBattleScreenRoutine+0x22+1
+POIN Lau_CustomBattleScreenRoutine+0x2E+1
+
+ALIGN 0x4
+Lau_CustomArrowRoutine:
+#incbin "Lau_CustomArrowPalettePalettes.bin"
+POIN 0xA0328C	//default arrow palette
+POIN Lau_CustomUniversalUnitPalettesCheck+1
+POIN Lau_CustomArrowRoutine+0xE+1
+
+
+DefaultMiniboxPaletteTable:
+POIN 0xA1738C
+POIN 0xA173AC
+POIN 0xA173CC
+POIN 0xA1738C
+
+
+/***\
+unit ID,class,faction,flags
+asm check
+pointer to pointerlist (list of palette)
+
+pointerlist: (00 = default)
+pointer to palette for map sprite OR OAM palette ID (0xC = player)
+pointer to palette for HP box
+pointer to palette for battle forecast
+pointer to palette for battle screen
+pointer to palette for map stats
+pointer to palette for arrow
+\***/
+
+//add additional entries here; see above example for how this works
+//(higher placed entries have priority over lower entries)
+//(feel free to delete any/all of the default entries)
+ALIGN 0x4
+UnitCustomPalettesTable:
+
+//Palettes for Greens
+SHORT Eldigan 0x0 0x1 0; WORD 0; POIN PaletteList_Greens
+SHORT Annand 0x0 0x1 0; WORD 0; POIN PaletteList_Greens
+SHORT AnnandSquad 0x0 0x1 0; WORD 0; POIN PaletteList_Greens
+SHORT Eve 0x0 0x1 0; WORD 0; POIN PaletteList_Greens
+SHORT Eva 0x0 0x1 0; WORD 0; POIN PaletteList_Greens
+SHORT Alva 0x0 0x1 0; WORD 0; POIN PaletteList_Greens
+
+//palette set specifically for Lau
+//SHORT 0x1 0x0 0x1 0; WORD 0; POIN PaletteList_Lau
+//SHORT 0x3 0x0 0x1 0; WORD 0; POIN PaletteList_Lau
+
+//palette set specifically for Brandon
+//SHORT 0x2 0x0 0x1 0; WORD 0; POIN PaletteList_Brandon
+//SHORT 0x4 0x0 0x1 0; WORD 0; POIN PaletteList_Brandon
+//SHORT 0x5 0x0 0x1 0; WORD 0; POIN PaletteList_Brandon
+//SHORT 0x6 0x0 0x1 0; WORD 0; POIN PaletteList_Brandon
+
+//palette set for ALL player characters during Lau chapters
+//SHORT 0x0 0x0 0x1 0; POIN CheckLauChapter; POIN PaletteList_LauLead
+//palette set for ALL player characters during Brandon chapters
+//SHORT 0x0 0x0 0x1 0; POIN CheckBrandonChapter; POIN PaletteList_BrandonLead
+
+//SHORT 0x0 0x0 0x2 0; POIN CheckCharacter_Lort; POIN PaletteList_Lort
+//SHORT 0x0 0x0 0x2 0; POIN CheckCharacter_Kak; POIN PaletteList_Kak
+
+WORD 0xFFFFFFFF	//terminator
+
+
+//Additional data added below, including the lists of palettes
+//as well as the literal palette data.
+ALIGN 4
+
+PaletteList_Greens:
+WORD 0xE
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+
+PaletteList_Lau:	//list of pointers to palettes
+WORD 0xC	//Lau uses the currently loaded player map sprite palette
+POIN pal_HPBox_Lau
+POIN pal_forecast_Lau
+POIN pal_battle_Lau
+POIN pal_mapStats_Lau
+POIN pal_arrow_Lau
+
+pal_HPBox_Lau:
+#incbin "CustomUnitPalettes/HPBox_Lau.bin"
+pal_forecast_Lau:
+#incbin "CustomUnitPalettes/Forecast_Lau.bin"
+pal_battle_Lau:
+#incbin "CustomUnitPalettes/MapBattleStats_Lau.bin"
+pal_mapStats_Lau:
+#incbin "CustomUnitPalettes/MapBattleStats_Lau.bin"
+pal_arrow_Lau:
+#incbin "CustomUnitPalettes/arrow_Lau.bin"
+
+
+PaletteList_Brandon:
+WORD 0xC
+POIN pal_HPBox_Brandon
+POIN pal_forecast_Brandon
+POIN pal_battle_Brandon
+POIN pal_mapStats_Brandon
+POIN pal_arrow_Brandon
+
+pal_HPBox_Brandon:
+#incbin "CustomUnitPalettes/HPBox_Brandon.bin"
+pal_forecast_Brandon:
+#incbin "CustomUnitPalettes/Forecast_Brandon.bin"
+pal_battle_Brandon:
+#incbin "CustomUnitPalettes/MapBattleStats_Brandon.bin"
+pal_mapStats_Brandon:
+#incbin "CustomUnitPalettes/MapBattleStats_Brandon.bin"
+pal_arrow_Brandon:
+#incbin "CustomUnitPalettes/arrow_Brandon.bin"
+
+
+PaletteList_LauLead:
+WORD 0xC
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+POIN pal_arrow_Lau
+
+PaletteList_BrandonLead:
+WORD 0xC
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+POIN pal_arrow_Brandon
+
+
+PaletteList_Lort:
+WORD 0xD
+POIN pal_HPBox_Lort
+POIN pal_forecast_Lort
+POIN pal_battle_Lort
+POIN pal_mapStats_Lort
+WORD 0
+
+PaletteList_Kak:
+WORD 0xD
+POIN pal_HPBox_Kak
+POIN pal_forecast_Kak
+POIN pal_battle_Kak
+POIN pal_mapStats_Kak
+WORD 0
+
+
+pal_HPBox_Lort:
+#incbin "CustomUnitPalettes/HPBox_Lort.bin"
+pal_forecast_Lort:
+#incbin "CustomUnitPalettes/Forecast_Lort.bin"
+pal_battle_Lort:
+#incbin "CustomUnitPalettes/MapBattleStats_Lort.bin"
+pal_mapStats_Lort:
+#incbin "CustomUnitPalettes/MapBattleStats_Lort.bin"
+
+pal_HPBox_Kak:
+#incbin "CustomUnitPalettes/HPBox_Kak.bin"
+pal_forecast_Kak:
+#incbin "CustomUnitPalettes/Forecast_Kak.bin"
+pal_battle_Kak:
+#incbin "CustomUnitPalettes/MapBattleStats_Kak.bin"
+pal_mapStats_Kak:
+#incbin "CustomUnitPalettes/MapBattleStats_Kak.bin"
+
+
+//CheckLauChapter:
+//#incbin "Lau_CheckIsLauChapter.bin"
+//CheckBrandonChapter:
+//#incbin "Lau_CheckIsBrandonChapter.bin"
+
+/***\
+//checks if chapter map ID falls between 0xC and 0x14, inclusive
+CheckChapterIDRange_Lort:
+#incbin "Lau_CheckMapIDRange.bin"
+WORD 0xC 0x14
+
+CheckChapterIDRange_Kak:
+#incbin "Lau_CheckMapIDRange.bin"
+WORD 0x17 0x1B
+
+//checks if character name text ID matches "nameLort" definition
+CheckCharacter_Lort:
+#incbin "Lau_CheckNameMatch.bin"
+WORD nameLort
+
+CheckCharacter_Kak:
+#incbin "Lau_CheckNameMatch.bin"
+WORD nameKakan
+\***/
+
+
+
+PUSH
+ORG 0x27168
+#incbin "Lau_CustomMapSpritePalettesA.bin"
+POIN 0x27176+1
+POIN Lau_CustomUniversalUnitPalettesCheck+1
+POIN Lau_CustomMapSpritesRoutine+1
+POIN Lau_CustomMapSpritesRoutine+0x20+1
+
+ORG 0x36D4C
+LoadForecastPalette:
+#incbin "Lau_CustomForecastPalettesA.bin"
+POIN Lau_CustomUniversalUnitPalettesCheck+1
+POIN Lau_CustomForecastRoutine+1
+POIN Lau_CustomForecastRoutine+0x20+1
+
+ORG 0x36D0C
+RetrievePalette_Forecast:
+BYTE 0x80 0x09
+BYTE 0x01 0x48
+BYTE 0x40 0x58
+BYTE 0x70 0x47
+POIN DefaultPaletteTable_Forecast
+DefaultPaletteTable_Forecast:
+POIN 0x5B6BB4
+POIN 0x5B6BD4
+POIN 0x5B6BF4
+POIN 0x5B6C14
+
+ORG 0x7BDD0
+LoadMapStatsPalette:
+#incbin "Lau_CustomMapStatsPalettes.bin"
+POIN Lau_CustomUniversalUnitPalettesCheck+1
+POIN DefaultMapStatsPalettteTable
+
+DefaultMapStatsPalettteTable:
+POIN 0x9AD648
+POIN 0x9AD688
+POIN 0x9AD668
+POIN 0x9AD6A8
+
+ORG 0x32E38
+BYTE 0x00 0x48
+BYTE 0x87 0x46
+POIN Lau_CustomArrowRoutine+1
+
+ORG 0x52118
+BYTE 0x16 0x4E
+BYTE 0x17 0x4D
+BYTE 0x17 0x4C
+BYTE 0x01 0x48
+BYTE 0x87 0x46
+SHORT 0
+POIN Lau_CustomBattleScreenRoutine+1
+
+ORG 0x8C2CC
+Lau_CustomMiniboxRoutine:
+#incbin "Lau_CustomMiniboxPalettes.bin"
+POIN DefaultMiniboxPaletteTable
+POIN Lau_CustomUniversalUnitPalettesCheck+1
+POIN Lau_CustomMiniboxRoutine+0x12+1
+
+POP

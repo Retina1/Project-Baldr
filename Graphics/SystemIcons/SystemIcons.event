@@ -1,0 +1,10 @@
+PUSH
+
+    ORG 0x88650
+    POIN StatScreenIcons
+
+POP
+
+ALIGN 4
+StatScreenIcons:
+#incbin "StatScreenIcons.lz77"
