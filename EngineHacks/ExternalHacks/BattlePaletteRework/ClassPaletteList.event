@@ -67,6 +67,7 @@ PaletteAssociationEntry(Myos, $DA)
 PaletteAssociationEntry(Donovan, $DD)
 PaletteAssociationEntry(Harold, $F7)
 PaletteAssociationEntry(Tonnamin, $100)
+PaletteAssociationEntry(Lance, $109)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -93,6 +94,7 @@ PaletteAssociationEntry(Arena7, $C1)
 //PaletteAssociationEntry(Jacobin, $CF)
 PaletteAssociationEntry(Marlon, $D7)
 //PaletteAssociationEntry(Galzus, $F9)
+PaletteAssociationEntry(Rissa, $0D)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -459,6 +461,7 @@ ALIGN 4
 
 DrgMasterPaletteList:
 PaletteAssociationEntry(Thracia, $7E)
+PaletteAssociationEntry(Lance, $10A)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -475,6 +478,7 @@ BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
 SentryPaletteList:
+PaletteAssociationEntry(Schwarz, $108)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -586,11 +590,6 @@ ALIGN 4
 
 MasterKntPaletteList:
 PaletteAssociationEntry(Byron, $E7)
-BYTE $00 $00 $00 $00 $00 $00 $00 $00
-ALIGN 4
-
-LionheartPaletteList:
-PaletteAssociationEntry(Eldigan, $0D)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -749,5 +748,5 @@ MapClassIdToPalettes:
     SetClassPaletteTable(0x8A,NO_PALETTE)
     SetClassPaletteTable(0x8B,NO_PALETTE)
 	SetClassPaletteTable(Bowfighter,NO_PALETTE)
-	SetClassPaletteTable(Lionheart,LionheartPaletteList)
+	SetClassPaletteTable(Lionheart,NO_PALETTE)
 WORD 0 //term

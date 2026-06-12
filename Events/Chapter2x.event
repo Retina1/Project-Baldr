@@ -104,41 +104,41 @@ UNIT Holyn Merc Sigurd Level(12,Ally,0) [4,9] 0x0 0x0 0x1 REDA4R14 [WindSwd] NoA
 UNIT
 
 SecondEnemies:
-UNIT Brawl Sentry Othello Level(15, Enemy, 0) [4,2] 0x00 0x00 0x0 0x00 [MasterLance, MagicBow] GuardTileAI 
-UNIT Sylvale Brigand Brawl Level(15, Enemy, 1) [1,8] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
-UNIT Sylvale Brigand Brawl Level(15, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
-UNIT Sylvale Brigand Brawl Level(15, Enemy, 1) [8,14] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
-UNIT Sylvale Brigand Brawl Level(15, Enemy, 1) [1,15] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
-UNIT Sylvale Fighter Brawl Level(15, Enemy, 1) [3,5] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
-UNIT Sylvale Fighter Brawl Level(15, Enemy, 1) [5,5] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
-UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [13,7] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
-UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [11,9] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
-UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [4,12] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
-UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [6,15] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
-UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [1,11] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
-UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [3,7] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
-UNIT Sylvale Merc Brawl Level(15, Enemy, 1) [13,4] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [9,8] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [7,9] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [11,4] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [10,2] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [16,8] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [11,15] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [7,17] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [0,17] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [7,5] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [6,7] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [2,10] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [3,15] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [5,18] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [11,11] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [5,3] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [10,14] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [13,9] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [2,13] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [9,7] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
-UNIT Sylvale TMage Brawl Level(15, Enemy, 1) [15,8] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Schwarz Sentry Othello Level(15, Enemy, 0) [4,2] 0x00 0x00 0x0 0x00 [MasterLance, MagicBow] GuardTileAI 
+UNIT Sylvale Brigand Schwarz Level(15, Enemy, 1) [1,8] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Sylvale Brigand Schwarz Level(15, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Sylvale Brigand Schwarz Level(15, Enemy, 1) [8,14] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Sylvale Brigand Schwarz Level(15, Enemy, 1) [1,15] 0x00 0x00 0x0 0x00 [VolantAxe] BrigandAI 
+UNIT Sylvale Fighter Schwarz Level(15, Enemy, 1) [3,5] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Sylvale Fighter Schwarz Level(15, Enemy, 1) [5,5] 0x00 0x00 0x0 0x00 [VolantAxe] AttackInRangeAI 
+UNIT Sylvale Merc Schwarz Level(15, Enemy, 1) [13,7] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Schwarz Level(15, Enemy, 1) [11,9] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Schwarz Level(15, Enemy, 1) [4,12] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Schwarz Level(15, Enemy, 1) [6,15] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Schwarz Level(15, Enemy, 1) [1,11] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Schwarz Level(15, Enemy, 1) [3,7] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Merc Schwarz Level(15, Enemy, 1) [13,4] 0x00 0x00 0x0 0x00 [BeoSword] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [9,8] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [7,9] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [11,4] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [10,2] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [16,8] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [11,15] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [7,17] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [0,17] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [7,5] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [6,7] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [2,10] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [3,15] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [5,18] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [11,11] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [5,3] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [10,14] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [13,9] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [2,13] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [9,7] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT Sylvale TMage Schwarz Level(15, Enemy, 1) [15,8] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
 UNIT
 
 FunnyMercs:
@@ -165,23 +165,23 @@ UNIT Holyn Merc 0x00 Level(12, Ally, 0) [4,9] 0x00 0x00 0x0 0x00 [ThunderSwd] No
 UNIT
 
 SecondReinforce:
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [12,0] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [13,0] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [12,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [13,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [6,24] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [9,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [0,10] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [12,0] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [13,0] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [12,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [13,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [6,24] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [9,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [0,10] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
 UNIT
 
 FirstReinforce:
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [26,24] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [27,24] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [10,18] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [12,18] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [30,12] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [30,4] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [27,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [29,0] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
-UNIT Sylvale Archer Brawl Level(15, Enemy, 1) [24,7] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [26,24] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [27,24] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [10,18] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [12,18] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [30,12] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [30,4] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [27,1] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [29,0] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
+UNIT Sylvale Archer Schwarz Level(15, Enemy, 1) [24,7] 0x00 0x00 0x0 0x00 [MagicBow] NoAI 
 UNIT
