@@ -29,6 +29,46 @@ ReplaceTextList:
 
 //Classic Mode modifiers
 
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Sigurd text_Zigludo
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Naoise text_Noish
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Quan text_Cuan
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Ethlyn text_Ethlin
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Midir text_Midayle
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Edain text_Adean
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Deirdre text_Diadora
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Chulainn text_Holyn
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Lewyn text_Levin
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Silvia text_Sylvia
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Erinys text_Fury
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Tailtiu text_Tiltyu
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Claud text_Claude
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Brigid text_Bridget
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Seliph text_Celice
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Oifey text_Oifaye
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Scathach text_Skashaher
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Dalvin text_Roddlevan
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Larcei text_Lakche
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Creidne text_Radney
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Muirne text_Mana
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Diarmuid text_Delmudd
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Deimne text_Dimna
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Iuchar text_Johan
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Iucharba text_Johalva
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Leif text_Leaf
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Lene text_Leen
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Tine text_Tinny
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Febail text_Faval
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Ced text_Sety
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Coirpre text_Corpul
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Charlot text_Sharlow
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Munnir text_Gandolf
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Cimbaeth text_Kinbois
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Bordeaux text_Boldor
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Lombard text_Langobalt
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Reptor text_Leptor
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Arvis text_Alvis
+SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Eldigan text_Eltoshan
+
 
 
 WORD 0 0 0// terminator 
@@ -39,6 +79,177 @@ WORD 0 0 0// terminator
 #ifdef _FE8_ 
 #include "Patches/FE8.lyn.event" 
 #include "Patches/FE8_asm.lyn.event" 
+
+
+code_Sigurd:
+tx("[Sigurd]")
+code_Oifey: 
+tx("[Oifey]")
+
+
+text_Zigludo:
+tx("Zigludo") 
+text_Oifaye:
+tx("Oifaye")  
+text_Noish: 
+tx("Noish")  
+text_Cuan:
+tx("Cuan") 
+text_Ethlin:
+tx("Ethlin")
+
+
+code_Naoise:
+tx("Naoise") 
+code_Quan:
+tx("[Quan]")
+code_Midir:
+tx("[Midir]")
+text_Midayle:
+tx("Midayle")
+text_Adean:
+tx("Adean")
+text_Diadora:
+tx("Diadora")
+text_Holyn:
+tx("Holyn")
+text_Levin:
+tx("Levin")
+
+
+
+code_Ethlyn:
+tx("[Ethlyn]")
+code_Edain:
+tx("[Edain]")
+code_Deirdre:
+tx("[Deirdre]")
+text_Fury:
+tx("Fury")
+text_Tiltyu:
+tx("Tiltyu")
+text_Claude:
+tx("Claude")
+text_Sylvia:
+tx("Sylvia")
+text_Bridget:
+tx("Bridget")
+text_Celice:
+tx("Celice")
+
+
+code_Chulainn:
+tx("[Chulainn]")
+code_Silvia:
+tx("[Silvia]")
+code_Lewyn:
+tx("[Lewyn]")
+text_Skashaher:
+tx("Skashaher")
+text_Roddlevan:
+tx("Roddlevan")
+text_Radney:
+tx("Radney")
+text_Lakche:
+tx("Lakche")
+text_Mana:
+tx("Mana")
+text_Delmudd:
+tx("Delmudd")
+
+
+code_Tailtiu:
+tx("[Tailtiu]")
+code_Erinys:
+tx("[Erinys]") 
+text_Dimna:
+tx("Dimna")
+text_Johan:
+tx("Johan")
+text_Johalva: 
+tx("Johalva")
+text_Leaf:
+tx("Leaf")
+text_Leen:
+tx("Le'en")
+text_Tinny: 
+tx("Tinny")
+
+code_Brigid:
+tx("[Brigid]")
+code_Claud:
+tx("[Claud]")
+code_Seliph:
+tx("[Seliph]")
+code_Larcei:
+tx("[Larcei]")
+code_Creidne:
+tx("[Creidne]")
+code_Dalvin:
+tx("[Dalvin]")
+code_Scathach:
+tx("[Scathach]")
+code_Muirne:
+tx("[Muirne]")
+code_Diarmuid:
+tx("[Diarmuid]")
+code_Deimne:
+tx("[Deimne]")
+code_Iuchar:
+tx("[Iuchar]")
+code_Iucharba:
+tx("[Iucharba]")
+code_Leif:
+tx("[Leif]")
+code_Tine:
+tx("[Tine]")
+code_Lene:
+tx("[Lene]")
+code_Febail:
+tx("[Febail]")
+code_Ced:
+tx("[Ced]")
+code_Charlot:
+tx("[Charlot]")
+code_Coirpre:
+tx("[Coirpre]")
+code_Munnir:
+tx("[Munnir]")
+code_Cimbaeth:
+tx("[Cimbaeth]")
+code_Bordeaux:
+tx("[Bordeaux]")
+code_Lombard:
+tx("[Lombard]")
+code_Reptor:
+tx("[Reptor]")
+code_Arvis:
+tx("[Arvis]")
+code_Eldigan:
+tx("[Eldigan]")
+
+text_Faval:
+tx("Faval")
+text_Sety:
+tx("Sety")
+text_Corpul: 
+tx("Corpul")
+text_Sharlow:
+tx("Sharlow")
+text_Gandolf:
+tx("Gandolf")
+text_Kinbois: 
+tx("Kinbois")
+text_Boldor:
+tx("Boldor")
+text_Langobalt:
+tx("Langobalt")
+text_Leptor: 
+tx("Leptor")
+text_Alvis:
+tx("Alvis")
+text_Eltoshan:
+tx("Eltoshan")
 
 #endif 
 

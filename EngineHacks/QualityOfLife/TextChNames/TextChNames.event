@@ -16,7 +16,7 @@
     ORG $89624
       jumpToHack(Chname)
   POP
-
+ALIGN 4
   Chname:
     #incbin "asm/fe8_chapter_names.dmp"
     POIN ChFont
