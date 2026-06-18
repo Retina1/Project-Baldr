@@ -971,6 +971,14 @@ MarioPalette:
 #incbin "Mario.dmp"
 
 ALIGN 4
+AtlasPalette:
+#incbin "Atlas.dmp"
+
+ALIGN 4
+AnnaPalette:
+#incbin "Anna.dmp"
+
+ALIGN 4
 HensonGreenPalette:
 #incbin "HensonGreen.dmp"
 
@@ -1004,7 +1012,7 @@ EmilPalette:
 
 ALIGN 4
 GazzackPalette:
-#incbin "Gazzak.dmp"
+#incbin "GazzakPirate.dmp"
 
 ALIGN 4
 CrotorPalette:
@@ -1012,7 +1020,7 @@ CrotorPalette:
 
 ALIGN 4
 WisemanPalette:
-#incbin "Wiseman.dmp"
+#incbin "WisemanMilitia.dmp"
 
 ALIGN 4
 SharkPalette:
@@ -1025,6 +1033,130 @@ HoodPalette:
 ALIGN 4
 BacchusPalette:
 #incbin "Bacchus.dmp"
+
+ALIGN 4
+ZeroPalette:
+#incbin "Zero.dmp"
+
+ALIGN 4
+MahatmaPalette:
+#incbin "Mahatma.dmp"
+
+ALIGN 4
+RowanPalette:
+#incbin "Rowan.dmp"
+
+ALIGN 4
+BarcninPalette:
+#incbin "Barcnin.dmp"
+
+ALIGN 4
+MilletPalette:
+#incbin "Millet.dmp"
+
+ALIGN 4
+HeltsokPalette:
+#incbin "Heltsok.dmp"
+
+ALIGN 4
+ChacofPalette:
+#incbin "Chacof.dmp"
+
+ALIGN 4
+TylerPalette:
+#incbin "Tyler.dmp"
+
+ALIGN 4
+LippPalette:
+#incbin "Lipp.dmp"
+
+ALIGN 4
+PelleoPalette:
+#incbin "Pelleo.dmp"
+
+ALIGN 4
+TrevillePalette:
+#incbin "Treville.dmp"
+
+ALIGN 4
+GellerPalette:
+#incbin "Geller.dmp"
+
+ALIGN 4
+PazanPalette:
+#incbin "PazanPirate.dmp"
+
+ALIGN 4
+DomaPalette:
+#incbin "Doma.dmp"
+
+ALIGN 4
+KellerPalette:
+#incbin "Keller.dmp"
+
+ALIGN 4
+KemalPalette:
+#incbin "Kemal.dmp"
+
+ALIGN 4
+KaladinPalette:
+#incbin "Kaladin.dmp"
+
+ALIGN 4
+KeithPalette:
+#incbin "Keith.dmp"
+
+ALIGN 4
+SenghorPalette:
+#incbin "Senghor.dmp"
+
+ALIGN 4
+NikitaPalette:
+#incbin "Nikita.dmp"
+
+ALIGN 4
+NenePalette:
+#incbin "Nene.dmp"
+
+ALIGN 4
+GraphPalette:
+#incbin "Graph.dmp"
+
+ALIGN 4
+NikiasPalette:
+#incbin "Nikias.dmp"
+
+ALIGN 4
+ShackalPalette:
+#incbin "Shackal.dmp"
+
+ALIGN 4
+RipPalette:
+#incbin "Rip.dmp"
+
+ALIGN 4
+GreiasPalette:
+#incbin "Greias.dmp"
+
+ALIGN 4
+GeesePalette:
+#incbin "Geese.dmp"
+
+ALIGN 4
+LeePalette:
+#incbin "Lee.dmp"
+
+ALIGN 4
+ShisielPalette:
+#incbin "Shisiel.dmp"
+
+ALIGN 4
+HawksPalette:
+#incbin "Hawks.dmp"
+
+ALIGN 4
+NazarlPalette:
+#incbin "NazarlPirate.dmp"
 
 
 PUSH
