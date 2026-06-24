@@ -8,7 +8,8 @@ Proc_Devil:
 #incbin "Devil/proc_devil.dmp"
 POIN SkillTester
 WORD DevilsLuckID
-WORD DevilsPactID
+//WORD DevilsPactID
+WORD DevilsWhimID
 WORD DevilsWhimID
 
 Proc_Foresight:

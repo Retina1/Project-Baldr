@@ -12,6 +12,8 @@
 
 #include "BattlePlatforms/BattlePlatformInstaller.event"
 
+#include "SystemIcons/SystemIcons.event"
+
 #include "Palettes/_Battle Palette Installer.event"
 
 PUSH

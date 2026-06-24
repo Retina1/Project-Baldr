@@ -156,6 +156,7 @@
 [LoadSandima] = [LoadFace][0xE0][0x1]
 [LoadElliot] = [LoadFace][0x3B][0x1]
 [LoadGraham] = [LoadFace][0x3C][0x1]
+[LoadSchwarz] = [LoadFace][0x69][0x2]
 [LoadPhillip] = [LoadFace][0xD1][0x1]
 [LoadBordeaux] = [LoadFace][0xC3][0x1]
 [LoadBanquo] = [LoadFace][0xBB][0x1]

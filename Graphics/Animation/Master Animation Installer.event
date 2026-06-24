@@ -136,6 +136,9 @@
 #include "Lachesis/Staff Installer.event"
 }
 {
+#include "Eldigan/Sword Installer.event"
+}
+{
 #include "Midir/Bow Installer.event"
 #include "Midir/Unarmed Installer.event"
 }
@@ -922,6 +925,11 @@ SwordAnim(0xDC)
 AxeAnim(0xDD)
 HandAxeAnim(0xDE)
 UnarmedAnim(0xDF)
+EndAnim
+
+ALIGN 4
+LionheartAnims:
+SwordAnim(0x14E)
 EndAnim
 
 ALIGN 4

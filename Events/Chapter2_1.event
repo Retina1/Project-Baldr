@@ -56,7 +56,6 @@ END_MAIN
 BeginningScene:
 MUSC 0x4
 Narration(0x8,Ch2_Narration)
-CLEAN
 CAM1 [13,14]
 FADU 16
 MUSC 0x24

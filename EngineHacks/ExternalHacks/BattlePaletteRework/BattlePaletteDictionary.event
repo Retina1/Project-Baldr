@@ -24,7 +24,7 @@ PaletteIdentifier($09,$72,$75,$6b,VerdaneBrigandPalette)
 PaletteIdentifier($0A,$72,$75,$6b,VerdaneWarriorPalette)
 PaletteIdentifier($0B,$72,$75,$6b,ArdenPalette)
 PaletteIdentifier($0C,$72,$75,$6b,AzelPalette)
-PaletteIdentifier($0D,$72,$75,$6b,EldiganPalette)
+PaletteIdentifier($0D,$72,$75,$6b,RissaPalette)
 PaletteIdentifier($0E,$72,$75,$6b,ArvisPalette)
 PaletteIdentifier($0F,$72,$75,$6b,BurkaulPalette)
 PaletteIdentifier($10,$72,$75,$6b,HeirheinArcherPalette)
@@ -306,9 +306,6 @@ PaletteIdentifier($123,$72,$75,$6b,LeePalette)
 PaletteIdentifier($124,$72,$75,$6b,ShisielPalette)
 PaletteIdentifier($125,$72,$75,$6b,HawksPalette)
 PaletteIdentifier($126,$72,$75,$6b,NazarlPalette)
-
-
-
 
 /*
 POP

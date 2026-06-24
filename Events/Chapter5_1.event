@@ -63,16 +63,19 @@ BeginningScene:
 CAM1 [43,8]
 MUSC 0x5
 Narration(0x8,Ch5_Narration)
-CLEAN
 CamOn
 LOAD1 0x1 LordByron
+FADU 16
 ENUN
 Text(Byronflees)
 CAM1 [52,8]
+Location(Name_Lubeck)
 MUSC 0x27
+FADI 16
 CleanText(0x13,SlayderMeetsLombard)
 LOAD1 0x1 EnemyUnits
 ENUN
+FADU 16
 CleanText(0x13,AndreyMeetsLombard)
 LOAD1 0x1 BeigeRitterCometh
 ENUN
@@ -80,6 +83,8 @@ CleanText(0x13,LombardDisgusted)
 LOAD1 0x1 LangbaltandGuards
 ENUN
 CamOff
+CAM1 [21,13]
+Location(Name_Zaxon)
 CleanText(0x15,KnightSpotted)
 GotoPrepScreen
 EndEvent

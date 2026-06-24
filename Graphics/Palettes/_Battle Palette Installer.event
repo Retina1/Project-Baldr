@@ -943,8 +943,20 @@ IndechPalette:
 #incbin "Indech.dmp"
 
 ALIGN 4
-EldiganPalette:
-#incbin "Eldigan.dmp"
+RissaPalette:
+#incbin "Rissa.dmp"
+
+ALIGN 4
+SchwarzPalette:
+#incbin "Schwarz.dmp"
+
+ALIGN 4
+LanceSrPalette:
+#incbin "LanceSr.dmp"
+
+ALIGN 4
+LancePalette:
+#incbin "Lance.dmp"
 
 ALIGN 4
 ClementPalette:

@@ -315,6 +315,9 @@ POP
   //A Support Trading by Clendo
   #include "ExternalHacks/ASupportTrades/ASupportTrades.event"
   
+  //Change Map and Forecast palettes
+  #include "Necessary/CustomUnitPalettes/CustomUnitPalettesCheck.event"
+  
   //Change Chapter Objective by Zeta
   #include "ExternalHacks/ChangeChapterObjective/Installer.event"
   
@@ -409,6 +412,9 @@ POP
   
   //Item Range Fix
   #include "Necessary/ItemRangeFix/ItemRangeFix.event"
+  
+  //Replace Text
+  #include "ExternalHacks/ReplaceText/Installer.event"
   
   //Chapter Names as Text
   #include "QualityOfLife/TextChNames/TextChNames.event"
