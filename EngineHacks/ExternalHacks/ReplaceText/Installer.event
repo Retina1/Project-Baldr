@@ -30,6 +30,7 @@ ReplaceTextList:
 //Classic Mode modifiers
 
 SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Sigurd text_Zigludo
+SHORT 0x0; BYTE 0xFF 0; POIN code_Sigurd text_Sigurd
 SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Naoise text_Noish
 SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Quan text_Cuan
 SHORT ClassicModeFlag; BYTE 0xFF 0; POIN code_Ethlyn text_Ethlin
@@ -82,13 +83,15 @@ WORD 0 0 0// terminator
 
 
 code_Sigurd:
-tx("[Sigurd]")
+tx("<Sigurd>")
 code_Oifey: 
-tx("[Oifey]")
+tx("<Oifey>")
 
 
 text_Zigludo:
-tx("Zigludo") 
+tx("Zigludo")
+text_Sigurd:
+tx("Sigurd")
 text_Oifaye:
 tx("Oifaye")  
 text_Noish: 
@@ -100,11 +103,11 @@ tx("Ethlin")
 
 
 code_Naoise:
-tx("[Naoise]") 
+tx("<Naoise>") 
 code_Quan:
-tx("[Quan]")
+tx("<Quan>")
 code_Midir:
-tx("[Midir]")
+tx("<Midir>")
 text_Midayle:
 tx("Midayle")
 text_Adean:
@@ -119,11 +122,11 @@ tx("Levin")
 
 
 code_Ethlyn:
-tx("[Ethlyn]")
+tx("<Ethlyn>")
 code_Edain:
-tx("[Edain]")
+tx("<Edain>")
 code_Deirdre:
-tx("[Deirdre]")
+tx("<Deirdre>")
 text_Fury:
 tx("Fury")
 text_Tiltyu:
@@ -139,11 +142,11 @@ tx("Celice")
 
 
 code_Chulainn:
-tx("[Chulainn]")
+tx("<Chulainn>")
 code_Silvia:
-tx("[Silvia]")
+tx("<Silvia>")
 code_Lewyn:
-tx("[Lewyn]")
+tx("<Lewyn>")
 text_Skashaher:
 tx("Skashaher")
 text_Roddlevan:
@@ -159,9 +162,9 @@ tx("Delmudd")
 
 
 code_Tailtiu:
-tx("[Tailtiu]")
+tx("<Tailtiu>")
 code_Erinys:
-tx("[Erinys]") 
+tx("<Erinys>") 
 text_Dimna:
 tx("Dimna")
 text_Johan:
@@ -176,57 +179,57 @@ text_Tinny:
 tx("Tinny")
 
 code_Brigid:
-tx("[Brigid]")
+tx("<Brigid>")
 code_Claud:
-tx("[Claud]")
+tx("<Claud>")
 code_Seliph:
-tx("[Seliph]")
+tx("<Seliph>")
 code_Larcei:
-tx("[Larcei]")
+tx("<Larcei>")
 code_Creidne:
-tx("[Creidne]")
+tx("<Creidne>")
 code_Dalvin:
-tx("[Dalvin]")
+tx("<Dalvin>")
 code_Scathach:
-tx("[Scathach]")
+tx("<Scathach>")
 code_Muirne:
-tx("[Muirne]")
+tx("<Muirne>")
 code_Diarmuid:
-tx("[Diarmuid]")
+tx("<Diarmuid>")
 code_Deimne:
-tx("[Deimne]")
+tx("<Deimne>")
 code_Iuchar:
-tx("[Iuchar]")
+tx("<Iuchar>")
 code_Iucharba:
-tx("[Iucharba]")
+tx("<Iucharba>")
 code_Leif:
-tx("[Leif]")
+tx("<Leif>")
 code_Tine:
-tx("[Tine]")
+tx("<Tine>")
 code_Lene:
-tx("[Lene]")
+tx("<Lene>")
 code_Febail:
-tx("[Febail]")
+tx("<Febail>")
 code_Ced:
-tx("[Ced]")
+tx("<Ced>")
 code_Charlot:
-tx("[Charlot]")
+tx("<Charlot>")
 code_Coirpre:
-tx("[Coirpre]")
+tx("<Coirpre>")
 code_Munnir:
-tx("[Munnir]")
+tx("<Munnir>")
 code_Cimbaeth:
-tx("[Cimbaeth]")
+tx("<Cimbaeth>")
 code_Bordeaux:
-tx("[Bordeaux]")
+tx("<Bordeaux>")
 code_Lombard:
-tx("[Lombard]")
+tx("<Lombard>")
 code_Reptor:
-tx("[Reptor]")
+tx("<Reptor>")
 code_Arvis:
-tx("[Arvis]")
+tx("<Arvis>")
 code_Eldigan:
-tx("[Eldigan]")
+tx("<Eldigan>")
 
 text_Faval:
 tx("Faval")

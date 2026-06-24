@@ -73,6 +73,7 @@ PaletteAssociationEntry(Donovan, $DD)
 PaletteAssociationEntry(Harold, $F7)
 PaletteAssociationEntry(Tonnamin, $100)
 PaletteAssociationEntry(Arena3, $122)
+PaletteAssociationEntry(Lance, $128)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -488,7 +489,7 @@ ALIGN 4
 
 DrgMasterPaletteList:
 PaletteAssociationEntry(Thracia, $7E)
-PaletteAssociationEntry(Lance, $10A)
+PaletteAssociationEntry(Lance, $129)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
@@ -505,7 +506,7 @@ BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 
 SentryPaletteList:
-PaletteAssociationEntry(Schwarz, $108)
+PaletteAssociationEntry(Schwarz, $127)
 BYTE $00 $00 $00 $00 $00 $00 $00 $00
 ALIGN 4
 

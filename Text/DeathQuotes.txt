@@ -1,36 +1,36 @@
 ##SigurdDeath
 [OpenMidRight][LoadSigurd]
-Urgh... Everyone...[N]
-I'm sorry...[A][X]
+Urgh[...] Everyone[...][N]
+I'm sorry[...][A][X]
 
 ##AlecDeath
 [OpenMidRight][LoadAlec]
-Gah... Got unlucky...[A][N]
-Lord Sigurd... good luck[N]
-out there...[A][X]
+Gah[...] Got unlucky[...][A][N]
+Lord <Sigurd>[...] good luck[N]
+out there[...][A][X]
 
 ##NoishDeath
 [OpenMidRight][LoadNoish]
-Lord Sigurd... My apologies...[N]
+Lord <Sigurd>[...] My apologies[...][N]
 Take care of yourself[A][X]
 
 ##ArdenDeath
 [OpenMidRight][LoadArden]
-Lord Sigurd...My life was[N]
+Lord <Sigurd>[...]My life was[N]
 yours from day one.[A][N]
-I regret nothing...[A][X]
+I regret nothing[...][A][X]
 
 ##AzelDeath
 [OpenMidRight][LoadAzel]
-Lord Sigurd...[A][N]
-The rest... is up to[N]
-you...[A][X]
+Lord <Sigurd>[...][A][N]
+The rest[...] is up to[N]
+you[...][A][X]
 
 ##LexDeath
 [OpenMidRight][LoadLex]
-I...I'm so pathetic, huh?[N]
-Sigurd, please...[A][N]
-just let me go in peace...[A][X]
+I[...]I'm so pathetic, huh?[N]
+Sigurd, please[...][A][N]
+just let me go in peace[...][A][X]
 
 ##QuanDeath
 [OpenMidRight][LoadQuan]
@@ -38,7 +38,7 @@ Urgh[...] What have I[...][A][X]
 
 ##EthlynDeath
 [OpenMidRight][LoadEthlyn]
-Aah[...] Quan[...] [...]help[...][A][X]
+Aah[...] <Quan>[...] [...]help[...][A][X]
 
 ##FinnDeath1
 [OpenMidRight][LoadFinn]
@@ -49,8 +49,8 @@ to Leonster at once.[A][X]
 
 ##MidirDeath
 [OpenMidRight][LoadMidir]
-Urgh...[N]
-Milady, I...[A][X]
+Urgh[...][N]
+Milady, I[...][A][X]
 
 ##EdainDeath
 [OpenMidRight][LoadEdain]
@@ -117,7 +117,7 @@ I'm[...][A][X]
 [OpenMidRight][LoadIndech]
 Caitlin[...][N]
 I won't be[...]coming back[...][A][N]
-I'm sorry[...]Eldigan[...][A][X]
+I'm sorry[...]<Eldigan>[...][A][X]
 
 ##CallistaDeath
 [A][X]
@@ -141,5 +141,5 @@ those of my friends[...][A][X]
 
 ##SeliphDeath
 [OpenMidRight][LoadSeliph]
-Father... Everyone...[N]
-I'm sorry...[A][X]
+Father[...] Everyone[...][N]
+I'm sorry[...][A][X]

@@ -1,35 +1,35 @@
 ##Name_Sigurd
-Sigurd[X]
+<Sigurd>[X]
 
 ##Name_Julia
 Julia[X]
 
 ##Name_Seliph
-Seliph[X]
+<Seliph>[X]
 
 ##Name_Lex
 Lex[X]
 
 ##Name_Azelle
-Azelle[X]
+<Azelle>[X]
 
 ##Name_Alec
 Alec[X]
 
 ##Name_Naoise
-Naoise[X]
+<Naoise>[X]
 
 ##Name_Arden
 Arden[X]
 
 ##Name_Quan
-Quan[X]
+<Quan>[X]
 
 ##Name_Finn
 Finn[X]
 
 ##Name_Ethlyn
-Ethlyn[X]
+<Ethlyn>[X]
 
 ##Name_Ayra
 Ayra[X]
@@ -38,31 +38,31 @@ Ayra[X]
 Jamke[X]
 
 ##Name_Edain
-Edain[X]
+<Edain>[X]
 
 ##Name_Midir
-Midir[X]
+<Midir>[X]
 
 ##Name_Dew
 Dew[X]
 
 ##Name_Deirdre
-Deirdre[X]
+<Deirdre>[X]
 
 ##Name_Chulainn
-Chulainn[X]
+<Chulainn>[X]
 
 ##Name_Lachesis
 Lachesis[X]
 
 ##Name_Lewyn
-Lewyn[X]
+<Lewyn>[X]
 
 ##Name_Silvia
-Silvia[X]
+<Silvia>[X]
 
 ##Name_Erinys
-Erinys[X]
+<Erinys>[X]
 
 ##Name_Beowolf
 Beowolf[X]
@@ -74,25 +74,25 @@ Indech[X]
 Hopper[X]
 
 ##Name_Claud
-Claud[X]
+<Claud>[X]
 
 ##Name_Callista
 Callista[X]
 
 ##Name_Tailtiu
-Tailtiu[X]
+<Tailtiu>[X]
 
 ##Name_Brigid
-Brigid[X]
+<Brigid>[X]
 
 ##Name_Eyvel
 Eyvel[X]
 
 ##Name_Larcei
-Larcei[X]
+<Larcei>[X]
 
 ##Name_Diarmuid
-Diarmuid[X]
+<Diarmuid>[X]
 
 ##Name_Lester
 Lester[X]
@@ -101,10 +101,7 @@ Lester[X]
 Lana[X]
 
 ##Name_Scathach
-Scathach[X]
-
-##Name_Delmud
-Delmud[X]
+<Scathach>[X]
 
 ##Name_Nanna
 Nanna[X]
@@ -113,25 +110,25 @@ Nanna[X]
 Arthur[X]
 
 ##Name_Tine
-Tine[X]
+<Tine>[X]
 
 ##Name_Febail
-Febail[X]
+<Febail>[X]
 
 ##Name_Patty
 Patty[X]
 
 ##Name_Lene
-Lene[X]
+<Lene>[X]
 
 ##Name_Coirpre
-Coirpre[X]
+<Coirpre>[X]
 
 ##Name_Fee
 Fee[X]
 
 ##Name_Ced
-Ced[X]
+<Ced>[X]
 
 ##Name_Zagreus
 Zagreus[X]
@@ -140,16 +137,16 @@ Zagreus[X]
 Persephone[X]
 
 ##Name_Creidne
-Creidne[X]
+<Creidne>[X]
 
 ##Name_Dalvin
-Dalvin[X]
+<Dalvin>[X]
 
 ##Name_Muirne
-Muirne[X]
+<Muirne>[X]
 
 ##Name_Deimne
-Deimne[X]
+<Deimne>[X]
 
 ##Name_Tristan
 Tristan[X]
@@ -170,7 +167,7 @@ Hawk[X]
 Hermina[X]
 
 ##Name_Charlot
-Charlot[X]
+<Charlot>[X]
 
 ##Name_Laylea
 Laylea[X]
@@ -182,7 +179,7 @@ Daisy[X]
 Asaello[X]
 
 ##Name_Oifey
-Oifey[X]
+<Oifey>[X]
 
 ##Name_Shannan
 Shannan[X]
@@ -194,10 +191,10 @@ Melchior[X]
 Nehalennia[X]
 
 ##Name_Iuchar
-Iuchar[X]
+<Iuchar>[X]
 
 ##Name_Iucharba
-Iucharba[X]
+<Iucharba>[X]
 
 ##Name_Ares
 Ares[X]
@@ -212,7 +209,7 @@ Hannibal[X]
 Altena[X]
 
 ##Name_Leif
-Leif[X]
+<Leif>[X]
 
 ##Name_Saias
 Saias[X]
@@ -226,17 +223,17 @@ Shannam[X]
 ##Name_Arion
 Arion[X]
 
-##Name_Gerrard
-Gerrard[X]
-
 ##Name_DiMaggio
 DiMaggio[X]
 
+##Name_Gerrard
+Gerrard[X]
+
 ##Name_Cimbaeth
-Cimbaeth[X]
+<Cimbaeth>[X]
 
 ##Name_Munnir
-Munnir[X]
+<Munnir>[X]
 
 ##Name_Burkaul
 Burkaul[X]
@@ -257,7 +254,7 @@ Graham[X]
 Phillip[X]
 
 ##Name_Bordeaux
-Bordeaux[X]
+<Bordeaux>[X]
 
 ##Name_Banquo
 Banquo[X]
@@ -350,7 +347,7 @@ Slayder[X]
 Andrey[X]
 
 ##Name_Lombard
-Lombard[X]
+<Lombard>[X]
 
 ##Name_Magorn
 Magorn[X]
@@ -359,7 +356,7 @@ Magorn[X]
 Vaja[X]
 
 ##Name_Reptor
-Reptor[X]
+<Reptor>[X]
 
 ##Name_Harold
 Harold[X]
@@ -473,7 +470,7 @@ Zagam[X]
 Shamash[X]
 
 ##Name_Arvis
-Arvis[X]
+<Arvis>[X]
 
 ##Name_Roberto
 Roberto[X]
@@ -683,7 +680,7 @@ Leonster[X]
 AnnandSquad[X]
 
 ##Name_Eldigan
-Eldigan[X]
+<Eldigan>[X]
 
 ##Name_Annand
 Annand[X]

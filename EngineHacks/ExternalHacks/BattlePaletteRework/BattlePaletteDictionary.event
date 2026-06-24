@@ -306,6 +306,9 @@ PaletteIdentifier($123,$72,$75,$6b,LeePalette)
 PaletteIdentifier($124,$72,$75,$6b,ShisielPalette)
 PaletteIdentifier($125,$72,$75,$6b,HawksPalette)
 PaletteIdentifier($126,$72,$75,$6b,NazarlPalette)
+PaletteIdentifier($127,$72,$75,$6b,SchwarzPalette)
+PaletteIdentifier($128,$72,$75,$6b,LanceSrPalette)
+PaletteIdentifier($129,$72,$75,$6b,LancePalette)
 
 /*
 POP
