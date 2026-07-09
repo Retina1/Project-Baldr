@@ -1096,7 +1096,7 @@ GellerPalette:
 
 ALIGN 4
 PazanPalette:
-#incbin "PazanPirate.dmp"
+#incbin "Pazan.dmp"
 
 ALIGN 4
 DomaPalette:
@@ -1111,8 +1111,8 @@ KemalPalette:
 #incbin "Kemal.dmp"
 
 ALIGN 4
-KaladinPalette:
-#incbin "Kaladin.dmp"
+KaledinPalette:
+#incbin "Kaledin.dmp"
 
 ALIGN 4
 KeithPalette:
@@ -1168,7 +1168,7 @@ HawksPalette:
 
 ALIGN 4
 NazarlPalette:
-#incbin "NazarlPirate.dmp"
+#incbin "Nazarl.dmp"
 
 
 PUSH
