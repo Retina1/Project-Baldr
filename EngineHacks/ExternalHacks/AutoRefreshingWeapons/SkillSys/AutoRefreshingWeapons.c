@@ -1,20 +1,17 @@
 #include "gbafe.h"
 
-extern u8 AutoRefreshList[];
-extern u8 BrokenWeaponTable[8][4];
+//extern u8 AutoRefreshList[];
+extern u16 BrokenWeaponTable[8][7];
 extern bool EQUIP_BROKEN_WEAPONS_Link;
 extern bool EQUIP_BROKEN_MAGIC_Link;
 extern u8 ConvoySize_Link;
 
 // hoo boy
 bool DoesItemRefreshDurability(int item) {
-	int i = 0;
-	while(AutoRefreshList[i] != 0) {
-		if(AutoRefreshList[i] == GetItemIndex(item)) {
-			return true;
-		}
-		i++;
+	if ((GetItemType(item) <= 0x7) || (GetItemType(item) == 0x15) || (GetItemType(item) == 0x25))  { //if item is not a consumable type, can change later if need be
+		return true;
 	}
+	
 	return false;
 }
 
@@ -108,7 +105,7 @@ s8 BattleGenerateRoundHits(struct BattleUnit* attacker, struct BattleUnit* defen
     int i, count;
     u16 attrs; // NOTE: this is a bug! attrs are 19 bits in FE8 (they're 16 bits in previous games)
 
-    if (GetItemUses(attacker->weapon) <= 0)
+	if (!attacker->weapon)
         return FALSE;
 
     attrs = gBattleHitIterator->attributes;
@@ -122,6 +119,146 @@ s8 BattleGenerateRoundHits(struct BattleUnit* attacker, struct BattleUnit* defen
     }
 
     return FALSE;
+}
+
+void BattleGenerateHitEffects(struct BattleUnit* attacker, struct BattleUnit* defender) {
+    attacker->wexpMultiplier++;
+
+    if (!(gBattleHitIterator->attributes & BATTLE_HIT_ATTR_MISS)) {
+        if (defender->unit.pClassData->number != CLASS_DEMON_KING) {
+            switch (GetItemWeaponEffect(attacker->weapon)) {
+
+            case WPN_EFFECT_POISON:
+                // Poison defender
+
+                defender->statusOut = UNIT_STATUS_POISON;
+                gBattleHitIterator->attributes |= BATTLE_HIT_ATTR_POISON;
+
+                // "Ungray" defender if it was petrified (as it won't be anymore)
+                if (defender->unit.statusIndex == UNIT_STATUS_PETRIFY || defender->unit.statusIndex == UNIT_STATUS_13)
+                    defender->unit.state = defender->unit.state &~ US_UNSELECTABLE;
+
+                break;
+
+            case WPN_EFFECT_HPHALVE:
+                gBattleHitIterator->attributes |= BATTLE_HIT_ATTR_HPHALVE;
+                break;
+
+            } // switch (GetItemWeaponEffect(attacker->weapon))
+        }
+
+        if ((GetItemWeaponEffect(attacker->weapon) == WPN_EFFECT_DEVIL) && (BattleRoll1RN(31 - attacker->unit.lck, FALSE))) {
+            gBattleHitIterator->attributes |= BATTLE_HIT_ATTR_DEVIL;
+
+            attacker->unit.curHP -= gBattleStats.damage;
+
+            if (attacker->unit.curHP < 0)
+                attacker->unit.curHP = 0;
+        } else {
+            if (gBattleStats.damage > defender->unit.curHP)
+                gBattleStats.damage = defender->unit.curHP;
+
+            defender->unit.curHP -= gBattleStats.damage;
+
+            if (defender->unit.curHP < 0)
+                defender->unit.curHP = 0;
+        }
+
+        if (GetItemWeaponEffect(attacker->weapon) == WPN_EFFECT_HPDRAIN) {
+            if (attacker->unit.maxHP < (attacker->unit.curHP + gBattleStats.damage))
+                attacker->unit.curHP = attacker->unit.maxHP;
+            else
+                attacker->unit.curHP += gBattleStats.damage;
+
+            gBattleHitIterator->attributes |= BATTLE_HIT_ATTR_HPSTEAL;
+        }
+
+        if (defender->unit.pClassData->number != CLASS_DEMON_KING) {
+            if (GetItemWeaponEffect(attacker->weapon) == WPN_EFFECT_PETRIFY) {
+                switch (gPlaySt.faction) {
+
+                case FACTION_BLUE:
+                    if (UNIT_FACTION(&defender->unit) == FACTION_BLUE)
+                        defender->statusOut = UNIT_STATUS_13;
+                    else
+                        defender->statusOut = UNIT_STATUS_PETRIFY;
+
+                    break;
+
+                case FACTION_RED:
+                    if (UNIT_FACTION(&defender->unit) == FACTION_RED)
+                        defender->statusOut = UNIT_STATUS_13;
+                    else
+                        defender->statusOut = UNIT_STATUS_PETRIFY;
+
+                    break;
+
+                case FACTION_GREEN:
+                    if (UNIT_FACTION(&defender->unit) == FACTION_GREEN)
+                        defender->statusOut = UNIT_STATUS_13;
+                    else
+                        defender->statusOut = UNIT_STATUS_PETRIFY;
+
+                    break;
+
+                } // switch (gPlaySt.faction)
+
+                gBattleHitIterator->attributes |= BATTLE_HIT_ATTR_PETRIFY;
+            }
+        }
+    }
+
+    gBattleHitIterator->hpChange = gBattleStats.damage;
+
+	int allegiance = (attacker->unit.index & 0xC0);
+	
+	if(allegiance == FACTION_BLUE) {
+		if (!(gBattleHitIterator->attributes & BATTLE_HIT_ATTR_MISS) || attacker->weaponAttributes & (IA_UNCOUNTERABLE | IA_MAGIC)) {
+			attacker->weapon = GetItemAfterUse(attacker->weapon);
+
+			if (!attacker->weapon)
+				attacker->weaponBroke = TRUE;
+		}
+	}
+}
+
+static const struct ProcCmd sProcScr_BattleAnimSimpleLock[] = {
+    PROC_SLEEP(1),
+    PROC_CALL(UpdateActorFromBattle),
+    PROC_END
+};
+
+
+void BattleApplyItemEffect(struct Proc* proc) {
+    (++gBattleHitIterator)->info = BATTLE_HIT_INFO_END;
+
+    BattleApplyItemExpGains();
+
+    if (gBattleActor.canCounter) {
+        if (GetItemAttributes(gBattleActor.weapon) & IA_STAFF)
+            gBattleActor.weaponBroke = TRUE;
+		
+		int allegiance = (gBattleActor.unit.index & 0xC0);
+		if(allegiance == FACTION_BLUE) {
+			gBattleActor.weapon = GetItemAfterUse(gBattleActor.weapon);
+		}
+        gBattleActor.unit.items[gBattleActor.weaponSlotIndex] = gBattleActor.weapon;
+
+        if (gBattleActor.weapon)
+            gBattleActor.weaponBroke = FALSE;
+    }
+
+    Proc_StartBlocking(sProcScr_BattleAnimSimpleLock, proc);
+}
+
+void UnitUpdateUsedItem(struct Unit* unit, int itemSlot) {
+	int allegiance = (unit->index & 0xC0);
+	if(allegiance == FACTION_BLUE) {
+		if (unit->items[itemSlot]) {
+			unit->items[itemSlot] = GetItemAfterUse(unit->items[itemSlot]);
+			UnitRemoveInvalidItems(unit);
+		}
+	}
 }
 
 void RefreshItemsASMC(struct Proc* proc) {
@@ -160,30 +297,55 @@ void RefreshItemsASMC(struct Proc* proc) {
 	}
 }
 
+inline char* GetItemName(int item) {
+    char* result;
+	
+	int nameIndex;
+	
+	if(GetItemUses(item) <= 0) {
+		nameIndex = BrokenWeaponTable[GetItemType(item)][0];
+	}
+	else {
+		nameIndex = GetItemData(ITEM_INDEX(item))->nameTextId;
+	}
+	
+    result = GetStringFromIndex(nameIndex);
+    result = StrInsertTact();
+
+    return result;
+}
+
+inline int GetItemDescId(int item) {
+	if(GetItemUses(item) <= 0) {
+		return BrokenWeaponTable[GetItemType(item)][1];
+	}
+    return GetItemData(ITEM_INDEX(item))->descTextId;
+}
+
 int GetItemMight(int item) {
 	if(GetItemUses(item) <= 0 && IsBrokenWeaponEquippable(item)) {
-		return BrokenWeaponTable[GetItemType(item)][0];
+		return BrokenWeaponTable[GetItemType(item)][2];
 	}
     return GetItemData(ITEM_INDEX(item))->might;
 }
 
 int GetItemHit(int item) {
 	if(GetItemUses(item) <= 0 && IsBrokenWeaponEquippable(item)) {
-		return BrokenWeaponTable[GetItemType(item)][1];
+		return BrokenWeaponTable[GetItemType(item)][3];
 	}
     return GetItemData(ITEM_INDEX(item))->hit;
 }
 
 int GetItemWeight(int item) {
 	if(GetItemUses(item) <= 0 && IsBrokenWeaponEquippable(item)) {
-		return BrokenWeaponTable[GetItemType(item)][2];
+		return BrokenWeaponTable[GetItemType(item)][4];
 	}
     return GetItemData(ITEM_INDEX(item))->weight;
 }
 
 int GetItemCrit(int item) {
 	if(GetItemUses(item) <= 0 && IsBrokenWeaponEquippable(item)) {
-		return BrokenWeaponTable[GetItemType(item)][3];
+		return BrokenWeaponTable[GetItemType(item)][5];
 	}
     return GetItemData(ITEM_INDEX(item))->crit;
 }
@@ -240,13 +402,40 @@ void DrawItemStatScreenLine(struct Text* text, int item, int nameColor, u16* map
     PutSpecialChar(mapOut + 12, color, TEXT_SPECIAL_SLASH);
 
     color = (nameColor != TEXT_COLOR_SYSTEM_GRAY) ? GetItemDurabilityColor(item) : TEXT_COLOR_SYSTEM_GRAY;
-    PutNumberOrBlank(mapOut + 11, color, GetItemUses(item));
+	
+	int allegiance = (gStatScreen.unit->index & 0xC0);
+	if(allegiance != FACTION_BLUE) {
+		PutNumberOrBlank(mapOut + 11, color, 255);
+	}
+	else {
+		PutNumberOrBlank(mapOut + 11, color, GetItemUses(item));
+	}
+	
     PutNumberOrBlank(mapOut + 14, color, GetItemMaxUses(item));
 
     PutText(text, mapOut + 2);
 
     DrawIcon(mapOut, GetItemIconId(item), 0x4000);
 }
+
+enum { LINES_MAX = 5 };
+struct UnitInfoWindowProc {
+    /* 00 */ PROC_HEADER;
+
+    /* 2C */ struct Unit* unit;
+
+    /* 30 */ struct Text name;
+    /* 38 */ struct Text lines[LINES_MAX];
+
+    /* 60 */ u8 x;
+    /* 61 */ u8 y;
+    /* 62 */ u8 xUnitSprite;
+    /* 63 */ u8 xNameText;
+};
+
+struct UnitInfoWindowProc* UnitInfoWindow_DrawBase(struct UnitInfoWindowProc* proc, struct Unit* unit, int x, int y, int width, int lines);
+int GetUnitInfoWindowX(struct Unit* unit, int width);
+
 
 void RefreshUnitStealInventoryInfoWindow(struct Unit* unit) {
     int i;

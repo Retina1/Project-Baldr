@@ -508,7 +508,7 @@ POP
   #include "Necessary/UnitMenu/UnitMenu.event"
   #include "Necessary/Popups.event"
   
-  //#include "ExternalHacks/AutoRefreshingWeapons/SkillSys/AutoRefreshingWeapons.event"
+  #include "ExternalHacks/AutoRefreshingWeapons/SkillSys/AutoRefreshingWeapons.event"
 
   #include "Necessary/CalcLoops/CalcLoops.event"
   
