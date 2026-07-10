@@ -51,4 +51,5 @@ EQUIP_BROKEN_MAGIC_Link:
 WORD EQUIP_BROKEN_MAGIC
 
 #include "AutoRefreshingWeapons.lyn.event"
+#include "RepairMenu.lyn.event"
 

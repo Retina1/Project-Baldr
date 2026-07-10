@@ -65,12 +65,20 @@ CharacterEventBothWays(0x7,LexTalketh,Sigurd,Lex)
 CharacterEventBothWays(0x1D,AzelTalketh,Sigurd,Azel)
 CharacterEventBothWays(0x1E,QuanTalketh,Sigurd,Quan)
 CharacterEventBothWays(0x20,LegionJoins,Legion,Arden)
+
+//DEBUG REPAIR
+//CharacterEventBothWays(0x0,TestRepairing,Sigurd,Arden)
 END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
 AreaEvent(0x00,VisitusSir,56,5,56,5)
 END_MAIN
+
+TestRepairing:
+SVAL 0x1 0x1
+ASMC RepairMenu_OnSelect|1
+EndEvent
 
 BeginningScene:
 SetBackground(0x35)
